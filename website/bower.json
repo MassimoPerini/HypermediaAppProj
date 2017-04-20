@@ -1,0 +1,25 @@
+{
+  "name": "polimi-hyp-2017-team-10543744",
+  "description": "polimi-hypermedia-2017-project",
+  "main": "app.js",
+  "authors": [
+    "Massimo Perini <perinimassimo1995@gmail.com>",
+    "Andrea Corsini <andrea.corsini@outlook.com>",
+    "Nico Montali <nico.montali24@gmail.com>"
+  ],
+  "license": "GNU GPL v3",
+  "keywords": [
+    "NodeJS"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
