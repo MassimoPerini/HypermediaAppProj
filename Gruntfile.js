@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: 'bower_components/bootstrap-sass/assets/javascripts/',
-                        src: ['**/*.js'],
+                        src: ['*.js'],
                         dest: 'public/javascripts/bootstrap/'
                     },
                     {
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
                         flatten: true,
                         cwd: 'bower_components/',
                         src: ['bootstrap-sass/assets/fonts/**'],
-                        dest: 'public/fonts/'
+                        dest: 'public/fonts/bootstrap/'
                     }
                 ]
             },
@@ -69,6 +69,12 @@ module.exports = function (grunt) {
         			cwd: 'custom/js',
         			src: '**/*.js',
         			dest: 'public/javascripts'
+      			},
+      			{
+        			expand: true,
+        			cwd: 'bower_components/bootstrap-sass/assets/javascripts/bootstrap',
+        			src: '**/*.js',
+        			dest: 'public/javascripts/bootstrap/add-on'
       			}]
     		},
     		release: {
@@ -77,6 +83,12 @@ module.exports = function (grunt) {
         			cwd: 'custom/js',
         			src: '**/*.js',
         			dest: 'public/javascripts'
+      			},
+      			{
+        			expand: true,
+        			cwd: 'bower_components/bootstrap-sass/assets/javascripts/bootstrap',
+        			src: '**/*.js',
+        			dest: 'public/javascripts/bootstrap/add-on'
       			}]
     		}
   		},

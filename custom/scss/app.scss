@@ -1,1 +1,43 @@
 @import "_bootstrap.scss";
+
+body{
+  @extend .container-fluid;
+}
+
+.navigation{
+  @extend .navbar, .navbar-default;
+
+  .header{
+    @extend .navbar-header;
+  }
+
+  .brand{
+    @extend .navbar-brand;
+  }
+
+  .landmarks{
+    @extend .collapse , .navbar-collapse;
+
+    > ul {
+      @extend .nav , .navbar-nav;
+    }
+
+    .landmarks-right{
+      @extend .navbar-right;
+    }
+  }
+}
+
+section{
+  @include make-row;
+  @include clearfix;
+
+}
+
+.services-widget {
+  .service {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    @include make-md-column(3);
+  }
+}

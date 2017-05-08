@@ -8,5 +8,29 @@
     <%- include('common/navbar', { page : '/'}) %>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <%- include('common/carousel', {imgs : ["../public/imgs/img1.jpg", "../public/imgs/img2.png", "../public/imgs/img3.jpg"]}) %>
+
+    <section>
+      <h1>Welcome to CPM clinic website</h1>
+    </section>
+
+    <section class="services-widget">
+      <h3>Our best services:</h3>
+      <div class="service">esempio</div>
+      <div class="service">esempio</div>
+      <div class="service">esempio</div>
+      <div class="service">esempio</div>
+    </section>
+
+    <section>
+      <h3>BUTTONS HERE</h3>
+    </section>
+
+    <section>
+      <h3>NEWS HERE</h3>
+    </section>
+
+    <%- include('common/footer') %>
+
   </body>
 </html>
