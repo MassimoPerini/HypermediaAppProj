@@ -1,0 +1,50 @@
+Database should have this structure
+
+LOCATIONS
+  - ID
+  - Name
+  - Icon
+  - Header-picture (one?)
+  - Position
+  - Description
+  - Timetable (SEPARATE)
+  - Contacts (SEPARATE)
+  - HTGT (SEPARATE)
+  - Pictures (SEPARATE)
+AREAS
+  - ID
+  - Name
+  - Description
+  - Awards (SEPARATE)
+  - Responsible
+  - Icon
+  - Header-picture (one?)
+  - Text-picture (inside text?)
+SERVICES
+  - ID
+  - Name
+  - Description
+  - Responsible
+  - Icon
+  - Header-picture (one?)
+  - Text-picture (inside text?)
+DOCTORS
+  - ID
+  - Name
+  - Description
+  - Timetable (SEPARATE? Nope, non serve nella reservation)
+  - Icon
+  - Header-picture
+PRACTICAL INFOS
+  - ID
+  - Text
+  - Icon
+  - Header-picture
+
+---- ASSOCIATIONS ----
+
+LOCATIONS-SERVICES many-to-many
+LOCATIONS-AREAS many-to-many
+AREAS-SERVICE one-to-many
+SERVICES-DOCTORS one-to-many
+SERVICES-LOCATIONS many-to-many

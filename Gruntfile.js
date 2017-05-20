@@ -92,23 +92,31 @@ module.exports = function (grunt) {
       			}]
     		}
   		},
-        // Watch these files and notify of changes.
-        watch: {
-            grunt: { files: ['Gruntfile.js'] },
+      // Watch these files and notify of changes.
+      watch: {
+          grunt: { files: ['Gruntfile.js'] },
 
-            sass: {
-                files: [
-                    'custom/scss/**/*.scss'
-                ],
-                tasks: ['sass:debug']
-            },
-            uglify: {
-                files: [
-                    'custom/js/**/*.js'
-                ],
-                tasks: ['uglify:debug']
+          sass: {
+              files: [
+                  'custom/scss/**/*.scss'
+              ],
+              tasks: ['sass:debug']
+          },
+          uglify: {
+              files: [
+                  'custom/js/**/*.js'
+              ],
+              tasks: ['uglify:debug']
+          }
+      },
+      jsdoc : {
+        dist : {
+            src: ['*.js'],
+            options: {
+                destination: 'docs/src'
             }
         }
+    }
     });
 
     // Load externally defined tasks.
@@ -116,7 +124,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
 	  grunt.loadNpmTasks('grunt-contrib-uglify');
-
+    grunt.loadNpmTasks('grunt-jsdoc');
     // Establish tasks we can run from the terminal.
     // grunt.registerTask('build', ['sass', 'copy']);
     // grunt.registerTask('build', ['copy', 'sass', 'uglify']);

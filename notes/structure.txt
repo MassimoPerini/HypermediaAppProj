@@ -1,0 +1,39 @@
+The website, according to the design specifications, should have this website structure.
+APIs are TODO
+: represents a parameter in the path (e.g. an ID)
+
+HOME
+  | /who-we-are
+    | /gallery
+    | /stats
+  | /faq
+  | /news
+  | /contacts
+  | /info
+    | /:info-id
+  | /areas
+    | /:area-id
+      | /services
+        | /:service-id (description)
+          | /instrumentations
+          | /doctors
+  | /locations
+    | /:location-id (position + timetable + contacts)
+      | /gallery
+      | /how-to-get-there
+      | /services
+  | /doctors
+    | /:doctor-id
+  | /locations-doctors
+    | /:location-id
+  | /areas-doctors
+    | /:area-id
+  | /services-doctors
+    | /:service-id
+  | /location-areas
+    | /:location-id
+  | /areas-services
+    | /:area-id
+
+----- PRIVATE -----
+TODO

@@ -13,7 +13,9 @@
     "express": "~4.14.1",
     "less-middleware": "~2.2.0",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.2"
+    "serve-favicon": "~2.3.2",
+    "swagger-jsdoc": "1.9.4",
+    "http-errors" : "1.6.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -22,6 +24,7 @@
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-uglify": "^2.3.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^2.0.0"
+    "grunt-sass": "^2.0.0",
+    "grunt-jsdoc": "2.1.0"
   }
 }
