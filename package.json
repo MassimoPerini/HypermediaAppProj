@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=app node app.js"
+    "start": "DEBUG=app,model node app.js",
+    "dbinit" : "DEBUG=model node dbinit.js"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -15,7 +16,9 @@
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.2",
     "swagger-jsdoc": "1.9.4",
-    "http-errors" : "1.6.1"
+    "http-errors" : "1.6.1",
+    "sequelize" : "3.30.4",
+    "pg" : "6.2.3"
   },
   "devDependencies": {
     "grunt": "^1.0.1",

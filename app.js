@@ -1,4 +1,4 @@
-/** Express app configuration file. Also loads all dependencies and connects to DB
+/** Express app configuration file. Also loads all dependencies and connects to DB.
  * @module app
  */
 
@@ -9,6 +9,8 @@ var favicon = require('serve-favicon');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var HttpErr = require('http-errors');
+/* Database */
+var models = require('./models');
 /* Logging */
 var logger = require('morgan');
 var debug = require('debug')('app');
@@ -34,13 +36,7 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use('/public',express.static(path.join(__dirname, 'public')));
 app.use('/docs',express.static(path.join(__dirname, 'docs')));
 
-/* Routers */
-var index = require('./routes/index');
-var api = require('./routes/api');
-app.use('/', index);
-app.use('/api/', api);
-
-/* API Documentation using swagger*/
+/* API Documentation config using swagger*/
 var swaggerSpec = swaggerJSDoc({
   swaggerDefinition: {
     info: {
@@ -53,6 +49,13 @@ var swaggerSpec = swaggerJSDoc({
   },
   apis: ['./routes/api.js']
 });
+
+/* Routers */
+var index = require('./routes/index');
+var api = require('./routes/api');
+app.use('/', index);
+app.use('/api/', api);
+
 // Serve swagger json
 app.get('/docs/api/swagger.json', function(req, res) {
   res.setHeader('Content-Type', 'application/json');

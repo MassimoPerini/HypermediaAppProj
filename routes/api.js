@@ -1,4 +1,5 @@
 var express = require('express');
+var models = require('../models');
 
 var router = express.Router();
 
@@ -22,6 +23,26 @@ router.get('/locations', function(req, res, next) {
       name: 'Via Mascheronzoli'
     }
   ]);
+});
+
+/**
+ * @swagger
+ * /doctors:
+ *   get:
+ *     tags:
+ *       - Doctors
+ *     description: Returns all doctors
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: An array of doctors
+ */
+router.get('/doctors', function(req, res, next){
+  models.doctors.findAll({})
+  .then(function(doctors){
+    res.send(doctors);
+  });
 });
 
 module.exports = router;

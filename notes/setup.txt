@@ -1,0 +1,21 @@
+===== DB SETUP =====
+
+To use the DB, first install Postgres locally
+For MAC, I use https://postgresapp.com
+For Windows, I did not test it, but https://www.postgresql.org/download/windows/
+
+To visualize data on MAC I use https://eggerapps.at/postico/
+
+Once the DB is up and running, create a table named "hyp_cdm" using graphic tools (postico) or CLI command
+> CREATE DATABASE hyp_cdm;
+
+The data to fill the db with is contained in the "data" folder, in the different JSONs.
+To init the DB and load this data run
+
+> npm run dbinit
+
+Now the DB is completely functional locally.
+
+===== RECOMMENDED ADDITIONAL SOFTWARE =====
+
+- Postman Chrome extension, API client
