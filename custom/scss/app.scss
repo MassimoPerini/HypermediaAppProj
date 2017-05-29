@@ -1,17 +1,47 @@
-@import "_bootstrap.scss";
-
-$secondary-color: #105592;
+$brand-primary: #105592;
+$navbar-height: 80px;
+$navbar-default-bg: $brand-primary;
 $secondary-text: #FFFFFF;
-$default-border: #000000;
+$navbar-default-link-color: #FFF;
+$navbar-default-link-hover-bg:#272727;
+$navbar-default-link-hover-color: #7dbbf1;
+$background-color: #FFFFFF;
+$footer-height: 100px;
+
+@import "variables";
+@import "_bootstrap.scss";
+@import "bootswatch";
+
+
+
+body {
+  padding-top: $navbar-height + 10px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+
 
 .main-content{
   @extend .container-fluid;
+  position: relative;
+  margin-bottom: $footer-height;
+  z-index: 100;
+  background-color:$background-color;
 }
 
-.navigation{
-  @extend .navbar, .navbar-default;
-  background-color: $secondary-color;
-  border-color: $default-border;
+nav{
+  @extend .navbar, .navbar-default, .navbar-fixed-top;
+  background-color: $navbar-default-bg;
+  opacity: 0.85;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+
+  .shrink{
+    height: 35px;
+  }
 
   .header{
     @extend .navbar-header;
@@ -23,22 +53,25 @@ $default-border: #000000;
 
   .landmarks{
     @extend .collapse , .navbar-collapse;
-
     > ul {
       @extend .nav , .navbar-nav;
-
-      >li > a{
-        color: $secondary-text;
+      >li {
+        > a {
+        }
       }
-
     }
+
+    .main-landmarks{
+      @media (min-width: 768px) {
+          position: absolute;
+          left: 50%;
+          transform: translatex(-50%);
+        }
+      }
 
     .landmarks-right{
       @extend .navbar-right;
     }
-
-
-
   }
 }
 
@@ -72,32 +105,35 @@ section{
 
 .button{
   @extend .btn, .btn-primary, .btn-block;
-  background-color: $secondary-color;
-  color: $secondary-text;
-  border-radius: 2px;
-  height: 65px;
-  font-size: 22pt;
+//  background-color: $secondary-color;
+//  color: $secondary-text;
+//  border-radius: 2px;
+    height: 65px;
+    font-size: 22pt;
 
 }
 
-#main-functions {
+.main-functions {
     > div {
       @include make-md-column(6);
     }
 }
 
-a{
-  color: $secondary-text;
-  &:hover{
-    color: #9d9d9d;
-  }
-}
 
 footer{
-  background-color: $secondary-color;
-  color: $secondary-text;
+  background-color: $navbar-default-bg;
+  color: $navbar-default-color;
   text-align: center;
-  font-size: 16pt;
+  position: fixed;
+  bottom: 0;
+  z-index: -10;
+  width: 100%;
+  height: $footer-height;
+
+  @media screen and (max-width: 768px)
+  {
+    position: relative !important;
+  }
 
   .links{
     @include make-md-column(4);
@@ -106,5 +142,19 @@ footer{
     @include make-md-column(12);
   }
 
+  a{
+    color: $navbar-default-color;
+    &:hover{
+      color:$navbar-default-link-hover-color;
+    }
+  }
 
+}
+
+.locations
+{
+  @include make-md-column(6);
+  @include make-xs-column(12);
+  @include make-sm-column(12);
+  @include make-lg-column(3);
 }
