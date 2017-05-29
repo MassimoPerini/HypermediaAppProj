@@ -4261,11 +4261,11 @@ tbody.collapse.in, nav tbody.in.landmarks {
 }
 
 @media (min-width: 768px) {
-  .navbar-right .dropdown-menu, nav .landmarks .landmarks-right .dropdown-menu {
+  .navbar-right .dropdown-menu, nav .landmarks .main-landmarks .landmarks-right .dropdown-menu {
     right: 0;
     left: auto;
   }
-  .navbar-right .dropdown-menu-left, nav .landmarks .landmarks-right .dropdown-menu-left {
+  .navbar-right .dropdown-menu-left, nav .landmarks .main-landmarks .landmarks-right .dropdown-menu-left {
     left: 0;
     right: auto;
   }
@@ -5235,11 +5235,11 @@ tbody.collapse.in, nav tbody.in.landmarks {
   .navbar-left {
     float: left !important;
   }
-  .navbar-right, nav .landmarks .landmarks-right {
+  .navbar-right, nav .landmarks .main-landmarks .landmarks-right {
     float: right !important;
     margin-right: -15px;
   }
-  .navbar-right ~ .navbar-right, nav .landmarks .landmarks-right ~ .navbar-right, nav .landmarks .navbar-right ~ .landmarks-right, nav .landmarks .landmarks-right ~ .landmarks-right {
+  .navbar-right ~ .navbar-right, nav .landmarks .main-landmarks .landmarks-right ~ .navbar-right, nav .landmarks .main-landmarks .navbar-right ~ .landmarks-right, nav .landmarks .main-landmarks .landmarks-right ~ .landmarks-right {
     margin-right: 0;
   }
 }
@@ -8209,6 +8209,7 @@ body {
 
 @media (max-width: 979px) {
   body {
+    padding: 0;
     padding-top: 0px;
   }
 }
@@ -8227,16 +8228,28 @@ nav {
   transition: all 0.4s ease;
 }
 
-nav .shrink {
-  height: 35px;
+nav .landmarks {
+  text-align: center;
+  /* Set this */
 }
 
-@media (min-width: 768px) {
-  nav .landmarks .main-landmarks {
-    position: absolute;
-    left: 50%;
-    transform: translatex(-50%);
-  }
+nav .landmarks > ul {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+nav .landmarks .main-landmarks {
+  /*  @media (min-width: 900px) {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+          }
+        }
+
+        margin-left: auto;
+        margin-right: auto;
+        */
 }
 
 section {
@@ -8330,20 +8343,6 @@ section:after {
   font-size: 22pt;
 }
 
-.main-functions > div {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-@media (min-width: 992px) {
-  .main-functions > div {
-    float: left;
-    width: 50%;
-  }
-}
-
 footer {
   background-color: #105592;
   color: #fff;
@@ -8391,10 +8390,87 @@ footer .locations {
 
 footer a {
   color: #fff;
+  text-decoration: none;
 }
 
 footer a:hover {
   color: #7dbbf1;
+}
+
+.main-functions > div, .main-functions > article.who-we-are {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .main-functions > div, .main-functions > article.who-we-are {
+    float: left;
+    width: 50%;
+  }
+}
+
+section.navigation-child > div, section.navigation-child > article.who-we-are {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  section.navigation-child > div, section.navigation-child > article.who-we-are {
+    float: left;
+    width: 25%;
+  }
+}
+
+section.navigation-child .button {
+  height: 40px;
+  font-size: 16px;
+}
+
+article.who-we-are {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  article.who-we-are {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  article.who-we-are {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  article.who-we-are {
+    float: left;
+    width: 100%;
+  }
 }
 
 .locations {

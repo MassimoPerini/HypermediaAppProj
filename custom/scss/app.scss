@@ -19,6 +19,7 @@ body {
 }
 @media (max-width: 979px) {
   body {
+    padding: 0;
     padding-top: 0px;
   }
 }
@@ -32,45 +33,51 @@ body {
   background-color:$background-color;
 }
 
-nav{
+nav {
   @extend .navbar, .navbar-default, .navbar-fixed-top;
   background-color: $navbar-default-bg;
   opacity: 0.85;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 
-  .shrink{
-    height: 35px;
-  }
-
-  .header{
+  .header {
     @extend .navbar-header;
   }
 
-  .brand{
+  .brand {
     @extend .navbar-brand;
   }
 
-  .landmarks{
-    @extend .collapse , .navbar-collapse;
+  .landmarks {
+    @extend .collapse, .navbar-collapse;
+    text-align: center; /* Set this */
+
     > ul {
-      @extend .nav , .navbar-nav;
-      >li {
+      @extend .nav, .navbar-nav;
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      > li {
         > a {
         }
       }
     }
 
-    .main-landmarks{
-      @media (min-width: 768px) {
-          position: absolute;
-          left: 50%;
-          transform: translatex(-50%);
+    .main-landmarks {
+      /*  @media (min-width: 900px) {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+          }
         }
-      }
 
-    .landmarks-right{
-      @extend .navbar-right;
+        margin-left: auto;
+        margin-right: auto;
+        */
+
+      .landmarks-right {
+        @extend .navbar-right;
+      }
     }
   }
 }
@@ -113,12 +120,6 @@ section{
 
 }
 
-.main-functions {
-    > div {
-      @include make-md-column(6);
-    }
-}
-
 
 footer{
   background-color: $navbar-default-bg;
@@ -144,11 +145,44 @@ footer{
 
   a{
     color: $navbar-default-color;
+    text-decoration: none;
     &:hover{
       color:$navbar-default-link-hover-color;
     }
   }
 
+}
+
+.main-functions {
+  > div {
+    @include make-md-column(6);
+  }
+}
+
+section.navigation-child{
+  >div{
+    @include make-md-column(3);
+    margin-bottom: 10px;
+  }
+  .button
+  {
+    height: 40px;
+    font-size:16px;
+  }
+}
+
+article{
+  &.who-we-are{
+    @extend div;
+    @include make-md-column(12);
+ //   @include make-md-column-offset(3);
+    @include make-xs-column(12);
+ //   @include make-md-column-offset(3);
+    @include make-sm-column(12);
+ //   @include make-md-column-offset(3);
+    @include make-lg-column(12);
+ //   @include make-md-column-offset(3);
+  }
 }
 
 .locations
