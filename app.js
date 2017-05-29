@@ -9,6 +9,9 @@ var favicon = require('serve-favicon');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var HttpErr = require('http-errors');
+/* Passport auth */
+var session = require('express-session');
+var passport = require('./config/auth');
 /* Database */
 var models = require('./models');
 /* Logging */
@@ -24,7 +27,17 @@ app.set('port', (process.env.PORT || 8000));
 // View setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+// Passport setup
+app.sessionMiddleware = session({secret: '\x99\xba\xd7\xe0[\xace\x1d*\xaa~\xa7\x9fr\xf0_\xc9nS\xad\xc3\x9ae\xbd'});
+app.use(app.sessionMiddleware);
+app.use(passport.initialize());
+app.use(passport.session());
 // App use
+// Passport setup
+app.sessionMiddleware = session({secret: '\x99\xba\xd7\xe0[\xace\x1d*\xaa~\xa7\x9fr\xf0_\xc9nS\xad\xc3\x9ae\xbd'});
+app.use(app.sessionMiddleware);
+app.use(passport.initialize());
+app.use(passport.session());
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -47,14 +60,12 @@ var swaggerSpec = swaggerJSDoc({
     host: 'https://polimi-hyp-2017-team-10543744.herokuapp.com',
     basePath: '/api/'
   },
-  apis: ['./routes/api.js']
+  apis: ['./routes/*.js']
 });
 
 /* Routers */
 var index = require('./routes/index');
-var api = require('./routes/api');
 app.use('/', index);
-app.use('/api/', api);
 
 // Serve swagger json
 app.get('/docs/api/swagger.json', function(req, res) {

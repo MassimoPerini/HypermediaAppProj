@@ -18,7 +18,10 @@
     "swagger-jsdoc": "1.9.4",
     "http-errors" : "1.6.1",
     "sequelize" : "3.30.4",
-    "pg" : "6.2.3"
+    "pg" : "6.2.3",
+    "sha1" : "^1.1.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",

@@ -1,29 +1,26 @@
 /**
-    MODEL : Doctors
-    TABLE: Doctors
+    MODEL : Infos
+    TABLE: Infos
 **/
 var debug = require('debug')('model');
 
 module.exports = function(sequelize, DataTypes) {
 
-  var doctors = sequelize.define("doctors", {
+  var infos = sequelize.define("infos", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
- 	  fullname: DataTypes.STRING,
+    title: DataTypes.STRING,
+ 	  text: DataTypes.STRING,
     icon: DataTypes.STRING,
-    header: DataTypes.STRING,
-    position: DataTypes.STRING,
-    phone: DataTypes.STRING,
-    email: DataTypes.STRING,
-    description: DataTypes.STRING
+    header: DataTypes.STRING
   },{
   	timestamps: true,
     classMethods : {
     }
   });
 
-  return doctors;
+  return infos;
 };

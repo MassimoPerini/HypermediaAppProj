@@ -33,6 +33,12 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
+db.services.belongsTo(db.areas);
+db.areas.hasMany(db.services);
+
+db.locations.belongsToMany(db.services, { through: 'locations_services'});
+db.services.belongsToMany(db.locations, { through: 'locations_services'});
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

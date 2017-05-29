@@ -17,12 +17,20 @@ return models.sequelize.sync({ force : true })
   Object.keys(models)
   .filter((key) => { return (key != 'sequelize' && key != 'Sequelize')})
   .forEach((table) => {
-    var datas = require('./data/' + table + '.json');
-    promises.push(models[table].bulkCreate(datas));
+    try {
+      var datas = require('./data/' + table + '.json');
+      promises.push(models[table].bulkCreate(datas,{
+        individualHooks: true
+      }));
+    }catch(err){
+      debug('Did not find data for ' + table);
+    }
   });
   return Promise.all(promises);
 }).then(function(results){
-  debug('Data loaded. DB ready, buckle up!');
+  debug('Data loaded.');
+  //debug('Loading associations...'); TODO
+  debug('DB ready, buckle up!');
   process.exit(0);
 }).catch(function(err){
   debug('Error syncing DB: ' + err);

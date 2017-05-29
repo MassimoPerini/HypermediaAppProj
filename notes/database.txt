@@ -9,7 +9,7 @@ LOCATIONS
   - Description
   - Timetable (SEPARATE)
   - Contacts (SEPARATE)
-  - HTGT (SEPARATE)
+  - HTGT
   - Pictures (SEPARATE)
 AREAS
   - ID
@@ -37,6 +37,7 @@ DOCTORS
   - Header-picture
 PRACTICAL INFOS
   - ID
+  - Title
   - Text
   - Icon
   - Header-picture
