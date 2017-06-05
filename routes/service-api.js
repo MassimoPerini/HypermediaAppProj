@@ -1,3 +1,5 @@
+var debug = require('debug')('api');
+
 var express = require('express');
 var models = require('../models');
 
@@ -21,6 +23,9 @@ router.get('/api/service', function(req, res, next){
     include: [models.areas]
   }).then(function(services){
     res.send(services);
+  }).catch(function(error){
+    debug(error);
+    next(error);
   });
 });
 
@@ -42,6 +47,20 @@ router.get('/api/service/:id', function(req, res, next){
     where : { id : req.params.id }
   }).then(function(service){
     res.send(service);
+  }).catch(function(error){
+    debug(error);
+    next(error);
+  });
+});
+
+router.post('/api/service', function(req, res, next){
+  models.services.create(req.body,{
+    include: [models.doctors]
+  }).then(function(service){
+    res.send(service);
+  }).catch(function(error){
+    debug(error);
+    next(error);
   });
 });
 

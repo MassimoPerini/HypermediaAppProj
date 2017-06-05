@@ -39,6 +39,9 @@ db.areas.hasMany(db.services);
 db.locations.belongsToMany(db.services, { through: 'locations_services'});
 db.services.belongsToMany(db.locations, { through: 'locations_services'});
 
+db.doctors.belongsToMany(db.services, { through: 'doctors_services'});
+db.services.belongsToMany(db.doctors, { through: 'doctors_services'} )
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

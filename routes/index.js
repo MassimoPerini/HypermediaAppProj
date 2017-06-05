@@ -1,3 +1,9 @@
+/**
+  Index.js file loads all the files containing
+  express routers inside the routes directory
+  and uses them in the main application.
+**/
+
 var express = require('express');
 var router = express.Router();
 

@@ -1,3 +1,5 @@
+var debug = require('debug')('api');
+
 var express = require('express');
 var models = require('../models');
 
@@ -20,6 +22,9 @@ router.get('/api/doctor', function(req, res, next){
   models.doctors.findAll({})
   .then(function(doctors){
     res.send(doctors);
+  }).catch(function(error){
+    debug(error);
+    next(error);
   });
 });
 
@@ -41,6 +46,9 @@ router.get('/api/doctor/:id', function(req, res, next){
     where : { id : req.params.id }
   }).then(function(doctor){
     res.send(doctor);
+  }).catch(function(error){
+    debug(error);
+    next(error);
   });
 });
 
