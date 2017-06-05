@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "DEBUG=app,model,api node app.js",
-    "dbinit" : "DEBUG=model node dbinit.js"
+    "dbinit": "DEBUG=model node dbinit.js",
+    "start_windows": "set DEBUG=app,model,api && node app.js",
+    "dbinit_windows": "set DEBUG=model && node dbinit.js"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -17,10 +19,10 @@
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.2",
     "swagger-jsdoc": "1.9.4",
-    "http-errors" : "1.6.1",
-    "sequelize" : "3.30.4",
-    "pg" : "6.2.3",
-    "sha1" : "^1.1.1",
+    "http-errors": "1.6.1",
+    "sequelize": "3.30.4",
+    "pg": "6.2.3",
+    "sha1": "^1.1.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
   },
