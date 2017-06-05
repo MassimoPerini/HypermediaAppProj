@@ -6,5 +6,9 @@
   </head>
   <body>
     <%- include('common/navbar', { page : '/doctors'}) %>
+    <% doctors.forEach((doctor) => { %>
+      <p> <%= doctor.fullname %> </p>
+      <p> <%= doctor.description %> </p>
+    <%});%>
   </body>
 </html>
