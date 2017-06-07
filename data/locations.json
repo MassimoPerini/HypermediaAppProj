@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "Via Mascheroni 2",
+        "icon": "",
+        "header": "",
+        "position": "posizione Via Mascheroni 2",
+        "description": "Our biggest building is located in Via Lorenzo Mascheroni, 2 Milan (Italy). Here you will find the majority of the services we offer.",
+        "htgt": "?"
+    },
+    {
+        "id": 2,
+        "name": "Via Saronno 5",
+        "icon": "",
+        "header": "",
+        "position": "posizione Via Saronno 5",
+        "description": "Our newest building is located in Via Saronno, 5 Milan (Italy). Here you will find the most requested and cutting edge services.",
+        "htgt": "?"
+    }
+]
