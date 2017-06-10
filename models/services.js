@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true
     },
  	  name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     icon: DataTypes.STRING,
     header: DataTypes.STRING,
     responsible: {

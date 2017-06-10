@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
     position: DataTypes.STRING,
     phone: DataTypes.STRING,
     email: DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.TEXT
   },{
   	timestamps: true,
     classMethods : {

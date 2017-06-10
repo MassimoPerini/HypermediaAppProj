@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+    <%- include('common/imports') %>
+
+  <style>
+    header{
+      background-image: url("/public/imgs/bg/doctor.jpg");
+    }
+
+  </style>
+
+  <script type="text/javascript">
+      $(document).on('click','.page',function(){
+          $( "#content" ).append("<div class='loading' style='transform:scale(0.31);'><div></div><div></div></div>");
+
+          $.getJSON("api_call", function(result){
+              $(".loading").remove();
+                 $.each(result, function(i, field){
+                     //BOH
+                 });
+          });
+      });
+
+
+  </script>
+
+</head>
+<body>
+<%- include('common/navbar', { page : '/service'}) %>
+
+  <header>
+    <div>
+      <h1>Services</h1>
+    </div>
+  </header>
+
+<div class="main-content">
+  <section id="content">
+
+  </section>
+
+  <nav class="navigation-content" role="toolbar" aria-label="...">
+    <button type="button" class="page">1</button>
+    <button type="button" class="page">2</button>
+    <button type="button" class="page">3</button>
+  </nav>
+
+</div>
+<%- include('common/footer') %>
+</body>
+</html>

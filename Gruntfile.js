@@ -17,10 +17,14 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'bower_components/jquery/dist/',
                         src: ['**/*.js', '**/*.map'],
-                     //	src: ['jquery.min.js', 'jquery.js', 'jquery.slim.js'],
                         dest: 'public/javascripts/jQuery/'
                     },
-
+                    {
+                        expand: true,
+                        cwd: 'bower_components/footer-reveal/',
+                        src: ['**/*.min.js'],
+                        dest: 'public/javascripts/footer-reveal/'
+                    },
                     // Fonts.
                     {
                         expand: true,

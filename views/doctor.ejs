@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+      <%- include('common/imports') %>
+
+      <style>
+        header{
+          background-image: url("/public/imgs/bg/doctor.jpg");
+        }
+
+      </style>
+  </head>
+  <body>
+        <%- include('common/navbar', { page : '/doctor'}) %>
+
+      <header class="doctor">
+        <!-- immagine -->
+        <div>
+          <img src="/public/imgs/doctors/<%=doctor.icon%>" height="300" width="190" alt="doctor-image" />
+        </div>
+        <div>
+          <h1><%=doctor.fullname%></h1>
+          <h3><%=doctor.position%></h3>
+          <h3><%=doctor.email%></h3>
+          <h3><%=doctor.phone%></h3>
+        </div>
+      </header>
+
+      <div class="main-content">
+        <section>
+          <section>
+            <article>
+                <h1>About <%=doctor.fullname%></h1>
+                <p><%=doctor.description%></p>
+            </article>
+            <article>
+              <h1>Where you can find me</h1>
+              <p>TODO</p>
+            </article>
+          </section>
+
+          <aside>
+            <section>
+              <a class="button" href="#">Ciao</a>
+            </section>
+          </aside>
+        </section>
+
+
+      </div>
+    <%- include('common/footer') %>
+  </body>
+</html>

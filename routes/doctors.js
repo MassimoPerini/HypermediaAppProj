@@ -12,4 +12,15 @@ router.get('/doctor', function(req, res, next){
   });
 });
 
+router.get('/doctor/:id', function(req, res, next){
+    models.doctors.findOne({
+        where : { id : req.params.id }
+    }).then(function(doctor){
+        res.render('doctor', { title: doctor.fullname, doctor: doctor});
+    }).catch(function(error){
+        debug(error);
+        next(error);
+    });
+});
+
 module.exports = router;
