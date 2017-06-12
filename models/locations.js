@@ -17,7 +17,8 @@ module.exports = function(sequelize, DataTypes) {
     header: DataTypes.STRING,
     position: DataTypes.STRING,
     description: DataTypes.STRING,
-    htgt: DataTypes.STRING
+    htgt: DataTypes.STRING,
+    gMaps: DataTypes.STRING(350)
   },{
   	timestamps: true,
     classMethods : {
