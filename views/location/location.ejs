@@ -8,6 +8,9 @@
         background-image: url("<%= location.header %>");
       }
 
+      th, td {
+        padding: 15px;
+      }
     </style>
   </head>
   <body>
@@ -31,11 +34,35 @@
           </article>
           <article>
             <h1>Timetable</h1>
-            <p>TODO</p>
+            <p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <% var i; for(var i=0; i<7; i++) { %>
+                      <td> <%= (timetables[i] == null ? "closed" : (timetables[i].opening_time + " - " + timetables[i].closing_time)) %></td>
+                    <% } %>                  
+                  </tr>
+                </tbody>
+              </table>
+            </p>
           </article>
           <article>
             <h1>Contacts</h1>
-            <p>TODO</p>
+            <ul>
+              <li><%= location.tell %></li>
+              <li><a href="mailto:<%= location.email %>"><%= location.email %></a></li>
+            </ul>
           </article>
         </section>
 

@@ -1,0 +1,68 @@
+[
+    {
+        "location_id": 1,
+        "day": "Monday",
+        "opening_time": "8:00",
+        "closing_time": "17:00"
+    },
+    {
+        "location_id": 1,
+        "day": "Tuesday",
+        "opening_time": "8:00",
+        "closing_time": "17:30"
+    },
+    {
+        "location_id": 1,
+        "day": "Wednesday",
+        "opening_time": "8:30",
+        "closing_time": "17:00"
+    },
+    {
+        "location_id": 1,
+        "day": "Thursday",
+        "opening_time": "8:00",
+        "closing_time": "17:30"
+    },
+    {
+        "location_id": 1,
+        "day": "Friday",
+        "opening_time": "8:00",
+        "closing_time": "17:00"
+    },
+    {
+        "location_id": 2,
+        "day": "Monday",
+        "opening_time": "9:00",
+        "closing_time": "18:00"
+    },
+    {
+        "location_id": 2,
+        "day": "Tuesday",
+        "opening_time": "9:00",
+        "closing_time": "18:30"
+    },
+    {
+        "location_id": 2,
+        "day": "Wednesday",
+        "opening_time": "9:30",
+        "closing_time": "18:00"
+    },
+    {
+        "location_id": 2,
+        "day": "Thursday",
+        "opening_time": "9:00",
+        "closing_time": "18:30"
+    },
+    {
+        "location_id": 2,
+        "day": "Friday",
+        "opening_time": "9:00",
+        "closing_time": "18:00"
+    },
+    {
+        "location_id": 2,
+        "day": "Saturday",
+        "opening_time": "8:00",
+        "closing_time": "12:30"
+    }  
+]

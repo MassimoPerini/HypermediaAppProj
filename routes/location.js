@@ -13,10 +13,16 @@ router.get('/location', function(req, res, next){
 });
 
 router.get('/location/:id', function(req, res, next){
+  var data = {};
   models.locations.findOne({
     where : { id : req.params.id }
   }).then(function(location){
-    res.render('location/location', { title: 'Location ' + location.name, location: location});
+    data.location = location;
+    models.locations_timetables.findAll({
+      where : { location_id : location.id }
+    }).then(function(timetables) {
+      res.render('location/location', { title: 'Location ' + data.location.name, location: data.location, timetables: timetables});
+    });
   });
 });
 
