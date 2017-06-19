@@ -17,10 +17,22 @@
         "icon": "",
         "header": "/public/imgs/locations/location2.jpg",
         "position": "posizione Via Saronno 5",
-        "description": "Our newest building is located in Via Saronno, 5 Milan (Italy). Here you will find the most requested and cutting edge services.",
+        "description": "Our newest building is located in Via Saronno, 5 Milan (Italy). Here you will find the most requested services.",
         "htgt": "?",
         "gMaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.338515697872!2d9.165180415050791!3d45.48312754020211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c13e0ffd647f%3A0x76a8754a3149d7cc!2sVia+Saronno%2C+5%2C+20154+Milano!5e0!3m2!1sit!2sit!4v1496937327545",
         "tell": "+39 02347530",
         "email": "saronno@cpm.com"
+    },
+    {
+        "id": 3,
+        "name": "Via Taormina 2",
+        "icon": "This locations is the home of all our experimental treatments, as well as our specialized analysis laboratory.",
+        "header": "/public/imgs/locations/location3.jpg",
+        "position": "posizione Via Taormina 2",
+        "description": "",
+        "htgt": "?",
+        "gMaps": "",
+        "tell": "+39 02347532",
+        "email": "taormina@cpm.com"
     }
 ]

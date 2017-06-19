@@ -33,14 +33,24 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
+/* ASSOCIATIONS SETUP */
+// Service belongs to an area
 db.services.belongsTo(db.areas);
 db.areas.hasMany(db.services);
-
+// Area responsible
+db.doctors.hasOne(db.areas, {foreignKey: 'responsible'});
+// Service responsible
+db.doctors.hasOne(db.services, {foreignKey: 'responsible'});
+// Location - Areas
+db.locations.belongsToMany(db.areas, {through: 'locations_areas'});
+db.areas.belongsToMany(db.locations, {through: 'locations_areas'});
+// Locations - Services
 db.locations.belongsToMany(db.services, { through: 'locations_services'});
 db.services.belongsToMany(db.locations, { through: 'locations_services'});
-
+// Services - Doctors
 db.doctors.belongsToMany(db.services, { through: 'doctors_services'});
-db.services.belongsToMany(db.doctors, { through: 'doctors_services'} )
+db.services.belongsToMany(db.doctors, { through: 'doctors_services'});
+
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

@@ -8,16 +8,41 @@
 var models = require('./models');
 var debug = require('debug')('model');
 
-/*
-  TABLES to fetch from files are listed here, in order
-*/
-var tablesToFetch = ['locations', 'locations_timetables' 'areas', 'doctors', 'service', 'users', 'infos']
+async function loadData(){
+  // Load table and files
 
-async function executeSequentially(promises) {
-    for (const promise of promises) {
-        await promise;
-    }
-    return true;
+  /* LOCATIONS */
+  var locations = require('./data/locations.json');
+  await models.locations.bulkCreate(locations);
+  /* LOCATION TIMETABLES */
+  var locations_timetables = require('./data/locations_timetables.json');
+  await models.locations_timetables.bulkCreate(locations_timetables);
+  /* DOCTORS */
+  var doctors = require('./data/doctors.json');
+  await models.doctors.bulkCreate(doctors);
+  /* DOCTORS TIMETABLES */
+  //var doctors_timetables = require('./data/doctors_timetables.json');
+  //await models.doctors_timetables.bulkCreate(doctors_timetables);
+  /* AREAS */
+  var areas = require('./data/areas.json');
+  await models.areas.bulkCreate(areas);
+  /* SERVICE */
+  var services = require('./data/services.json');
+  await models.services.bulkCreate(services);
+  /* USERS */
+  var users = require('./data/users.json');
+  await models.users.bulkCreate(users, { individualHooks: true });
+  /* INFOS */
+  var infos = require('./data/infos.json');
+  await models.infos.bulkCreate(infos);
+  /* LOCATIONS-AREAS */
+  for (var area of areas){
+    await models.areas.findById(area.id).then((_area) => {_area.setLocations(area.locations);})
+  }
+  /* LOCATION-SERVICES */
+
+  // End function
+  return true;
 }
 
 debug("Updating schema...");
@@ -25,18 +50,7 @@ return models.sequelize.sync({ force : true })
 .then(function(err){
   debug("DB schema is up-to-date");
   debug("Loading data...");
-  var promises = [];
-  tablesToFetch.forEach((table) => {
-    try {
-      var datas = require('./data/' + table + '.json');
-      promises.push(models[table].bulkCreate(datas,{
-        individualHooks: true
-      }));
-    }catch(err){
-      debug('Did not find data for ' + table);
-    }
-  });
-  return executeSequentially(promises);
+  return loadData();
 }).then(function(results){
   debug('Data loaded.');
   debug('DB ready, buckle up!');

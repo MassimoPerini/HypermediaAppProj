@@ -1,7 +1,45 @@
 [
   {
     "id": 1,
+    "name": "Cardiology",
+    "description": "",
+    "locations" : [1, 2],
+    "responsible" : 2
+  },
+  {
+    "id": 2,
+    "name": "Dermatology",
+    "description": "",
+    "locations" : [1]
+  },
+  {
+    "id": 3,
+    "name": "Eye care",
+    "description": "",
+    "locations" : [1,3]
+  },
+  {
+    "id": 4,
+    "name": "Gynecology",
+    "description": "",
+    "locations" : []
+  },
+  {
+    "id": 5,
+    "name": "Radiology",
+    "description": "",
+    "locations" : [1,2]
+  },
+  {
+    "id": 6,
     "name": "Radiotherapy",
-    "description": "Here goes the description"
+    "description": "",
+    "locations" : [1,3]
+  },
+  {
+    "id": 7,
+    "name": "Surgery",
+    "description": "",
+    "locations" : [1]
   }
 ]
