@@ -23,6 +23,9 @@ router.get('/location/:id', function(req, res, next){
     }).then(function(timetables) {
       res.render('location/location', { title: 'Location ' + data.location.name, location: data.location, timetables: timetables});
     });
+  }).catch(function(error){
+    debug(error);
+    next(error);
   });
 });
 
@@ -34,7 +37,7 @@ router.get('/location/:id/gallery', function(req, res, next) {
   });
 });
 
-router.get('/location/:id/how-to-arrive', function(req, res, next) {
+router.get('/location/:id/how-to-get-there', function(req, res, next) {
   models.locations.findOne({
     where : { id : req.params.id }
   }).then(function(location){

@@ -21,8 +21,8 @@ async function loadData(){
   var doctors = require('./data/doctors.json');
   await models.doctors.bulkCreate(doctors);
   /* DOCTORS TIMETABLES */
-  //var doctors_timetables = require('./data/doctors_timetables.json');
-  //await models.doctors_timetables.bulkCreate(doctors_timetables);
+  var doctors_timetables = require('./data/doctors_timetables.json');
+  await models.doctors_timetables.bulkCreate(doctors_timetables);
   /* AREAS */
   var areas = require('./data/areas.json');
   await models.areas.bulkCreate(areas);
