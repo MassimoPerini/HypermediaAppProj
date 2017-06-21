@@ -42,7 +42,6 @@ router.get('/api/location', function(req, res, next) {
  *         description: The specified location
  */
 router.get('/api/location/:id', function(req, res, next) {
-    models.locations.hasMany(models.locations_timetables, {foreignKey: 'location_id'});
     models.locations.findOne({
         where : {id : req.params.id},
         include : [{

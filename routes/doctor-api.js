@@ -42,8 +42,6 @@ router.get('/api/doctor', function(req, res, next){
  *         description: The specified doctor
  */
 router.get('/api/doctor/:id', function(req, res, next){
-  models.doctors.hasMany(models.doctors_timetables, { foreignKey : 'doctor_id'});
-  models.doctors_timetables.hasOne(models.locations, { foreignKey : 'id'});
   models.doctors.findOne({
     where : { id : req.params.id },
     include : [{
