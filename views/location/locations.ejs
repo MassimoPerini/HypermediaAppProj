@@ -7,16 +7,19 @@
   <body>
     <%- include('../common/navbar', { page : '/location'}) %>
     <div class="main-content">
+      <div class="main-content">
       <h1><%= title %></h1>
       <section>
         <div class="locations">
           <% locations.forEach((location) => { %>
-            <div class="location">
-              <a href="/location/<%= location.id %>"><%= location.name %></a>
-            </div>
+            <section class="location image-with-title">
+              <img src="<%= location.header %>"/>
+              <h3><a href="/location/<%= location.id %>"><%= location.name %></a></h3>
+            </section>
           <% }); %>
         </div>
       </section>
+    </div>
     </div>
     <%- include('../common/footer') %>
   </body>

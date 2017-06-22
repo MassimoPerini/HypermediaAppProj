@@ -1970,19 +1970,19 @@ pre code {
   }
 }
 
-.container-fluid, .main-content {
+.container-fluid, .main-content, footer {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.container-fluid:before, .main-content:before, .container-fluid:after, .main-content:after {
+.container-fluid:before, .main-content:before, footer:before, .container-fluid:after, .main-content:after, footer:after {
   content: " ";
   display: table;
 }
 
-.container-fluid:after, .main-content:after {
+.container-fluid:after, .main-content:after, footer:after {
   clear: both;
 }
 
@@ -5032,10 +5032,10 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 .container > .navbar-header, nav.main-navigation .container > .header,
 .container > .navbar-collapse, nav.main-navigation
 .container > .landmarks,
-.container-fluid > .navbar-header, .main-content > .navbar-header, nav.main-navigation
-.container-fluid > .header, nav.main-navigation .main-content > .header,
-.container-fluid > .navbar-collapse, .main-content > .navbar-collapse, nav.main-navigation
-.container-fluid > .landmarks, nav.main-navigation .main-content > .landmarks {
+.container-fluid > .navbar-header, .main-content > .navbar-header, footer > .navbar-header, nav.main-navigation
+.container-fluid > .header, nav.main-navigation .main-content > .header, nav.main-navigation footer > .header,
+.container-fluid > .navbar-collapse, .main-content > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
+.container-fluid > .landmarks, nav.main-navigation .main-content > .landmarks, nav.main-navigation footer > .landmarks {
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -5044,10 +5044,10 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   .container > .navbar-header, nav.main-navigation .container > .header,
   .container > .navbar-collapse, nav.main-navigation
   .container > .landmarks,
-  .container-fluid > .navbar-header, .main-content > .navbar-header, nav.main-navigation
-  .container-fluid > .header, nav.main-navigation .main-content > .header,
-  .container-fluid > .navbar-collapse, .main-content > .navbar-collapse, nav.main-navigation
-  .container-fluid > .landmarks, nav.main-navigation .main-content > .landmarks {
+  .container-fluid > .navbar-header, .main-content > .navbar-header, footer > .navbar-header, nav.main-navigation
+  .container-fluid > .header, nav.main-navigation .main-content > .header, nav.main-navigation footer > .header,
+  .container-fluid > .navbar-collapse, .main-content > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
+  .container-fluid > .landmarks, nav.main-navigation .main-content > .landmarks, nav.main-navigation footer > .landmarks {
     margin-right: 0;
     margin-left: 0;
   }
@@ -5110,10 +5110,13 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   .navbar > .container .navbar-brand, nav.main-navigation > .container .navbar-brand, .navbar > .container nav.main-navigation .brand, nav.main-navigation .navbar > .container .brand, nav.main-navigation > .container .brand,
   .navbar > .container-fluid .navbar-brand, nav.main-navigation > .container-fluid .navbar-brand,
   .navbar > .main-content .navbar-brand, nav.main-navigation > .main-content .navbar-brand,
+  .navbar > footer .navbar-brand, nav.main-navigation > footer .navbar-brand,
   .navbar > .container-fluid nav.main-navigation .brand, nav.main-navigation
   .navbar > .container-fluid .brand, nav.main-navigation > .container-fluid .brand,
   .navbar > .main-content nav.main-navigation .brand, nav.main-navigation
-  .navbar > .main-content .brand, nav.main-navigation > .main-content .brand {
+  .navbar > .main-content .brand, nav.main-navigation > .main-content .brand,
+  .navbar > footer nav.main-navigation .brand, nav.main-navigation
+  .navbar > footer .brand, nav.main-navigation > footer .brand {
     margin-left: -15px;
   }
 }
@@ -5883,7 +5886,7 @@ a.badge:hover, a.badge:focus {
 }
 
 .container .jumbotron,
-.container-fluid .jumbotron, .main-content .jumbotron {
+.container-fluid .jumbotron, .main-content .jumbotron, footer .jumbotron {
   border-radius: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -5899,7 +5902,7 @@ a.badge:hover, a.badge:focus {
     padding-bottom: 48px;
   }
   .container .jumbotron,
-  .container-fluid .jumbotron, .main-content .jumbotron {
+  .container-fluid .jumbotron, .main-content .jumbotron, footer .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -8435,15 +8438,14 @@ input[type="checkbox"] {
   border-color: #00b2ff;
 }
 
-html, body {
+body {
   width: 100%;
   height: 100%;
-  padding: 40px 0;
+  padding-top: 80px;
 }
 
 header {
   min-height: 500px;
-  /* Create the parallax scrolling effect */
   background: no-repeat fixed center;
   background-size: cover;
   text-align: center;
@@ -8534,6 +8536,7 @@ header.doctor > div {
 }
 
 .main-content {
+  width: 100%;
   background-color: white;
 }
 
@@ -8830,8 +8833,7 @@ section.navigation-child .button {
   }
 }
 
-/*end*/
-.locations {
+.locations > .location {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -8853,22 +8855,43 @@ section.navigation-child .button {
 }
 
 @media (min-width: 992px) {
-  .locations {
+  .locations > .location {
     float: left;
     width: 50%;
   }
 }
 
 @media (min-width: 768px) {
-  .locations {
+  .locations > .location {
     float: left;
     width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  .locations {
+  .locations > .location {
     float: left;
-    width: 25%;
+    width: 50%;
   }
 }
+
+.image-with-title > img {
+  width: 100%;
+  position: relative;
+  margin: 8px;
+}
+
+.image-with-title > h3 {
+  position: absolute;
+  left: 2%;
+  top: 0%;
+  width: 70%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.image-with-title > h3 > a {
+  color: white;
+}
+
+/*end*/

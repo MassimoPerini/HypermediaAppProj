@@ -8,23 +8,21 @@ $navbar-default-link-hover-color: #7dbbf1;
 $background-color: #FFFFFF;
 $color-bar: #8dbbf6;
 
-
 @import "variables";
 @import "_bootstrap.scss";
 @import "bootswatch";
 @import "loading";
 
-html, body{
+body{
   width: 100%;
   height: 100%;
-  padding: 40px 0;
+  padding-top: $navbar-height;
 }
-
 
 header {
   min-height: 500px;
 
-  /* Create the parallax scrolling effect */
+  //Create the parallax scrolling effect
   background: no-repeat fixed center;
   background-size: cover;
 
@@ -50,6 +48,7 @@ header.doctor{
 
 //Defines the container
 .main-content{
+  width: 100%;
   @extend .container-fluid;
   background-color: white;
 }
@@ -95,9 +94,6 @@ nav.main-navigation {
 
 //New section (div class=
 
-
-
-
 //slideset
 .preview-set{
   @include make-md-column(12);
@@ -126,6 +122,8 @@ nav.main-navigation {
 
 
 footer{
+
+  @extend .container-fluid;
 
   >section{
     @include make-row;
@@ -204,15 +202,33 @@ nav.navigation-content{
   }
 }
 
+.locations{
+  >.location{
+    @include make-md-column(6);
+    @include make-xs-column(12);
+    @include make-sm-column(12);
+    @include make-lg-column(6);
+  }
+}
 
+.image-with-title{
+  >img{
+    width:100%;
+    position: relative;
+    margin: 8px;
+  }
+  >h3{
+    position: absolute;
+    left: 2%;
+    top: 0%;
+    width: 70%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    >a{
+      color: white;
+    }
+  }
+}
 
 
 /*end*/
-
-.locations
-{
-  @include make-md-column(6);
-  @include make-xs-column(12);
-  @include make-sm-column(12);
-  @include make-lg-column(3);
-}
