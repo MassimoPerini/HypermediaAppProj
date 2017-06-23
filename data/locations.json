@@ -26,10 +26,10 @@
     {
         "id": 3,
         "name": "Via Taormina 2",
-        "icon": "This locations is the home of all our experimental treatments, as well as our specialized analysis laboratory.",
+        "icon": "",
         "header": "/public/imgs/locations/taormina.jpg",
         "position": "posizione Via Taormina 2",
-        "description": "",
+        "description": "This locations is the home of all our experimental treatments, as well as our specialized analysis laboratory.",
         "htgt": "?",
         "gMaps": "",
         "tell": "+39 02347532",
