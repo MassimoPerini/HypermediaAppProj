@@ -15,14 +15,10 @@ router.get('/location', function(req, res, next){
 router.get('/location/:id', function(req, res, next){
   var data = {};
   models.locations.findOne({
-    where : { id : req.params.id }
-  }).then(function(location){
-    data.location = location;
-    models.locations_timetables.findAll({
-      where : { location_id : location.id }
-    }).then(function(timetables) {
-      res.render('location/location', { title: 'Location ' + data.location.name, location: data.location, timetables: timetables});
-    });
+    where : { id : req.params.id },
+    include: models.locations_timetables
+  }).then(function(location) {
+    res.render('location/location', { title: 'Location ' + location.name, location: location, timetables: location.locations_timetables});
   }).catch(function(error){
     debug(error);
     next(error);
@@ -41,7 +37,7 @@ router.get('/location/:id/how-to-get-there', function(req, res, next) {
   models.locations.findOne({
     where : { id : req.params.id }
   }).then(function(location){
-    res.render('location/htgt', { title: 'How to get to ' + location.name, location: location});
+    res.render('location/htgt', { title: 'How to get to ' + location.name, location: location, htgt: JSON.parse(location.htgt)});
   });
 });
 

@@ -17,28 +17,28 @@
     <%- include('../common/navbar', { page : '/location'}) %>
 
     <header class="location">
-      <div>
-        <h1><%= title %></h1>
-      </div>
     </header>
-
+    <center>
+      <h1><%= location.name %></h1>
+    </center>
     <section class="two-sided">
       <article>
+
         <!-- SHORT DESCRIPTION -->
         <div>
-          <h1>Description</h1>
+          <h2>Description</h2>
           <p>
             <%= location.description %>
           </p>
         </div>
         <!-- MAP POSITION -->
         <div>
-          <h1>Position</h1>
+          <h2>Position</h2>
           <iframe src="<%= location.gMaps %>" width="90%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <!-- TIMETABLE -->
         <div>
-          <h1>Timetable</h1>
+          <h2>Timetable</h2>
           <p>
             <table class="table">
               <thead>
@@ -64,7 +64,7 @@
         </div>
         <!-- CONTACTS -->
         <div>
-          <h1>Contacts</h1>
+          <h2>Contacts</h2>
           <ul>
             <li><%= location.tell %></li>
             <li><a href="mailto:<%= location.email %>"><%= location.email %></a></li>
@@ -74,7 +74,7 @@
 
       <aside>
         <div class="imagecard">
-          <a href="#">
+          <a href="/location/<%=location.id%>/services">
             <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
               <center><img src="/public/imgs/service.png" style="color:#BB7824" width="100%"></img></center>
             </div>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="imagecard">
-          <a href="#">
+          <a href="/location/<%=location.id%>/how-to-get-there">
             <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
               <center><img src="/public/imgs/maps.png" style="color:#BB7824" width="100%"></img></center>
             </div>
@@ -96,7 +96,7 @@
         </div>
 
         <div class="imagecard">
-          <a href="#">
+          <a href="/location/<%=location.id%>/gallery">
             <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
               <center><img src="/public/imgs/gallery.png" style="color:#BB7824" width="100%"></img></center>
             </div>
