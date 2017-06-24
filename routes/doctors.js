@@ -19,7 +19,14 @@ router.get('/doctor/:id', function(req, res, next){
     var data = {};
     models.doctors.findOne({
         where : { id : req.params.id },
-        include: [models.doctors_timetables]
+        include: [{
+          model: models.doctors_timetables,
+          atributes: ['day', 'opening_time', 'closing_time'],
+          include : [{
+            model: models.locations,
+            attributes: ['id', 'name']
+          }]
+        }]
     }).then(function(doctor){
       res.render('doctor', { title: doctor.fullname, doctor: doctor, timetables: doctor.doctors_timetables});
     }).catch(function(error){

@@ -55,7 +55,7 @@ db.doctors.hasMany(db.doctors_timetables, { foreignKey : 'doctor_id'});
 // Locations - Locations timetables
 db.locations.hasMany(db.locations_timetables, {foreignKey: 'location_id'});
 // Location
-db.doctors_timetables.hasOne(db.locations, { foreignKey : 'id'});
+db.doctors_timetables.belongsTo(db.locations, { foreignKey : 'working_location_id'});
 // Location-Services
 db.locations.belongsToMany(db.services, {through: 'locations_services'});
 db.services.belongsToMany(db.locations, {through: 'locations_services'});

@@ -27,28 +27,75 @@
         </div>
       </header>
 
-      <div class="main-content">
-        <section>
-          <section>
-            <article>
-                <h1>About <%=doctor.fullname%></h1>
-                <p><%=doctor.description%></p>
-            </article>
-            <article>
-              <h1>Where you can find me</h1>
-              <p><%= timetables %></p>
-            </article>
-          </section>
+      <section class="two-sided">
+        <article>
+          <!-- DOCTOR CURRICULUM -->
+          <div>
+            <h2>About <%=doctor.fullname%></h2>
+              <p><%=doctor.description%></p>
+          </div>
+          <!-- DOCTOR TIMETABLE -->
+          <div>
+            <h2>Where you can find me</h2>
+            <p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% var i; for(var i=0; i<7; i++) { if(timetables[i] != null) { %>
+                  <tr>
+                    <td><%= timetables[i].day %></td>
+                    <td><%= timetables[i].opening_time %> - <%= timetables[i].closing_time %></td>
+                    <td><a href="/location/<%= timetables[i].location.id %>"><%= timetables[i].location.name %></a></td>
+                  </tr>
+                  <% } } %>
+                </tbody>
+              </table>
+            </p>
+          </div>
+        </article>
+        
+        <aside>
+          <div class="imagecard">
+            <a href="/service/doctor/<%=doctor.id%>">
+              <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+                <center><img src="/public/imgs/service.png" style="color:#BB7824" width="100%"></img></center>
+              </div>
+              <div class="imagecard_title">
+                <h5>Doctor's service
+              </div>
+            </a>
+          </div>
+          
+          <div class="imagecard">
+            <a href="/service/?">
+              <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+                <center><img src="/public/imgs/boh.png" style="color:#BB7824" width="100%"></img></center>
+              </div>
+              <div class="imagecard_title">
+                <h5>[OPTIONAL]Service responsible
+              </div>
+            </a>
+          </div>
 
-          <aside>
-            <section>
-              <a class="button" href="#">Ciao</a>
-            </section>
-          </aside>
-        </section>
+          <div class="imagecard">
+            <a href="/service/?">
+              <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+                <center><img src="/public/imgs/boh.png" style="color:#BB7824" width="100%"></img></center>
+              </div>
+              <div class="imagecard_title">
+                <h5>[OPTIONAL]Area responsible
+              </div>
+            </a>
+          </div>
+        </aside>
+      </section>
 
-
-      </div>
     <%- include('common/footer') %>
   </body>
 </html>
