@@ -1,6 +1,7 @@
 /**
- * Created by massimo on 10/06/17.
- */
+  This files provides all the endpoints for pages related to Services
+  E.g. Single service and list of all service
+**/
 var debug = require('debug')('content');
 
 var express = require('express');

@@ -50,14 +50,15 @@ db.services.belongsToMany(db.locations, { through: 'locations_services'});
 // Services - Doctors
 db.doctors.belongsToMany(db.services, { through: 'doctors_services'});
 db.services.belongsToMany(db.doctors, { through: 'doctors_services'});
-
 // Doctors - Doctors timetables
 db.doctors.hasMany(db.doctors_timetables, { foreignKey : 'doctor_id'});
 // Locations - Locations timetables
 db.locations.hasMany(db.locations_timetables, {foreignKey: 'location_id'});
 // Location
 db.doctors_timetables.hasOne(db.locations, { foreignKey : 'id'});
-
+// Location-Services
+db.locations.belongsToMany(db.services, {through: 'locations_services'});
+db.services.belongsToMany(db.locations, {through: 'locations_services'});
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

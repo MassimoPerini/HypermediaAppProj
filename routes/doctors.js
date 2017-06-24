@@ -1,5 +1,8 @@
+/**
+  This files provides all the endpoints for pages related to Doctors
+  E.g. Single doctor and list of all doctors in A-Z order
+**/
 var debug = require('debug')('content');
-
 var express = require('express');
 var models = require('../models');
 
@@ -15,14 +18,10 @@ router.get('/doctor', function(req, res, next){
 router.get('/doctor/:id', function(req, res, next){
     var data = {};
     models.doctors.findOne({
-        where : { id : req.params.id }
+        where : { id : req.params.id },
+        include: [models.doctors_timetables]
     }).then(function(doctor){
-        data.doctor = doctor;
-        models.doctors_timetables.findAll({
-          where : { doctor_id : doctor.id }
-        }).then(function(timetables) {
-          res.render('doctor', { title: data.doctor.fullname, doctor: data.doctor, timetables: timetables});
-        });
+      res.render('doctor', { title: doctor.fullname, doctor: doctor, timetables: doctor.doctors_timetables});
     }).catch(function(error){
         debug(error);
         next(error);

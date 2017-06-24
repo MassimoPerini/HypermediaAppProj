@@ -1,4 +1,4 @@
-/* PARAMS */
+/* ------------ PARAMS ------------- */
 $brand-primary: #105592;
 $navbar-height: 80px;
 $navbar-default-bg: $brand-primary;
@@ -15,12 +15,14 @@ $aside-size: 2;
 @import "bootswatch";
 @import "loading";
 
+/* ------------ BODY ------------- */
 body{
   width: 100%;
   height: 100%;
   padding-top: $navbar-height;
 }
 
+/* ------------ HEADER ------------- */
 header {
   min-height: 500px;
 
@@ -55,6 +57,7 @@ header.doctor{
   }
 }
 
+/* ------------ NAVBAR ------------- */
 nav.navigation-content{
   @extend .btn-group;
   >.page{
@@ -101,9 +104,7 @@ nav.main-navigation {
   }
 }
 
-//New section (div class=
-
-//slideset
+/* ------------ CAROUSEL (HOME) ------------- */
 .preview-set{
   @include make-md-column(12);
   @extend .well;
@@ -126,9 +127,9 @@ nav.main-navigation {
 //  border-radius: 2px;
     height: 65px;
     font-size: 22pt;
-
 }
 
+/* ------------ CONTENTS ------------- */
 .main-content{
   width: 100%;
   @extend .container-fluid;
@@ -157,10 +158,10 @@ nav.main-navigation {
         @include make-sm-column(12);
         @include make-lg-column(12);
       }
-      //Gli one page saranno <section> - <article> <article>... </section>
     }
 }
 
+// Two sided is used in 2-sided pages
 .two-sided{
   @extend .container-fluid;
   >article{
@@ -177,6 +178,7 @@ nav.main-navigation {
     @include make-md-column($aside-size);
     @include make-lg-column($aside-size);
 
+    // Imagecard is the button with images
     .imagecard{
 
       @include make-xs-column(4);
@@ -228,7 +230,10 @@ nav.main-navigation {
   }
 }
 
-
+// List Large (locations)
+.list-lg{
+  @extend container-fluid
+}
 
 .locations{
   >.location{
@@ -258,6 +263,7 @@ nav.main-navigation {
   }
 }
 
+/* ------------ FOOTER ------------- */
 footer{
 
   @extend .container-fluid;

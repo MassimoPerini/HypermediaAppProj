@@ -1,3 +1,6 @@
+/**
+  This files provides all the endpoints for the who we are pages
+**/
 var express = require('express');
 var router = express.Router();
 

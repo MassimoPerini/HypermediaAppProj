@@ -1,5 +1,8 @@
+/**
+  This files provides all the endpoints for APIs related to Doctors
+  E.g. Single doctor and list of all doctors
+**/
 var debug = require('debug')('api');
-
 var express = require('express');
 var models = require('../models');
 
