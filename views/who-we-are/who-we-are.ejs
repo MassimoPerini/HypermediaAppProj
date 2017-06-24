@@ -3,48 +3,40 @@
   <head>
     <title><%= title %></title>
     <%- include('../common/imports') %>
+    <style>
+      header{
+        background-image: url("../public/imgs/bg/doctor.jpg");
+      }
+    </style>
   </head>
   <body>
     <%- include('../common/navbar', {page : '/who-we-are'}) %>
-    <div class="main-content">
-      <section>
-        <img src="../public/imgs/img1.jpg" alt="main-image"/>
-      </section>
-      <hr />
-      <section class="navigation-child">
+
+    <header>
+      <center>
+        <img src="../public/imgs/img2.png">
+      </center>
+    </header>
+    <center>
+      <h1>Who we are</h1>
+    </center>
+
+    <section class="two-sided">
+      <article>
+        <!-- CLINIC -->
         <div>
-          <a href="#" class="button" role="button">Explore the services</a>
-        </div>
-        <div>
-          <a href="#" class="button" role="button">Explore the areas</a>
-        </div>
-        <div>
-          <a href="#" class="button" role="button">Our locations</a>
-        </div>
-        <div>
-          <a href="#" class="button" role="button">Explore the areas</a>
-        </div>
-        <div>
-          <a href="#" class="button" role="button">Our locations</a>
-        </div>        <div>
-          <a href="#" class="button" role="button">Explore the areas</a>
-        </div>
-        <div>
-          <a href="#" class="button" role="button">Our locations</a>
-        </div>
-      </section>
-      <section>
-        <article class="who-we-are">
-          <h1>Our Clinic</h1>
+          <h2>Our Clinic</h2>
           <p>CPM Clinic is an organization committed to clinical practice, providing expert, whole-person care to everyone who needs healing. For more than 50 years, people from all walks of life have found answers at CPM Clinic. CPM is a treasury of medical knowledge, where each day our outstanding staff delivers the highest-quality, highest-value care to our patients. With assist more than 500000 people every year.
           </p>
           <p>Diversity and inclusion are integral to CPM mission to provide excellent, culturally relevant care in a welcoming environment to patients from a wide variety of backgrounds and creating an inclusive work environment where differences are valued, allowing individuals to achieve and contribute to their fullest potential.
           This commitment to diversity is woven into the fabric of CPM Clinic — we embrace these values as we serve our patients, employees, students, suppliers and communities.
           Our mission is to inspire hope and contribute to health and well-being by providing the best care to every patient through integrated clinical practice, education and research.
           </p>
-          
+        </div>
+        
+        <!-- VALUE STATEMENTS -->
+        <div>
           <h2>Our value statements</h2>
-          
           <h3>Respect</h3>
           <p>Treat everyone in our diverse community, including patients, their families and colleagues, with dignity.</p>
           
@@ -62,11 +54,60 @@
           
           <h3>Excellence</h3>
           <p>Deliver the best outcomes and highest quality service through the dedicated effort of every team member."</p>
-          <a href='/who-we-are/statistics'>Statistics</a><br>
-          <a href='/who-we-are/photogallery'>Photogallery</a><br>
-        </article>
-      </section>
-    </div>
+        </div>
+
+        <div>
+          <hr />
+          <section class="navigation-child">
+            <div>
+              <a href="#" class="button" role="button">Explore the services</a>
+            </div>
+            <div>
+              <a href="#" class="button" role="button">Explore the areas</a>
+            </div>
+            <div>
+              <a href="#" class="button" role="button">Our locations</a>
+            </div>
+            <div>
+              <a href="#" class="button" role="button">Explore the areas</a>
+            </div>
+            <div>
+              <a href="#" class="button" role="button">Our locations</a>
+            </div>        <div>
+              <a href="#" class="button" role="button">Explore the areas</a>
+            </div>
+            <div>
+              <a href="#" class="button" role="button">Our locations</a>
+            </div>
+          </section>
+        </div>
+      </article>
+      
+      <aside>
+        <div class="imagecard">
+          <a href="/who-we-are/gallery">
+            <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+              <center><img src="/public/imgs/gallery.png" style="color:#BB7824" width="100%"></img></center>
+            </div>
+            <div class="imagecard_title">
+              <h5>Photo gallery</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="imagecard">
+          <a href="/who-we-are/statistics">
+            <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+              <center><img src="/public/imgs/statistics.png" style="color:#BB7824" width="100%"></img></center>
+            </div>
+            <div class="imagecard_title">
+              <h5>Statistics</h5>
+            </div>
+          </a>
+        </div>
+      </aside>
+    
+    </section>
     <%- include('../common/footer') %>
   </body>
 </html>
