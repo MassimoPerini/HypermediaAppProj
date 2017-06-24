@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
  	  name: DataTypes.STRING,
     icon: DataTypes.STRING,
     header: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     responsible: {
       type: DataTypes.INTEGER,
       references: {

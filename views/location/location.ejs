@@ -13,64 +13,99 @@
     <%- include('../common/navbar', { page : '/location'}) %>
 
     <header class="location">
-      <div>
-        <h1><%= title %></h1>
-      </div>
     </header>
+    <center>
+      <h1><%= location.name %></h1>
+    </center>
+    <section class="two-sided">
+      <article>
 
-    <div class="main-content">
-      <section>
-        <section>
-          <article>
-            <h1>Position</h1>
-              <iframe src="<%= location.gMaps %>" width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <p>
-              <%= location.description %>
-            </p>
-          </article>
-          <article>
-            <h1>Timetable</h1>
-            <p>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
-                    <th>Sunday</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <% var i; for(var i=0; i<7; i++) { %>
-                      <td> <%= (timetables[i] == null ? "closed" : (timetables[i].opening_time + " - " + timetables[i].closing_time)) %></td>
-                    <% } %>                  
-                  </tr>
-                </tbody>
-              </table>
-            </p>
-          </article>
-          <article>
-            <h1>Contacts</h1>
-            <ul>
-              <li><%= location.tell %></li>
-              <li><a href="mailto:<%= location.email %>"><%= location.email %></a></li>
-            </ul>
-          </article>
-        </section>
+        <!-- SHORT DESCRIPTION -->
+        <div>
+          <h2>Description</h2>
+          <p>
+            <%= location.description %>
+          </p>
+        </div>
+        <!-- MAP POSITION -->
+        <div>
+          <h2>Position</h2>
+          <iframe src="<%= location.gMaps %>" width="90%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <!-- TIMETABLE -->
+        <div>
+          <h2>Timetable</h2>
+          <p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <% var i; for(var i=0; i<7; i++) { %>
+                    <td> <%= (timetables[i] == null ? "closed" : (timetables[i].opening_time + " - " + timetables[i].closing_time)) %></td>
+                  <% } %>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+        </div>
+        <!-- CONTACTS -->
+        <div>
+          <h2>Contacts</h2>
+          <ul>
+            <li><%= location.tell %></li>
+            <li><a href="mailto:<%= location.email %>"><%= location.email %></a></li>
+          </ul>
+        </div>
+      </article>
 
-        <aside>
-          <section>
-            <a class="button" href="/location/<%= location.id %>/gallery">Gallery</a>
-            <a class="button" href="/location/<%= location.id %>/how-to-arrive">How to Arrive</a>
-            <a class="button" href="/location/<%= location.id %>/available-services">Available Services</a>
-          </section>
-        </aside>
-      </section>
-    </div>
-    <%- include('../common/footer') %>    
+      <aside>
+        <div class="imagecard">
+          <a href="/location/<%=location.id%>/services">
+            <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+              <center><img src="/public/imgs/service.png" style="color:#BB7824" width="100%"></img></center>
+            </div>
+            <div class="imagecard_title">
+              <h5>Available services
+            </div>
+          </a>
+        </div>
+
+        <div class="imagecard">
+          <a href="/location/<%=location.id%>/how-to-get-there">
+            <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+              <center><img src="/public/imgs/maps.png" style="color:#BB7824" width="100%"></img></center>
+            </div>
+            <div class="imagecard_title">
+              <h5>How to get here
+            </div>
+          </a>
+        </div>
+
+        <div class="imagecard">
+          <a href="/location/<%=location.id%>/gallery">
+            <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+              <center><img src="/public/imgs/gallery.png" style="color:#BB7824" width="100%"></img></center>
+            </div>
+            <div class="imagecard_title">
+              <h5>Photo gallery
+            </div>
+          </a>
+        </div>
+
+      </aside>
+
+    </section>
+
+    <%- include('../common/footer') %>
   </body>
 </html>

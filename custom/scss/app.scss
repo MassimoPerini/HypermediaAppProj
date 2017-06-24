@@ -1,3 +1,4 @@
+/* PARAMS */
 $brand-primary: #105592;
 $navbar-height: 80px;
 $navbar-default-bg: $brand-primary;
@@ -7,24 +8,23 @@ $navbar-default-link-hover-bg:#272727;
 $navbar-default-link-hover-color: #7dbbf1;
 $background-color: #FFFFFF;
 $color-bar: #8dbbf6;
-
+$aside-size: 2;
 
 @import "variables";
 @import "_bootstrap.scss";
 @import "bootswatch";
 @import "loading";
 
-html, body{
+body{
   width: 100%;
   height: 100%;
-  padding: 40px 0;
+  padding-top: $navbar-height;
 }
-
 
 header {
   min-height: 500px;
 
-  /* Create the parallax scrolling effect */
+  //Create the parallax scrolling effect
   background: no-repeat fixed center;
   background-size: cover;
 
@@ -36,6 +36,13 @@ header {
     @include make-xs-column(12);
     @include make-sm-column(12);
     @include make-lg-column(12);
+
+    >h1{
+      background-color: $navbar-default-link-hover-bg;
+      color: white;
+      display: inline-block;
+      opacity: 0.85;
+    }
   }
 }
 
@@ -48,10 +55,11 @@ header.doctor{
   }
 }
 
-//Defines the container
-.main-content{
-  @extend .container-fluid;
-  background-color: white;
+nav.navigation-content{
+  @extend .btn-group;
+  >.page{
+    @extend .btn, .btn-default;
+  }
 }
 
 //Navbar
@@ -95,9 +103,6 @@ nav.main-navigation {
 
 //New section (div class=
 
-
-
-
 //slideset
 .preview-set{
   @include make-md-column(12);
@@ -124,8 +129,138 @@ nav.main-navigation {
 
 }
 
+.main-content{
+  width: 100%;
+  @extend .container-fluid;
+  background-color: white;
+    >section {
+        @include make-row;
+        @include clearfix;
+      > section{
+        @extend div;
+        @include make-md-column(9);
+        @include make-xs-column(12);
+        @include make-sm-column(9);
+        @include make-lg-column(9);
+      }
+      > aside {
+        @extend div;
+        @include make-md-column(3);
+        @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-lg-column(3);
+      }
+      >article{
+        @extend div;
+        @include make-md-column(12);
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-lg-column(12);
+      }
+      //Gli one page saranno <section> - <article> <article>... </section>
+    }
+}
+
+.two-sided{
+  @extend .container-fluid;
+  >article{
+    @extend div;
+    @include make-xs-column(12);
+    @include make-sm-column(12 - $aside-size);
+    @include make-md-column(12 - $aside-size);
+    @include make-lg-column(12 - $aside-size);
+  }
+  >aside{
+    @extend div;
+    @include make-xs-column(12);
+    @include make-sm-column($aside-size);
+    @include make-md-column($aside-size);
+    @include make-lg-column($aside-size);
+
+    .imagecard{
+
+      @include make-xs-column(4);
+      @include make-sm-column(12);
+      @include make-md-column(12);
+      @include make-lg-column(12);
+
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+      position: relative;
+      background: #fff;
+      box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+
+      padding-right: 0;
+      padding-left: 0;
+
+      .imagecard_title{
+        text-align: center;
+        padding-bottom: 0.75rem;
+        position: relative;
+      }
+      .imagecard_header{
+        padding: 20px;
+      }
+
+      >a{
+        width: 100%;
+        height: 100%;
+        display: block;
+        border:0;
+        text-decoration: none;
+        color: #525c65;
+        transition: color 0.3s ease;
+      }
+
+      >a:hover{
+        box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+      }
+
+    }
+
+    .imagecard:hover {
+      box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+    }
+
+  }
+}
+
+
+
+.locations{
+  >.location{
+    @include make-md-column(6);
+    @include make-xs-column(12);
+    @include make-sm-column(12);
+    @include make-lg-column(6);
+  }
+}
+
+.image-with-title{
+  >img{
+    width:100%;
+    position: relative;
+    margin: 8px;
+  }
+  >h3{
+    position: absolute;
+    left: 2%;
+    top: 0%;
+    width: 70%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    >a{
+      color: white;
+    }
+  }
+}
 
 footer{
+
+  @extend .container-fluid;
 
   >section{
     @include make-row;
@@ -151,7 +286,6 @@ footer{
       color:$navbar-default-link-hover-color;
     }
   }
-
 }
 
 //Home page
@@ -166,53 +300,5 @@ section.navigation-child{
     font-size:16px;
   }
 }
-/*Right bar and main content*/
-.main-content{
-    >section {
-        @include make-row;
-        @include clearfix;
-      > section{
-        @extend div;
-        @include make-md-column(9);
-        @include make-xs-column(12);
-        @include make-sm-column(9);
-        @include make-lg-column(9);
-      }
-      > aside {
-        @extend div;
-        background-color: $color-bar;
-        @include make-md-column(3);
-        @include make-xs-column(12);
-        @include make-sm-column(3);
-        @include make-lg-column(3);
-      }
-      >article{
-        @extend div;
-        @include make-md-column(12);
-        @include make-xs-column(12);
-        @include make-sm-column(12);
-        @include make-lg-column(12);
-      }
-      //Gli one page saranno <section> - <article> <article>... </section>
-    }
-}
-
-nav.navigation-content{
-  @extend .btn-group;
-  >.page{
-    @extend .btn, .btn-default;
-  }
-}
-
-
-
 
 /*end*/
-
-.locations
-{
-  @include make-md-column(6);
-  @include make-xs-column(12);
-  @include make-sm-column(12);
-  @include make-lg-column(3);
-}

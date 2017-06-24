@@ -2,27 +2,30 @@
   {
     "id": 1,
     "name": "Cardiology",
-    "description": "",
+    "description": "Cardiology (from Greek καρδίᾱ kardiā, \"heart\" and -λογία -logia, \"study\") is a branch of medicine dealing with disorders of the heart as well as parts of the circulatory system. The field includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart failure, valvular heart disease and electrophysiology. Physicians who specialize in this field of medicine are called cardiologists, a specialty of internal medicine. Pediatric cardiologists are pediatricians who specialize in cardiology. Physicians who specialize in cardiac surgery are called cardiothoracic surgeons or cardiac surgeons, a specialty of general surgery. Although the cardiovascular system is inextricably linked to blood, cardiology is relatively unconcerned with hematology and its diseases. Some obvious exceptions that affect the function of the heart would be blood tests (electrolyte disturbances, troponins), decreased oxygen carrying capacity (anemia, hypovolemic shock), and coagulopathies.",
     "locations" : [1, 2],
     "responsible" : 2
   },
   {
     "id": 2,
     "name": "Dermatology",
-    "description": "",
-    "locations" : [1]
+    "description": "Dermatology (from ancient Greek δέρμα, derma which means skin and λογία, logia) is the branch of medicine dealing with the skin, nails, hair and its diseases. It is a specialty with both medical and surgical aspects. A dermatologist treats diseases, in the widest sense, and some cosmetic problems of the skin, scalp, hair, and nails.",
+    "locations" : [1],
+    "responsible" : 4
   },
   {
     "id": 3,
     "name": "Eye care",
-    "description": "",
-    "locations" : [1,3]
+    "description": "is a health care profession which involves examining the eyes and applicable visual systems for defects or abnormalities as well as the medical diagnosis and management of eye disease. Traditionally, the field of optometry began with the primary focus of correcting refractive error through the use of spectacles. Modern day optometry, however, has evolved through time so that the educational curriculum additionally includes intensive medical training in the diagnosis and management of ocular disease in countries where the profession is established and regulated. Optometrists (also known as Doctors of Optometry in the US and Canada for those holding the O.D. degree or Ophthalmic Opticians in the UK) are medical professionals who provide primary eyecare through comprehensive eye examinations to detect and treat various visual abnormalities and eye diseases.",
+    "locations" : [1,3],
+    "responsible" : 6
   },
   {
     "id": 4,
     "name": "Gynecology",
-    "description": "",
-    "locations" : []
+    "locations" : [1],
+    "description" : "Gynaecology or gynecology (see spelling differences) is the medical practice dealing with the health of the female reproductive systems (vagina, uterus, and ovaries) and the breasts. Literally, outside medicine, the term means \"the science of women\". Its counterpart is andrology, which deals with medical issues specific to the male reproductive system. Almost all modern gynaecologists are also obstetricians (see obstetrics and gynaecology). In many areas, the specialities of gynaecology and obstetrics overlap.",
+    "responsible" : 7
   },
   {
     "id": 5,

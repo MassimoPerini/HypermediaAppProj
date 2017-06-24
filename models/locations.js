@@ -23,8 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     email: DataTypes.STRING
   },{
   	timestamps: true,
-    classMethods : {
-    }
+    classMethods : {}
   });
 
   return locations;

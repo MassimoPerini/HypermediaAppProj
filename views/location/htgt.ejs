@@ -12,12 +12,73 @@
   </head>
   <body>
     <%- include('../common/navbar', { page : '/location'}) %>
-
     <header class="location">
-      <div>
-        <h1><%= title %></h1>
-      </div>
     </header>
+    <center>
+      <h1>How to get to <%= location.name %></h1>
+    </center>
+    <section class="two-sided">
+      <article>
+
+        <!-- SHORT DESCRIPTION -->
+        <div>
+          <h2>Description</h2>
+          <h4><img src='/public/imgs/car.png' width="64px"> By car</h4>
+          <p>
+            <%=htgt.car%>
+          </p>
+          <h4><img src='/public/imgs/bus.png' width="64px"> By bus</h4>
+          <p>
+            <%=htgt.bus%>
+          </p>
+          <h4><img src='/public/imgs/tube.png' width="64px"> By tube</h4>
+          <p>
+            <%=htgt.tube%>
+          </p>
+          <h4><img src='/public/imgs/sub.png' width="64px"> By sub</h4>
+          <p>
+            Maybe you need to go deeper? 
+          </p>
+        </div>
+      </article>
+
+      <aside>
+        <div class="imagecard">
+          <a href="/location/<%=location.id%>/">
+            <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+              <center><img src="/public/imgs/location.png" style="color:#BB7824" width="100%"></img></center>
+            </div>
+            <div class="imagecard_title">
+              <h5>Back to location
+            </div>
+          </a>
+        </div>
+
+        <div class="imagecard">
+          <a href="/location/<%=location.id%>/services">
+            <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+              <center><img src="/public/imgs/service.png" style="color:#BB7824" width="100%"></img></center>
+            </div>
+            <div class="imagecard_title">
+              <h5>Available services
+            </div>
+          </a>
+        </div>
+
+        <div class="imagecard">
+          <a href="/location/<%=location.id%>/gallery">
+            <div class="imagecard_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+              <center><img src="/public/imgs/gallery.png" style="color:#BB7824" width="100%"></img></center>
+            </div>
+            <div class="imagecard_title">
+              <h5>Photo gallery
+            </div>
+          </a>
+        </div>
+
+      </aside>
+
+    </section>
 
     <div class="main-content">
       <section>
@@ -41,6 +102,6 @@
         </aside>
       </section>
     </div>
-    <%- include('../common/footer') %>    
+    <%- include('../common/footer') %>
   </body>
 </html>
