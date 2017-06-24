@@ -104,7 +104,42 @@ nav.main-navigation {
   }
 }
 
-/* ------------ CAROUSEL (HOME) ------------- */
+/* ------------ COMPONENTS ------------- */
+// Cards
+.card{
+  box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.15);
+  transition: 0.3s;
+  border-radius: 4px;
+  background: #fff;
+  >a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border:0;
+    text-decoration: none;
+    color: #525c65;
+    transition: color 0.3s ease;
+  }
+  >a:hover{
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.2);
+  }
+  .card-header{
+    padding: 20px;
+    background-color:rgba(187, 120, 36, 0.1);
+  }
+  .card-text{
+    text-align: center;
+    color: black;
+  }
+  img{
+    width:100%;
+  }
+}
+.card:hover{
+  box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.2);
+}
+
+//Carousel (home)
 .preview-set{
   @include make-md-column(12);
   @extend .well;
@@ -178,90 +213,51 @@ nav.main-navigation {
     @include make-md-column($aside-size);
     @include make-lg-column($aside-size);
 
-    // Imagecard is the button with images
-    .imagecard{
-
+    .card{
       @include make-xs-column(4);
       @include make-sm-column(12);
       @include make-md-column(12);
       @include make-lg-column(12);
 
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      text-align: left;
-      position: relative;
-      background: #fff;
-      box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
-      border-radius: 4px;
-      transition: all 0.3s ease;
-
       padding-right: 0;
       padding-left: 0;
-
-      .imagecard_title{
-        text-align: center;
-        padding-bottom: 0.75rem;
-        position: relative;
-      }
-      .imagecard_header{
-        padding: 20px;
-      }
-
-      >a{
-        width: 100%;
-        height: 100%;
-        display: block;
-        border:0;
-        text-decoration: none;
-        color: #525c65;
-        transition: color 0.3s ease;
-      }
-
-      >a:hover{
-        box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
-      }
+      margin-bottom: 40px;
 
     }
 
-    .imagecard:hover {
-      box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
-    }
+  }
+}
 
+// List base (defines images cards etc)
+.list{
+  @extend div;
+  >article{
+    margin-bottom: 2%;
   }
 }
 
 // List Large (locations)
 .list-lg{
-  @extend container-fluid
-}
-
-.locations{
-  >.location{
-    @include make-md-column(6);
+  @extend .list;
+  >article{
     @include make-xs-column(12);
-    @include make-sm-column(12);
+    @include make-sm-column(6);
+    @include make-md-column(6);
     @include make-lg-column(6);
   }
 }
 
-.image-with-title{
-  >img{
-    width:100%;
-    position: relative;
-    margin: 8px;
-  }
-  >h3{
-    position: absolute;
-    left: 2%;
-    top: 0%;
-    width: 70%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    >a{
-      color: white;
-    }
+// List Medium (Areas)
+.list-md{
+  @extend .list;
+  >article{
+    @include make-xs-column(12);
+    @include make-sm-column(2);
+    @include make-md-column(2);
+    @include make-lg-column(2);
   }
 }
+
 
 /* ------------ FOOTER ------------- */
 footer{
