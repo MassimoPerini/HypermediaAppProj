@@ -1,5 +1,8 @@
+/**
+  This files provides all the endpoints for APIs related to Services
+  E.g. Single service and list of all services
+**/
 var debug = require('debug')('api');
-
 var express = require('express');
 var models = require('../models');
 

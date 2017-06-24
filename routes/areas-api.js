@@ -1,5 +1,8 @@
+/**
+  This files provides all the endpoints for APIs related to Areas
+  E.g. Single area and list of all areas
+**/
 var debug = require('debug')('api');
-
 var express = require('express');
 var models = require('../models');
 

@@ -1,5 +1,8 @@
+/**
+  This files provides all the endpoints for APIs related to Locations
+  E.g. Single location and list of all locations
+**/
 var debug = require('debug')('api');
-
 var express = require('express');
 var models = require('../models');
 

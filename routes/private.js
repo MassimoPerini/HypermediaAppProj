@@ -1,6 +1,8 @@
+/**
+  This file provides all the endpoints for the private portal
+**/
 var express = require('express');
 var models = require('../models');
-
 var router = express.Router();
 
 var passport = require('../config/auth.js');

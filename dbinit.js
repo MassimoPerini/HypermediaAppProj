@@ -40,7 +40,9 @@ async function loadData(){
     await models.areas.findById(area.id).then((_area) => {_area.setLocations(area.locations);})
   }
   /* LOCATION-SERVICES */
-
+  for (var service of services){
+    await models.services.findById(service.id).then((_service) => {_service.setLocations(service.locations);})
+  }
   // End function
   return true;
 }
