@@ -6,26 +6,25 @@
   </head>
   <body>
     <%- include('../common/navbar', { page : '/location'}) %>
-    <!--<div class="list-lg">
+
+    <div class="container-fluid">
+
       <h1><%= title %></h1>
 
-    </div>-->
-
-    <div class="main-content">
-      <div class="main-content">
-      <h1><%= title %></h1>
-      <section>
-        <div class="locations">
-          <% locations.forEach((location) => { %>
-            <section class="location image-with-title">
-              <img src="<%= location.header %>"/>
-              <h3><a href="/location/<%= location.id %>"><%= location.name %></a></h3>
-            </section>
-          <% }); %>
-        </div>
+      <section class="list-lg">
+        <% locations.forEach((location) => { %>
+          <article>
+            <div class="card">
+              <a href="/location/<%= location.id %>">
+                <img class="card-image" src="<%= location.header %>"/>
+                <h3 class="card-text"><%= location.name %></h3>
+              </a>
+            </div>
+          </article>
+        <% }); %>
       </section>
+
     </div>
-  </div>
     <%- include('../common/footer') %>
   </body>
 </html>

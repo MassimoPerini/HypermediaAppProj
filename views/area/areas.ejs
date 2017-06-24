@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+      <%- include('../common/imports') %>
+  </head>
+  <body>
+    <%- include('../common/navbar', { page : '/area'}) %>
+
+    <div class="container-fluid">
+
+      <h1><%= title %></h1>
+
+      <section class="list-md">
+        <% areas.forEach((area) => { %>
+          <article>
+            <div class="card">
+              <a href="/area/<%= area.id %>">
+                <div class="card-header">
+                  <img class="card-image" src="<%= area.icon %>"/>
+                </div>
+                <h4 class="card-text"><%= area.name %></h4>
+              </a>
+            </div>
+          </article>
+        <% }); %>
+      </section>
+
+    </div>
+    <%- include('../common/footer') %>
+  </body>
+</html>
