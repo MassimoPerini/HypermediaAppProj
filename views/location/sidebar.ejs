@@ -1,0 +1,53 @@
+<aside>
+    <% if(page != 'location') { %>
+    <div class="card">
+        <a href="/location/<%=location.id%>/">
+        <div class="card-header">
+            <center><img src="/public/imgs/location.svg"></img></center>
+        </div>
+        <div class="card-text">
+            <h5>Back to location</h5>
+        </div>
+        </a>
+    </div>
+    <% } %>
+
+    <% if(page != 'available-services') { %>
+    <div class="card">
+        <a href="/location/<%=location.id%>/available-services">
+        <div class="card-header">
+            <center><img src="/public/imgs/service.svg"></img></center>
+        </div>
+        <div class="card-text">
+            <h5>Available services</h5>
+        </div>
+        </a>
+    </div>
+    <% } %>
+
+    <% if(page != 'htgt') { %>
+    <div class="card">
+        <a href="/location/<%=location.id%>/how-to-get-there">
+        <div class="card-header">
+            <center><img src="/public/imgs/maps.svg"></img></center>
+        </div>
+        <div class="card-text">
+            <h5>How to get here</h5>
+        </div>
+        </a>
+    </div>
+    <% } %>
+    
+    <% if(page != 'gallery') { %>
+    <div class="card">
+        <a href="/location/<%=location.id%>/gallery">
+        <div class="card-header">
+            <center><img src="/public/imgs/gallery.svg"></img></center>
+        </div>
+        <div class="card-text">
+            <h5>Photo gallery</h5>
+        </div>
+        </a>
+    </div>
+    <% } %>
+</aside>

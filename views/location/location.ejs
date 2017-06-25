@@ -68,41 +68,7 @@
         </div>
       </article>
 
-      <aside>
-        <div class="card">
-          <a href="/location/<%=location.id%>/services">
-            <div class="card-header">
-              <center><img src="/public/imgs/service.svg"></img></center>
-            </div>
-            <div class="card-text">
-              <h5>Available services
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/location/<%=location.id%>/how-to-get-there">
-            <div class="card-header">
-              <center><img src="/public/imgs/maps.svg"></img></center>
-            </div>
-            <div class="card-text">
-              <h5>How to get here
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/location/<%=location.id%>/gallery">
-            <div class="card-header">
-              <center><img src="/public/imgs/gallery.svg"></img></center>
-            </div>
-            <div class="card-text">
-              <h5>Photo gallery
-            </div>
-          </a>
-        </div>
-
-      </aside>
+      <%- include('sidebar', { page : 'location'}) %>
 
     </section>
 

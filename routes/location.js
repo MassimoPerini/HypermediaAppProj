@@ -45,7 +45,15 @@ router.get('/location/:id/how-to-get-there', function(req, res, next) {
 });
 
 router.get('/location/:id/available-services', function(req, res, next) {
-  //TODO
+  models.locations.findOne({
+    where : { id : req.params.id },
+    include : models.services
+  }).then(function (location) {
+    res.render('location/available-services', { title: 'Available services in ' + location.name, location : location});
+  }).catch(function(error){
+    debug(error);
+    next(error);
+  });
 });
 
 module.exports = router;

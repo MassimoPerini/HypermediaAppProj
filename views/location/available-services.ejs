@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+      <%- include('../common/imports') %>
+      <style>
+      header{
+        background-image: url("<%= location.header %>");
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('../common/navbar', { page : '/location'}) %>
+
+    <header class="location">
+    </header>
+    <center>
+      <h1><%= title %></h1>
+    </center>
+    <section class="two-sided">
+      <article>
+        <div>
+          <h2>Services</h2>
+          <% if(location.services.length <= 0) { console.log("SIIIII VOLAAAA"); %>
+          <p>There is no service in this <%= location.name %></p>
+          <% } else { %>
+          <ul>
+            <% location.services.forEach(service => { %>
+              <li><a href="/service/<%= service.id %>"><%= service.name %></a></li>
+            <% }); %>
+          </ul>
+          <% } %>
+        </div>
+      </article>
+
+      <%- include('sidebar', { page : 'available-services'}) %>
+
+    </section>
+    <%- include('../common/footer') %>
+  </body>
+</html>

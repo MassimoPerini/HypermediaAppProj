@@ -5,7 +5,7 @@
     "description": "A generic appointment with one of ours cardiologist. Choose this to have a diagnosis of a particular problem.",
     "areaId": 1,
     "responsible" : 1,
-    "locations" : [1,2]
+    "locations" : [1]
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "This includes a collection of generic cardiologic check-up services (blood analysis, simple ECG)",
     "areaId": 1,
     "responsible" : 1,
-    "locations" : [1,2]
+    "locations" : [2]
   },
   {
     "id": 3,
