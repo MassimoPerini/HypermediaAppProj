@@ -22,7 +22,7 @@ var router = express.Router();
  *         description: An array of doctors
  */
 router.get('/api/doctor', function(req, res, next){
-  models.doctors.findAll({})
+  models.doctors.findAll({offset: req.param("offset"), limit: req.param("limit") })
   .then(function(doctors){
     res.send(doctors);
   }).catch(function(error){

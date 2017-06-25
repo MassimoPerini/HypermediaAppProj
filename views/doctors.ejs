@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <style>
+      header{
+        background-image: url("../imgs/bg/doctor.jpg");
+      }
+    </style>
+
     <title><%= title %></title>
       <%- include('common/imports') %>
+      <%var size = 3%>
+
+      <script>
+        var currentPage;
+        function loadValue(page) {
+            $("#content").empty().append("<div class='loading' style='transform:scale(0.31);'><div></div><div></div></div>");
+            $.getJSON("api/doctor",{ offset: page, limit:<%=size%> }, function(result){
+                var add="";
+                $("#content").empty();
+                $.each(result, function(index, element){
+                    add=add+'<div>'+element.fullname+'</div>';
+                });
+                $('#content').append(add);
+            });
+        }
+
+          $(document).ready(function (){
+
+              //Default loading
+              params = new URLSearchParams(window.location.search);
+              currentPage = (params.get("page")) ? params.get("page") : 0;
+              loadValue(currentPage);
+
+              //On click
+              $('button').click(function(e){
+
+                  var pressed = (event.target.id)-1;
+                  if (pressed == currentPage)
+                  {
+                      return;
+                  }
+                  //   var pressed = $(e.target).text();
+                  currentPage = pressed;
+                  loadValue(pressed);
+                  pressed++;
+                  window.history.pushState(null, null, "?page="+pressed);
+              })
+          });
+      </script>
+
+
   </head>
   <body>
     <%- include('common/navbar', { page : '/doctors'}) %>
-    <% doctors.forEach((doctor) => { %>
-      <p> <%= doctor.fullname %> </p>
-      <p> <%= doctor.description %> </p>
-    <%});%>
+
+
+    <header>
+      <h1>Doctors</h1>
+    </header>
+
+    <div id="content" class="container-fluid">
+      <!-- LOAD JQUERY AJAX-->
+    </div>
+
+    <div class="btn-group" role="group" aria-label="...">
+    <% var max = Math.ceil (doctors.length / size);
+    for (var i=1;i<=max;i++)
+    {
+        %><button type="button" class="btn btn-default" id="<%=i%>"> <%=i%> </button>
+    <%}%>
+    </div>
+
   </body>
 </html>
