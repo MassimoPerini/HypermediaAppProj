@@ -4,58 +4,132 @@
     <title><%= title %></title>
     <%- include('common/imports') %>
     <link rel="stylesheet" href="/public/stylesheets/carousel.css"/>
-    <script src="/public/javascripts/carousel.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <%- include('common/navbar', { page : '/'}) %>
     <div id='content'>
-		  <div class="masthead">
-        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-              <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#bs-carousel" data-slide-to="1"></li>
-              <li data-target="#bs-carousel" data-slide-to="2"></li>
-          </ol>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item slides active">
-              <div class="slide-1"></div>
-                  <div class="hero">
-                      <hgroup>
-                          <h1>We are creative</h1>
-                          <h3>Get start your next awesome project</h3>
-                      </hgroup>
-                      <button class="btn btn-hero btn-lg" role="button">See all features</button>
-                  </div>
-              </div>
-              <div class="item slides">
-                <div class="slide-2"></div>
-                <div class="hero">
-                    <hgroup>
-                        <h1>We are smart</h1>
-                        <h3>Get start your next awesome project</h3>
-                    </hgroup>
-                    <button class="btn btn-hero btn-lg" role="button">See all features</button>
-                </div>
-              </div>
-              <div class="item slides">
-                <div class="slide-3"></div>
-                <div class="hero">
-                    <hgroup>
-                        <h1>We are amazing</h1>
-                        <h3>Get start your next awesome project</h3>
-                    </hgroup>
-                    <button class="btn btn-hero btn-lg" role="button">See all features</button>
-                </div>
-              </div>
+
+      <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#bs-carousel" data-slide-to="1"></li>
+          <li data-target="#bs-carousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item slides active">
+            <!-- Overlay -->
+            <div class="overlay"></div>
+            <div class="slide-1"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We are the best</h1>
+                  <h3>Why we are the most awarded clinic ever</h3>
+              </hgroup>
+              <button class="btn btn-hero btn-lg" role="button">Discover us</button>
             </div>
           </div>
-		    </div>
-
-        <div class="container-fluid">
-          CIAOJJDKDNSAKNDAKNDSKNADKNDNK<br>sjjsajkjnakndjnkjndknkdnkdnkdn
+          <div class="item slides">
+            <!-- Overlay -->
+            <div class="overlay"></div>
+            <div class="slide-2"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We treat you right</h1>
+                  <h3>The clinic with the highest client satisfaction</h3>
+              </hgroup>
+              <button class="btn btn-hero btn-lg" role="button">See our awards</button>
+            </div>
+          </div>
+          <div class="item slides">
+            <!-- Overlay -->
+            <div class="overlay"></div>
+            <div class="slide-3"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We are complete</h1>
+                  <h3>Everything you need, you can find it here</h3>
+              </hgroup>
+              <button class="btn btn-hero btn-lg" role="button">See our services</button>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="container-fluid">
+        <center><h2>What they say about us</h2></center>
+        <div class='item col-sm-6'>
+          <blockquote>
+            <div class="row">
+              <div class="col-sm-3 text-center">
+                <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">
+              </div>
+              <div class="col-sm-9">
+                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                <small>Someone famous</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <div class='item col-sm-6'>
+          <blockquote>
+            <div class="row">
+              <div class="col-sm-3 text-center">
+                <img class="img-circle" src="http://www.reactiongifs.com/wp-content/gallery/omg/omg_girl.gif" style="width: 100px;height:100px;">
+              </div>
+              <div class="col-sm-9">
+                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                <small>Someone famous</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <div class='item col-sm-6'>
+          <blockquote>
+            <div class="row">
+              <div class="col-sm-3 text-center">
+                <img class="img-circle" src="http://www.reactiongifs.com/wp-content/gallery/yes/the_rock_gif.gif" style="width: 100px;height:100px;">
+              </div>
+              <div class="col-sm-9">
+                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                <small>Someone famous</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <div class='item col-sm-6'>
+          <blockquote>
+            <div class="row">
+              <div class="col-sm-3 text-center">
+                <img class="img-circle" src="http://www.reactiongifs.com/wp-content/gallery/yes/convinced.gif" style="width: 100px;height:100px;">
+              </div>
+              <div class="col-sm-9">
+                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                <small>Someone famous</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+      <!--<div class="row">
+        <div class="item col-sm-6">
+          <blockquote>
+            <div class="row">
+              <div class="col-sm-3 text-center">
+                <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">
+              </div>
+              <div class="col-sm-9">
+                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                <small>Someone famous</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>-->
     </div>
 
     <%- include('common/footer') %>
