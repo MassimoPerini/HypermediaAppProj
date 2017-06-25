@@ -49,7 +49,8 @@ module.exports = function (grunt) {
                 },
                 files: {
                //     'css/app.css': 'scss/app.scss'
-               		'public/stylesheets/app.css': 'custom/scss/app.scss'
+               		'public/stylesheets/app.css': 'custom/scss/app.scss',
+                  'public/stylesheets/carousel.css': 'custom/scss/carousel.scss'
                 }
             },
             debug: {
@@ -57,7 +58,8 @@ module.exports = function (grunt) {
                     outputStyle: 'expanded'
                 },
                 files: {
-               		'public/stylesheets/app.css': 'custom/scss/app.scss'
+               		'public/stylesheets/app.css': 'custom/scss/app.scss',
+                  'public/stylesheets/carousel.css': 'custom/scss/carousel.scss'
                 }
             }
         },

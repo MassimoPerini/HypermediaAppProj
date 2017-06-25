@@ -11,7 +11,7 @@ var DB_CONFIG = require("../config/database.js");
 var sequelize = new Sequelize(DB_CONFIG.URL,{
   logging : debug,
   dialectOptions:{
-    //ssl: true
+    ssl: DB_CONFIG.URL.endsWith('?ssl=true')
   }
 });
 

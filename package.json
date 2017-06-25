@@ -5,6 +5,7 @@
   "scripts": {
     "start": "DEBUG=app,model,api node app.js",
     "dbinit": "DEBUG=model node dbinit.js",
+    "remotedbinit": "DEBUG=model DATABASE_URL=postgres://nvbaqbmoowgnje:19f9caa1a4a6138027cf7416ee997eec8bc20569e8adc1fb466124364e2ae6bb@ec2-176-34-113-15.eu-west-1.compute.amazonaws.com:5432/d2o7c83dgpbmh4?ssl=true node dbinit.js",
     "start_windows": "set DEBUG=app,model,api && node app.js",
     "dbinit_windows": "set DEBUG=model && node dbinit.js"
   },

@@ -20,6 +20,7 @@ body{
   width: 100%;
   height: 100%;
   padding-top: $navbar-height;
+  display: table;
 }
 
 /* ------------ HEADER ------------- */
@@ -72,6 +73,7 @@ nav.main-navigation {
   opacity: 0.85;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  min-height: $navbar-height;
 
   .header {
     @extend .navbar-header;
@@ -222,9 +224,7 @@ nav.main-navigation {
       padding-right: 0;
       padding-left: 0;
       margin-bottom: 40px;
-
     }
-
   }
 }
 
@@ -273,6 +273,7 @@ footer{
   color: $navbar-default-color;
   text-align: center;
   width: 100%;
+  bottom: 0;
 
   .links{
     @include make-md-column(4);

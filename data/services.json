@@ -1,10 +1,91 @@
 [
   {
     "id": 1,
-    "name": "Radioqualcosa",
-    "description": "sjjskabcklknkjnc",
-    "icon": "",
-    "header": "",
-    "areaId": 1
+    "name": "Cardiologic generic appointment",
+    "description": "A generic appointment with one of ours cardiologist. Choose this to have a diagnosis of a particular problem.",
+    "areaId": 1,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 2,
+    "name": "Cardio check-up",
+    "description": "This includes a collection of generic cardiologic check-up services (blood analysis, simple ECG)",
+    "areaId": 1,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 3,
+    "name": "Cardiac Computed Tomography",
+    "description": "A traditional CT scan is an x-ray procedure that combines many x-ray images with the aid of a computer to generate cross-sectional views of the body. Cardiac CT uses the advanced CT technology with intravenous (IV) contrast (dye) to visualize your cardiac anatomy, coronary circulation and great vessels.",
+    "areaId": 1,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 4,
+    "name": "Coronary Computed Tomography Angiogram",
+    "description": "A coronary computed tomography angiogram (CTA) uses advanced CT technology, along with intravenous (IV) contrast material (dye), to obtain high-resolution, 3D pictures of the moving heart and great vessels.CTA is also called multi-slice computed tomography (MSCT), cardiac CT or cardiac CAT. During CTA, x-rays pass through the body and are picked up by detectors in the scanner, that produce 3D images on a computer screen. These images enable physicians to determine whether plaque or calcium deposits are present in the artery walls.CTA is used as a noninvasive method for detecting blockages in the coronary arteries. A CTA can be performed much faster (in less than one minute) than a cardiac catheterization, with potentially less risk and discomfort as well as decreased recovery time.",
+    "areaId": 1,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 5,
+    "name": "Cosmetic Facial Surgery",
+    "description": "Cosmetic facial surgery enhances your appearance by improving visual appeal, symmetry and/or proportion. Procedures include face lifts, lip lifts, neck lifts, cosmetic nose surgery and many more.",
+    "areaId": 2,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 6,
+    "name": "Breast Surgery",
+    "description": "Our breasts often change over time, losing their youthful shape and firmness. Or you may have very large breasts that cause body image issues and even physical pain. Procedures offered include breast augmentation, breast lift and breast reduction.",
+    "areaId": 2,
+    "responsible" : 1,
+    "locations" : [1,2],
+    "doctors" : [1]
+  },
+  {
+    "id": 7,
+    "name": "Hair Replacement Surgery/Hair Transplant",
+    "description": "Plastic surgeons and dermatologists at Cleveland Clinic Cosmetic & Plastic Surgery Center use state-of-the-art hair replacement (implant) surgery techniques that treat hair loss due to genetic or hormonal reasons in male pattern baldness. Hair replacement (implant) surgery can also be completed to restore hair loss due to burns, injury or disease of the scalp.",
+    "areaId": 2,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 8,
+    "name": "Laser Vision Correction",
+    "description": "Clear vision is an essential part of our daily lives. Clear vision depends on how light rays are focused inside the eye. Normally, light is focused sharply on the retina, allowing the eye to see clearly at all distances. With refractive disorders, the eye’s shape is disproportionate, causing light to focus in front of or behind the retina. This refractive condition causes objects seen with the eye to appear blurry. By correcting your visual problems in the eye itself instead of relying on glasses or contact lenses, laser vision correction surgery provides hassle-free normal or near-normal vision for many patients.",
+    "areaId": 3,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 9,
+    "name": "Glasses & Contacts",
+    "description": "The eye allows us to see by capturing the light rays that are reflected off an object. These light rays are focused upside-down on the retina where they are converted into electrical impulses and carried to the brain. The brain translates the image into its upright position. For those suffering from vision problems such as nearsightedness, farsightedness, astigmatism and presbyopia, eyeglasses and/or contacts may be a solution. These help to correct vision by focusing light more appropriately on the retina.",
+    "areaId": 3,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 10,
+    "name": "Cosmetic & Reconstructive Procedures",
+    "description": "Specializing in eyelid surgery, lacrimal (tear duct) surgery, and orbital (eye socket) surgery, our oculoplastics surgeons perform more than 600 procedures annually, with excellent results and few complications. Our surgeons perform the most advanced procedures available, including orbital fracture repair, ptosis (droopy eyelid) repair, lacrimal obstruction repair and facial rejuvenation procedures (browlifting, midface lifting, blepharoplasty, Botox® injection, and hyaluronic acid filler injections).",
+    "areaId": 3,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 11,
+    "name": "Cornea & External Disease",
+    "description": "The cornea is the transparent structure on the front of the eye through which we see. It is the tissue that is reshaped during laser vision correction. It begins the process of seeing by focusing onto the retina the light that it receives. There are five layers to the cornea, each with a distinct function: epithelium, Bowman’s membrane, stroma, Descemet’s membrane and endothelium.",
+    "areaId": 3,
+    "responsible" : 1,
+    "locations" : [1,2]
   }
 ]
