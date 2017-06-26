@@ -151,22 +151,58 @@ nav.main-navigation {
     font-size: 22pt;
 }
 
-.item blockquote {
+.quote-container{
+
+  >article{
+    @include make-xs-column(12);
+    @include make-sm-column(12);
+    @include make-md-column(6);
+    @include make-lg-column(6);
+  }
+
+  blockquote{
+
+    @include make-row;
+    @include clearfix;
+
     border-left: none;
     margin: 0;
-}
-
-.item blockquote img {
     margin-bottom: 10px;
-}
 
-.item blockquote p:before {
     content: "\f10d";
     font-family: 'Fontawesome';
     float: left;
     margin-right: 10px;
-}
 
+    .avatar{
+      @include make-xs-column(3);
+      @include make-sm-column(3);
+      @include make-md-column(3);
+      @include make-lg-column(3);
+      img{
+        @extend .img-circle;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .quote{
+      @include make-xs-column(9);
+      @include make-sm-column(9);
+      @include make-md-column(9);
+      @include make-lg-column(9);
+
+      p:before{
+        content: "\f10d";
+        font-family: 'Fontawesome';
+        float: left;
+        margin-right: 10px;
+      }
+    }
+
+  }
+}
 
 /* ------------ CONTENTS ------------- */
 

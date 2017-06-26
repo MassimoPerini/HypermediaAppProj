@@ -35,15 +35,14 @@ router.get('/api/doctor', function(req, res, next){
     models.doctors.findAll({
         offset: offset,
         limit: limit,
-/*
         include: [{
             model: models.services,
-            where: {
-              id:campo_service_da_input
-            }
+            as: 'doctors_services'
+        },{
+            model: models.services,
+            as: 'responsible'
         }]
-*/
-})
+    })
   .then(function(doctors){
     res.send(doctors);
   }).catch(function(error){
