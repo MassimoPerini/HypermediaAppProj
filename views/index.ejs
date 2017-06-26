@@ -3,50 +3,155 @@
   <head>
     <title><%= title %></title>
     <%- include('common/imports') %>
+    <link rel="stylesheet" href="/public/stylesheets/carousel.css"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <%- include('common/navbar', { page : '/'}) %>
-    <div class="main-content">
-      <h1><%= title %></h1>
-      <p>Welcome to <%= title %></p>
-      <%- include('common/carousel', {imgs : ["../public/imgs/img1.jpg", "../public/imgs/img2.png", "../public/imgs/img3.jpg"]}) %>
+    <div id='content'>
 
-      <section>
-        <h1 class="title">Welcome to CPM clinic website</h1>
-      </section>
+      <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="6000" id="bs-carousel">
 
-      <section class="services-widget">
-        <h3 class="title">Our best services:</h3>
-      </section>
-      <%- include('common/slideset') %>
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#bs-carousel" data-slide-to="1"></li>
+          <li data-target="#bs-carousel" data-slide-to="2"></li>
+        </ol>
 
-      <!--
-            <div class="service">esempio</div>
-        <div class="service">esempio</div>
-        <div class="service">esempio</div>
-        <div class="service">esempio</div>
-
-      -->
-
-      <section class="main-functions">
-        <div>
-          <a href="#" class="button" role="button">Explore the services</a>
-          <a href="#" class="button" role="button">Explore the areas</a>
-          <a href="#" class="button" role="button">Our locations</a>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item slides active">
+            <!-- Overlay -->
+            <div class="overlay"></div>
+            <div class="slide-1"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We are the best</h1>
+                  <h3>Why we are the most awarded clinic ever</h3>
+              </hgroup>
+              <a class="btn btn-hero btn-lg" href='/who-we-are'>Discover us</a>
+            </div>
+          </div>
+          <div class="item slides">
+            <!-- Overlay -->
+            <div class="overlay"></div>
+            <div class="slide-2"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We treat you right</h1>
+                  <h3>The clinic with the highest client satisfaction</h3>
+              </hgroup>
+              <a class="btn btn-hero btn-lg" href="/who-we-are/statistics">See our statistics</a>
+            </div>
+          </div>
+          <div class="item slides">
+            <!-- Overlay -->
+            <div class="overlay"></div>
+            <div class="slide-3"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We are complete</h1>
+                  <h3>Everything you need, you can find it here</h3>
+              </hgroup>
+              <a class="btn btn-hero btn-lg" href='/area'>See our services</a>
+            </div>
+          </div>
         </div>
-        <div>
-          <a href="#" class="button" role="button">Our doctors</a>
-          <a href="#" class="button" role="button">Contact us</a>
-          <a href="#" class="button" role="button">Private area</a>
-        </div>
-      </section>
+      </div>
+      <div class="container-fluid quote-container">
+        <center><h2>What they say about us</h2></center>
+        <article>
+          <blockquote>
+            <div class='avatar'>
+              <img src="http://www.reactiongifs.com/r/overbite.gif">
+            </div>
+            <div class="quote">
+                <p>I think CPM is the best place to be when something goes wrong. They will never give you up.</p>
+                <small>Rick Astley</small>
+            </div>
+          </blockquote>
+        </article>
+        <article>
+          <blockquote>
+            <div class='avatar'>
+              <img src="http://www.reactiongifs.com/wp-content/gallery/omg/omg_girl.gif">
+            </div>
+            <div class="quote">
+              <p>I was really worried about my operation, but now I want to injure myself to come back there.</p>
+              <small>A smart girl</small>
+            </div>
+          </blockquote>
+        </article>
+        <article>
+          <blockquote>
+            <div class='avatar'>
+              <img src="http://www.reactiongifs.com/wp-content/gallery/yes/the_rock_gif.gif">
+            </div>
+            <div class="quote">
+              <p>If pleasure you seek, CPM you need. Come here and you will never go back.</p>
+              <small>Oscar Wilde</small>
+            </div>
+          </blockquote>
+        </article>
+        <article>
+          <blockquote>
+            <div class='avatar'>
+              <img src="http://www.reactiongifs.com/wp-content/gallery/yes/convinced.gif">
+            </div>
+            <div class="quote">
+              <p>CPM has a great way of treating their patient: they are like a caring granny.</p>
+              <small>My girlfriend</small>
+            </div>
+          </blockquote>
+        </article>
+      </div>
 
-      <section>
-        <h3>NEWS HERE</h3>
-          <%- include('common/slideset') %>
-      </section>
+      <div class="container-fluid">
+        <center><h2>Our awards</h2></center>
+        <div class="col-md-3">
+          <center>
+            <img src="/public/imgs/home/award1.jpg" height="100%" width="80%">
+            <p class="container-fluid text-center" style="margin-top:5%">
+              Blablabla something about award
+            </p>
+          </center>
+        </div>
+        <div class="col-md-3">
+          <center>
+            <img src="/public/imgs/home/award2.jpg" height="10%" width="80%">
+            <p class="container-fluid text-center" style="margin-top:5%">
+              Blablabla something about award
+            </p>
+          </center>
+        </div>
+        <div class="col-md-3">
+          <center>
+            <img src="/public/imgs/home/award3.jpg" width="80%">
+            <p class="container-fluid text-center" style="margin-top:5%">
+              Blablabla something about award
+            </p>
+          </center>
+        </div>
+        <div class="col-md-3">
+          <center>
+            <img src="/public/imgs/home/award4.jpg" width="80%">
+            <p class="container-fluid text-center" style="margin-top:5%">
+              Blablabla something about award
+            </p>
+          </center>
+        </div>
+
+
+
+      </div>
+
+      <div class="container-fluid">
+        <center><h2>News</h2></center>
+      </div>
+
     </div>
-    <%- include('common/footer') %>
 
+    <%- include('common/footer') %>
   </body>
 </html>

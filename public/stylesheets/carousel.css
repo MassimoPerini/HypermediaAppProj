@@ -114,15 +114,15 @@ Image credits: unsplash.com
 }
 
 .fade-carousel .slides .slide-1 {
-  background-image: url("/public/imgs/home1.jpg");
+  background-image: url("/public/imgs/home/home1.jpg");
 }
 
 .fade-carousel .slides .slide-2 {
-  background-image: url("/public/imgs/home2.jpg");
+  background-image: url("/public/imgs/home/home2.jpg");
 }
 
 .fade-carousel .slides .slide-3 {
-  background-image: url("/public/imgs/home3.jpg");
+  background-image: url("/public/imgs/home/home3.jpg");
 }
 
 /********************************/
