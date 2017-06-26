@@ -37,15 +37,24 @@ async function loadData(){
   await models.infos.bulkCreate(infos);
   /* LOCATIONS-AREAS */
   for (var area of areas){
-    if (area.locations) await models.areas.findById(area.id).then((_area) => {_area.setLocations(area.locations);})
+    if (area.locations) {
+      var _area = await models.areas.findById(area.id);
+      await _area.setLocations(area.locations);
+    }
   }
   /* LOCATION-SERVICES */
   for (var service of services){
-    if (service.locations) await models.services.findById(service.id).then((_service) => {_service.setLocations(service.locations);})
+    if (service.locations){
+      var _service = await models.services.findById(service.id);
+      await _service.setLocations(service.locations);
+    }
   }
   /* DOCTORS-SERVICES */
   for (var service of services){
-    if (service.doctors) await models.services.findById(service.id).then((_service) => {_service.setDoctors(service.doctors);})
+    if (service.doctors){
+      var _service = await models.services.findById(service.id);
+      await _service.setDoctors_services(service.doctors);
+    }
   }
   // End function
   return true;
