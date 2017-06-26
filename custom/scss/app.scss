@@ -161,7 +161,9 @@ nav.main-navigation {
   }
 
   h1{
-    color: #efefef;
+    //color: #efefef;
+    //color: black;
+    color: #333;
   }
 
   blockquote{
@@ -174,7 +176,6 @@ nav.main-navigation {
     margin-bottom: 10px;
 
     content: "\f10d";
-    font-family: 'Fontawesome';
     float: left;
     margin-right: 10px;
 
@@ -197,10 +198,12 @@ nav.main-navigation {
       @include make-md-column(9);
       @include make-lg-column(9);
 
-      color: #efefef;
+      //color: #efefef;
+      color: #333;
 
       small{
-        color: #e0e0e0;
+        color: #333;
+        //color: #e0e0e0;
       }
 
       p:before{
@@ -299,7 +302,7 @@ table{
     >section.quotes{
       @extend .quote-container;
       text-align: left;
-      background-color: #1abc9c;
+      background-color: #D6E681;
     }
 
     >section.awards{
@@ -319,8 +322,9 @@ table{
     }
 
     >section.contact{
-      background-color: #1abc9c;
-      color: #efefef;
+      background-color: #D6E681;
+      color: #333;
+      padding-bottom: 6%;
     }
 
   }

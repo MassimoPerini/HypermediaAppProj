@@ -8748,7 +8748,7 @@ nav.main-navigation .landmarks > ul {
 }
 
 .quote-container h1, .home > article > section.quotes h1 {
-  color: #efefef;
+  color: #333;
 }
 
 .quote-container blockquote, .home > article > section.quotes blockquote {
@@ -8758,7 +8758,6 @@ nav.main-navigation .landmarks > ul {
   margin: 0;
   margin-bottom: 10px;
   content: "\f10d";
-  font-family: 'Fontawesome';
   float: left;
   margin-right: 10px;
 }
@@ -8848,7 +8847,7 @@ nav.main-navigation .landmarks > ul {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  color: #efefef;
+  color: #333;
 }
 
 @media (min-width: 768px) {
@@ -8873,7 +8872,7 @@ nav.main-navigation .landmarks > ul {
 }
 
 .quote-container blockquote .quote small, .home > article > section.quotes blockquote .quote small {
-  color: #e0e0e0;
+  color: #333;
 }
 
 .quote-container blockquote .quote p:before, .home > article > section.quotes blockquote .quote p:before {
@@ -9114,7 +9113,7 @@ nav.main-navigation .landmarks > ul {
 
 .home > article > section.quotes {
   text-align: left;
-  background-color: #1abc9c;
+  background-color: #D6E681;
 }
 
 .home > article > section.awards > article {
@@ -9168,8 +9167,9 @@ nav.main-navigation .landmarks > ul {
 }
 
 .home > article > section.contact {
-  background-color: #1abc9c;
-  color: #efefef;
+  background-color: #D6E681;
+  color: #333;
+  padding-bottom: 6%;
 }
 
 .two-sided > article {
