@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+    <%- include('common/imports') %>
+
+  <style>
+    header{
+      background-image: url("/public/imgs/bg/doctor.jpg");
+    }
+
+  </style>
+
+</head>
+<body>
+<%- include('common/navbar', { page : '/service'}) %>
+
+<header>
+    <h1>Contact US</h1>
+</header>
+
+<div class="main-content">
+
+  <section>
+    <h3>Contacts</h3>
+    <p>You'll find many ways to contact us right here:</p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Phone</th>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>Mail</th>
+          <td>Boh</td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td>Mah</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </section>
+  <hr />
+  <section>
+    <form>
+
+      <label for="name">Nome</label>
+      <input id="name" type="text" name="firstName" required placeholder="name">
+
+      <label for="surname">Cognome</label>
+      <input id="surname" type="text" name="firstName" required placeholder="surname">
+
+      <label for="phone">Telefono</label>
+      <input id="phone" type="tel" name="your_tel" placeholder="phone" required>
+
+      <label for="email">Mail</label>
+      <input id="email" type="email" name="your_email" placeholder="" required>
+
+      <label for="field">Area target</label>
+      <input id="field" list="field" placeholder="" required>
+      <datalist id="field">
+        <option value="Surgery">
+        <option value="Boh">
+      </datalist>
+
+      <label for="subject">Oggetto</label>
+      <input id="subject" type="text" name="firstName" required placeholder="name">
+
+      <label for="text">Testo</label>
+      <textarea id="text" placeholder="Write here..." required></textarea>
+
+      <label for="agree">I agree...</label>
+      <input id="agree" name="agree" type="checkbox">
+      <input type="submit" value="Submit">
+
+    </form>
+  </section>
+
+</div>
+<%- include('common/footer') %>
+</body>
+</html>

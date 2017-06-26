@@ -6,7 +6,7 @@
     "phone": "123456789",
     "email": "amanda.curie@cpm.com",
     "description": "Drs. Amanda Curie oversees the radiotherapy health area as a well-respected, certified radiotherapist in the Milan area. She completed her bachelor of science in biomedical sciences at the University of South Florida. After she had completed her B.S., she continued her education and earned her master’s of public health degree with a concentration at the Harvard School of Public Health. Afterward, she attended the University of South Florida College of Medicine, where she completed her medical degree. During this time, she became a member of the Alpha Omega Alpha Medical Honor Society.\nUpon graduating, Drs. Curie completed an internship in internal medicine. Her residency at the University of South Florida College of Medicine in Tampa, FL, focused on radiotherapy.\nShe brings all of her knowledge and enthusiasm for helping others to CPM clinic. She improves physical health and patients’ confidence with the services she supplies.\nAmanda is an energetic practitioner who enjoys providing evidence-based, exceptional care and educating patients also on lifestyle changes for better overall health. Her experiences and interest in treating a variety of conditions have motivated and inspired her career in radiotherapy.",
-    "icon": "1.png",
+    "icon": "/public/imgs/doctors/curie.png",
     "header": ""
   },
   {
@@ -16,7 +16,7 @@
     "phone": "123456789",
     "email": "robert.atkins@cpm.com",
     "description": "Dr. Robert Atkins is an American physician and cardiologist, best known for the \"Atkins Nutritional Approach\", or \"Atkins Diet\", a popular but controversial way of eating that requires close control of carbohydrate consumption, emphasizing protein and fat as the primary sources of dietary calories in addition to a controlled number of carbohydrates from vegetables.",
-    "icon": "1.png",
+    "icon": "/public/imgs/doctors/zaccaria.jpg",
     "header": ""
   },
   {
@@ -26,7 +26,7 @@
     "phone": "123456789",
     "email": "@cpm.com",
     "description": "Dr. Willem Einthoven is a Dutch doctor and physiologist. He invented the first practical electrocardiogram (ECG or EKG) in 1903 and received the Nobel Prize in Medicine.",
-    "icon": "1.png",
+    "icon": "/public/imgs/doctors/bruschi.jpeg",
     "header": ""
   },
   {
@@ -36,7 +36,7 @@
     "phone": "123456789",
     "email": "fredem@cpm.com",
     "description": "Dr. Frederic Edward Mohs is a physician and general surgeon, developed the Mohs micrographic surgery (MMS) technique to remove skin cancer lesions while still a medical student at the University of Wisconsin–Madison. The Mohs procedure is considered the best method for treating certain types of skin cancer, because it has very high cure rates for even high-risk lesions, combined with maximal preservation of healthy tissues",
-    "icon": "1.png",
+    "icon": "/public/imgs/doctors/quintarelli.jpeg",
     "header": ""
   },
   {
@@ -46,7 +46,7 @@
     "phone": "123456789",
     "email": "jeffak@cpm.com",
     "description": "Dr. Jeffrey Alan Klein is an American dermatologist from Southern California, who described the tumescent technique for liposuction surgery in 1987, which according to Hayashree Venkataram \"revolutionized liposuction surgery\" by \"permit[ting] liposuction totally by local anaesthesia and with minimal blood loss.\" He is the author of Tumescent Technique: Tumescent Anesthesia & Microcannular Liposuction, a textbook on liposuction safety and effectiveness.",
-    "icon": "1.png",
+    "icon": "/public/imgs/doctors/toletti.jpeg",
     "header": ""
   },
   {
@@ -56,7 +56,7 @@
     "phone": "123456789",
     "email": "jwilliam@cpm.com",
     "description": "J. William Harbour, M.D., is an ophthalmologist, ocular oncologist and cancer researcher. He currently serves as the vice-chairman for Translational Research and director of ocular oncology at the Bascom Palmer Eye Institute and the associate director for basic research at the Sylvester Comprehensive Cancer Center of the University of Miami Miller School of Medicine. His clinical practice focuses on intraocular tumors, including uveal (ocular) melanoma, retinoblastoma, lymphoma and other neoplasms. His field of research includes the genetics and genomics of cancer, with a focus on prognostic biomarkers, mechanisms of metastasis, and molecular targeted therapies. He has given over 300 invited scientific lectures, and published over 150 peer-reviewed scientific articles and book chapters. Dr. Harbour founded the Ocular Oncology Service at the Washington University School of Medicine in St. Louis, where he was the Paul A. Cibis Distinguished Professor of Ophthalmology & Visual Sciences.",
-    "icon": "1.png",
+    "icon": "/public/imgs/doctors/curie.png",
     "header": ""
   },
   {
@@ -66,7 +66,7 @@
     "phone": "123456789",
     "email": "jwilliam@cpm.com",
     "description": "Ernst Ludwig Alfred Hegar, aka Alfred Hegar, is a German gynecologist famous for developing new medical tools and techniques. Among the many techniques and instruments he developed were Hegar's sign and Hegar dilators, as well as Hegar's operation, an operation for repairing a ruptured perineum. His works are still widely discussed at colleges of obstetrics worldwide.",
-    "icon": "1.png",
+    "icon": "/public/imgs/doctors/curie.png",
     "header": ""
   },
   {
@@ -76,7 +76,7 @@
     "phone": "123456789",
     "email": "jwilliam@cpm.com",
     "description": "J. William Harbour, M.D., is an ophthalmologist, ocular oncologist and cancer researcher. He currently serves as the vice-chairman for Translational Research and director of ocular oncology at the Bascom Palmer Eye Institute and the associate director for basic research at the Sylvester Comprehensive Cancer Center of the University of Miami Miller School of Medicine. His clinical practice focuses on intraocular tumors, including uveal (ocular) melanoma, retinoblastoma, lymphoma and other neoplasms. His field of research includes the genetics and genomics of cancer, with a focus on prognostic biomarkers, mechanisms of metastasis, and molecular targeted therapies. He has given over 300 invited scientific lectures, and published over 150 peer-reviewed scientific articles and book chapters. Dr. Harbour founded the Ocular Oncology Service at the Washington University School of Medicine in St. Louis, where he was the Paul A. Cibis Distinguished Professor of Ophthalmology & Visual Sciences.",
-    "icon": "1.png",
+    "icon": "/public/imgs/doctors/curie.png",
     "header": ""
   }
 ]

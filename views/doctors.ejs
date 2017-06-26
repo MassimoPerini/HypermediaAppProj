@@ -4,7 +4,7 @@
 
     <style>
       header{
-        background-image: url("../imgs/bg/doctor.jpg");
+        background-image: url("/public/imgs/bg/doctor.jpg");
       }
     </style>
 
@@ -20,7 +20,12 @@
                 var add="";
                 $("#content").empty();
                 $.each(result, function(index, element){
-                    add=add+'<div>'+element.fullname+'</div>';
+
+                    add+='<article class="card"><a href="">';
+                    add+='<div class="card-header"><img class="card-image" src='+element.icon+'></div>';
+                    add+='<h4>'+element.fullname+'</h4>'
+                    add+='</a></article>';
+
                 });
                 $('#content').append(add);
             });
@@ -60,8 +65,10 @@
       <h1>Doctors</h1>
     </header>
 
-    <div id="content" class="container-fluid">
-      <!-- LOAD JQUERY AJAX-->
+    <div class="container-fluid">
+      <section id="content" class="list-md">
+        <!-- LOAD JQUERY AJAX-->
+      </section>
     </div>
 
     <div class="btn-group" role="group" aria-label="...">

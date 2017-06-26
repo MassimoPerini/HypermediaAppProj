@@ -8,6 +8,7 @@ var router = express.Router();
 var passport = require('../config/auth.js');
 
 router.get('/login', function(req, res, next){
+    res.render('privateArea/login', { title: 'Login'});
   res.send("errore login");
 });
 
