@@ -14,7 +14,8 @@
     "description": "This includes a collection of generic cardiologic check-up services (blood analysis, simple ECG)",
     "areaId": 1,
     "responsible" : 1,
-    "locations" : [2]
+    "locations" : [2],
+    "doctors": [2,5]
   },
   {
     "id": 3,
@@ -30,7 +31,8 @@
     "description": "A coronary computed tomography angiogram (CTA) uses advanced CT technology, along with intravenous (IV) contrast material (dye), to obtain high-resolution, 3D pictures of the moving heart and great vessels.CTA is also called multi-slice computed tomography (MSCT), cardiac CT or cardiac CAT. During CTA, x-rays pass through the body and are picked up by detectors in the scanner, that produce 3D images on a computer screen. These images enable physicians to determine whether plaque or calcium deposits are present in the artery walls.CTA is used as a noninvasive method for detecting blockages in the coronary arteries. A CTA can be performed much faster (in less than one minute) than a cardiac catheterization, with potentially less risk and discomfort as well as decreased recovery time.",
     "areaId": 1,
     "responsible" : 1,
-    "locations" : [1,2]
+    "locations" : [1,2],
+    "doctors" : [6]
   },
   {
     "id": 5,
@@ -46,8 +48,7 @@
     "description": "Our breasts often change over time, losing their youthful shape and firmness. Or you may have very large breasts that cause body image issues and even physical pain. Procedures offered include breast augmentation, breast lift and breast reduction.",
     "areaId": 2,
     "responsible" : 1,
-    "locations" : [1,2],
-    "doctors" : [1]
+    "locations" : [1,2]
   },
   {
     "id": 7,

@@ -8,7 +8,7 @@
   </head>
   <body>
     <%- include('common/navbar', { page : '/'}) %>
-    <div id='content'>
+    <div id='content' class="home">
 
       <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="6000" id="bs-carousel">
 
@@ -59,97 +59,93 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid quote-container">
-        <center><h2>What they say about us</h2></center>
-        <article>
-          <blockquote>
-            <div class='avatar'>
-              <img src="http://www.reactiongifs.com/r/overbite.gif">
-            </div>
-            <div class="quote">
-                <p>I think CPM is the best place to be when something goes wrong. They will never give you up.</p>
-                <small>Rick Astley</small>
-            </div>
-          </blockquote>
-        </article>
-        <article>
-          <blockquote>
-            <div class='avatar'>
-              <img src="http://www.reactiongifs.com/wp-content/gallery/omg/omg_girl.gif">
-            </div>
-            <div class="quote">
-              <p>I was really worried about my operation, but now I want to injure myself to come back there.</p>
-              <small>A smart girl</small>
-            </div>
-          </blockquote>
-        </article>
-        <article>
-          <blockquote>
-            <div class='avatar'>
-              <img src="http://www.reactiongifs.com/wp-content/gallery/yes/the_rock_gif.gif">
-            </div>
-            <div class="quote">
-              <p>If pleasure you seek, CPM you need. Come here and you will never go back.</p>
-              <small>Oscar Wilde</small>
-            </div>
-          </blockquote>
-        </article>
-        <article>
-          <blockquote>
-            <div class='avatar'>
-              <img src="http://www.reactiongifs.com/wp-content/gallery/yes/convinced.gif">
-            </div>
-            <div class="quote">
-              <p>CPM has a great way of treating their patient: they are like a caring granny.</p>
-              <small>My girlfriend</small>
-            </div>
-          </blockquote>
-        </article>
-      </div>
 
-      <div class="container-fluid">
-        <center><h2>Our awards</h2></center>
-        <div class="col-md-3">
+      <!-- Home page text contents-->
+      <article>
+        <!-- INTRO SECTION -->
+        <section class="intro">
           <center>
-            <img src="/public/imgs/home/award1.jpg" height="100%" width="80%">
-            <p class="container-fluid text-center" style="margin-top:5%">
-              Blablabla something about award
-            </p>
+            <h1>Welcome to CPM</h1>
+            <h3>We are different from the others, we act differently. You are what make us special. We do not just heal patients, we care for them. You're journey with us begins here, whatever you need. We'll be there for you.</h3>
           </center>
-        </div>
-        <div class="col-md-3">
-          <center>
-            <img src="/public/imgs/home/award2.jpg" height="10%" width="80%">
-            <p class="container-fluid text-center" style="margin-top:5%">
-              Blablabla something about award
-            </p>
-          </center>
-        </div>
-        <div class="col-md-3">
-          <center>
-            <img src="/public/imgs/home/award3.jpg" width="80%">
-            <p class="container-fluid text-center" style="margin-top:5%">
-              Blablabla something about award
-            </p>
-          </center>
-        </div>
-        <div class="col-md-3">
-          <center>
-            <img src="/public/imgs/home/award4.jpg" width="80%">
-            <p class="container-fluid text-center" style="margin-top:5%">
-              Blablabla something about award
-            </p>
-          </center>
-        </div>
+        </section>
+        <!-- QUOTES SECTION -->
+        <section class="quotes">
+          <center><h1>What they say about us</h1></center>
+          <article>
+            <blockquote>
+              <div class='avatar'>
+                <img src="http://www.reactiongifs.com/r/overbite.gif">
+              </div>
+              <div class="quote">
+                  <p>I think CPM is the best place to be when something goes wrong. They will never give you up.</p>
+                  <small>Rick Astley</small>
+              </div>
+            </blockquote>
+          </article>
+          <article>
+            <blockquote>
+              <div class='avatar'>
+                <img src="http://www.reactiongifs.com/wp-content/gallery/omg/omg_girl.gif">
+              </div>
+              <div class="quote">
+                <p>I was really worried about my operation, but now I want to injure myself to come back there.</p>
+                <small>A smart girl</small>
+              </div>
+            </blockquote>
+          </article>
+          <article>
+            <blockquote>
+              <div class='avatar'>
+                <img src="http://www.reactiongifs.com/wp-content/gallery/yes/the_rock_gif.gif">
+              </div>
+              <div class="quote">
+                <p>If pleasure you seek, CPM you need. Come here and you will never go back.</p>
+                <small>Oscar Wilde</small>
+              </div>
+            </blockquote>
+          </article>
+          <article>
+            <blockquote>
+              <div class='avatar'>
+                <img src="http://www.reactiongifs.com/wp-content/gallery/yes/convinced.gif">
+              </div>
+              <div class="quote">
+                <p>CPM has a great way of treating their patient: they are like a caring granny.</p>
+                <small>My girlfriend</small>
+              </div>
+            </blockquote>
+          </article>
+        </section>
+        <!-- AWARD SECTION -->
+        <section class="awards">
+          <center><h1>Our awards</h1></center>
+          <article>
+              <img src="/public/imgs/home/award1.jpg">
+              <h4>Distinguished Hospitals for Clinical Excellence are hospitals rated in the top 5% in the nation with the lowest risk-adjusted mortality and complication rates.</h4>
+          </article>
+          <article>
+              <img src="/public/imgs/home/award2.jpg">
+              <h4>The Medical Design Excellence Awards competition celebrates achievements in medical product design and engineering that improve the quality of healthcare delivery and accessibility. </h4>
+          </article>
+          <article>
+              <img src="/public/imgs/home/award3.jpg">
+              <h4>The Illinois Health and Hospital Association's annual Quality Excellence Achievement Awards recognizes and celebrates the achievements of hospitals and health systems in innovation.</h4>
+          </article>
+          <article>
+              <img src="/public/imgs/home/award4.jpg">
+              <h4>The Pulmonary Care Excellence Award™ recognizes hospitals for superior outcomes in treating chronic obstructive pulmonary disease (COPD) and pneumonia. </h4>
+          </article>
+        </section>
 
-
-
-      </div>
-
-      <div class="container-fluid">
-        <center><h2>News</h2></center>
-      </div>
-
+        <section class="contact">
+          <h1>Missing something?</h1>
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-9">
+          </div>
+        </section>
+      </article>
     </div>
 
     <%- include('common/footer') %>

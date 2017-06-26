@@ -160,6 +160,10 @@ nav.main-navigation {
     @include make-lg-column(6);
   }
 
+  h1{
+    color: #efefef;
+  }
+
   blockquote{
 
     @include make-row;
@@ -181,8 +185,8 @@ nav.main-navigation {
       @include make-lg-column(3);
       img{
         @extend .img-circle;
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: auto;
         margin-bottom: 10px;
       }
     }
@@ -192,6 +196,12 @@ nav.main-navigation {
       @include make-sm-column(9);
       @include make-md-column(9);
       @include make-lg-column(9);
+
+      color: #efefef;
+
+      small{
+        color: #e0e0e0;
+      }
 
       p:before{
         content: "\f10d";
@@ -205,7 +215,6 @@ nav.main-navigation {
 }
 
 /* ------------ CONTENTS ------------- */
-
 .one-sided{
   width: 100%;
   @extend .container-fluid;
@@ -257,6 +266,64 @@ form{
 
 table{
   @extend .table;
+}
+
+.home{
+
+  >article{
+
+    >section{
+      @extend .container-fluid;
+      margin-top: 4%;
+      text-align: center;
+    }
+
+    >section.intro{
+
+      >center{
+        @include make-xs-column(10);
+        @include make-sm-column(8);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+        @include make-xs-column-offset(1);
+        @include make-sm-column-offset(2);
+        @include make-md-column-offset(3);
+        @include make-lg-column-offset(3);
+      }
+
+      h1{
+        font-weight: bold;
+      }
+    }
+
+    >section.quotes{
+      @extend .quote-container;
+      text-align: left;
+      background-color: #1abc9c;
+    }
+
+    >section.awards{
+
+      >article{
+        @include make-xs-column(6);
+        @include make-sm-column(3);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        img{
+          width: 80%;
+        }
+        p{
+          margin-top: 10%;
+        }
+      }
+    }
+
+    >section.contact{
+      background-color: #1abc9c;
+      color: #efefef;
+    }
+
+  }
 }
 
 // Two sided is used in 2-sided pages
