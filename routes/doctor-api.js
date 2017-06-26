@@ -22,7 +22,28 @@ var router = express.Router();
  *         description: An array of doctors
  */
 router.get('/api/doctor', function(req, res, next){
-  models.doctors.findAll({offset: req.param("offset"), limit: req.param("limit") })
+
+    var offset = req.param("offset");
+    var limit = req.param("limit");
+    var campo_service_da_input = 1;
+
+    offset = offset && !isNaN(offset) ? offset : 0;
+    limit = limit && !isNaN(limit) ? limit : 4;
+
+  //  locationFilter = (req.params.location) ? { id : req.params.location} : {};
+
+    models.doctors.findAll({
+        offset: offset,
+        limit: limit,
+/*
+        include: [{
+            model: models.services,
+            where: {
+              id:campo_service_da_input
+            }
+        }]
+*/
+})
   .then(function(doctors){
     res.send(doctors);
   }).catch(function(error){

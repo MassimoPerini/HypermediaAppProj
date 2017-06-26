@@ -1971,19 +1971,19 @@ pre code {
   }
 }
 
-.container-fluid, .main-content, .two-sided, footer {
+.container-fluid, .one-sided, .two-sided, footer {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.container-fluid:before, .main-content:before, .two-sided:before, footer:before, .container-fluid:after, .main-content:after, .two-sided:after, footer:after {
+.container-fluid:before, .one-sided:before, .two-sided:before, footer:before, .container-fluid:after, .one-sided:after, .two-sided:after, footer:after {
   content: " ";
   display: table;
 }
 
-.container-fluid:after, .main-content:after, .two-sided:after, footer:after {
+.container-fluid:after, .one-sided:after, .two-sided:after, footer:after {
   clear: both;
 }
 
@@ -5033,10 +5033,10 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 .container > .navbar-header, nav.main-navigation .container > .header,
 .container > .navbar-collapse, nav.main-navigation
 .container > .landmarks,
-.container-fluid > .navbar-header, .main-content > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
-.container-fluid > .header, nav.main-navigation .main-content > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
-.container-fluid > .navbar-collapse, .main-content > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
-.container-fluid > .landmarks, nav.main-navigation .main-content > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
+.container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
+.container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
+.container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
+.container-fluid > .landmarks, nav.main-navigation .one-sided > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -5045,10 +5045,10 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   .container > .navbar-header, nav.main-navigation .container > .header,
   .container > .navbar-collapse, nav.main-navigation
   .container > .landmarks,
-  .container-fluid > .navbar-header, .main-content > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
-  .container-fluid > .header, nav.main-navigation .main-content > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
-  .container-fluid > .navbar-collapse, .main-content > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
-  .container-fluid > .landmarks, nav.main-navigation .main-content > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
+  .container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
+  .container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
+  .container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
+  .container-fluid > .landmarks, nav.main-navigation .one-sided > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
     margin-right: 0;
     margin-left: 0;
   }
@@ -5110,13 +5110,13 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 @media (min-width: 992px) {
   .navbar > .container .navbar-brand, nav.main-navigation > .container .navbar-brand, .navbar > .container nav.main-navigation .brand, nav.main-navigation .navbar > .container .brand, nav.main-navigation > .container .brand,
   .navbar > .container-fluid .navbar-brand, nav.main-navigation > .container-fluid .navbar-brand,
-  .navbar > .main-content .navbar-brand, nav.main-navigation > .main-content .navbar-brand,
+  .navbar > .one-sided .navbar-brand, nav.main-navigation > .one-sided .navbar-brand,
   .navbar > .two-sided .navbar-brand, nav.main-navigation > .two-sided .navbar-brand,
   .navbar > footer .navbar-brand, nav.main-navigation > footer .navbar-brand,
   .navbar > .container-fluid nav.main-navigation .brand, nav.main-navigation
   .navbar > .container-fluid .brand, nav.main-navigation > .container-fluid .brand,
-  .navbar > .main-content nav.main-navigation .brand, nav.main-navigation
-  .navbar > .main-content .brand, nav.main-navigation > .main-content .brand,
+  .navbar > .one-sided nav.main-navigation .brand, nav.main-navigation
+  .navbar > .one-sided .brand, nav.main-navigation > .one-sided .brand,
   .navbar > .two-sided nav.main-navigation .brand, nav.main-navigation
   .navbar > .two-sided .brand, nav.main-navigation > .two-sided .brand,
   .navbar > footer nav.main-navigation .brand, nav.main-navigation
@@ -5890,7 +5890,7 @@ a.badge:hover, a.badge:focus {
 }
 
 .container .jumbotron,
-.container-fluid .jumbotron, .main-content .jumbotron, .two-sided .jumbotron, footer .jumbotron {
+.container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron {
   border-radius: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -5906,7 +5906,7 @@ a.badge:hover, a.badge:focus {
     padding-bottom: 48px;
   }
   .container .jumbotron,
-  .container-fluid .jumbotron, .main-content .jumbotron, .two-sided .jumbotron, footer .jumbotron {
+  .container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -8417,7 +8417,7 @@ input[type="checkbox"] {
   height: 200px;
 }
 
-.loading div, .loading .main-content > section > section, .loading .main-content > section > aside, .loading .main-content > section > article, .loading .two-sided > article, .loading .two-sided > aside, .loading .list, .loading .list-lg, .loading .list-md {
+.loading div, .loading .one-sided > section > section, .loading .one-sided > section > aside, .loading .one-sided > section > article, .loading .two-sided > article, .loading .two-sided > aside, .loading .list, .loading .list-lg, .loading .list-md {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8432,13 +8432,13 @@ input[type="checkbox"] {
   animation: loading 2s ease-out infinite;
 }
 
-.loading div:nth-of-type(1), .loading .main-content > section > section:nth-of-type(1), .loading .main-content > section > aside:nth-of-type(1), .loading .main-content > section > article:nth-of-type(1), .loading .two-sided > article:nth-of-type(1), .loading .two-sided > aside:nth-of-type(1), .loading .list:nth-of-type(1), .loading .list-lg:nth-of-type(1), .loading .list-md:nth-of-type(1) {
+.loading div:nth-of-type(1), .loading .one-sided > section > section:nth-of-type(1), .loading .one-sided > section > aside:nth-of-type(1), .loading .one-sided > section > article:nth-of-type(1), .loading .two-sided > article:nth-of-type(1), .loading .two-sided > aside:nth-of-type(1), .loading .list:nth-of-type(1), .loading .list-lg:nth-of-type(1), .loading .list-md:nth-of-type(1) {
   border-color: #afafb7;
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
 }
 
-.loading div:nth-of-type(2), .loading .main-content > section > section:nth-of-type(2), .loading .main-content > section > aside:nth-of-type(2), .loading .main-content > section > article:nth-of-type(2), .loading .two-sided > article:nth-of-type(2), .loading .two-sided > aside:nth-of-type(2), .loading .list:nth-of-type(2), .loading .list-lg:nth-of-type(2), .loading .list-md:nth-of-type(2) {
+.loading div:nth-of-type(2), .loading .one-sided > section > section:nth-of-type(2), .loading .one-sided > section > aside:nth-of-type(2), .loading .one-sided > section > article:nth-of-type(2), .loading .two-sided > article:nth-of-type(2), .loading .two-sided > aside:nth-of-type(2), .loading .list:nth-of-type(2), .loading .list-lg:nth-of-type(2), .loading .list-md:nth-of-type(2) {
   border-color: #00b2ff;
 }
 
@@ -8593,7 +8593,7 @@ nav.main-navigation .landmarks > ul {
 
 .card .card-header {
   padding: 20px;
-  background-color: rgba(16, 85, 146, 0.85);
+  background-color: rgba(16, 85, 146, 0.65);
 }
 
 .card .card-text {
@@ -8631,35 +8631,35 @@ nav.main-navigation .landmarks > ul {
 }
 
 /* ------------ CONTENTS ------------- */
-.main-content {
+.one-sided {
   width: 100%;
   background-color: white;
 }
 
-.main-content > section {
+.one-sided > section {
   margin-left: -15px;
   margin-right: -15px;
 }
 
-.main-content > section:before, .main-content > section:after {
+.one-sided > section:before, .one-sided > section:after {
   content: " ";
   display: table;
 }
 
-.main-content > section:after {
+.one-sided > section:after {
   clear: both;
 }
 
-.main-content > section:before, .main-content > section:after {
+.one-sided > section:before, .one-sided > section:after {
   content: " ";
   display: table;
 }
 
-.main-content > section:after {
+.one-sided > section:after {
   clear: both;
 }
 
-.main-content > section > section {
+.one-sided > section > section {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -8681,27 +8681,27 @@ nav.main-navigation .landmarks > ul {
 }
 
 @media (min-width: 992px) {
-  .main-content > section > section {
+  .one-sided > section > section {
     float: left;
     width: 75%;
   }
 }
 
 @media (min-width: 768px) {
-  .main-content > section > section {
+  .one-sided > section > section {
     float: left;
     width: 75%;
   }
 }
 
 @media (min-width: 1200px) {
-  .main-content > section > section {
+  .one-sided > section > section {
     float: left;
     width: 75%;
   }
 }
 
-.main-content > section > aside {
+.one-sided > section > aside {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -8723,27 +8723,27 @@ nav.main-navigation .landmarks > ul {
 }
 
 @media (min-width: 992px) {
-  .main-content > section > aside {
+  .one-sided > section > aside {
     float: left;
     width: 25%;
   }
 }
 
 @media (min-width: 768px) {
-  .main-content > section > aside {
+  .one-sided > section > aside {
     float: left;
     width: 25%;
   }
 }
 
 @media (min-width: 1200px) {
-  .main-content > section > aside {
+  .one-sided > section > aside {
     float: left;
     width: 25%;
   }
 }
 
-.main-content > section > article {
+.one-sided > section > article {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -8765,21 +8765,21 @@ nav.main-navigation .landmarks > ul {
 }
 
 @media (min-width: 992px) {
-  .main-content > section > article {
+  .one-sided > section > article {
     float: left;
     width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  .main-content > section > article {
+  .one-sided > section > article {
     float: left;
     width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  .main-content > section > article {
+  .one-sided > section > article {
     float: left;
     width: 100%;
   }
@@ -9071,7 +9071,7 @@ footer a:hover {
   color: #7dbbf1;
 }
 
-section.navigation-child > div, .main-content > section.navigation-child > section, .main-content > section.navigation-child > aside, .main-content > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
+section.navigation-child > div, .one-sided > section.navigation-child > section, .one-sided > section.navigation-child > aside, .one-sided > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -9080,7 +9080,7 @@ section.navigation-child > div, .main-content > section.navigation-child > secti
 }
 
 @media (min-width: 992px) {
-  section.navigation-child > div, .main-content > section.navigation-child > section, .main-content > section.navigation-child > aside, .main-content > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
+  section.navigation-child > div, .one-sided > section.navigation-child > section, .one-sided > section.navigation-child > aside, .one-sided > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
     float: left;
     width: 25%;
   }
