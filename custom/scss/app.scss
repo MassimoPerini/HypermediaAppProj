@@ -141,21 +141,6 @@ nav.main-navigation {
   box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.2);
 }
 
-//Carousel (home)
-.preview-set{
-  @include make-md-column(12);
-  @extend .well;
-
-  .feature{
-    @include make-md-column(3);
-  }
-
-  .slideset-indicators{
-    @extend .carousel-indicators;
-    padding: 30px 0px 40px 40px; //???
-  }
-}
-
 //Default button
 .button{
   @extend .btn, .btn-primary, .btn-block;
@@ -165,6 +150,23 @@ nav.main-navigation {
     height: 65px;
     font-size: 22pt;
 }
+
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
 
 /* ------------ CONTENTS ------------- */
 .main-content{

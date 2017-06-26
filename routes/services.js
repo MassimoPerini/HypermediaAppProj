@@ -12,16 +12,34 @@ var router = express.Router();
 router.get('/service', function(req, res, next){
     models.services.findAll({})
         .then(function(services){
-            res.render('services', { title: 'Servizi', services: services});
+            res.render('service/services', { title: 'Services', services: services});
         });
 });
 
 router.get('/service/:id', function(req, res, next){
     models.services.findOne({
-        where : { id : req.params.id }
+        where : { id : req.params.id },
+        include : [{
+          model : models.areas,
+          attributes : ['name', 'icon']
+        }, {
+          model : models.locations,
+          attributes : ['id', 'name']
+        }]
     }).then(function(service){
-        res.render('service', { title: service.name, service: service});
+        res.render('service/service', { title: service.name, service: service});
     }).catch(function(error){
+        debug(error);
+        next(error);
+    });
+});
+
+router.get('/service/:id/instrumentations', function(req, res, next) {
+    models.services.findOne({
+        where : { id : req.params.id}
+    }).then(function(service){
+        res.render('service/instrumentations', { title: 'Instrumentation of ' + service.name, service: service});
+    }).catch(function(error) {
         debug(error);
         next(error);
     });
