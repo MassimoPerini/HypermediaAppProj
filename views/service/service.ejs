@@ -1,0 +1,42 @@
+<% console.log(service); %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+    <%- include('../common/imports') %>
+
+  <style>
+    header{
+      background-image: url("<%=service.header%>");
+    }
+
+  </style>
+</head>
+<body>
+    <%- include('../common/navbar', { page : '/doctor'}) %>
+
+  <header>
+    <div>
+      <h1><%=service.name%></h1>
+    </div>
+  </header>
+
+  <section class="two-sided">
+    <article>
+      <div>
+        <h2>Description</h2>
+        <p><%=service.description%></p>
+      </div>
+      <div>
+        <h2>Awards</h2>
+        <p>TODO</p>
+      </div>
+    </article>
+
+    <%- include('sidebar', { page : 'service' }) %>
+
+  </section>
+
+<%- include('../common/footer') %>
+</body>
+</html>
