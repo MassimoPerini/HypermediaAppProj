@@ -11,6 +11,19 @@
 
   </style>
 
+  <script type="text/javascript">
+
+      $(function() {
+          $('form').submit(function(e) {
+              $("#contact-form").empty().append("NON HO INVIATO PERCHE' MANCANO LE API");
+              e.preventDefault();
+          });
+      });
+
+
+  </script>
+
+
 </head>
 <body>
 <%- include('common/navbar', { page : '/service'}) %>
@@ -19,9 +32,7 @@
     <h1>Contact US</h1>
 </header>
 
-<div class="main-content">
-
-  <section>
+  <section id="content" class="one-sided">
     <h3>Contacts</h3>
     <p>You'll find many ways to contact us right here:</p>
     <table>
@@ -42,44 +53,54 @@
     </table>
 
 
-  </section>
   <hr />
-  <section>
-    <form>
-
-      <label for="name">Nome</label>
-      <input id="name" type="text" name="firstName" required placeholder="name">
-
-      <label for="surname">Cognome</label>
-      <input id="surname" type="text" name="firstName" required placeholder="surname">
-
-      <label for="phone">Telefono</label>
-      <input id="phone" type="tel" name="your_tel" placeholder="phone" required>
-
-      <label for="email">Mail</label>
-      <input id="email" type="email" name="your_email" placeholder="" required>
-
-      <label for="field">Area target</label>
-      <input id="field" list="field" placeholder="" required>
-      <datalist id="field">
-        <option value="Surgery">
-        <option value="Boh">
-      </datalist>
-
+  <section id="contact-form">
+    <form class="contact-form" >
+      <div>
+        <label for="name">Nome</label>
+        <input id="name" type="text" name="firstName" required placeholder="name">
+      </div>
+      <div>
+        <label for="surname">Cognome</label>
+        <input id="surname" type="text" name="firstName" required placeholder="surname">
+      </div>
+      <div>
+        <label for="phone">Telefono</label>
+        <input id="phone" type="tel" name="your_tel" placeholder="phone" required>
+      </div>
+      <div>
+        <label for="email">Mail</label>
+        <input id="email" type="email" name="your_email" placeholder="" required>
+      </div>
+      <div>
+        <label for="areas">Area target</label>
+        <select id="areas">
+          <%areas.forEach((area) => {%>
+          <option value="<%=area.id%>"><%=area.name%></option>
+          <%})%>
+        </select>
+      </div>
+      <div>
       <label for="subject">Oggetto</label>
       <input id="subject" type="text" name="firstName" required placeholder="name">
+      </div>
+      <div>
+        <label for="text">Testo</label>
+        <textarea id="text" placeholder="Write here..." required></textarea>
+      </div>
 
-      <label for="text">Testo</label>
-      <textarea id="text" placeholder="Write here..." required></textarea>
-
-      <label for="agree">I agree...</label>
-      <input id="agree" name="agree" type="checkbox">
-      <input type="submit" value="Submit">
-
+      <div class="checkbox">
+        <label>
+          <input id="agree" name="agree" type="checkbox">Check me out
+        </label>
+      </div>
+      <div>
+        <input type="submit" value="Submit">
+      </div>
     </form>
+    </section>
   </section>
 
-</div>
 <%- include('common/footer') %>
 </body>
 </html>

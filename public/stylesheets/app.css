@@ -285,11 +285,11 @@ th {
   .label {
     border: 1px solid #000;
   }
-  .table {
+  .table, table {
     border-collapse: collapse !important;
   }
-  .table td,
-  .table th {
+  .table td, table td,
+  .table th, table th {
     background-color: #fff !important;
   }
   .table-bordered th,
@@ -1447,7 +1447,7 @@ img {
   height: auto;
 }
 
-.img-circle, .quote-container blockquote .avatar img {
+.img-circle {
   border-radius: 50%;
 }
 
@@ -1937,53 +1937,53 @@ pre code {
   overflow-y: scroll;
 }
 
-.container {
+.container, .contact-form {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.container:before, .container:after {
+.container:before, .contact-form:before, .container:after, .contact-form:after {
   content: " ";
   display: table;
 }
 
-.container:after {
+.container:after, .contact-form:after {
   clear: both;
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container, .contact-form {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container, .contact-form {
     width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .container, .contact-form {
     width: 1170px;
   }
 }
 
-.container-fluid, .two-sided, footer {
+.container-fluid, .one-sided, .two-sided, footer {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.container-fluid:before, .two-sided:before, footer:before, .container-fluid:after, .two-sided:after, footer:after {
+.container-fluid:before, .one-sided:before, .two-sided:before, footer:before, .container-fluid:after, .one-sided:after, .two-sided:after, footer:after {
   content: " ";
   display: table;
 }
 
-.container-fluid:after, .two-sided:after, footer:after {
+.container-fluid:after, .one-sided:after, .two-sided:after, footer:after {
   clear: both;
 }
 
@@ -2708,43 +2708,43 @@ th {
   text-align: left;
 }
 
-.table {
+.table, table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 21px;
 }
 
-.table > thead > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > th,
-.table > tbody > tr > td,
-.table > tfoot > tr > th,
-.table > tfoot > tr > td {
+.table > thead > tr > th, table > thead > tr > th,
+.table > thead > tr > td, table > thead > tr > td,
+.table > tbody > tr > th, table > tbody > tr > th,
+.table > tbody > tr > td, table > tbody > tr > td,
+.table > tfoot > tr > th, table > tfoot > tr > th,
+.table > tfoot > tr > td, table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.4;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
 
-.table > thead > tr > th {
+.table > thead > tr > th, table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
 }
 
-.table > caption + thead > tr:first-child > th,
-.table > caption + thead > tr:first-child > td,
-.table > colgroup + thead > tr:first-child > th,
-.table > colgroup + thead > tr:first-child > td,
-.table > thead:first-child > tr:first-child > th,
-.table > thead:first-child > tr:first-child > td {
+.table > caption + thead > tr:first-child > th, table > caption + thead > tr:first-child > th,
+.table > caption + thead > tr:first-child > td, table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > th, table > colgroup + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > td, table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > th, table > thead:first-child > tr:first-child > th,
+.table > thead:first-child > tr:first-child > td, table > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
 
-.table > tbody + tbody {
+.table > tbody + tbody, table > tbody + tbody {
   border-top: 2px solid #ddd;
 }
 
-.table .table {
+.table .table, table .table, .table table, table table {
   background-color: #fff;
 }
 
@@ -2796,18 +2796,18 @@ table th[class*="col-"] {
   display: table-cell;
 }
 
-.table > thead > tr > td.active,
-.table > thead > tr > th.active,
-.table > thead > tr.active > td,
-.table > thead > tr.active > th,
-.table > tbody > tr > td.active,
-.table > tbody > tr > th.active,
-.table > tbody > tr.active > td,
-.table > tbody > tr.active > th,
-.table > tfoot > tr > td.active,
-.table > tfoot > tr > th.active,
-.table > tfoot > tr.active > td,
-.table > tfoot > tr.active > th {
+.table > thead > tr > td.active, table > thead > tr > td.active,
+.table > thead > tr > th.active, table > thead > tr > th.active,
+.table > thead > tr.active > td, table > thead > tr.active > td,
+.table > thead > tr.active > th, table > thead > tr.active > th,
+.table > tbody > tr > td.active, table > tbody > tr > td.active,
+.table > tbody > tr > th.active, table > tbody > tr > th.active,
+.table > tbody > tr.active > td, table > tbody > tr.active > td,
+.table > tbody > tr.active > th, table > tbody > tr.active > th,
+.table > tfoot > tr > td.active, table > tfoot > tr > td.active,
+.table > tfoot > tr > th.active, table > tfoot > tr > th.active,
+.table > tfoot > tr.active > td, table > tfoot > tr.active > td,
+.table > tfoot > tr.active > th, table > tfoot > tr.active > th {
   background-color: #f5f5f5;
 }
 
@@ -2819,18 +2819,18 @@ table th[class*="col-"] {
   background-color: #e8e8e8;
 }
 
-.table > thead > tr > td.success,
-.table > thead > tr > th.success,
-.table > thead > tr.success > td,
-.table > thead > tr.success > th,
-.table > tbody > tr > td.success,
-.table > tbody > tr > th.success,
-.table > tbody > tr.success > td,
-.table > tbody > tr.success > th,
-.table > tfoot > tr > td.success,
-.table > tfoot > tr > th.success,
-.table > tfoot > tr.success > td,
-.table > tfoot > tr.success > th {
+.table > thead > tr > td.success, table > thead > tr > td.success,
+.table > thead > tr > th.success, table > thead > tr > th.success,
+.table > thead > tr.success > td, table > thead > tr.success > td,
+.table > thead > tr.success > th, table > thead > tr.success > th,
+.table > tbody > tr > td.success, table > tbody > tr > td.success,
+.table > tbody > tr > th.success, table > tbody > tr > th.success,
+.table > tbody > tr.success > td, table > tbody > tr.success > td,
+.table > tbody > tr.success > th, table > tbody > tr.success > th,
+.table > tfoot > tr > td.success, table > tfoot > tr > td.success,
+.table > tfoot > tr > th.success, table > tfoot > tr > th.success,
+.table > tfoot > tr.success > td, table > tfoot > tr.success > td,
+.table > tfoot > tr.success > th, table > tfoot > tr.success > th {
   background-color: #dff0d8;
 }
 
@@ -2842,18 +2842,18 @@ table th[class*="col-"] {
   background-color: #d0e9c6;
 }
 
-.table > thead > tr > td.info,
-.table > thead > tr > th.info,
-.table > thead > tr.info > td,
-.table > thead > tr.info > th,
-.table > tbody > tr > td.info,
-.table > tbody > tr > th.info,
-.table > tbody > tr.info > td,
-.table > tbody > tr.info > th,
-.table > tfoot > tr > td.info,
-.table > tfoot > tr > th.info,
-.table > tfoot > tr.info > td,
-.table > tfoot > tr.info > th {
+.table > thead > tr > td.info, table > thead > tr > td.info,
+.table > thead > tr > th.info, table > thead > tr > th.info,
+.table > thead > tr.info > td, table > thead > tr.info > td,
+.table > thead > tr.info > th, table > thead > tr.info > th,
+.table > tbody > tr > td.info, table > tbody > tr > td.info,
+.table > tbody > tr > th.info, table > tbody > tr > th.info,
+.table > tbody > tr.info > td, table > tbody > tr.info > td,
+.table > tbody > tr.info > th, table > tbody > tr.info > th,
+.table > tfoot > tr > td.info, table > tfoot > tr > td.info,
+.table > tfoot > tr > th.info, table > tfoot > tr > th.info,
+.table > tfoot > tr.info > td, table > tfoot > tr.info > td,
+.table > tfoot > tr.info > th, table > tfoot > tr.info > th {
   background-color: #d9edf7;
 }
 
@@ -2865,18 +2865,18 @@ table th[class*="col-"] {
   background-color: #c4e3f3;
 }
 
-.table > thead > tr > td.warning,
-.table > thead > tr > th.warning,
-.table > thead > tr.warning > td,
-.table > thead > tr.warning > th,
-.table > tbody > tr > td.warning,
-.table > tbody > tr > th.warning,
-.table > tbody > tr.warning > td,
-.table > tbody > tr.warning > th,
-.table > tfoot > tr > td.warning,
-.table > tfoot > tr > th.warning,
-.table > tfoot > tr.warning > td,
-.table > tfoot > tr.warning > th {
+.table > thead > tr > td.warning, table > thead > tr > td.warning,
+.table > thead > tr > th.warning, table > thead > tr > th.warning,
+.table > thead > tr.warning > td, table > thead > tr.warning > td,
+.table > thead > tr.warning > th, table > thead > tr.warning > th,
+.table > tbody > tr > td.warning, table > tbody > tr > td.warning,
+.table > tbody > tr > th.warning, table > tbody > tr > th.warning,
+.table > tbody > tr.warning > td, table > tbody > tr.warning > td,
+.table > tbody > tr.warning > th, table > tbody > tr.warning > th,
+.table > tfoot > tr > td.warning, table > tfoot > tr > td.warning,
+.table > tfoot > tr > th.warning, table > tfoot > tr > th.warning,
+.table > tfoot > tr.warning > td, table > tfoot > tr.warning > td,
+.table > tfoot > tr.warning > th, table > tfoot > tr.warning > th {
   background-color: #fcf8e3;
 }
 
@@ -2888,18 +2888,18 @@ table th[class*="col-"] {
   background-color: #faf2cc;
 }
 
-.table > thead > tr > td.danger,
-.table > thead > tr > th.danger,
-.table > thead > tr.danger > td,
-.table > thead > tr.danger > th,
-.table > tbody > tr > td.danger,
-.table > tbody > tr > th.danger,
-.table > tbody > tr.danger > td,
-.table > tbody > tr.danger > th,
-.table > tfoot > tr > td.danger,
-.table > tfoot > tr > th.danger,
-.table > tfoot > tr.danger > td,
-.table > tfoot > tr.danger > th {
+.table > thead > tr > td.danger, table > thead > tr > td.danger,
+.table > thead > tr > th.danger, table > thead > tr > th.danger,
+.table > thead > tr.danger > td, table > thead > tr.danger > td,
+.table > thead > tr.danger > th, table > thead > tr.danger > th,
+.table > tbody > tr > td.danger, table > tbody > tr > td.danger,
+.table > tbody > tr > th.danger, table > tbody > tr > th.danger,
+.table > tbody > tr.danger > td, table > tbody > tr.danger > td,
+.table > tbody > tr.danger > th, table > tbody > tr.danger > th,
+.table > tfoot > tr > td.danger, table > tfoot > tr > td.danger,
+.table > tfoot > tr > th.danger, table > tfoot > tr > th.danger,
+.table > tfoot > tr.danger > td, table > tfoot > tr.danger > td,
+.table > tfoot > tr.danger > th, table > tfoot > tr.danger > th {
   background-color: #f2dede;
 }
 
@@ -2924,15 +2924,20 @@ table th[class*="col-"] {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
   }
-  .table-responsive > .table {
+  .table-responsive > .table, .table-responsive > table {
     margin-bottom: 0;
   }
-  .table-responsive > .table > thead > tr > th,
+  .table-responsive > .table > thead > tr > th, .table-responsive > table > thead > tr > th,
   .table-responsive > .table > thead > tr > td,
+  .table-responsive > table > thead > tr > td,
   .table-responsive > .table > tbody > tr > th,
+  .table-responsive > table > tbody > tr > th,
   .table-responsive > .table > tbody > tr > td,
+  .table-responsive > table > tbody > tr > td,
   .table-responsive > .table > tfoot > tr > th,
-  .table-responsive > .table > tfoot > tr > td {
+  .table-responsive > table > tfoot > tr > th,
+  .table-responsive > .table > tfoot > tr > td,
+  .table-responsive > table > tfoot > tr > td {
     white-space: nowrap;
   }
   .table-responsive > .table-bordered {
@@ -3030,7 +3035,7 @@ output {
   color: #6f6f6f;
 }
 
-.form-control {
+.form-control, form input:not([type='checkbox']), form textarea {
   display: block;
   width: 100%;
   height: 39px;
@@ -3049,43 +3054,51 @@ output {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
-.form-control:focus {
+.form-control:focus, form input:focus:not([type='checkbox']), form textarea:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-.form-control::-moz-placeholder {
+.form-control::-moz-placeholder, form input:not([type='checkbox'])::-moz-placeholder, form textarea::-moz-placeholder {
   color: #999999;
   opacity: 1;
 }
 
-.form-control:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, form input:-ms-input-placeholder:not([type='checkbox']), form textarea:-ms-input-placeholder {
   color: #999999;
 }
 
-.form-control::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, form input:not([type='checkbox'])::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
   color: #999999;
 }
 
-.form-control::-ms-expand {
+.form-control::-ms-expand, form input:not([type='checkbox'])::-ms-expand, form textarea::-ms-expand {
   border: 0;
   background-color: transparent;
 }
 
-.form-control[disabled], .form-control[readonly],
-fieldset[disabled] .form-control {
+.form-control[disabled], form input[disabled]:not([type='checkbox']), form textarea[disabled], .form-control[readonly], form input[readonly]:not([type='checkbox']), form textarea[readonly],
+fieldset[disabled] .form-control,
+fieldset[disabled] form input:not([type='checkbox']), form
+fieldset[disabled] input:not([type='checkbox']),
+fieldset[disabled] form textarea, form
+fieldset[disabled] textarea {
   background-color: #eeeeee;
   opacity: 1;
 }
 
-.form-control[disabled],
-fieldset[disabled] .form-control {
+.form-control[disabled], form input[disabled]:not([type='checkbox']), form textarea[disabled],
+fieldset[disabled] .form-control,
+fieldset[disabled] form input:not([type='checkbox']), form
+fieldset[disabled] input:not([type='checkbox']),
+fieldset[disabled] form textarea, form
+fieldset[disabled] textarea {
   cursor: not-allowed;
 }
 
-textarea.form-control {
+textarea.form-control, form textarea {
   height: auto;
 }
 
@@ -3094,13 +3107,16 @@ input[type="search"] {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type="date"].form-control,
+  input[type="date"].form-control, form input[type="date"]:not([type='checkbox']),
   input[type="time"].form-control,
+  form input[type="time"]:not([type='checkbox']),
   input[type="datetime-local"].form-control,
-  input[type="month"].form-control {
+  form input[type="datetime-local"]:not([type='checkbox']),
+  input[type="month"].form-control,
+  form input[type="month"]:not([type='checkbox']) {
     line-height: 39px;
   }
-  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
+  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control, form .input-group-sm > input[type="date"]:not([type='checkbox']),
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm > nav.navigation-content.input-group-btn > input[type="date"].page,
@@ -3108,6 +3124,7 @@ input[type="search"] {
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
+  form .input-group-sm > input[type="time"]:not([type='checkbox']),
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm > nav.navigation-content.input-group-btn > input[type="time"].page,
@@ -3116,6 +3133,7 @@ input[type="search"] {
   input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
+  form .input-group-sm > input[type="datetime-local"]:not([type='checkbox']),
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm > nav.navigation-content.input-group-btn > input[type="datetime-local"].page,
@@ -3124,6 +3142,7 @@ input[type="search"] {
   input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
+  form .input-group-sm > input[type="month"]:not([type='checkbox']),
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm > nav.navigation-content.input-group-btn > input[type="month"].page,
@@ -3132,7 +3151,7 @@ input[type="search"] {
   input[type="month"] {
     line-height: 36px;
   }
-  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
+  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, form .input-group-lg > input[type="date"]:not([type='checkbox']),
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg > nav.navigation-content.input-group-btn > input[type="date"].page,
@@ -3140,6 +3159,7 @@ input[type="search"] {
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
+  form .input-group-lg > input[type="time"]:not([type='checkbox']),
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg > nav.navigation-content.input-group-btn > input[type="time"].page,
@@ -3148,6 +3168,7 @@ input[type="search"] {
   input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
+  form .input-group-lg > input[type="datetime-local"]:not([type='checkbox']),
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg > nav.navigation-content.input-group-btn > input[type="datetime-local"].page,
@@ -3156,6 +3177,7 @@ input[type="search"] {
   input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
+  form .input-group-lg > input[type="month"]:not([type='checkbox']),
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg > nav.navigation-content.input-group-btn > input[type="month"].page,
@@ -3166,7 +3188,7 @@ input[type="search"] {
   }
 }
 
-.form-group {
+.form-group, form > div:not(.checkbox), form.two-sided > article:not(.checkbox), form.two-sided > aside:not(.checkbox), form > .list:not(.checkbox), form > .list-lg:not(.checkbox), form > .list-md:not(.checkbox) {
   margin-bottom: 15px;
 }
 
@@ -3250,11 +3272,11 @@ fieldset[disabled]
   min-height: 36px;
 }
 
-.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
+.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, form .input-group-lg > input.form-control-static:not([type='checkbox']), form .input-group-lg > textarea.form-control-static,
 .input-group-lg > .form-control-static.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-static.btn,
 .input-group-lg > nav.navigation-content.input-group-btn > .form-control-static.page,
-.input-group-lg > .input-group-btn > .form-control-static.button, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+.input-group-lg > .input-group-btn > .form-control-static.button, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, form .input-group-sm > input.form-control-static:not([type='checkbox']), form .input-group-sm > textarea.form-control-static,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
 .input-group-sm > nav.navigation-content.input-group-btn > .form-control-static.page,
@@ -3263,7 +3285,7 @@ fieldset[disabled]
   padding-right: 0;
 }
 
-.input-sm, .input-group-sm > .form-control,
+.input-sm, .input-group-sm > .form-control, form .input-group-sm > input:not([type='checkbox']), form .input-group-sm > textarea,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > nav.navigation-content.input-group-btn > .page,
@@ -3284,7 +3306,7 @@ select.input-sm, .input-group-sm > select.form-control,
   line-height: 36px;
 }
 
-textarea.input-sm, .input-group-sm > textarea.form-control,
+textarea.input-sm, .input-group-sm > textarea.form-control, form .input-group-sm > textarea,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 .input-group-sm > nav.navigation-content.input-group-btn > textarea.page,
@@ -3298,7 +3320,7 @@ select[multiple].input-sm,
   height: auto;
 }
 
-.form-group-sm .form-control {
+.form-group-sm .form-control, .form-group-sm form input:not([type='checkbox']), form .form-group-sm input:not([type='checkbox']), .form-group-sm form textarea, form .form-group-sm textarea {
   height: 36px;
   padding: 8px 12px;
   font-size: 12px;
@@ -3311,7 +3333,7 @@ select[multiple].input-sm,
   line-height: 36px;
 }
 
-.form-group-sm textarea.form-control,
+.form-group-sm textarea.form-control, .form-group-sm form textarea, form .form-group-sm textarea,
 .form-group-sm select[multiple].form-control {
   height: auto;
 }
@@ -3324,7 +3346,7 @@ select[multiple].input-sm,
   line-height: 1.5;
 }
 
-.input-lg, .input-group-lg > .form-control,
+.input-lg, .input-group-lg > .form-control, form .input-group-lg > input:not([type='checkbox']), form .input-group-lg > textarea,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > nav.navigation-content.input-group-btn > .page,
@@ -3345,7 +3367,7 @@ select.input-lg, .input-group-lg > select.form-control,
   line-height: 60px;
 }
 
-textarea.input-lg, .input-group-lg > textarea.form-control,
+textarea.input-lg, .input-group-lg > textarea.form-control, form .input-group-lg > textarea,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 .input-group-lg > nav.navigation-content.input-group-btn > textarea.page,
@@ -3359,7 +3381,7 @@ select[multiple].input-lg,
   height: auto;
 }
 
-.form-group-lg .form-control {
+.form-group-lg .form-control, .form-group-lg form input:not([type='checkbox']), form .form-group-lg input:not([type='checkbox']), .form-group-lg form textarea, form .form-group-lg textarea {
   height: 60px;
   padding: 16px 20px;
   font-size: 19px;
@@ -3372,7 +3394,7 @@ select[multiple].input-lg,
   line-height: 60px;
 }
 
-.form-group-lg textarea.form-control,
+.form-group-lg textarea.form-control, .form-group-lg form textarea, form .form-group-lg textarea,
 .form-group-lg select[multiple].form-control {
   height: auto;
 }
@@ -3389,7 +3411,7 @@ select[multiple].input-lg,
   position: relative;
 }
 
-.has-feedback .form-control {
+.has-feedback .form-control, .has-feedback form input:not([type='checkbox']), form .has-feedback input:not([type='checkbox']), .has-feedback form textarea, form .has-feedback textarea {
   padding-right: 48.75px;
 }
 
@@ -3406,25 +3428,33 @@ select[multiple].input-lg,
   pointer-events: none;
 }
 
-.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
+.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, form .input-group-lg > input:not([type='checkbox']) + .form-control-feedback, form .input-group-lg > textarea + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg > nav.navigation-content.input-group-btn > .page + .form-control-feedback,
 .input-group-lg > .input-group-btn > .button + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
-.form-group-lg .form-control + .form-control-feedback {
+.form-group-lg .form-control + .form-control-feedback,
+.form-group-lg form input:not([type='checkbox']) + .form-control-feedback, form
+.form-group-lg input:not([type='checkbox']) + .form-control-feedback,
+.form-group-lg form textarea + .form-control-feedback, form
+.form-group-lg textarea + .form-control-feedback {
   width: 60px;
   height: 60px;
   line-height: 60px;
 }
 
-.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
+.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, form .input-group-sm > input:not([type='checkbox']) + .form-control-feedback, form .input-group-sm > textarea + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm > nav.navigation-content.input-group-btn > .page + .form-control-feedback,
 .input-group-sm > .input-group-btn > .button + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
-.form-group-sm .form-control + .form-control-feedback {
+.form-group-sm .form-control + .form-control-feedback,
+.form-group-sm form input:not([type='checkbox']) + .form-control-feedback, form
+.form-group-sm input:not([type='checkbox']) + .form-control-feedback,
+.form-group-sm form textarea + .form-control-feedback, form
+.form-group-sm textarea + .form-control-feedback {
   width: 36px;
   height: 36px;
   line-height: 36px;
@@ -3443,13 +3473,13 @@ select[multiple].input-lg,
   color: #43ac6a;
 }
 
-.has-success .form-control {
+.has-success .form-control, .has-success form input:not([type='checkbox']), form .has-success input:not([type='checkbox']), .has-success form textarea, form .has-success textarea {
   border-color: #43ac6a;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-.has-success .form-control:focus {
+.has-success .form-control:focus, .has-success form input:focus:not([type='checkbox']), form .has-success input:focus:not([type='checkbox']), .has-success form textarea:focus, form .has-success textarea:focus {
   border-color: #358753;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #85d0a1;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #85d0a1;
@@ -3478,13 +3508,13 @@ select[multiple].input-lg,
   color: #E99002;
 }
 
-.has-warning .form-control {
+.has-warning .form-control, .has-warning form input:not([type='checkbox']), form .has-warning input:not([type='checkbox']), .has-warning form textarea, form .has-warning textarea {
   border-color: #E99002;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-.has-warning .form-control:focus {
+.has-warning .form-control:focus, .has-warning form input:focus:not([type='checkbox']), form .has-warning input:focus:not([type='checkbox']), .has-warning form textarea:focus, form .has-warning textarea:focus {
   border-color: #b67102;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #febc53;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #febc53;
@@ -3513,13 +3543,13 @@ select[multiple].input-lg,
   color: #F04124;
 }
 
-.has-error .form-control {
+.has-error .form-control, .has-error form input:not([type='checkbox']), form .has-error input:not([type='checkbox']), .has-error form textarea, form .has-error textarea {
   border-color: #F04124;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-.has-error .form-control:focus {
+.has-error .form-control:focus, .has-error form input:focus:not([type='checkbox']), form .has-error input:focus:not([type='checkbox']), .has-error form textarea:focus, form .has-error textarea:focus {
   border-color: #d32a0e;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f79483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f79483;
@@ -3551,12 +3581,12 @@ select[multiple].input-lg,
 }
 
 @media (min-width: 768px) {
-  .form-inline .form-group {
+  .form-inline .form-group, .form-inline form > div:not(.checkbox), .form-inline form.two-sided > article:not(.checkbox), .form-inline form.two-sided > aside:not(.checkbox), .form-inline form > .list:not(.checkbox), .form-inline form > .list-lg:not(.checkbox), .form-inline form > .list-md:not(.checkbox) {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
   }
-  .form-inline .form-control {
+  .form-inline .form-control, .form-inline form input:not([type='checkbox']), form .form-inline input:not([type='checkbox']), .form-inline form textarea, form .form-inline textarea {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -3570,10 +3600,14 @@ select[multiple].input-lg,
   }
   .form-inline .input-group .input-group-addon,
   .form-inline .input-group .input-group-btn,
-  .form-inline .input-group .form-control {
+  .form-inline .input-group .form-control,
+  .form-inline .input-group form input:not([type='checkbox']), form
+  .form-inline .input-group input:not([type='checkbox']),
+  .form-inline .input-group form textarea, form
+  .form-inline .input-group textarea {
     width: auto;
   }
-  .form-inline .input-group > .form-control {
+  .form-inline .input-group > .form-control, .form-inline form .input-group > input:not([type='checkbox']), form .form-inline .input-group > input:not([type='checkbox']), .form-inline form .input-group > textarea, form .form-inline .input-group > textarea {
     width: 100%;
   }
   .form-inline .control-label {
@@ -3615,17 +3649,17 @@ select[multiple].input-lg,
   min-height: 30px;
 }
 
-.form-horizontal .form-group {
+.form-horizontal .form-group, .form-horizontal form > div:not(.checkbox), .form-horizontal form.two-sided > article:not(.checkbox), .form-horizontal form.two-sided > aside:not(.checkbox), .form-horizontal form > .list:not(.checkbox), .form-horizontal form > .list-lg:not(.checkbox), .form-horizontal form > .list-md:not(.checkbox) {
   margin-left: -15px;
   margin-right: -15px;
 }
 
-.form-horizontal .form-group:before, .form-horizontal .form-group:after {
+.form-horizontal .form-group:before, .form-horizontal form > div:not(.checkbox):before, .form-horizontal form.two-sided > article:not(.checkbox):before, .form-horizontal form.two-sided > aside:not(.checkbox):before, .form-horizontal form > .list:not(.checkbox):before, .form-horizontal form > .list-lg:not(.checkbox):before, .form-horizontal form > .list-md:not(.checkbox):before, .form-horizontal .form-group:after, .form-horizontal form > div:not(.checkbox):after, .form-horizontal form.two-sided > article:not(.checkbox):after, .form-horizontal form.two-sided > aside:not(.checkbox):after, .form-horizontal form > .list:not(.checkbox):after, .form-horizontal form > .list-lg:not(.checkbox):after, .form-horizontal form > .list-md:not(.checkbox):after {
   content: " ";
   display: table;
 }
 
-.form-horizontal .form-group:after {
+.form-horizontal .form-group:after, .form-horizontal form > div:not(.checkbox):after, .form-horizontal form.two-sided > article:not(.checkbox):after, .form-horizontal form.two-sided > aside:not(.checkbox):after, .form-horizontal form > .list:not(.checkbox):after, .form-horizontal form > .list-lg:not(.checkbox):after, .form-horizontal form > .list-md:not(.checkbox):after {
   clear: both;
 }
 
@@ -4594,7 +4628,7 @@ nav.navigation-content[data-toggle="buttons"] > .page input[type="checkbox"],
   padding-right: 0;
 }
 
-.input-group .form-control {
+.input-group .form-control, .input-group form input:not([type='checkbox']), form .input-group input:not([type='checkbox']), .input-group form textarea, form .input-group textarea {
   position: relative;
   z-index: 2;
   float: left;
@@ -4602,19 +4636,27 @@ nav.navigation-content[data-toggle="buttons"] > .page input[type="checkbox"],
   margin-bottom: 0;
 }
 
-.input-group .form-control:focus {
+.input-group .form-control:focus, .input-group form input:focus:not([type='checkbox']), form .input-group input:focus:not([type='checkbox']), .input-group form textarea:focus, form .input-group textarea:focus {
   z-index: 3;
 }
 
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control {
+.input-group .form-control,
+.input-group form input:not([type='checkbox']), form
+.input-group input:not([type='checkbox']),
+.input-group form textarea, form
+.input-group textarea {
   display: table-cell;
 }
 
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group form input:not(:first-child):not(:last-child):not([type='checkbox']), form
+.input-group input:not(:first-child):not(:last-child):not([type='checkbox']),
+.input-group form textarea:not(:first-child):not(:last-child), form
+.input-group textarea:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -4637,7 +4679,7 @@ nav.navigation-content[data-toggle="buttons"] > .page input[type="checkbox"],
   border-radius: 0;
 }
 
-.input-group-addon.input-sm,
+.input-group-addon.input-sm, form .input-group-sm > input.input-group-addon:not([type='checkbox']), form .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > nav.navigation-content.input-group-btn > .input-group-addon.page,
@@ -4647,7 +4689,7 @@ nav.navigation-content[data-toggle="buttons"] > .page input[type="checkbox"],
   border-radius: 0;
 }
 
-.input-group-addon.input-lg,
+.input-group-addon.input-lg, form .input-group-lg > input.input-group-addon:not([type='checkbox']), form .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > nav.navigation-content.input-group-btn > .input-group-addon.page,
@@ -4662,7 +4704,7 @@ nav.navigation-content[data-toggle="buttons"] > .page input[type="checkbox"],
   margin-top: 0;
 }
 
-.input-group .form-control:first-child,
+.input-group .form-control:first-child, .input-group form input:first-child:not([type='checkbox']), form .input-group input:first-child:not([type='checkbox']), .input-group form textarea:first-child, form .input-group textarea:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 nav.navigation-content.input-group-btn:first-child > .page,
@@ -4689,7 +4731,7 @@ nav.navigation-content.input-group-btn:last-child > .page:not(:last-child):not(.
   border-right: 0;
 }
 
-.input-group .form-control:last-child,
+.input-group .form-control:last-child, .input-group form input:last-child:not([type='checkbox']), form .input-group input:last-child:not([type='checkbox']), .input-group form textarea:last-child, form .input-group textarea:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 nav.navigation-content.input-group-btn:last-child > .page,
@@ -5030,25 +5072,25 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   }
 }
 
-.container > .navbar-header, nav.main-navigation .container > .header,
-.container > .navbar-collapse, nav.main-navigation
-.container > .landmarks,
-.container-fluid > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
-.container-fluid > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
-.container-fluid > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
-.container-fluid > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
+.container > .navbar-header, .contact-form > .navbar-header, nav.main-navigation .container > .header, nav.main-navigation .contact-form > .header,
+.container > .navbar-collapse, .contact-form > .navbar-collapse, nav.main-navigation
+.container > .landmarks, nav.main-navigation .contact-form > .landmarks,
+.container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
+.container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
+.container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
+.container-fluid > .landmarks, nav.main-navigation .one-sided > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
   margin-right: -15px;
   margin-left: -15px;
 }
 
 @media (min-width: 992px) {
-  .container > .navbar-header, nav.main-navigation .container > .header,
-  .container > .navbar-collapse, nav.main-navigation
-  .container > .landmarks,
-  .container-fluid > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
-  .container-fluid > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
-  .container-fluid > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
-  .container-fluid > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
+  .container > .navbar-header, .contact-form > .navbar-header, nav.main-navigation .container > .header, nav.main-navigation .contact-form > .header,
+  .container > .navbar-collapse, .contact-form > .navbar-collapse, nav.main-navigation
+  .container > .landmarks, nav.main-navigation .contact-form > .landmarks,
+  .container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
+  .container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
+  .container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
+  .container-fluid > .landmarks, nav.main-navigation .one-sided > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
     margin-right: 0;
     margin-left: 0;
   }
@@ -5108,12 +5150,15 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 }
 
 @media (min-width: 992px) {
-  .navbar > .container .navbar-brand, nav.main-navigation > .container .navbar-brand, .navbar > .container nav.main-navigation .brand, nav.main-navigation .navbar > .container .brand, nav.main-navigation > .container .brand,
+  .navbar > .container .navbar-brand, nav.main-navigation > .container .navbar-brand, .navbar > .contact-form .navbar-brand, nav.main-navigation > .contact-form .navbar-brand, .navbar > .container nav.main-navigation .brand, nav.main-navigation .navbar > .container .brand, nav.main-navigation > .container .brand, .navbar > .contact-form nav.main-navigation .brand, nav.main-navigation .navbar > .contact-form .brand, nav.main-navigation > .contact-form .brand,
   .navbar > .container-fluid .navbar-brand, nav.main-navigation > .container-fluid .navbar-brand,
+  .navbar > .one-sided .navbar-brand, nav.main-navigation > .one-sided .navbar-brand,
   .navbar > .two-sided .navbar-brand, nav.main-navigation > .two-sided .navbar-brand,
   .navbar > footer .navbar-brand, nav.main-navigation > footer .navbar-brand,
   .navbar > .container-fluid nav.main-navigation .brand, nav.main-navigation
   .navbar > .container-fluid .brand, nav.main-navigation > .container-fluid .brand,
+  .navbar > .one-sided nav.main-navigation .brand, nav.main-navigation
+  .navbar > .one-sided .brand, nav.main-navigation > .one-sided .brand,
   .navbar > .two-sided nav.main-navigation .brand, nav.main-navigation
   .navbar > .two-sided .brand, nav.main-navigation > .two-sided .brand,
   .navbar > footer nav.main-navigation .brand, nav.main-navigation
@@ -5215,12 +5260,12 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 }
 
 @media (min-width: 768px) {
-  .navbar-form .form-group {
+  .navbar-form .form-group, .navbar-form form > div:not(.checkbox), .navbar-form form.two-sided > article:not(.checkbox), .navbar-form form.two-sided > aside:not(.checkbox), .navbar-form form > .list:not(.checkbox), .navbar-form form > .list-lg:not(.checkbox), .navbar-form form > .list-md:not(.checkbox) {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
   }
-  .navbar-form .form-control {
+  .navbar-form .form-control, .navbar-form form input:not([type='checkbox']), form .navbar-form input:not([type='checkbox']), .navbar-form form textarea, form .navbar-form textarea {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -5234,10 +5279,14 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   }
   .navbar-form .input-group .input-group-addon,
   .navbar-form .input-group .input-group-btn,
-  .navbar-form .input-group .form-control {
+  .navbar-form .input-group .form-control,
+  .navbar-form .input-group form input:not([type='checkbox']), form
+  .navbar-form .input-group input:not([type='checkbox']),
+  .navbar-form .input-group form textarea, form
+  .navbar-form .input-group textarea {
     width: auto;
   }
-  .navbar-form .input-group > .form-control {
+  .navbar-form .input-group > .form-control, .navbar-form form .input-group > input:not([type='checkbox']), form .navbar-form .input-group > input:not([type='checkbox']), .navbar-form form .input-group > textarea, form .navbar-form .input-group > textarea {
     width: 100%;
   }
   .navbar-form .control-label {
@@ -5266,10 +5315,10 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 }
 
 @media (max-width: 991px) {
-  .navbar-form .form-group {
+  .navbar-form .form-group, .navbar-form form > div:not(.checkbox), .navbar-form form.two-sided > article:not(.checkbox), .navbar-form form.two-sided > aside:not(.checkbox), .navbar-form form > .list:not(.checkbox), .navbar-form form > .list-lg:not(.checkbox), .navbar-form form > .list-md:not(.checkbox) {
     margin-bottom: 5px;
   }
-  .navbar-form .form-group:last-child {
+  .navbar-form .form-group:last-child, .navbar-form form > div:last-child:not(.checkbox), .navbar-form form.two-sided > article:last-child:not(.checkbox), .navbar-form form.two-sided > aside:last-child:not(.checkbox), .navbar-form form > .list:last-child:not(.checkbox), .navbar-form form > .list-lg:last-child:not(.checkbox), .navbar-form form > .list-md:last-child:not(.checkbox) {
     margin-bottom: 0;
   }
 }
@@ -5886,14 +5935,14 @@ a.badge:hover, a.badge:focus {
   border-top-color: #e1e0e0;
 }
 
-.container .jumbotron,
-.container-fluid .jumbotron, .two-sided .jumbotron, footer .jumbotron {
+.container .jumbotron, .contact-form .jumbotron,
+.container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron {
   border-radius: 0;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.jumbotron .container {
+.jumbotron .container, .jumbotron .contact-form {
   max-width: 100%;
 }
 
@@ -5902,8 +5951,8 @@ a.badge:hover, a.badge:focus {
     padding-top: 48px;
     padding-bottom: 48px;
   }
-  .container .jumbotron,
-  .container-fluid .jumbotron, .two-sided .jumbotron, footer .jumbotron {
+  .container .jumbotron, .contact-form .jumbotron,
+  .container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -6511,100 +6560,142 @@ button.list-group-item-danger.active:focus {
   border-top-width: 0;
 }
 
-.panel > .table,
+.panel > .table, .panel > table,
 .panel > .table-responsive > .table,
-.panel > .panel-collapse > .table {
+.panel > .table-responsive > table,
+.panel > .panel-collapse > .table,
+.panel > .panel-collapse > table {
   margin-bottom: 0;
 }
 
-.panel > .table caption,
+.panel > .table caption, .panel > table caption,
 .panel > .table-responsive > .table caption,
-.panel > .panel-collapse > .table caption {
+.panel > .table-responsive > table caption,
+.panel > .panel-collapse > .table caption,
+.panel > .panel-collapse > table caption {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.panel > .table:first-child,
-.panel > .table-responsive:first-child > .table:first-child {
+.panel > .table:first-child, .panel > table:first-child,
+.panel > .table-responsive:first-child > .table:first-child,
+.panel > .table-responsive:first-child > table:first-child {
   border-top-right-radius: -1;
   border-top-left-radius: -1;
 }
 
-.panel > .table:first-child > thead:first-child > tr:first-child,
+.panel > .table:first-child > thead:first-child > tr:first-child, .panel > table:first-child > thead:first-child > tr:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child,
+.panel > table:first-child > tbody:first-child > tr:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
+.panel > .table-responsive:first-child > table:first-child > thead:first-child > tr:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child,
+.panel > .table-responsive:first-child > table:first-child > tbody:first-child > tr:first-child {
   border-top-left-radius: -1;
   border-top-right-radius: -1;
 }
 
-.panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.panel > .table:first-child > thead:first-child > tr:first-child td:first-child, .panel > table:first-child > thead:first-child > tr:first-child td:first-child,
 .panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.panel > table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.panel > table:first-child > tbody:first-child > tr:first-child td:first-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+.panel > table:first-child > tbody:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.panel > .table-responsive:first-child > table:first-child > thead:first-child > tr:first-child td:first-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.panel > .table-responsive:first-child > table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+.panel > .table-responsive:first-child > table:first-child > tbody:first-child > tr:first-child td:first-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+.panel > .table-responsive:first-child > table:first-child > tbody:first-child > tr:first-child th:first-child {
   border-top-left-radius: -1;
 }
 
-.panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.panel > .table:first-child > thead:first-child > tr:first-child td:last-child, .panel > table:first-child > thead:first-child > tr:first-child td:last-child,
 .panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.panel > table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.panel > table:first-child > tbody:first-child > tr:first-child td:last-child,
 .panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+.panel > table:first-child > tbody:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.panel > .table-responsive:first-child > table:first-child > thead:first-child > tr:first-child td:last-child,
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.panel > .table-responsive:first-child > table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
-.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+.panel > .table-responsive:first-child > table:first-child > tbody:first-child > tr:first-child td:last-child,
+.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+.panel > .table-responsive:first-child > table:first-child > tbody:first-child > tr:first-child th:last-child {
   border-top-right-radius: -1;
 }
 
-.panel > .table:last-child,
-.panel > .table-responsive:last-child > .table:last-child {
+.panel > .table:last-child, .panel > table:last-child,
+.panel > .table-responsive:last-child > .table:last-child,
+.panel > .table-responsive:last-child > table:last-child {
   border-bottom-right-radius: -1;
   border-bottom-left-radius: -1;
 }
 
-.panel > .table:last-child > tbody:last-child > tr:last-child,
+.panel > .table:last-child > tbody:last-child > tr:last-child, .panel > table:last-child > tbody:last-child > tr:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child,
+.panel > table:last-child > tfoot:last-child > tr:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
+.panel > .table-responsive:last-child > table:last-child > tbody:last-child > tr:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child,
+.panel > .table-responsive:last-child > table:last-child > tfoot:last-child > tr:last-child {
   border-bottom-left-radius: -1;
   border-bottom-right-radius: -1;
 }
 
-.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child, .panel > table:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.panel > table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.panel > table:last-child > tfoot:last-child > tr:last-child td:first-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+.panel > table:last-child > tfoot:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.panel > .table-responsive:last-child > table:last-child > tbody:last-child > tr:last-child td:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.panel > .table-responsive:last-child > table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+.panel > .table-responsive:last-child > table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+.panel > .table-responsive:last-child > table:last-child > tfoot:last-child > tr:last-child th:first-child {
   border-bottom-left-radius: -1;
 }
 
-.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child, .panel > table:last-child > tbody:last-child > tr:last-child td:last-child,
 .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.panel > table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.panel > table:last-child > tfoot:last-child > tr:last-child td:last-child,
 .panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+.panel > table:last-child > tfoot:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.panel > .table-responsive:last-child > table:last-child > tbody:last-child > tr:last-child td:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.panel > .table-responsive:last-child > table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
-.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+.panel > .table-responsive:last-child > table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+.panel > .table-responsive:last-child > table:last-child > tfoot:last-child > tr:last-child th:last-child {
   border-bottom-right-radius: -1;
 }
 
-.panel > .panel-body + .table,
+.panel > .panel-body + .table, .panel > .panel-body + table,
 .panel > .panel-body + .table-responsive,
 .panel > .table + .panel-body,
+.panel > table + .panel-body,
 .panel > .table-responsive + .panel-body {
   border-top: 1px solid #ddd;
 }
 
-.panel > .table > tbody:first-child > tr:first-child th,
-.panel > .table > tbody:first-child > tr:first-child td {
+.panel > .table > tbody:first-child > tr:first-child th, .panel > table > tbody:first-child > tr:first-child th,
+.panel > .table > tbody:first-child > tr:first-child td,
+.panel > table > tbody:first-child > tr:first-child td {
   border-top: 0;
 }
 
@@ -7940,7 +8031,7 @@ button.close {
   margin-bottom: 5px;
 }
 
-.navbar-form .form-control {
+.navbar-form .form-control, .navbar-form form input:not([type='checkbox']), form .navbar-form input:not([type='checkbox']), .navbar-form form textarea, form .navbar-form textarea {
   height: auto;
   padding: 4px 6px;
 }
@@ -8414,7 +8505,7 @@ input[type="checkbox"] {
   height: 200px;
 }
 
-.loading div, .loading .two-sided > article, .loading .two-sided > aside, .loading .list, .loading .list-lg, .loading .list-md {
+.loading div, .loading .one-sided > section > section, .loading .one-sided > section > aside, .loading .one-sided > section > article, .loading .two-sided > article, .loading .two-sided > aside, .loading .list, .loading .list-lg, .loading .list-md {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8429,13 +8520,13 @@ input[type="checkbox"] {
   animation: loading 2s ease-out infinite;
 }
 
-.loading div:nth-of-type(1), .loading .two-sided > article:nth-of-type(1), .loading .two-sided > aside:nth-of-type(1), .loading .list:nth-of-type(1), .loading .list-lg:nth-of-type(1), .loading .list-md:nth-of-type(1) {
+.loading div:nth-of-type(1), .loading .one-sided > section > section:nth-of-type(1), .loading .one-sided > section > aside:nth-of-type(1), .loading .one-sided > section > article:nth-of-type(1), .loading .two-sided > article:nth-of-type(1), .loading .two-sided > aside:nth-of-type(1), .loading .list:nth-of-type(1), .loading .list-lg:nth-of-type(1), .loading .list-md:nth-of-type(1) {
   border-color: #afafb7;
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
 }
 
-.loading div:nth-of-type(2), .loading .two-sided > article:nth-of-type(2), .loading .two-sided > aside:nth-of-type(2), .loading .list:nth-of-type(2), .loading .list-lg:nth-of-type(2), .loading .list-md:nth-of-type(2) {
+.loading div:nth-of-type(2), .loading .one-sided > section > section:nth-of-type(2), .loading .one-sided > section > aside:nth-of-type(2), .loading .one-sided > section > article:nth-of-type(2), .loading .two-sided > article:nth-of-type(2), .loading .two-sided > aside:nth-of-type(2), .loading .list:nth-of-type(2), .loading .list-lg:nth-of-type(2), .loading .list-md:nth-of-type(2) {
   border-color: #00b2ff;
 }
 
@@ -8611,7 +8702,56 @@ nav.main-navigation .landmarks > ul {
   font-size: 22pt;
 }
 
-.quote-container > article {
+.item blockquote {
+  border-left: none;
+  margin: 0;
+}
+
+.item blockquote img {
+  margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+  content: "\f10d";
+  font-family: 'Fontawesome';
+  float: left;
+  margin-right: 10px;
+}
+
+/* ------------ CONTENTS ------------- */
+.one-sided {
+  width: 100%;
+  background-color: white;
+}
+
+.one-sided > section {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.one-sided > section:before, .one-sided > section:after {
+  content: " ";
+  display: table;
+}
+
+.one-sided > section:after {
+  clear: both;
+}
+
+.one-sided > section:before, .one-sided > section:after {
+  content: " ";
+  display: table;
+}
+
+.one-sided > section:after {
+  clear: both;
+}
+
+.one-sided > section > section {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
   float: left;
   width: 100%;
@@ -8626,161 +8766,117 @@ nav.main-navigation .landmarks > ul {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .one-sided > section > section {
+    float: left;
+    width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .one-sided > section > section {
+    float: left;
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .one-sided > section > section {
+    float: left;
+    width: 75%;
+  }
+}
+
+.one-sided > section > aside {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+@media (min-width: 992px) {
+  .one-sided > section > aside {
+    float: left;
+    width: 25%;
+  }
+}
+
 @media (min-width: 768px) {
-  .quote-container > article {
+  .one-sided > section > aside {
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .one-sided > section > aside {
+    float: left;
+    width: 25%;
+  }
+}
+
+.one-sided > section > article {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .one-sided > section > article {
     float: left;
     width: 100%;
   }
 }
 
-@media (min-width: 992px) {
-  .quote-container > article {
-    float: left;
-    width: 50%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .quote-container > article {
-    float: left;
-    width: 50%;
-  }
-}
-
-.quote-container blockquote {
-  margin-left: -15px;
-  margin-right: -15px;
-  border-left: none;
-  margin: 0;
-  margin-bottom: 10px;
-  content: "\f10d";
-  font-family: 'Fontawesome';
-  float: left;
-  margin-right: 10px;
-}
-
-.quote-container blockquote:before, .quote-container blockquote:after {
-  content: " ";
-  display: table;
-}
-
-.quote-container blockquote:after {
-  clear: both;
-}
-
-.quote-container blockquote:before, .quote-container blockquote:after {
-  content: " ";
-  display: table;
-}
-
-.quote-container blockquote:after {
-  clear: both;
-}
-
-.quote-container blockquote .avatar {
-  position: relative;
-  float: left;
-  width: 25%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 @media (min-width: 768px) {
-  .quote-container blockquote .avatar {
+  .one-sided > section > article {
     float: left;
-    width: 25%;
-  }
-}
-
-@media (min-width: 992px) {
-  .quote-container blockquote .avatar {
-    float: left;
-    width: 25%;
+    width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  .quote-container blockquote .avatar {
+  .one-sided > section > article {
     float: left;
-    width: 25%;
+    width: 100%;
   }
 }
 
-.quote-container blockquote .avatar img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
+.contact-form {
+  max-width: 500px;
 }
 
-.quote-container blockquote .quote {
-  position: relative;
-  float: left;
-  width: 75%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-@media (min-width: 768px) {
-  .quote-container blockquote .quote {
-    float: left;
-    width: 75%;
-  }
-}
-
-@media (min-width: 992px) {
-  .quote-container blockquote .quote {
-    float: left;
-    width: 75%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .quote-container blockquote .quote {
-    float: left;
-    width: 75%;
-  }
-}
-
-.quote-container blockquote .quote p:before {
-  content: "\f10d";
-  font-family: 'Fontawesome';
-  float: left;
-  margin-right: 10px;
-}
-
-/* ------------ CONTENTS ------------- */
 .two-sided > article {
   position: relative;
   float: left;
@@ -9067,7 +9163,7 @@ footer a:hover {
   color: #7dbbf1;
 }
 
-section.navigation-child > div, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
+section.navigation-child > div, .one-sided > section.navigation-child > section, .one-sided > section.navigation-child > aside, .one-sided > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -9076,7 +9172,7 @@ section.navigation-child > div, section.two-sided.navigation-child > article, se
 }
 
 @media (min-width: 992px) {
-  section.navigation-child > div, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
+  section.navigation-child > div, .one-sided > section.navigation-child > section, .one-sided > section.navigation-child > aside, .one-sided > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
     float: left;
     width: 25%;
   }
