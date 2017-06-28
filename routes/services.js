@@ -34,6 +34,24 @@ router.get('/service/:id', function(req, res, next){
     });
 });
 
+router.get('/service/:id/operating-doctors', function(req, res, next){
+  models.services.findOne({
+    where : { id : req.params.id },
+    include : [{
+      model : models.areas,
+      attributes : ['name', 'icon']
+    }, {
+        model : models.doctors,
+        as: 'doctors_services'
+    }]
+  }).then(function(service) {
+    res.render('service/operating-doctors', { title: 'Doctors operating in ' + service.name, service: service});
+  }).catch(function(error) {
+    debug(error);
+    next(error);
+  });
+});
+
 router.get('/service/:id/instrumentations', function(req, res, next) {
     models.services.findOne({
         where : { id : req.params.id}
