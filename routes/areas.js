@@ -16,11 +16,11 @@ router.get('/area', function(req, res, next){
 });
 
 router.get('/area/:id', function(req, res, next){
-    var data = {};
-    models.area.findOne({
-        where : { id : req.params.id }
+    models.areas.findOne({
+        where : { id : req.params.id },
+        include : models.services
     }).then(function(area) {
-      res.render('area/area', { title: '', area: area });
+      res.render('area/area', { title: area.name + ' Area', area: area });
     }).catch(function(error){
         debug(error);
         next(error);
