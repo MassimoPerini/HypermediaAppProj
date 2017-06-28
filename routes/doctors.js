@@ -9,10 +9,22 @@ var models = require('../models');
 var router = express.Router();
 
 router.get('/doctor', function(req, res, next){
+
+    var locations = (models.locations.findAll({}));
+    var areas = models.areas.findAll({});
+    var services = models.services.findAll({});
+
+    Promise.all([locations, areas, services]).then(
+        function(locations, areas, services) {
+        res.render('doctors', {title: 'Dottori', locations:locations, areas:areas, services:services});
+    });
+
+    /*
   models.doctors.findAll({})
   .then(function(doctors){
     res.render('doctors', { title: 'Dottori', doctors: doctors});
   });
+  */
 });
 
 router.get('/doctor/:id', function(req, res, next){

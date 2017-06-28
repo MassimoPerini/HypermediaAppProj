@@ -4,35 +4,41 @@
     <title><%= title %></title>
       <%- include('../common/imports') %>
 
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      body {
+        background: #43cea2; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #185a9d, #43cea2) no-repeat center center fixed;
+        background: linear-gradient(to top, #185a9d, #43cea2) no-repeat center center fixed;
+      }
+    </style>
 
   </head>
   <body>
-  <%- include('../common/navbar', { page : '/login'}) %>
-  <!-- https://bootsnipp.com/snippets/featured/google-style-login-extended-with-html5-localstorage  -->
 
-  <div class="container">
-    <div class="card card-container">
+  <section>
+    <div class="private-area-form">
+      <form class="register-form">
+        <input type="text" placeholder="name"/>
+        <input type="password" placeholder="password"/>
+        <input type="text" placeholder="email address"/>
+        <button>create</button>
+        <p class="message">Already registered? <a href="#">Sign In</a></p>
+      </form>
+      <form class="login-form">
+        <input type="text" placeholder="username"/>
+        <input type="password" placeholder="password"/>
+        <button>login</button>
+        <p>Not registered? <a href="#">Create an account</a></p>
+      </form>
+    </div>
+  </section>
 
-      <img class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-      <p id="profile-name" class="profile-name-card"></p>
 
-      <form>
-        <span id="reauth-email" class="reauth-email"></span>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div id="remember" class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-      </form><!-- /form -->
-      <a href="#" class="forgot-password">
-        Forgot the password?
-      </a>
-    </div><!-- /card-container -->
-  </div><!-- /container -->
+  <script>
+      $('a').click(function(){
+          $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+      });
+  </script>
 
   </body>
 </html>

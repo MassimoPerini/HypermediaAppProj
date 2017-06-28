@@ -27,7 +27,18 @@
                     add+='</a></article>';
 
                 });
+
                 $('#content').append(add);
+                add="";
+                var lMax = Math.ceil(result.length / <%=size%>);
+                console.log(lMax);
+                for (i=1;i<=lMax;i++)
+                {
+                    add+='<button type="button" class="btn btn-default" id="'+i+'">'+i+' </button>';
+                }
+
+                $('#pagination').empty().append(add);
+
             });
         }
 
@@ -71,12 +82,7 @@
       </section>
     </div>
 
-    <div class="btn-group" role="group" aria-label="...">
-    <% var max = Math.ceil (doctors.length / size);
-    for (var i=1;i<=max;i++)
-    {
-        %><button type="button" class="btn btn-default" id="<%=i%>"> <%=i%> </button>
-    <%}%>
+    <div class="btn-group" role="group" id="pagination" aria-label="...">
     </div>
 
   </body>

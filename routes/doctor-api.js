@@ -25,30 +25,53 @@ router.get('/api/doctor', function(req, res, next){
 
     var offset = req.param("offset");
     var limit = req.param("limit");
-    var campo_service_da_input = 1;
+    var service = req.param("service");     //TUTTI ID
+    var area = req.param("area");
+    var location = req.param("location");
 
-    offset = offset && !isNaN(offset) ? offset : 0;
+    offset = offset && !isNaN(offset) && offset >= 0 ? offset : 0;
     limit = limit && !isNaN(limit) ? limit : 4;
+    service = service ? service : {};
+    area = area ? area : {};
+    location = location ? location : {};
 
   //  locationFilter = (req.params.location) ? { id : req.params.location} : {};
 
     models.doctors.findAll({
-        offset: offset,
-        limit: limit,
-        include: [{
-            model: models.services,
-            as: 'doctors_services'
-        },{
-            model: models.services,
-            as: 'responsible'
-        }]
+        include: [
+            {
+                model: models.services,
+                as: 'doctors_services',
+                where: {
+                    id: service
+                },
+                include:[
+                    {
+                        model: models.areas,
+                        where:{
+                            id: area
+                        }
+                    }
+                ]
+            }
+        ]
     })
-  .then(function(doctors){
-    res.send(doctors);
+ /* .then(function(doctors){
+      console.out("ARRIVATO!!!");
+      console.log("ARRIVATO!!!");
+      var datas = [];
+      for (;offset<limit;offset++)
+      {
+          datas.push(doctors[offset]);
+      }
+      var result = {};
+      result.data = datas;
+      result.count = doctors.length;
+    res.send(result);
   }).catch(function(error){
     debug(error);
     next(error);
-  });
+  });*/
 });
 
 /**
