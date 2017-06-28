@@ -1,0 +1,57 @@
+<% console.log(service); %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+    <%- include('../common/imports') %>
+
+  <style>
+    header{
+      background-image: url("<%=service.header%>");
+    }
+
+  </style>
+</head>
+<body>
+    <%- include('../common/navbar', { page : '/doctor'}) %>
+
+  <header>
+    <div>
+      <h1><%=service.name%></h1>
+    </div>
+  </header>
+
+  <section class="two-sided" id="content">
+    <article>
+      <div>
+        <h2><%= title %></h2>
+        <p>Here you can find the list of all doctors operating in this service. Feel free to contact with them.</p>
+        <div class="row">
+        <% var i = 0; service.doctors_services.forEach(doctor => { %>
+            <div class="col-sm-2">
+                <div class="card">
+                    <a href="/doctor/<%= doctor.id %>">
+                        <div class="card-header">
+                        <img class="card-image" src="<%= doctor.icon %>"/>
+                        </div>
+                        <h5 class="card-text"><%= doctor.fullname %></h5>
+                    </a>
+                </div>
+            </div>
+        <% i++; if(i % 3 == 0 && i < service.doctors_services.length) { %>
+            </div>
+            <div class="row">
+        <%   }
+           }); %>
+        </div>
+      </div>
+
+    </article>
+
+    <%- include('sidebar', { page : 'operating-doctors' }) %>
+
+  </section>
+
+<%- include('../common/footer') %>
+</body>
+</html>

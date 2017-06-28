@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+    <%- include('../common/imports') %>
+
+  <style>
+    header{
+      background-image: url("<%=area.header%>");
+    }
+
+  </style>
+  <script>
+    $(document).ready(function(){
+      $.ajax({
+        dataType: 'json',
+        url: '/api/doctor/<%= area.responsible %>',
+        success: function(result) {
+          $('#responsible a').attr('href', '/doctor/'+result['id']);
+          $('#responsible a img').attr('src', result['icon']);
+          $('#responsible a h5').html('Responsible: ' + result['fullname']);
+        } 
+      });
+    });
+  </script>
+</head>
+<body>
+    <%- include('../common/navbar', { page : '/area'}) %>
+
+  <header>
+    <div>
+      <h1><%=area.name%></h1>
+    </div>
+  </header>
+
+  <section class="two-sided" id="content">
+    <article>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="card" id="responsible">
+              <a href="">
+                  <div class="card-header">
+                  <img class="card-image" src="/public/imgs/doctor.svg"/>
+                  </div>
+                  <h5 class="card-text"></h5>
+              </a>
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <div>
+            <h2>Description</h2>
+            <p><%=area.description%></p>
+          </div>
+
+          <div>
+            <h2>Available Service in this <%= area.name %></h2>
+            <ul>
+                <% area.services.forEach(service => { %>
+                <li><a href="/service/<%= service.id %>"><%= service.name %></a></li>
+                <% }); %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <aside>
+        <div class="card">
+            <a href="/contacts?topic=<%= area.name %>">
+                <div class="card-header">
+                <img class="card-image" src="/public/imgs/svgs/018-note.svg"/>
+                </div>
+                <h5 class="card-text">Questions? Contact the area</h5>
+            </a>
+        </div>
+        <div class="card">
+            <a href="">
+                <div class="card-header">
+                <img class="card-image" src=""/>
+                </div>
+                <h5 class="card-text">Che altro mettere?</h5>
+            </a>
+        </div>
+        <div class="card">
+            <a href="">
+                <div class="card-header">
+                <img class="card-image" src=""/>
+                </div>
+                <h5 class="card-text">Che altro mettere?</h5>
+            </a>
+        </div>
+    </aside>
+
+  </section>
+
+<%- include('../common/footer') %>
+</body>
+</html>
