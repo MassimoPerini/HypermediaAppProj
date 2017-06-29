@@ -33,5 +33,39 @@
         "working_location_id": 2,
         "opening_time": "09:00",
         "closing_time": "11:00"
+    },
+    {        "doctor_id": 2,
+        "day": "Monday",
+        "working_location_id": 1,
+        "opening_time": "10:00",
+        "closing_time": "12:00"
+    },
+    {
+        "doctor_id": 2,
+        "day": "Tuesday",
+        "working_location_id": 1,
+        "opening_time": "09:30",
+        "closing_time": "11:30"
+    },
+    {
+        "doctor_id": 2,
+        "day": "Wednesday",
+        "working_location_id": 2,
+        "opening_time": "15:30",
+        "closing_time": "18:30"
+    },
+    {
+        "doctor_id": 2,
+        "day": "Thursday",
+        "working_location_id": 1,
+        "opening_time": "11:00",
+        "closing_time": "12:30"
+    },
+    {
+        "doctor_id": 2,
+        "day": "Friday",
+        "working_location_id": 2,
+        "opening_time": "09:00",
+        "closing_time": "11:00"
     }
 ]

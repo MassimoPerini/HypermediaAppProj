@@ -31,10 +31,10 @@ router.get('/api/doctor', function(req, res, next){
 
     offset = offset && !isNaN(offset) && offset >= 0 ? offset : 0;
     limit = limit && !isNaN(limit) ? limit : 4;
-    service = service ? service : {};
     area = area ? area : {};
     location = location ? location : {};
 
+    service = 1;
   //  locationFilter = (req.params.location) ? { id : req.params.location} : {};
 
     models.doctors.findAll({
@@ -42,14 +42,19 @@ router.get('/api/doctor', function(req, res, next){
             {
                 model: models.services,
                 as: 'doctors_services',
-                where: {
-                    id: service
-                },
+                    where: {
+                        $or: [{
+                                id: 1
+                            },
+                            {
+                                service: null
+                        }]
+                    },
                 include: [
                     {
                         model: models.areas,
                         where: {
-                            id: area
+                 //           id: area
                         }
                     }]
             },
@@ -58,15 +63,13 @@ router.get('/api/doctor', function(req, res, next){
                 include:[{
                     model: models.locations,
                     where:{
-                        id: location
+                //        id: location
                     }
                 }]
             }
         ]
-    });
- /* .then(function(doctors){
-      console.out("ARRIVATO!!!");
-      console.log("ARRIVATO!!!");
+    })
+  .then(function(doctors){
       var datas = [];
       for (;offset<limit;offset++)
       {
@@ -79,7 +82,7 @@ router.get('/api/doctor', function(req, res, next){
   }).catch(function(error){
     debug(error);
     next(error);
-  });*/
+  });
 });
 
 /**
