@@ -31,54 +31,70 @@ router.get('/api/doctor', function(req, res, next){
 
     offset = offset && !isNaN(offset) && offset >= 0 ? offset : 0;
     limit = limit && !isNaN(limit) ? limit : 4;
-    area = area ? area : {};
-    location = location ? location : {};
 
-    service = 1;
-  //  locationFilter = (req.params.location) ? { id : req.params.location} : {};
+    var serviceQuery = {};
+    var locationQuery = {};
+    var areaQuery = {};
+
+    if (service) {
+        serviceQuery =
+            {
+                id: service
+            }
+    }
+    if (location)
+    {
+        locationQuery =
+            {
+                id: location
+            }
+    }
+    if (area)
+    {
+        areaQuery =
+            {
+                id: area
+            }
+    }
+
+    //  locationFilter = (req.params.location) ? { id : req.params.location} : {};
 
     models.doctors.findAll({
         include: [
             {
                 model: models.services,
+                attributes: [],
                 as: 'doctors_services',
-                    where: {
-                        $or: [{
-                                id: 1
-                            },
-                            {
-                                service: null
-                        }]
-                    },
+                where: serviceQuery,
                 include: [
                     {
                         model: models.areas,
-                        where: {
-                 //           id: area
-                        }
+                        attributes: [],
+                        where: areaQuery
                     }]
             },
             {
                 model: models.doctors_timetables,
+                attributes: [],
                 include:[{
                     model: models.locations,
-                    where:{
-                //        id: location
-                    }
+                    attributes: [],
+                    where:locationQuery
                 }]
             }
         ]
     })
   .then(function(doctors){
       var datas = [];
-      for (;offset<limit;offset++)
+      for (;offset<limit && offset<doctors.length ;offset++)
       {
           datas.push(doctors[offset]);
       }
       var result = {};
       result.data = datas;
       result.count = doctors.length;
-    res.send(result);
+      var send = JSON.stringify(result);
+    res.send(send);
   }).catch(function(error){
     debug(error);
     next(error);

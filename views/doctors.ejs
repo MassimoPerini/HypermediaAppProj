@@ -14,13 +14,14 @@
 
       <script>
         var currentPage;
-        function loadValue(page) {
+        function loadValue(page, service, area, location) {
+
             $("#content").empty().append("<div class='loading' style='transform:scale(0.31);'><div></div><div></div></div>");
-            $.getJSON("api/doctor",{ offset: page, limit:<%=size%> }, function(result){
+            $.getJSON("api/doctor",{ offset: page, limit:<%=size%>, service:service, area:area, location:location }, function(result){
+
                 var add="";
                 $("#content").empty();
-                $.each(result, function(index, element){
-
+                $.each(result.data, function(index, element){
                     add+='<article class="card"><a href="">';
                     add+='<div class="card-header"><img class="card-image" src='+element.icon+'></div>';
                     add+='<h4>'+element.fullname+'</h4>'
@@ -29,8 +30,10 @@
                 });
 
                 $('#content').append(add);
+
+                //navbar
                 add="";
-                var lMax = Math.ceil(result.length / <%=size%>);
+                var lMax = Math.ceil(result.count / <%=size%>);
                 console.log(lMax);
                 for (i=1;i<=lMax;i++)
                 {
@@ -47,8 +50,7 @@
               //Default loading
               params = new URLSearchParams(window.location.search);
               currentPage = (params.get("page")) ? params.get("page") : 0;
-              loadValue(currentPage);
-
+              loadValue(currentPage, params.get("service"), params.get("area"), params.get("location"));
               //On click
               $('button').click(function(e){
 
