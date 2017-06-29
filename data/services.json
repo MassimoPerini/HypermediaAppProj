@@ -23,7 +23,8 @@
     "description": "A traditional CT scan is an x-ray procedure that combines many x-ray images with the aid of a computer to generate cross-sectional views of the body. Cardiac CT uses the advanced CT technology with intravenous (IV) contrast (dye) to visualize your cardiac anatomy, coronary circulation and great vessels.",
     "areaId": 1,
     "responsible" : 1,
-    "locations" : [1,2]
+    "locations" : [2,3],
+    "doctors" : [7,8]
   },
   {
     "id": 4,
@@ -32,7 +33,7 @@
     "areaId": 1,
     "responsible" : 1,
     "locations" : [1,2],
-    "doctors" : [6]
+    "doctors" : [6,7]
   },
   {
     "id": 5,
@@ -40,7 +41,8 @@
     "description": "Cosmetic facial surgery enhances your appearance by improving visual appeal, symmetry and/or proportion. Procedures include face lifts, lip lifts, neck lifts, cosmetic nose surgery and many more.",
     "areaId": 2,
     "responsible" : 1,
-    "locations" : [1,2]
+    "locations" : [1,3],
+    "doctors" : [5,6,7]
   },
   {
     "id": 6,
@@ -48,7 +50,8 @@
     "description": "Our breasts often change over time, losing their youthful shape and firmness. Or you may have very large breasts that cause body image issues and even physical pain. Procedures offered include breast augmentation, breast lift and breast reduction.",
     "areaId": 2,
     "responsible" : 1,
-    "locations" : [1,2]
+    "locations" : [1,2],
+    "doctors" : [4,5,6,8]
   },
   {
     "id": 7,

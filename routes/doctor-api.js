@@ -86,7 +86,10 @@ router.get('/api/doctor', function(req, res, next){
     })
   .then(function(doctors){
       var datas = [];
-      for (;offset<limit && offset<doctors.length ;offset++)
+      maxSize = Number(limit)+Number(offset);
+      if (maxSize >= doctors.length)
+          maxSize = doctors.length;
+      for (;offset<maxSize ;offset++)
       {
           datas.push(doctors[offset]);
       }

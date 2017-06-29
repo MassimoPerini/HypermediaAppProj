@@ -15,8 +15,8 @@ router.get('/doctor', function(req, res, next){
     var services = models.services.findAll({});
 
     Promise.all([locations, areas, services]).then(
-        function(locations, areas, services) {
-        res.render('doctors', {title: 'Dottori', locations:locations, areas:areas, services:services});
+        function(result) {
+        res.render('doctors', {title: 'Dottori', locations:result[0], areas:result[1], services:result[2]});
     });
 
     /*

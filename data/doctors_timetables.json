@@ -67,5 +67,209 @@
         "working_location_id": 2,
         "opening_time": "09:00",
         "closing_time": "11:00"
+    },
+    {        "doctor_id": 3,
+        "day": "Monday",
+        "working_location_id": 1,
+        "opening_time": "10:00",
+        "closing_time": "12:00"
+    },
+    {
+        "doctor_id": 3,
+        "day": "Tuesday",
+        "working_location_id": 1,
+        "opening_time": "09:30",
+        "closing_time": "11:30"
+    },
+    {
+        "doctor_id": 3,
+        "day": "Wednesday",
+        "working_location_id": 2,
+        "opening_time": "15:30",
+        "closing_time": "18:30"
+    },
+    {
+        "doctor_id": 3,
+        "day": "Thursday",
+        "working_location_id": 1,
+        "opening_time": "11:00",
+        "closing_time": "12:30"
+    },
+    {
+        "doctor_id": 3,
+        "day": "Friday",
+        "working_location_id": 2,
+        "opening_time": "09:00",
+        "closing_time": "11:00"
+    },
+    {        "doctor_id": 4,
+        "day": "Monday",
+        "working_location_id": 1,
+        "opening_time": "10:00",
+        "closing_time": "12:00"
+    },
+    {
+        "doctor_id": 4,
+        "day": "Tuesday",
+        "working_location_id": 1,
+        "opening_time": "09:30",
+        "closing_time": "11:30"
+    },
+    {
+        "doctor_id": 4,
+        "day": "Wednesday",
+        "working_location_id": 2,
+        "opening_time": "15:30",
+        "closing_time": "18:30"
+    },
+    {
+        "doctor_id": 4,
+        "day": "Thursday",
+        "working_location_id": 1,
+        "opening_time": "11:00",
+        "closing_time": "12:30"
+    },
+    {
+        "doctor_id": 4,
+        "day": "Friday",
+        "working_location_id": 2,
+        "opening_time": "09:00",
+        "closing_time": "11:00"
+    },
+    {        "doctor_id": 5,
+        "day": "Monday",
+        "working_location_id": 1,
+        "opening_time": "10:00",
+        "closing_time": "12:00"
+    },
+    {
+        "doctor_id": 5,
+        "day": "Tuesday",
+        "working_location_id": 1,
+        "opening_time": "09:30",
+        "closing_time": "11:30"
+    },
+    {
+        "doctor_id": 5,
+        "day": "Wednesday",
+        "working_location_id": 2,
+        "opening_time": "15:30",
+        "closing_time": "18:30"
+    },
+    {
+        "doctor_id": 5,
+        "day": "Thursday",
+        "working_location_id": 1,
+        "opening_time": "11:00",
+        "closing_time": "12:30"
+    },
+    {
+        "doctor_id": 5,
+        "day": "Friday",
+        "working_location_id": 2,
+        "opening_time": "09:00",
+        "closing_time": "11:00"
+    },
+    {        "doctor_id": 6,
+        "day": "Monday",
+        "working_location_id": 1,
+        "opening_time": "10:00",
+        "closing_time": "12:00"
+    },
+    {
+        "doctor_id": 6,
+        "day": "Tuesday",
+        "working_location_id": 1,
+        "opening_time": "09:30",
+        "closing_time": "11:30"
+    },
+    {
+        "doctor_id": 6,
+        "day": "Wednesday",
+        "working_location_id": 2,
+        "opening_time": "15:30",
+        "closing_time": "18:30"
+    },
+    {
+        "doctor_id": 6,
+        "day": "Thursday",
+        "working_location_id": 1,
+        "opening_time": "11:00",
+        "closing_time": "12:30"
+    },
+    {
+        "doctor_id": 6,
+        "day": "Friday",
+        "working_location_id": 2,
+        "opening_time": "09:00",
+        "closing_time": "11:00"
+    },
+    {        "doctor_id": 7,
+        "day": "Monday",
+        "working_location_id": 1,
+        "opening_time": "10:00",
+        "closing_time": "12:00"
+    },
+    {
+        "doctor_id": 7,
+        "day": "Tuesday",
+        "working_location_id": 1,
+        "opening_time": "09:30",
+        "closing_time": "11:30"
+    },
+    {
+        "doctor_id": 7,
+        "day": "Wednesday",
+        "working_location_id": 2,
+        "opening_time": "15:30",
+        "closing_time": "18:30"
+    },
+    {
+        "doctor_id": 7,
+        "day": "Thursday",
+        "working_location_id": 1,
+        "opening_time": "11:00",
+        "closing_time": "12:30"
+    },
+    {
+        "doctor_id": 7,
+        "day": "Friday",
+        "working_location_id": 2,
+        "opening_time": "09:00",
+        "closing_time": "11:00"
+    },
+    {        "doctor_id": 8,
+        "day": "Monday",
+        "working_location_id": 1,
+        "opening_time": "10:00",
+        "closing_time": "12:00"
+    },
+    {
+        "doctor_id": 8,
+        "day": "Tuesday",
+        "working_location_id": 1,
+        "opening_time": "09:30",
+        "closing_time": "11:30"
+    },
+    {
+        "doctor_id": 8,
+        "day": "Wednesday",
+        "working_location_id": 2,
+        "opening_time": "15:30",
+        "closing_time": "18:30"
+    },
+    {
+        "doctor_id": 8,
+        "day": "Thursday",
+        "working_location_id": 1,
+        "opening_time": "11:00",
+        "closing_time": "12:30"
+    },
+    {
+        "doctor_id": 8,
+        "day": "Friday",
+        "working_location_id": 2,
+        "opening_time": "09:00",
+        "closing_time": "11:00"
     }
 ]
