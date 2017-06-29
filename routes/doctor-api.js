@@ -45,17 +45,25 @@ router.get('/api/doctor', function(req, res, next){
                 where: {
                     id: service
                 },
-                include:[
+                include: [
                     {
                         model: models.areas,
-                        where:{
+                        where: {
                             id: area
                         }
+                    }]
+            },
+            {
+                model: models.doctors_timetables,
+                include:[{
+                    model: models.locations,
+                    where:{
+                        id: location
                     }
-                ]
+                }]
             }
         ]
-    })
+    });
  /* .then(function(doctors){
       console.out("ARRIVATO!!!");
       console.log("ARRIVATO!!!");
