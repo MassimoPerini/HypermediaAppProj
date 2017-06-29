@@ -42,12 +42,13 @@ app.use(passport.session());
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 // Static directories
 app.use('/public',express.static(path.join(__dirname, 'public')));
 app.use('/docs',express.static(path.join(__dirname, 'docs')));
+
 
 /* API Documentation config using swagger*/
 var swaggerSpec = swaggerJSDoc({

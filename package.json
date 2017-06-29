@@ -10,7 +10,7 @@
     "dbinit_windows": "set DEBUG=model && node dbinit.js"
   },
   "dependencies": {
-    "body-parser": "~1.16.0",
+    "body-parser": "^1.17.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
     "ejs": "~2.5.5",

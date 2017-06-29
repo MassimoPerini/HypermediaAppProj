@@ -12,6 +12,8 @@ router.get('/login', function(req, res, next){
   res.send("errore login");
 });
 
+//app.use(function({})     passo username   req.user
+
 router.post('/login',
   passport.authenticate('local', {
     successRedirect: '/private',

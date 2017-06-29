@@ -12,12 +12,13 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
- 	  name: DataTypes.STRING,
+ 	  name: {type: DataTypes.STRING, nullable: false},
     icon: DataTypes.STRING,
     header: DataTypes.STRING,
     description: DataTypes.TEXT,
     responsible: {
       type: DataTypes.INTEGER,
+        nullable: false,
       references: {
         model: 'doctors',
         key: 'id'

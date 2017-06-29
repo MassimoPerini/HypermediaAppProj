@@ -10,7 +10,23 @@
         background: -webkit-linear-gradient(to top, #185a9d, #43cea2) no-repeat center center fixed;
         background: linear-gradient(to top, #185a9d, #43cea2) no-repeat center center fixed;
       }
+
     </style>
+
+    <script type="text/javascript">
+
+        $(document).ready(function (){
+
+            params = new URLSearchParams(window.location.search);
+            if (params.get("error"))
+            {
+                $('.private-area-form').prepend('<p style="color: #FF2C25">Error login</p>')
+            }
+        });
+
+
+
+    </script>
 
   </head>
   <body>
@@ -24,7 +40,7 @@
         <button>create</button>
         <p class="message">Already registered? <a href="#">Sign In</a></p>
       </form>
-      <form class="login-form">
+      <form class="login-form" action="/login" method="post">
         <input type="text" placeholder="username"/>
         <input type="password" placeholder="password"/>
         <button>login</button>

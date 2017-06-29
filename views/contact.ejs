@@ -15,7 +15,16 @@
 
       $(function() {
           $('form').submit(function(e) {
-              $("#contact-form").empty().append("NON HO INVIATO PERCHE' MANCANO LE API");
+              $("#contact-form").empty().append("<div class='loading' style='transform:scale(0.31);'><div></div><div></div></div>");
+              $.ajax({
+                  type: "POST",
+                  url: "/api/contact",
+                  data: $(this).serialize(),
+                  success: function(data)
+                  {
+                      $("#contact-form").empty().append(data.message);
+                  }
+              });
               e.preventDefault();
           });
       });
@@ -58,35 +67,35 @@
     <form class="contact-form" >
       <div>
         <label for="name">Nome</label>
-        <input id="name" type="text" name="firstName" required placeholder="name">
+        <input id="name" type="text" name="name" required placeholder="name">
       </div>
       <div>
         <label for="surname">Cognome</label>
-        <input id="surname" type="text" name="firstName" required placeholder="surname">
+        <input id="surname" type="text" name="surname" required placeholder="surname">
       </div>
       <div>
         <label for="phone">Telefono</label>
-        <input id="phone" type="tel" name="your_tel" placeholder="phone" required>
+        <input id="phone" type="tel" name="phone" placeholder="phone" required>
       </div>
       <div>
-        <label for="email">Mail</label>
-        <input id="email" type="email" name="your_email" placeholder="" required>
+        <label for="mail">Mail</label>
+        <input id="mail" type="email" name="mail" placeholder="" required>
       </div>
       <div>
-        <label for="areas">Area target</label>
-        <select id="areas">
+        <label for="target">Area target</label>
+        <select id="target" name="target">
           <%areas.forEach((area) => {%>
-          <option value="<%=area.id%>"><%=area.name%></option>
+          <option name="<%=area.name%>" value="<%=area.id%>"><%=area.name%></option>
           <%})%>
         </select>
       </div>
       <div>
-      <label for="subject">Oggetto</label>
-      <input id="subject" type="text" name="firstName" required placeholder="name">
+      <label for="obj">Oggetto</label>
+      <input id="obj" type="text" name="obj" required placeholder="name">
       </div>
       <div>
         <label for="text">Testo</label>
-        <textarea id="text" placeholder="Write here..." required></textarea>
+        <textarea id="message" name="message" placeholder="Write here..." required></textarea>
       </div>
 
       <div class="checkbox">
