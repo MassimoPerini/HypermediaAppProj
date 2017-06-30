@@ -47,7 +47,7 @@ router.get('/api/doctor', function(req, res, next){
         model: models.services,
         as: 'doctors_services',
         where: serviceQuery,
-        required: (service)
+        required: (service == true)
       }]
     }).then(function(doctors){
       res.send(doctors);
