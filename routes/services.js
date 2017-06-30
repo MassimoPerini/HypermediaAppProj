@@ -12,7 +12,7 @@ var router = express.Router();
 router.get('/service', function(req, res, next){
     models.services.findAll({})
         .then(function(services){
-            res.render('service/services', { title: 'Services', services: services});
+            res.render('service/services', { title: 'Services', services: services, user:req.user});
         });
 });
 
@@ -27,7 +27,7 @@ router.get('/service/:id', function(req, res, next){
           attributes : ['id', 'name']
         }]
     }).then(function(service){
-        res.render('service/service', { title: service.name, service: service});
+        res.render('service/service', { title: service.name, service: service, user:req.user});
     }).catch(function(error){
         debug(error);
         next(error);
@@ -45,7 +45,7 @@ router.get('/service/:id/operating-doctors', function(req, res, next){
         as: 'doctors_services'
     }]
   }).then(function(service) {
-    res.render('service/operating-doctors', { title: 'Doctors operating in ' + service.name, service: service});
+    res.render('service/operating-doctors', { title: 'Doctors operating in ' + service.name, service: service, user:req.user});
   }).catch(function(error) {
     debug(error);
     next(error);
@@ -56,7 +56,7 @@ router.get('/service/:id/instrumentations', function(req, res, next) {
     models.services.findOne({
         where : { id : req.params.id}
     }).then(function(service){
-        res.render('service/instrumentations', { title: 'Instrumentation of ' + service.name, service: service});
+        res.render('service/instrumentations', { title: 'Instrumentation of ' + service.name, service: service, user:req.user});
     }).catch(function(error) {
         debug(error);
         next(error);

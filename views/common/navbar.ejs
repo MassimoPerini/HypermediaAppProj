@@ -20,7 +20,11 @@
         <li<%if(page=='/news'){%> class="active"<%}%>><a href="/news">News</a></li>
         <li<%if(page=='/faq'){%> class="active"<%}%>><a href="/faq">FAQ</a></li>
         <li<%if(page=='/contacts'){%> class="active"<%}%>><a href="/contacts">Contacts</a></li>
-        <li><a href="/login">Login</a></li>
+        <%if (user){%>
+          <li><a href="/private">Private area, <%=user.username%></a></li>
+        <%} else{%>
+          <li><a href="/login">Login</a></li>
+        <%}%>
       </ul>
   </div><!-- /.navbar-collapse -->
 </nav>

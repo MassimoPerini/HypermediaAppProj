@@ -12,7 +12,7 @@ router.get('/contacts', function(req, res, next){
 
     models.areas.findAll({})
         .then(function(areas){
-            res.render('contact', { title: 'Contatti', areas: areas});
+            res.render('contact', { title: 'Contatti', areas: areas, user:req.user});
         });
 
        //     res.render('contact', { title: 'Contatti'});

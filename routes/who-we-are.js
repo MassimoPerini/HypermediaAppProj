@@ -5,11 +5,11 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/who-we-are', function(req, res, next){
-  res.render('who-we-are/who-we-are', { title: 'Who we are'});
+  res.render('who-we-are/who-we-are', { title: 'Who we are', user:req.user});
 });
 
 router.get('/who-we-are/statistics', function(req, res, next){
-  res.render('who-we-are/statistics');
+  res.render('who-we-are/statistics', {user:req.user});
 });
 
 module.exports = router;

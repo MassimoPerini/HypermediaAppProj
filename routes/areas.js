@@ -11,7 +11,7 @@ var router = express.Router();
 router.get('/area', function(req, res, next){
   models.areas.findAll({})
   .then(function(areas){
-    res.render('area/areas', { title: 'Areas', areas: areas});
+    res.render('area/areas', { title: 'Areas', areas: areas, user:req.user});
   });
 });
 
@@ -20,7 +20,7 @@ router.get('/area/:id', function(req, res, next){
         where : { id : req.params.id },
         include : models.services
     }).then(function(area) {
-      res.render('area/area', { title: area.name + ' Area', area: area });
+      res.render('area/area', { title: area.name + ' Area', area: area, user:req.user });
     }).catch(function(error){
         debug(error);
         next(error);
