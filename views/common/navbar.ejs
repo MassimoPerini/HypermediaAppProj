@@ -21,7 +21,7 @@
         <li<%if(page=='/faq'){%> class="active"<%}%>><a href="/faq">FAQ</a></li>
         <li<%if(page=='/contacts'){%> class="active"<%}%>><a href="/contacts">Contacts</a></li>
         <%if (user){%>
-          <li><a href="/private">Private area, <%=user.username%></a></li>
+          <li<%if(page=='/private'){%> class="active"<%}%>><a href="/private">Private area, <%=user.username%></a></li>
         <%} else{%>
           <li><a href="/login">Login</a></li>
         <%}%>

@@ -8,7 +8,7 @@ var router = express.Router();
 var passport = require('../config/auth.js');
 
 router.get('/login', function(req, res, next){
-    res.render('privateArea/login', { title: 'Login'});
+    res.render('private-area/login', { title: 'Login'});
   res.send("errore login");
 });
 
@@ -30,7 +30,12 @@ router.get('/logout', function(req,res,next){
 });
 
 router.get('/private', function(req, res, next){
-  res.send("Hello again!" + req.user);
-})
+    if (!req.user){
+        res.redirect('/login');
+    }
+    else {
+        res.render('private-area/private-home', {title: 'Private area', user: req.user});
+    }
+});
 
 module.exports = router;
