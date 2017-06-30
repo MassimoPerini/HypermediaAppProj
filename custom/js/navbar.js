@@ -1,8 +1,7 @@
 $(document).ready(function($) {
-    console.log("isInside ");
-    var isFormInside = $('form') ? 1 :  0;
-    isFormInside*=150;
-    console.log("isInside "+isFormInside);
+    var isFormInside = $('form').length > 0 ? 1 :  0;
+    console.log($('form'));
+    isFormInside*=200;
     $(window).on("scroll", function() {
         var headerOuter = $("header").length ? $("header").outerHeight() : 0;
         $(window).scrollTop() + $(window).height() > ($("#content").outerHeight() + headerOuter + isFormInside) ? $("body").addClass("tight") : $("body").removeClass("tight");
