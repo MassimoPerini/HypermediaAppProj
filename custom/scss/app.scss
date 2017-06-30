@@ -10,6 +10,7 @@ $background-color: #FFFFFF;
 $color-bar: #8dbbf6;
 $aside-size: 2;
 $brand-selected: #226b92;
+$brand-left-margin: 15px;
 
 @import "variables";
 @import "_bootstrap.scss";
@@ -85,12 +86,15 @@ nav.main-navigation {
   }
 
   .brand {
-    @extend .navbar-brand;
+    @extend .navbar-left;
+    vertical-align: middle;
+    line-height: $navbar-height;
+    margin-left:$brand-left-margin;
   }
 
   .landmarks {
     @extend .collapse, .navbar-collapse;
-    text-align: center; /* Set this */
+    text-align: center;
 
     > ul {
       @extend .nav, .navbar-nav;
@@ -245,9 +249,10 @@ nav.main-navigation {
   }
 
 
-.contact-form{
+#contact-form{
   @extend .container;
   max-width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 form{
