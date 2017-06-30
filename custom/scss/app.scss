@@ -360,7 +360,7 @@ table{
     >section.quotes{
       @extend .quote-container;
       text-align: left;
-      background-color: #D6E681;
+      background-color: #80A1C1;
     }
 
     >section.awards{
@@ -380,9 +380,26 @@ table{
     }
 
     >section.contact{
-      background-color: #D6E681;
+      background-color: #80A1C1;
       color: #333;
       padding-bottom: 6%;
+      padding-top: 6%;
+      >div.relax-image{
+        @include make-xs-column(3);
+        @include make-xs-column-offset(3);
+        img{
+          @extend .img-circle;
+          width: 100%;
+        }
+      }
+      >div.relax-text{
+        @include make-xs-column(3);
+
+        h3{
+          margin-top:10%;
+        }
+
+      }
     }
 
   }
@@ -464,6 +481,8 @@ footer{
   text-align: center;
   width: 100%;
   bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
 
   .links{
     @include make-md-column(4);

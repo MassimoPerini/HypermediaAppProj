@@ -38,9 +38,9 @@ Object.keys(db).forEach(function(modelName) {
 db.services.belongsTo(db.areas);
 db.areas.hasMany(db.services);
 // Area responsible
-db.doctors.hasOne(db.areas, {foreignKey: 'responsible', as: 'responsible'});
+db.doctors.hasOne(db.areas, {foreignKey: 'responsible', as: 'area_responsible'});
 // Service responsible
-db.doctors.hasOne(db.services, {foreignKey: 'responsible', as: 'responsible'});
+db.doctors.hasOne(db.services, {foreignKey: 'responsible', as: 'service_responsible'});
 // Location - Areas
 db.locations.belongsToMany(db.areas, {through: 'locations_areas'});
 db.areas.belongsToMany(db.locations, {through: 'locations_areas'});

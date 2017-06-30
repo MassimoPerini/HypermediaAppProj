@@ -2,6 +2,7 @@
   {
     "id": 1,
     "fullname": "Drs. Amanda Curie",
+    "surname" : "Curie",
     "position": "Radiotherapist",
     "phone": "123456789",
     "email": "amanda.curie@cpm.com",
@@ -12,6 +13,7 @@
   {
     "id": 2,
     "fullname": "Dr. Robert Atkins",
+    "surname" : "Atkins",
     "position": "Cardiologist",
     "phone": "123456789",
     "email": "robert.atkins@cpm.com",
@@ -22,6 +24,7 @@
   {
     "id": 3,
     "fullname": "Dr. Willem Einthoven",
+    "surname" : "Einthoven",
     "position": "Cardiologist",
     "phone": "123456789",
     "email": "@cpm.com",
@@ -32,6 +35,7 @@
   {
     "id": 4,
     "fullname": "Dr. Frederic Edward Mohs",
+    "surname" : "Mohs",
     "position": "Dermatologist",
     "phone": "123456789",
     "email": "fredem@cpm.com",
@@ -42,6 +46,7 @@
   {
     "id": 5,
     "fullname": "Dr. Jeffrey Alan Klein",
+    "surname" : "Klein",
     "position": "Dermatologist",
     "phone": "123456789",
     "email": "jeffak@cpm.com",
@@ -52,6 +57,7 @@
   {
     "id": 6,
     "fullname": "J. William Harbour",
+    "surname" : "Harbour",
     "position": "Ophthalmologist",
     "phone": "123456789",
     "email": "jwilliam@cpm.com",
@@ -62,6 +68,7 @@
   {
     "id": 7,
     "fullname": "Dr. Ernst Ludwig Alfred Hegar",
+    "surname" : "Hegar",
     "position": "Gynecologist",
     "phone": "123456789",
     "email": "jwilliam@cpm.com",
@@ -72,6 +79,7 @@
   {
     "id": 8,
     "fullname": "J. William Harbour",
+    "surname" : "Harbour",
     "position": "Ophthalmologist",
     "phone": "123456789",
     "email": "jwilliam@cpm.com",

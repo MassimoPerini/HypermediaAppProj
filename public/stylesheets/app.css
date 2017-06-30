@@ -1447,7 +1447,7 @@ img {
   height: auto;
 }
 
-.img-circle, .quote-container blockquote .avatar img, .home > article > section.quotes blockquote .avatar img {
+.img-circle, .quote-container blockquote .avatar img, .home > article > section.quotes blockquote .avatar img, .home > article > section.contact > div.relax-image img, .home > article.one-sided > section.contact > section.relax-image img, .home > article.one-sided > section.contact > aside.relax-image img, .home > article.one-sided > section.contact > article.relax-image img, .home > article > section.two-sided.contact > article.relax-image img, .home > article > section.two-sided.contact > aside.relax-image img, .home > article > section.contact > .relax-image.list img, .home > article > section.contact > .relax-image.list-lg img, .home > article > section.contact > .relax-image.list-md img {
   border-radius: 50%;
 }
 
@@ -9170,7 +9170,7 @@ nav.main-navigation .landmarks > ul {
 
 .home > article > section.quotes {
   text-align: left;
-  background-color: #D6E681;
+  background-color: #80A1C1;
 }
 
 .home > article > section.awards > article {
@@ -9224,9 +9224,37 @@ nav.main-navigation .landmarks > ul {
 }
 
 .home > article > section.contact {
-  background-color: #D6E681;
+  background-color: #80A1C1;
   color: #333;
   padding-bottom: 6%;
+  padding-top: 6%;
+}
+
+.home > article > section.contact > div.relax-image, .home > article.one-sided > section.contact > section.relax-image, .home > article.one-sided > section.contact > aside.relax-image, .home > article.one-sided > section.contact > article.relax-image, .home > article > section.two-sided.contact > article.relax-image, .home > article > section.two-sided.contact > aside.relax-image, .home > article > section.contact > .relax-image.list, .home > article > section.contact > .relax-image.list-lg, .home > article > section.contact > .relax-image.list-md {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 25%;
+}
+
+.home > article > section.contact > div.relax-image img, .home > article.one-sided > section.contact > section.relax-image img, .home > article.one-sided > section.contact > aside.relax-image img, .home > article.one-sided > section.contact > article.relax-image img, .home > article > section.two-sided.contact > article.relax-image img, .home > article > section.two-sided.contact > aside.relax-image img, .home > article > section.contact > .relax-image.list img, .home > article > section.contact > .relax-image.list-lg img, .home > article > section.contact > .relax-image.list-md img {
+  width: 100%;
+}
+
+.home > article > section.contact > div.relax-text, .home > article.one-sided > section.contact > section.relax-text, .home > article.one-sided > section.contact > aside.relax-text, .home > article.one-sided > section.contact > article.relax-text, .home > article > section.two-sided.contact > article.relax-text, .home > article > section.two-sided.contact > aside.relax-text, .home > article > section.contact > .relax-text.list, .home > article > section.contact > .relax-text.list-lg, .home > article > section.contact > .relax-text.list-md {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.home > article > section.contact > div.relax-text h3, .home > article.one-sided > section.contact > section.relax-text h3, .home > article.one-sided > section.contact > aside.relax-text h3, .home > article.one-sided > section.contact > article.relax-text h3, .home > article > section.two-sided.contact > article.relax-text h3, .home > article > section.two-sided.contact > aside.relax-text h3, .home > article > section.contact > .relax-text.list h3, .home > article > section.contact > .relax-text.list-lg h3, .home > article > section.contact > .relax-text.list-md h3 {
+  margin-top: 10%;
 }
 
 .two-sided > article {
@@ -9453,6 +9481,8 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 footer > section {
