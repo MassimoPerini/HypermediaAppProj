@@ -9103,7 +9103,7 @@ nav.main-navigation .landmarks > ul {
 .list-md > article {
   position: relative;
   float: left;
-  width: 100%;
+  width: 50%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -9124,7 +9124,7 @@ nav.main-navigation .landmarks > ul {
 @media (min-width: 768px) {
   .list-md > article {
     float: left;
-    width: 16.6666666667%;
+    width: 33.3333333333%;
   }
 }
 
@@ -9146,7 +9146,6 @@ nav.main-navigation .landmarks > ul {
   min-height: 100vh;
   transform-origin: center bottom 0px;
   transition: all 0.5s ease 0s;
-  box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
   background-color: #FFFFFF;
 }
 

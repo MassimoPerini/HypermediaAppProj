@@ -9,22 +9,15 @@ var models = require('../models');
 var router = express.Router();
 
 router.get('/doctor', function(req, res, next){
+  var locations = models.locations.findAll({});
+  var areas = models.areas.findAll({});
+  var services = models.services.findAll({});
 
-    var locations = (models.locations.findAll({}));
-    var areas = models.areas.findAll({});
-    var services = models.services.findAll({});
-
-    Promise.all([locations, areas, services]).then(
-        function(result) {
-        res.render('doctors', {title: 'Dottori', locations:result[0], areas:result[1], services:result[2], user:req.user});
-    });
-
-    /*
-  models.doctors.findAll({})
-  .then(function(doctors){
-    res.render('doctors', { title: 'Dottori', doctors: doctors});
+  Promise.all([locations, areas, services])
+  .then(function(result) {
+      res.render('doctor/doctors', {title: 'Dottori', locations:result[0], areas:result[1], services:result[2], user:req.user});
   });
-  */
+
 });
 
 router.get('/doctor/:id', function(req, res, next){
@@ -48,7 +41,7 @@ router.get('/doctor/:id', function(req, res, next){
           attributes: ['id', 'name', 'icon']
         }]
     }).then(function(doctor){
-      res.render('doctor', { title: doctor.fullname, doctor: doctor, timetables: doctor.doctors_timetables, user:req.user});
+      res.render('doctor/doctor', { title: doctor.fullname, doctor: doctor, timetables: doctor.doctors_timetables, user:req.user});
     }).catch(function(error){
         debug(error);
         next(error);

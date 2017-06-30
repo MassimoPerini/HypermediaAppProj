@@ -3,7 +3,7 @@
 <html>
   <head>
     <title><%= title %></title>
-      <%- include('common/imports') %>
+      <%- include('../common/imports') %>
 
       <style>
         header{
@@ -13,7 +13,7 @@
       </style>
   </head>
   <body>
-        <%- include('common/navbar', { page : '/doctor', user:user}) %>
+        <%- include('../common/navbar', { page : '/doctor', user:user}) %>
 
       <header class="doctor">
         <!-- immagine -->
@@ -60,7 +60,7 @@
             </p>
           </div>
         </article>
-        
+
         <aside>
           <div class="card">
             <a href="/service/doctor/<%=doctor.id%>">
@@ -102,6 +102,6 @@
         </aside>
       </section>
 
-    <%- include('common/footer') %>
+    <%- include('../common/footer') %>
   </body>
 </html>

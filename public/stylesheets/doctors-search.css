@@ -3188,7 +3188,7 @@ input[type="search"] {
   }
 }
 
-.form-group, form > div:not(.checkbox), form.two-sided > article:not(.checkbox), form.two-sided > aside:not(.checkbox), form > .list:not(.checkbox), form > .list-lg:not(.checkbox), form > .list-md:not(.checkbox) {
+.form-group, form > div:not(.checkbox), form.two-sided > article:not(.checkbox), form.two-sided > aside:not(.checkbox), form > .list:not(.checkbox), form > .list-lg:not(.checkbox), form > .list-md:not(.checkbox), form > #doctors-list:not(.checkbox) {
   margin-bottom: 15px;
 }
 
@@ -3581,7 +3581,7 @@ select[multiple].input-lg,
 }
 
 @media (min-width: 768px) {
-  .form-inline .form-group, .form-inline form > div:not(.checkbox), .form-inline form.two-sided > article:not(.checkbox), .form-inline form.two-sided > aside:not(.checkbox), .form-inline form > .list:not(.checkbox), .form-inline form > .list-lg:not(.checkbox), .form-inline form > .list-md:not(.checkbox) {
+  .form-inline .form-group, .form-inline form > div:not(.checkbox), .form-inline form.two-sided > article:not(.checkbox), .form-inline form.two-sided > aside:not(.checkbox), .form-inline form > .list:not(.checkbox), .form-inline form > .list-lg:not(.checkbox), .form-inline form > .list-md:not(.checkbox), .form-inline form > #doctors-list:not(.checkbox) {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
@@ -3649,17 +3649,17 @@ select[multiple].input-lg,
   min-height: 30px;
 }
 
-.form-horizontal .form-group, .form-horizontal form > div:not(.checkbox), .form-horizontal form.two-sided > article:not(.checkbox), .form-horizontal form.two-sided > aside:not(.checkbox), .form-horizontal form > .list:not(.checkbox), .form-horizontal form > .list-lg:not(.checkbox), .form-horizontal form > .list-md:not(.checkbox) {
+.form-horizontal .form-group, .form-horizontal form > div:not(.checkbox), .form-horizontal form.two-sided > article:not(.checkbox), .form-horizontal form.two-sided > aside:not(.checkbox), .form-horizontal form > .list:not(.checkbox), .form-horizontal form > .list-lg:not(.checkbox), .form-horizontal form > .list-md:not(.checkbox), .form-horizontal form > #doctors-list:not(.checkbox) {
   margin-left: -15px;
   margin-right: -15px;
 }
 
-.form-horizontal .form-group:before, .form-horizontal form > div:not(.checkbox):before, .form-horizontal form.two-sided > article:not(.checkbox):before, .form-horizontal form.two-sided > aside:not(.checkbox):before, .form-horizontal form > .list:not(.checkbox):before, .form-horizontal form > .list-lg:not(.checkbox):before, .form-horizontal form > .list-md:not(.checkbox):before, .form-horizontal .form-group:after, .form-horizontal form > div:not(.checkbox):after, .form-horizontal form.two-sided > article:not(.checkbox):after, .form-horizontal form.two-sided > aside:not(.checkbox):after, .form-horizontal form > .list:not(.checkbox):after, .form-horizontal form > .list-lg:not(.checkbox):after, .form-horizontal form > .list-md:not(.checkbox):after {
+.form-horizontal .form-group:before, .form-horizontal form > div:not(.checkbox):before, .form-horizontal form.two-sided > article:not(.checkbox):before, .form-horizontal form.two-sided > aside:not(.checkbox):before, .form-horizontal form > .list:not(.checkbox):before, .form-horizontal form > .list-lg:not(.checkbox):before, .form-horizontal form > .list-md:not(.checkbox):before, .form-horizontal form > #doctors-list:not(.checkbox):before, .form-horizontal .form-group:after, .form-horizontal form > div:not(.checkbox):after, .form-horizontal form.two-sided > article:not(.checkbox):after, .form-horizontal form.two-sided > aside:not(.checkbox):after, .form-horizontal form > .list:not(.checkbox):after, .form-horizontal form > .list-lg:not(.checkbox):after, .form-horizontal form > .list-md:not(.checkbox):after, .form-horizontal form > #doctors-list:not(.checkbox):after {
   content: " ";
   display: table;
 }
 
-.form-horizontal .form-group:after, .form-horizontal form > div:not(.checkbox):after, .form-horizontal form.two-sided > article:not(.checkbox):after, .form-horizontal form.two-sided > aside:not(.checkbox):after, .form-horizontal form > .list:not(.checkbox):after, .form-horizontal form > .list-lg:not(.checkbox):after, .form-horizontal form > .list-md:not(.checkbox):after {
+.form-horizontal .form-group:after, .form-horizontal form > div:not(.checkbox):after, .form-horizontal form.two-sided > article:not(.checkbox):after, .form-horizontal form.two-sided > aside:not(.checkbox):after, .form-horizontal form > .list:not(.checkbox):after, .form-horizontal form > .list-lg:not(.checkbox):after, .form-horizontal form > .list-md:not(.checkbox):after, .form-horizontal form > #doctors-list:not(.checkbox):after {
   clear: both;
 }
 
@@ -5260,7 +5260,7 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 }
 
 @media (min-width: 768px) {
-  .navbar-form .form-group, .navbar-form form > div:not(.checkbox), .navbar-form form.two-sided > article:not(.checkbox), .navbar-form form.two-sided > aside:not(.checkbox), .navbar-form form > .list:not(.checkbox), .navbar-form form > .list-lg:not(.checkbox), .navbar-form form > .list-md:not(.checkbox) {
+  .navbar-form .form-group, .navbar-form form > div:not(.checkbox), .navbar-form form.two-sided > article:not(.checkbox), .navbar-form form.two-sided > aside:not(.checkbox), .navbar-form form > .list:not(.checkbox), .navbar-form form > .list-lg:not(.checkbox), .navbar-form form > .list-md:not(.checkbox), .navbar-form form > #doctors-list:not(.checkbox) {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
@@ -5315,10 +5315,10 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 }
 
 @media (max-width: 991px) {
-  .navbar-form .form-group, .navbar-form form > div:not(.checkbox), .navbar-form form.two-sided > article:not(.checkbox), .navbar-form form.two-sided > aside:not(.checkbox), .navbar-form form > .list:not(.checkbox), .navbar-form form > .list-lg:not(.checkbox), .navbar-form form > .list-md:not(.checkbox) {
+  .navbar-form .form-group, .navbar-form form > div:not(.checkbox), .navbar-form form.two-sided > article:not(.checkbox), .navbar-form form.two-sided > aside:not(.checkbox), .navbar-form form > .list:not(.checkbox), .navbar-form form > .list-lg:not(.checkbox), .navbar-form form > .list-md:not(.checkbox), .navbar-form form > #doctors-list:not(.checkbox) {
     margin-bottom: 5px;
   }
-  .navbar-form .form-group:last-child, .navbar-form form > div:last-child:not(.checkbox), .navbar-form form.two-sided > article:last-child:not(.checkbox), .navbar-form form.two-sided > aside:last-child:not(.checkbox), .navbar-form form > .list:last-child:not(.checkbox), .navbar-form form > .list-lg:last-child:not(.checkbox), .navbar-form form > .list-md:last-child:not(.checkbox) {
+  .navbar-form .form-group:last-child, .navbar-form form > div:last-child:not(.checkbox), .navbar-form form.two-sided > article:last-child:not(.checkbox), .navbar-form form.two-sided > aside:last-child:not(.checkbox), .navbar-form form > .list:last-child:not(.checkbox), .navbar-form form > .list-lg:last-child:not(.checkbox), .navbar-form form > .list-md:last-child:not(.checkbox), .navbar-form form > #doctors-list:last-child:not(.checkbox) {
     margin-bottom: 0;
   }
 }
@@ -8505,7 +8505,7 @@ input[type="checkbox"] {
   height: 200px;
 }
 
-.loading div, .loading .one-sided > section > section, .loading .one-sided > section > aside, .loading .one-sided > section > article, .loading .two-sided > article, .loading .two-sided > aside, .loading .list, .loading .list-lg, .loading .list-md {
+.loading div, .loading .one-sided > section > section, .loading .one-sided > section > aside, .loading .one-sided > section > article, .loading .two-sided > article, .loading .two-sided > aside, .loading .list, .loading .list-lg, .loading .list-md, .loading #doctors-list {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8520,13 +8520,13 @@ input[type="checkbox"] {
   animation: loading 2s ease-out infinite;
 }
 
-.loading div:nth-of-type(1), .loading .one-sided > section > section:nth-of-type(1), .loading .one-sided > section > aside:nth-of-type(1), .loading .one-sided > section > article:nth-of-type(1), .loading .two-sided > article:nth-of-type(1), .loading .two-sided > aside:nth-of-type(1), .loading .list:nth-of-type(1), .loading .list-lg:nth-of-type(1), .loading .list-md:nth-of-type(1) {
+.loading div:nth-of-type(1), .loading .one-sided > section > section:nth-of-type(1), .loading .one-sided > section > aside:nth-of-type(1), .loading .one-sided > section > article:nth-of-type(1), .loading .two-sided > article:nth-of-type(1), .loading .two-sided > aside:nth-of-type(1), .loading .list:nth-of-type(1), .loading .list-lg:nth-of-type(1), .loading .list-md:nth-of-type(1), .loading #doctors-list:nth-of-type(1) {
   border-color: #afafb7;
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
 }
 
-.loading div:nth-of-type(2), .loading .one-sided > section > section:nth-of-type(2), .loading .one-sided > section > aside:nth-of-type(2), .loading .one-sided > section > article:nth-of-type(2), .loading .two-sided > article:nth-of-type(2), .loading .two-sided > aside:nth-of-type(2), .loading .list:nth-of-type(2), .loading .list-lg:nth-of-type(2), .loading .list-md:nth-of-type(2) {
+.loading div:nth-of-type(2), .loading .one-sided > section > section:nth-of-type(2), .loading .one-sided > section > aside:nth-of-type(2), .loading .one-sided > section > article:nth-of-type(2), .loading .two-sided > article:nth-of-type(2), .loading .two-sided > aside:nth-of-type(2), .loading .list:nth-of-type(2), .loading .list-lg:nth-of-type(2), .loading .list-md:nth-of-type(2), .loading #doctors-list:nth-of-type(2) {
   border-color: #00b2ff;
 }
 
@@ -8550,7 +8550,7 @@ header {
   text-align: center;
 }
 
-header > div, header.two-sided > article, header.two-sided > aside, header > .list, header > .list-lg, header > .list-md {
+header > div, header.two-sided > article, header.two-sided > aside, header > .list, header > .list-lg, header > .list-md, header > #doctors-list {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -8572,34 +8572,34 @@ header > div, header.two-sided > article, header.two-sided > aside, header > .li
 }
 
 @media (min-width: 992px) {
-  header > div, header.two-sided > article, header.two-sided > aside, header > .list, header > .list-lg, header > .list-md {
+  header > div, header.two-sided > article, header.two-sided > aside, header > .list, header > .list-lg, header > .list-md, header > #doctors-list {
     float: left;
     width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  header > div, header.two-sided > article, header.two-sided > aside, header > .list, header > .list-lg, header > .list-md {
+  header > div, header.two-sided > article, header.two-sided > aside, header > .list, header > .list-lg, header > .list-md, header > #doctors-list {
     float: left;
     width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  header > div, header.two-sided > article, header.two-sided > aside, header > .list, header > .list-lg, header > .list-md {
+  header > div, header.two-sided > article, header.two-sided > aside, header > .list, header > .list-lg, header > .list-md, header > #doctors-list {
     float: left;
     width: 100%;
   }
 }
 
-header > div > h1, header.two-sided > article > h1, header.two-sided > aside > h1, header > .list > h1, header > .list-lg > h1, header > .list-md > h1 {
+header > div > h1, header.two-sided > article > h1, header.two-sided > aside > h1, header > .list > h1, header > .list-lg > h1, header > .list-md > h1, header > #doctors-list > h1 {
   background-color: #272727;
   color: white;
   display: inline-block;
   opacity: 0.85;
 }
 
-header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md {
+header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -8621,21 +8621,21 @@ header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor 
 }
 
 @media (min-width: 992px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md {
+  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
     float: left;
     width: 50%;
   }
 }
 
 @media (min-width: 768px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md {
+  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
     float: left;
     width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md {
+  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
     float: left;
     width: 50%;
   }
@@ -9051,7 +9051,7 @@ nav.main-navigation .landmarks > ul {
   }
 }
 
-.list > article, .list-lg > article, .list-md > article {
+.list > article, .list-lg > article, .list-md > article, #doctors-list > article {
   margin-bottom: 2%;
 }
 
@@ -9097,7 +9097,7 @@ nav.main-navigation .landmarks > ul {
   }
 }
 
-.list-md > article {
+.list-md > article, #doctors-list > article {
   position: relative;
   float: left;
   width: 50%;
@@ -9119,21 +9119,21 @@ nav.main-navigation .landmarks > ul {
 }
 
 @media (min-width: 768px) {
-  .list-md > article {
+  .list-md > article, #doctors-list > article {
     float: left;
     width: 33.3333333333%;
   }
 }
 
 @media (min-width: 992px) {
-  .list-md > article {
+  .list-md > article, #doctors-list > article {
     float: left;
     width: 16.6666666667%;
   }
 }
 
 @media (min-width: 1200px) {
-  .list-md > article {
+  .list-md > article, #doctors-list > article {
     float: left;
     width: 16.6666666667%;
   }
@@ -9228,7 +9228,7 @@ footer a:hover {
   color: #7dbbf1;
 }
 
-section.navigation-child > div, .one-sided > section.navigation-child > section, .one-sided > section.navigation-child > aside, .one-sided > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
+section.navigation-child > div, .one-sided > section.navigation-child > section, .one-sided > section.navigation-child > aside, .one-sided > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md, section.navigation-child > #doctors-list {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -9237,7 +9237,7 @@ section.navigation-child > div, .one-sided > section.navigation-child > section,
 }
 
 @media (min-width: 992px) {
-  section.navigation-child > div, .one-sided > section.navigation-child > section, .one-sided > section.navigation-child > aside, .one-sided > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md {
+  section.navigation-child > div, .one-sided > section.navigation-child > section, .one-sided > section.navigation-child > aside, .one-sided > section.navigation-child > article, section.two-sided.navigation-child > article, section.two-sided.navigation-child > aside, section.navigation-child > .list, section.navigation-child > .list-lg, section.navigation-child > .list-md, section.navigation-child > #doctors-list {
     float: left;
     width: 25%;
   }
@@ -9249,3 +9249,48 @@ section.navigation-child .button {
 }
 
 /*end*/
+.selector {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .selector {
+    float: left;
+    width: 33.3333333333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .selector {
+    float: left;
+    width: 33.3333333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .selector {
+    float: left;
+    width: 33.3333333333%;
+  }
+}
+
+#doctors-list {
+  margin-top: 64px;
+}
