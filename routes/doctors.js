@@ -15,7 +15,7 @@ router.get('/doctor', function(req, res, next){
 
   Promise.all([locations, areas, services])
   .then(function(result) {
-      res.render('doctor/doctors', {title: 'Dottori', locations:result[0], areas:result[1], services:result[2], user:req.user});
+      res.render('doctor/doctors', {title: 'Doctors', locations:result[0], areas:result[1], services:result[2], user:req.user});
   });
 
 });

@@ -86,10 +86,15 @@ nav.main-navigation {
   }
 
   .brand {
-    @extend .navbar-left;
-    vertical-align: middle;
-    line-height: $navbar-height;
-    margin-left:$brand-left-margin;
+    @extend .navbar-brand;
+    padding: 0px;
+
+    >img{
+      width: auto;
+      height: 100%;
+      padding: 20%;
+    }
+
   }
 
   .landmarks {
@@ -158,6 +163,14 @@ nav.main-navigation {
 //  border-radius: 2px;
     height: 65px;
     font-size: 22pt;
+}
+
+center{
+  text-align: center;
+  >h1{
+    margin: 0px;
+    padding: 16px;
+  }
 }
 
 /* ------------ CONTENTS ------------- */

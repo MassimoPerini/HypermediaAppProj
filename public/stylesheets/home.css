@@ -5133,7 +5133,7 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   border-width: 1px 0 0;
 }
 
-.navbar-brand {
+.navbar-brand, nav.main-navigation .brand {
   float: left;
   padding: 29.5px 15px;
   font-size: 19px;
@@ -5141,21 +5141,31 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   height: 80px;
 }
 
-.navbar-brand:hover, .navbar-brand:focus {
+.navbar-brand:hover, nav.main-navigation .brand:hover, .navbar-brand:focus, nav.main-navigation .brand:focus {
   text-decoration: none;
 }
 
-.navbar-brand > img {
+.navbar-brand > img, nav.main-navigation .brand > img {
   display: block;
 }
 
 @media (min-width: 992px) {
-  .navbar > .container .navbar-brand, nav.main-navigation > .container .navbar-brand, .navbar > #contact-form .navbar-brand, nav.main-navigation > #contact-form .navbar-brand,
+  .navbar > .container .navbar-brand, nav.main-navigation > .container .navbar-brand, .navbar > #contact-form .navbar-brand, nav.main-navigation > #contact-form .navbar-brand, .navbar > .container nav.main-navigation .brand, nav.main-navigation .navbar > .container .brand, nav.main-navigation > .container .brand, .navbar > #contact-form nav.main-navigation .brand, nav.main-navigation .navbar > #contact-form .brand, nav.main-navigation > #contact-form .brand,
   .navbar > .container-fluid .navbar-brand, nav.main-navigation > .container-fluid .navbar-brand,
   .navbar > .one-sided .navbar-brand, nav.main-navigation > .one-sided .navbar-brand,
   .navbar > .two-sided .navbar-brand, nav.main-navigation > .two-sided .navbar-brand,
   .navbar > footer .navbar-brand, nav.main-navigation > footer .navbar-brand, .home >
-  article.navbar > section .navbar-brand {
+  article.navbar > section .navbar-brand,
+  .navbar > .container-fluid nav.main-navigation .brand, nav.main-navigation
+  .navbar > .container-fluid .brand, nav.main-navigation > .container-fluid .brand,
+  .navbar > .one-sided nav.main-navigation .brand, nav.main-navigation
+  .navbar > .one-sided .brand, nav.main-navigation > .one-sided .brand,
+  .navbar > .two-sided nav.main-navigation .brand, nav.main-navigation
+  .navbar > .two-sided .brand, nav.main-navigation > .two-sided .brand,
+  .navbar > footer nav.main-navigation .brand, nav.main-navigation
+  .navbar > footer .brand, nav.main-navigation > footer .brand, .home >
+  article.navbar > section nav.main-navigation .brand, nav.main-navigation .home >
+  article.navbar > section .brand {
     margin-left: -15px;
   }
 }
@@ -5372,7 +5382,7 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 }
 
 @media (min-width: 992px) {
-  .navbar-left, nav.main-navigation .brand {
+  .navbar-left {
     float: left !important;
   }
   .navbar-right, nav.main-navigation .landmarks .main-landmarks .landmarks-right {
@@ -5389,11 +5399,11 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   border-color: #0d4474;
 }
 
-.navbar-default .navbar-brand, nav.main-navigation .navbar-brand {
+.navbar-default .navbar-brand, nav.main-navigation .navbar-brand, nav.main-navigation .brand {
   color: #FFF;
 }
 
-.navbar-default .navbar-brand:hover, nav.main-navigation .navbar-brand:hover, .navbar-default .navbar-brand:focus, nav.main-navigation .navbar-brand:focus {
+.navbar-default .navbar-brand:hover, nav.main-navigation .navbar-brand:hover, nav.main-navigation .brand:hover, .navbar-default .navbar-brand:focus, nav.main-navigation .navbar-brand:focus, nav.main-navigation .brand:focus {
   color: #FFF;
   background-color: transparent;
 }
@@ -5490,11 +5500,11 @@ fieldset[disabled] nav.main-navigation .btn-link:focus {
   border-color: #0b3a64;
 }
 
-.navbar-inverse .navbar-brand {
+.navbar-inverse .navbar-brand, .navbar-inverse nav.main-navigation .brand, nav.main-navigation .navbar-inverse .brand {
   color: #fff;
 }
 
-.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+.navbar-inverse .navbar-brand:hover, .navbar-inverse nav.main-navigation .brand:hover, nav.main-navigation .navbar-inverse .brand:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse nav.main-navigation .brand:focus, nav.main-navigation .navbar-inverse .brand:focus {
   color: #fff;
   background-color: transparent;
 }
@@ -8644,9 +8654,13 @@ nav.main-navigation {
 }
 
 nav.main-navigation .brand {
-  vertical-align: middle;
-  line-height: 80px;
-  margin-left: 15px;
+  padding: 0px;
+}
+
+nav.main-navigation .brand > img {
+  width: auto;
+  height: 100%;
+  padding: 20%;
 }
 
 nav.main-navigation .landmarks {
@@ -8702,6 +8716,15 @@ nav.main-navigation .landmarks > ul {
 .button {
   height: 65px;
   font-size: 22pt;
+}
+
+center {
+  text-align: center;
+}
+
+center > h1 {
+  margin: 0px;
+  padding: 16px;
 }
 
 /* ------------ CONTENTS ------------- */
