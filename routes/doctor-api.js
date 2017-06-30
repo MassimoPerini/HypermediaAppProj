@@ -8,7 +8,7 @@ var models = require('../models');
 
 var router = express.Router();
 
-const DEFAULT_PAGE_SIZE = 4;
+const DEFAULT_PAGE_SIZE = 6;
 
 /**
  * @swagger
@@ -25,108 +25,50 @@ const DEFAULT_PAGE_SIZE = 4;
  */
 router.get('/api/doctor', function(req, res, next){
     // Paging parameters
-    var page = req.param("page");
-    var pagesize = req.param("pagesize");
+    var page = req.query["page"];
+    var pagesize = req.query["pagesize"];
     page = page && !isNaN(page) && page >= 0 ? Number(page) : 0;
     pagesize = pagesize && !isNaN(pagesize) ? Number(pagesize) : DEFAULT_PAGE_SIZE;
     // Filtering parameters, ids of chosen filters
-    var service = req.param("service");
-    var area = req.param("area");
-    var location = req.param("location");
+    var service = req.query["service"];
+    var area = req.query["area"];
+    var location = req.query["location"];
     var serviceQuery = (service) ? {id : service} : {};
     var locationQuery = (location) ? {id : location} : {};
     var areaQuery = (area) ? {id: area} : {};
-    // Initally getting doctors size
-
-
-    models.doctors.findAndCountAll({
-      offset: page * pagesize,
-      limit: pagesize,
-      order: 'surname ASC',
+    // Get all doctors, apply pagination after
+    // FIXME: sequelize has a broken findAndCountAll that is faster than manual pagination,
+    // but is bugged.
+    models.doctors.findAll({
       include:[{
         model: models.services,
         as: 'doctors_services',
         where: serviceQuery,
-        required: (service == true)
-      }]
+        attributes: [],
+        include: [{
+          model: models.areas,
+          where: areaQuery,
+          attributes: []
+        }]
+      },{
+        model: models.doctors_timetables,
+        attributes: [],
+        include: [{
+          model: models.locations,
+          attributes: [],
+          where: locationQuery
+        }]
+      }],
+      order: 'surname ASC'
     }).then(function(doctors){
-      res.send(doctors);
+      res.send({
+        count: doctors.length,
+        data: doctors.slice(page * pagesize, (page+1) * pagesize)
+      });
     }).catch(function(error){
       debug(error);
       next(error);
     });
-
-    /*
-    var serviceQuery = {};
-    var locationQuery = {};
-    var areaQuery = {};
-
-    if (service) {
-        serviceQuery =
-            {
-                id: service
-            }
-    }
-    if (location)
-    {
-        locationQuery =
-            {
-                id: location
-            }
-    }
-    if (area)
-    {
-        areaQuery =
-            {
-                id: area
-            }
-    }
-
-    //  locationFilter = (req.params.location) ? { id : req.params.location} : {};
-
-    models.doctors.findAll({
-        include: [
-            {
-                model: models.services,
-                attributes: [],
-                as: 'doctors_services',
-                where: serviceQuery,
-                include: [
-                    {
-                        model: models.areas,
-                        attributes: [],
-                        where: areaQuery
-                    }]
-            },
-            {
-                model: models.doctors_timetables,
-                attributes: [],
-                include:[{
-                    model: models.locations,
-                    attributes: [],
-                    where:locationQuery
-                }]
-            }
-        ]
-    })
-  .then(function(doctors){
-      var datas = [];
-      maxSize = Number(limit)+Number(offset);
-      if (maxSize >= doctors.length)
-          maxSize = doctors.length;
-      for (;offset<maxSize ;offset++)
-      {
-          datas.push(doctors[offset]);
-      }
-      var result = {};
-      result.data = datas;
-      result.count = doctors.length;
-      var send = JSON.stringify(result);
-    res.send(send);
-  }).catch(function(error){
-    debug(error);
-    next(error);
-  });*/
 });
 
 /**

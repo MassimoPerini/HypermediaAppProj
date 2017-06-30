@@ -4,9 +4,9 @@
 
 $(document).ready(function($) {
     $(window).on('scroll', function() {
-
         //ADD .TIGHT
-        if ($(window).scrollTop() + $(window).height() > $('#content').outerHeight()+$('header').outerHeight()) {
+        var headerOuter = ($('header').length) ? $('header').outerHeight() : 0;
+        if ($(window).scrollTop() + $(window).height() > $('#content').outerHeight() + headerOuter) {
             $('body').addClass('tight');
         } else {
             $('body').removeClass('tight');
