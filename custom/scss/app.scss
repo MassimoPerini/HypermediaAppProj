@@ -11,6 +11,8 @@ $color-bar: #8dbbf6;
 $aside-size: 2;
 $brand-selected: #226b92;
 $brand-left-margin: 15px;
+$form-width: 450px;
+$login-form-margin: 100px;
 
 @import "variables";
 @import "_bootstrap.scss";
@@ -211,13 +213,24 @@ center{
   .register-form {
     display: none;
   }
+
+  .forget-form{
+    display: none;
+  }
 }
   .private-area-form {
+
+    img{
+      width:$form-width - $login-form-margin;
+      margin-bottom: $login-form-margin / 2;
+      height: auto;
+    }
+
     position: relative;
     z-index: 1;
     background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
+    max-width: $form-width;
+    margin: 0 auto $login-form-margin;
     padding: 45px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -264,8 +277,9 @@ center{
 
 #contact-form{
   @extend .container;
-  max-width: 500px;
+  max-width: $form-width;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 form{
@@ -275,7 +289,14 @@ form{
 
   input:not([type='checkbox']){
     @extend .form-control;
+
+    input [type='submit'] {
+      background-color: #00A7E1;
+      color: #FFFFFF;
+    }
+
   }
+
   textarea{
     @extend .form-control;
   }

@@ -1,3 +1,12 @@
+function initFilters() {
+    params = new URLSearchParams(window.location.search), params.get("location") && $("#location-selector").val(params.get("location")).trigger("change"), 
+    params.get("area") && $("#area-selector").val(params.get("area")).trigger("change"), 
+    params.get("service") && $("#service-selector").val(params.get("service")).trigger("change"), 
+    initDoctors(), $(window).scroll(function() {
+        $(document).height() - $(window).height() >= $(window).scrollTop() && loadNextPage();
+    });
+}
+
 function initDoctors() {
     getFilters(), window.currentPage = -1, window.doctors = [], $("#doctors-list").empty(), 
     loadNextPage();
@@ -43,10 +52,5 @@ $(document).ready(function() {
         initDoctors();
     });
 }), window.onload = function() {
-    params = new URLSearchParams(window.location.search), params.get("location") && $("#location-selector").val(params.get("location")).trigger("change"), 
-    params.get("area") && $("#area-selector").val(params.get("area")).trigger("change"), 
-    params.get("service") && $("#service-selector").val(params.get("service")).trigger("change"), 
-    initDoctors(), $(window).scroll(function() {
-        $(document).height() - $(window).height() >= $(window).scrollTop() && loadNextPage();
-    });
+    initFilters();
 };

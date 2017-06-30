@@ -33,27 +33,37 @@
 
   <section>
     <div class="private-area-form">
+      <a href="/" class="brand"><img src="/public/imgs/logo_fullsize.png"></a>
       <form class="register-form">
         <input type="text" placeholder="name"/>
         <input type="password" placeholder="password"/>
         <input type="text" placeholder="email address"/>
         <button>create</button>
-        <p class="message">Already registered? <a href="#">Sign In</a></p>
+        <p class="message">Already registered? <a id="login" href="#">Sign In</a></p>
       </form>
       <form class="login-form" action="/login" method="post">
         <input type="text" placeholder="username" id="username" name="username"/>
         <input type="password" placeholder="password" id="password" name="password"/>
         <button>login</button>
-        <p>Not registered? <a href="#">Create an account</a></p>
+        <p>Not registered? <a id="register" href="#">Create an account</a></p>
+        <a href="#" id="forget">Forgot your password?</a>
       </form>
+
+      <form class="forget-form" action="/login" method="post">
+       CIAO!
+      </form>
+
     </div>
   </section>
 
 
   <script>
-      $('a').click(function(){
+      $('a').click(function(e){
+          var el = e.target.id;
+       //   el === "register" ?
           $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
       });
+
   </script>
 
   </body>

@@ -8,6 +8,9 @@
     header{
       background-image: url("/public/imgs/bg/doctor_phone.jpg");
     }
+    #content{
+      padding-bottom: 100px;
+    }
 
   </style>
 
@@ -62,51 +65,53 @@
 
 
   <hr />
-  <section id="contact-form">
-    <h1>Contact Form</h1>
-    <form >
-      <div>
-        <label for="name">Nome</label>
-        <input id="name" type="text" name="name" required placeholder="name">
-      </div>
-      <div>
-        <label for="surname">Cognome</label>
-        <input id="surname" type="text" name="surname" required placeholder="surname">
-      </div>
-      <div>
-        <label for="phone">Telefono</label>
-        <input id="phone" type="tel" name="phone" placeholder="phone" required>
-      </div>
-      <div>
-        <label for="mail">Mail</label>
-        <input id="mail" type="email" name="mail" placeholder="e-mail" required>
-      </div>
-      <div>
-        <label for="target">Area target</label>
-        <select id="target" name="target">
-          <%areas.forEach((area) => {%>
-          <option name="<%=area.name%>" value="<%=area.id%>"><%=area.name%></option>
-          <%})%>
-        </select>
-      </div>
-      <div>
-      <label for="obj">Oggetto</label>
-      <input id="obj" type="text" name="obj" required placeholder="name">
-      </div>
-      <div>
-        <label for="text">Testo</label>
-        <textarea id="message" name="message" placeholder="Write here..." required></textarea>
-      </div>
+  <section>
+      <div id="contact-form">
+      <h1>Contact Form</h1>
+      <form >
+        <div>
+          <label for="name">Nome</label>
+          <input id="name" type="text" name="name" required placeholder="name">
+        </div>
+        <div>
+          <label for="surname">Cognome</label>
+          <input id="surname" type="text" name="surname" required placeholder="surname">
+        </div>
+        <div>
+          <label for="phone">Telefono</label>
+          <input id="phone" type="tel" name="phone" placeholder="phone" required>
+        </div>
+        <div>
+          <label for="mail">Mail</label>
+          <input id="mail" type="email" name="mail" placeholder="e-mail" required>
+        </div>
+        <div>
+          <label for="target">Area target</label>
+          <select id="target" name="target">
+            <%areas.forEach((area) => {%>
+            <option name="<%=area.name%>" value="<%=area.id%>"><%=area.name%></option>
+            <%})%>
+          </select>
+        </div>
+        <div>
+        <label for="obj">Oggetto</label>
+        <input id="obj" type="text" name="obj" required placeholder="name">
+        </div>
+        <div>
+          <label for="text">Testo</label>
+          <textarea id="message" name="message" placeholder="Write here..." required></textarea>
+        </div>
 
-      <div class="checkbox">
-        <label>
-          <input id="agree" name="agree" type="checkbox">Check me out
-        </label>
-      </div>
-      <div>
-        <input type="submit" value="Submit">
-      </div>
-    </form>
+        <div class="checkbox">
+          <label>
+            <input id="agree" name="agree" type="checkbox">Check me out
+          </label>
+        </div>
+        <div>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
     </section>
   </section>
 

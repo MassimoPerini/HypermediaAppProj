@@ -25,20 +25,24 @@ $(document).ready(function() {
   });
 });
 
+function initFilters() {
+    // Set filters from URL
+    params = new URLSearchParams(window.location.search);
+    if (params.get("location")) $("#location-selector").val(params.get("location")).trigger('change');
+    if (params.get("area")) $("#area-selector").val(params.get("area")).trigger('change');
+    if (params.get("service")) $("#service-selector").val(params.get("service")).trigger('change');
+    // Init filters and list
+    initDoctors();
+    // Infinite scroll
+    $(window).scroll(function(){
+        if ($(document).height() - $(window).height() >= $(window).scrollTop()) {
+            loadNextPage();
+        }
+    });
+}
+
 window.onload = function(){
-  // Set filters from URL
-  params = new URLSearchParams(window.location.search);
-  if (params.get("location")) $("#location-selector").val(params.get("location")).trigger('change');
-  if (params.get("area")) $("#area-selector").val(params.get("area")).trigger('change');
-  if (params.get("service")) $("#service-selector").val(params.get("service")).trigger('change');
-  // Init filters and list
-  initDoctors();
-  // Infinite scroll
-  $(window).scroll(function(){
-    if ($(document).height() - $(window).height() >= $(window).scrollTop()) {
-      loadNextPage();
-    }
-  });
+  initFilters();
 }
 
 function initDoctors(){
@@ -75,6 +79,12 @@ function getFilters(){
   if (window.filters.service) params.append('service', window.filters.service);
   window.history.pushState(null, null, '?' + params.toString());
 }
+
+window.addEventListener('popstate', function(event) {
+  console.log("popstate");
+  initFilters();
+});
+
 
 function doctorCard(doctor){
   // FIXME: We did not use ES6 multiline because grunt Uglify minification did not support it
