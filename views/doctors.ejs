@@ -2,17 +2,11 @@
 <html>
   <head>
 
-    <style>
-      header{
-        background-image: url("/public/imgs/bg/doctor.jpg");
-      }
-    </style>
-
     <title><%= title %></title>
       <%- include('common/imports') %>
-      <%var size = 3%>
+      <!--<%var size = 3%>-->
 
-      <script>
+      <!--<script>
         var currentPage;
         var serviceSelected;
         var areaSelected;
@@ -145,21 +139,20 @@
               })
 
           });
-      </script>
+      </script>-->
 
 
   </head>
   <body>
     <%- include('common/navbar', { page : '/doctors', user:user}) %>
 
+    <div class="container-fluid" id='content'>
 
-    <header>
-      <h1>Doctors</h1>
-    </header>
+      <center>
+        <h1>Our Doctors</h1>
+      </center>
 
-    <div class="container-fluid">
-
-      Locations:
+      <!--Locations:
       <select id="locations">
         <option value = "-1">Select Location</option>
         <% locations.forEach((location) => {%>
@@ -179,15 +172,16 @@
           <% services.forEach((service) => {%>
         <option value="<%= service.id%>"><%= service.name%></option>
           <%});%>
-      </select>
+      </select>-->
 
-      <section id="content" class="list-md">
-        <!-- LOAD JQUERY AJAX-->
-      </section>
+      <!--<section class="list-md">
+        Hello
+      </section>-->
     </div>
 
-    <div class="btn-group" role="group" id="pagination" aria-label="...">
-    </div>
+    <!--<div class="btn-group" role="group" id="pagination" aria-label="...">
+    </div>-->
 
+    <%- include('common/footer') %>
   </body>
 </html>
