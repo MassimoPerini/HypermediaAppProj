@@ -1,15 +1,26 @@
-function initFilters() {
-    params = new URLSearchParams(window.location.search), params.get("location") && $("#location-selector").val(params.get("location")).trigger("change"), 
-    params.get("area") && $("#area-selector").val(params.get("area")).trigger("change"), 
-    params.get("service") && $("#service-selector").val(params.get("service")).trigger("change"), 
-    initDoctors(), $(window).scroll(function() {
-        $(document).height() - $(window).height() >= $(window).scrollTop() && loadNextPage();
-    });
+function changedFilters() {
+    getFiltersFromSelectors(), initDoctors();
+}
+
+function setFiltersFromUrl() {
+    params = new URLSearchParams(window.location.search), window.filters = {}, params.get("location") && (window.filters.location = Number(params.get("location"))), 
+    params.get("area") && (window.filters.area = Number(params.get("area"))), params.get("service") && (window.filters.service = Number(params.get("service"))), 
+    params.get("location") ? $("#location-selector").val(params.get("location")).trigger("change.select2") : $("#location-selector").val(null).trigger("change.select2"), 
+    params.get("area") ? $("#area-selector").val(params.get("area")).trigger("change.select2") : $("#area-selector").val(null).trigger("change.select2"), 
+    params.get("service") ? $("#service-selector").val(params.get("service")).trigger("change.select2") : $("#service-selector").val(null).trigger("change.select2");
+}
+
+function getFiltersFromSelectors() {
+    window.filters = {}, $("#location-selector").val().length > 0 && (window.filters.location = Number($("#location-selector").val())), 
+    $("#area-selector").val().length > 0 && (window.filters.area = Number($("#area-selector").val())), 
+    $("#service-selector").val().length > 0 && (window.filters.service = Number($("#service-selector").val()));
+    var params = new URLSearchParams();
+    window.filters.location && params.append("location", window.filters.location), window.filters.area && params.append("area", window.filters.area), 
+    window.filters.service && params.append("service", window.filters.service), window.history.pushState(window.filters, null, "?" + params.toString());
 }
 
 function initDoctors() {
-    getFilters(), window.currentPage = -1, window.doctors = [], $("#doctors-list").empty(), 
-    loadNextPage();
+    window.currentPage = -1, window.doctors = [], $("#doctors-list").empty(), loadNextPage();
 }
 
 function loadNextPage() {
@@ -21,15 +32,6 @@ function loadNextPage() {
     }));
 }
 
-function getFilters() {
-    window.filters = {}, $("#location-selector").val().length > 0 && (window.filters.location = Number($("#location-selector").val())), 
-    $("#area-selector").val().length > 0 && (window.filters.area = Number($("#area-selector").val())), 
-    $("#service-selector").val().length > 0 && (window.filters.service = Number($("#service-selector").val()));
-    var params = new URLSearchParams();
-    window.filters.location && params.append("location", window.filters.location), window.filters.area && params.append("area", window.filters.area), 
-    window.filters.service && params.append("service", window.filters.service), window.history.pushState(null, null, "?" + params.toString());
-}
-
 function doctorCard(doctor) {
     return '<article><div class="card"><a href="/doctor/' + doctor.id + '"><center><img src="' + doctor.icon + '"></img></center><div class="card-text"><h5>' + doctor.fullname + "</h5></div></a></div></article>";
 }
@@ -39,18 +41,22 @@ $(document).ready(function() {
         allowClear: !0,
         placeholder: "Select a location"
     }), $("#location-selector").on("change", function(e) {
-        initDoctors();
+        changedFilters();
     }), $("#area-selector").select2({
         allowClear: !0,
         placeholder: "Select an area"
     }), $("#area-selector").on("change", function(e) {
-        initDoctors();
+        changedFilters();
     }), $("#service-selector").select2({
         allowClear: !0,
         placeholder: "Select a service"
     }), $("#service-selector").on("change", function(e) {
-        initDoctors();
+        changedFilters();
     });
 }), window.onload = function() {
-    initFilters();
+    setFiltersFromUrl(), initDoctors(), $(window).scroll(function() {
+        $(document).height() - $(window).height() >= $(window).scrollTop() && loadNextPage();
+    });
+}, window.onpopstate = function() {
+    setFiltersFromUrl(), initDoctors();
 };

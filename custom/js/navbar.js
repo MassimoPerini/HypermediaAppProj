@@ -1,6 +1,6 @@
 $(document).ready(function($) {
-    var isFormInside = $('form').length > 0 ? 1 :  0;
-    console.log($('form'));
+    var isFormInside = 1;//$('form').length > 0 ? 1 :  0;
+    //console.log($('form'));
     isFormInside*=200;
     $(window).on("scroll", function() {
         var headerOuter = $("header").length ? $("header").outerHeight() : 0;
