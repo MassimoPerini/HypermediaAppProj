@@ -159,7 +159,7 @@ router.get('/api/doctor/:id', function(req, res, next){
     },{
       model: models.areas,
       as: 'area_responsible',
-      attributes: ['id', 'name']
+      attributes: ['id', 'name', 'icon']
     }]
   }).then(function(doctor){
     res.send(doctor);

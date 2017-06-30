@@ -1,3 +1,4 @@
+<% console.log(doctor); %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -64,35 +65,40 @@
           <div class="card">
             <a href="/service/doctor/<%=doctor.id%>">
               <div class="card_header" style="background-color:rgba(187, 120, 36, 0.1) ">
-                <center><img src="/public/imgs/service.png" style="color:#BB7824" width="100%"></img></center>
+                <center><img src="/public/imgs/service.svg" style="color:#BB7824" width="100%"></img></center>
               </div>
               <div class="card-text">
-                <h5>Doctor's service
-              </div>
-            </a>
-          </div>
-          
-          <div class="card">
-            <a href="/service/?">
-              <div class="card_header" style="background-color:rgba(187, 120, 36, 0.1) ">
-                <center><img src="/public/imgs/boh.png" style="color:#BB7824" width="100%"></img></center>
-              </div>
-              <div class="card-text">
-                <h5>[OPTIONAL]Service responsible
+                <h5>Doctor's service</h5>
               </div>
             </a>
           </div>
 
+          <% if(doctor.area_responsible != null) { %>
           <div class="card">
-            <a href="/service/?">
+            <a href="/area/<%= doctor.area_responsible.id %>">
               <div class="card_header">
-                <center><img src="/public/imgs/boh.png"></img></center>
+                <center><img src="<%= doctor.area_responsible.icon %>"></img></center>
               </div>
               <div class="card-text">
-                <h5>[OPTIONAL]Area responsible
+                <h5>Responsible of <%= doctor.area_responsible.name %> Area</h5>
               </div>
             </a>
           </div>
+          <% } %>
+
+          <% if(doctor.service_responsible != null) { %>
+          <div class="card">
+            <a href="/service/<%= doctor.service_responsible.id %>">
+              <div class="card_header" style="background-color:rgba(187, 120, 36, 0.1) ">
+                <center><img src="/public/imgs/boh.png" style="color:#BB7824" width="100%"></img></center>
+              </div>
+              <div class="card-text">
+                <h5>Responsible of <%= doctor.service_responsible.name %></h5>
+              </div>
+            </a>
+          </div>
+          <% } %>
+
         </aside>
       </section>
 

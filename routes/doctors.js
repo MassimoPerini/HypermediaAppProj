@@ -38,6 +38,14 @@ router.get('/doctor/:id', function(req, res, next){
             model: models.locations,
             attributes: ['id', 'name']
           }]
+        }, {
+          model: models.services,
+          as: 'service_responsible',
+          attributes: ['id', 'name']
+        },{
+          model: models.areas,
+          as: 'area_responsible',
+          attributes: ['id', 'name', 'icon']
         }]
     }).then(function(doctor){
       res.render('doctor', { title: doctor.fullname, doctor: doctor, timetables: doctor.doctors_timetables, user:req.user});
