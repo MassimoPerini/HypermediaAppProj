@@ -1,4 +1,4 @@
-<footer id='footer'>
+<footer id="footer">
     <section>
         <div class="links">
             <a>Copyright 2016 CPM s.p.a.</a>
@@ -10,18 +10,25 @@
             <a>Terms & Conditions</a>
         </div>
     </section>
-    <section>
-        <div class="locations">
-        <a>Via Taormina 2, Milan - Italy
-        Phone: +39 0267354673 </a></div>
-
-        <div class="locations">
-        <a>Via Saronno 5, Milan - Italy
-            Phone: +39 0228465834</a></div>
-
-        <div class="locations">
-        <a>Via Mascheroni 2, Milan - Italy
-            Phone: +39 026343379</a></div>
-    </section>
+    <section id="locations-footer"></section>
 </footer>
+
+<script>
+  $(document).ready(function(){
+    $.ajax({
+      dataType : 'json',
+      url : '/api/location'
+    }).done(function(result) {
+        result.forEach(location => {
+          $('#footer #locations-footer').append('\
+            <div class="locations">\
+                <a href="/location/' + location['id'] + '">' + location['position'] + '</a> - \
+                <a href="tell:' + location['tell'] + '"><span class="glyphicon glyphicon-earphone"/>' + location['tell'] + '</a>\
+            </div>');
+        });
+        $('#footer #locations-footer').append();
+      });
+  });
+</script>
+
 <%- include('last-imports') %>
