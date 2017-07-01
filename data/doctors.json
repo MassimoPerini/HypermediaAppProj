@@ -105,8 +105,52 @@
     "position": "Cardiologist",
     "phone": "123456789",
     "email": "beamer@cpm.com",
-    "description": "Drs. Staci E. Beamer is specialized in Chest surgery and Esophagitis. She is actively researching ",
-    "icon": "/public/imgs/doctors/agnew.jpg",
+    "description": "Drs. Staci E. Beamer is specialized in Chest surgery and Esophagitis. She is actively researching Minimally invasive thoracic surgery and Thoracic oncology. She also likes knitting btw.",
+    "icon": "/public/imgs/doctors/beamer.jpg",
     "header": ""
   },
+  {
+    "id": 11,
+    "fullname": "Dr. Richard C. Daly",
+    "surname" : "Daly",
+    "position": "Cardiologist",
+    "phone": "123456789",
+    "email": "daly@cpm.com",
+    "description": "Dr. Richard C. Daly is one of our senior members, with over 40 years of procedures in our clinic. He treated many cardiac diseases, mostly specializing in Coronary bypass surgery, Heart valve repair and Ventricular assist device insertion. He is a pioneer of the Robotic assisted mitral valve repair (minimally invasive) procedure. ",
+    "icon": "/public/imgs/doctors/daly.jpg",
+    "header": ""
+  },
+  {
+    "id": 12,
+    "fullname": "Dr. Steven Bowers",
+    "surname" : "Bowers",
+    "position": "Surgeon",
+    "phone": "123456789",
+    "email": "bowers@cpm.com",
+    "description": "Dr. Steven Bowers is one of our youngest and promising surgeons, specializing in Laparoscopic surgery. He is currently actively writing papers on experimental procedures.",
+    "icon": "/public/imgs/doctors/bowers.jpg",
+    "header": ""
+  },
+  {
+    "id": 13,
+    "fullname": "Drs. Sarah A. McLaughlin",
+    "surname" : "McLaughlin",
+    "position": "Surgeon",
+    "phone": "123456789",
+    "email": "rotfl@cpm.com",
+    "description": "Drs. Sarah A. McLaughlin is our top surgeon in breast cancer procedures. She is currently specialized in breast cancer and lymphedema, researching in Oncoplastic breast surgery.",
+    "icon": "/public/imgs/doctors/mclaughlin.jpg",
+    "header": ""
+  },
+  {
+    "id": 14,
+    "fullname": "Dr. Enrique F. Elli",
+    "surname" : "Elli",
+    "position": "Surgeon",
+    "phone": "123456789",
+    "email": "elli@cpm.com",
+    "description": "Dr. Enrique Elli is our most valuable surgeon. He treats mostly Hernia, Esophageal cancer and Gastroparesis. He is one of the top researchers in Abdominal wall hernias procedures.",
+    "icon": "/public/imgs/doctors/elli.jpg",
+    "header": ""
+  }
 ]

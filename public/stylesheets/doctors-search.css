@@ -9173,6 +9173,24 @@ form input:not([type='checkbox']) input [type='submit'] {
   }
 }
 
+@media (max-width: 768px) {
+  .list-md > article:nth-child(2n+1), #doctors-list > article:nth-child(2n+1) {
+    clear: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .list-md > article:nth-child(3n+1), #doctors-list > article:nth-child(3n+1) {
+    clear: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .list-md > article:nth-child(6n+1), #doctors-list > article:nth-child(6n+1) {
+    clear: left;
+  }
+}
+
 #content {
   min-height: 100vh;
   transform-origin: center bottom 0px;

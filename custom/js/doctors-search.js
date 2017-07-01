@@ -98,7 +98,7 @@ function loadNextPage(){
 
 function doctorCard(doctor){
   // FIXME: We did not use ES6 multiline because grunt Uglify minification did not support it
-  return '<article>' +
+  return '<article class="doctor">' +
           '<div class="card">' +
             '<a href="/doctor/' + doctor.id +'">' +
             '<center><img src="' + doctor.icon + '"></img></center>' +

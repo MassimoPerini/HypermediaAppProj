@@ -33,7 +33,7 @@ function loadNextPage() {
 }
 
 function doctorCard(doctor) {
-    return '<article><div class="card"><a href="/doctor/' + doctor.id + '"><center><img src="' + doctor.icon + '"></img></center><div class="card-text"><h5>' + doctor.fullname + "</h5></div></a></div></article>";
+    return '<article class="doctor"><div class="card"><a href="/doctor/' + doctor.id + '"><center><img src="' + doctor.icon + '"></img></center><div class="card-text"><h5>' + doctor.fullname + "</h5></div></a></div></article>";
 }
 
 $(document).ready(function() {

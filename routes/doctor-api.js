@@ -8,7 +8,7 @@ var models = require('../models');
 
 var router = express.Router();
 
-const DEFAULT_PAGE_SIZE = 6;
+const DEFAULT_PAGE_SIZE = 12;
 
 /**
  * @swagger
