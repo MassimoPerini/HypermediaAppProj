@@ -304,10 +304,13 @@ center{
 
 #contact-form{
   @extend .container;
-  max-width: $form-width;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+  @media (min-width: $form-width) {
+    width: $form-width;
+  }
 }
+
 
 form{
   >div:not(.checkbox){
@@ -341,16 +344,57 @@ form{
   }
 }
 
+/*TABLE*/
+
 table{
   @extend .table;
 }
+
+table {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  border-collapse:
+          collapse; border-spacing: 0;
+}
+
+td, th {
+  border: 1px solid transparent; /* No more visible border */
+  height: 30px;
+  transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+th {
+  background: #DFDFDF;  /* Darken header a bit */
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td { background: #F1F1F1; }
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+tr:nth-child(odd) td { background: #FEFEFE; }
+
+tr td:hover {
+  background: #666;
+  color: #FFFFFF;
+  a{
+    color: #FFFFFF;
+  }
+}
+
+
 
 @media only screen and (max-width: 800px) {
   table, thead, tbody, th, td, tr {
     display: block;
   }
 
-  /* Hide table headers (but not display: none;, for accessibility) */
   thead {
     tr {
       position: absolute;
@@ -371,9 +415,7 @@ table{
     text-align:left;
 
     &:before{
-      /* Now like a table header */
       position: absolute;
-      /* Top/left values mimic padding */
       top: 6px;
       left: 6px;
       width: 45%;
@@ -385,6 +427,8 @@ table{
     }
   }
 }
+
+/*MAIN LAYOUT*/
 
 // Two sided is used in 2-sided pages
 .two-sided{

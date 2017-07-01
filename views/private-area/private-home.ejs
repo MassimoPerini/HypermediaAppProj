@@ -5,19 +5,35 @@
 
       <%- include('../common/imports') %>
 
+    <style>
+      header{
+        background-image: url('/public/imgs/bg/private.jpg');
+      }
+    </style>
+
   </head>
   <body>
   <%- include('../common/navbar', { page : '/private', user:user}) %>
   <header>
-    <h1>Hi, <%=user.username%></h1>
   </header>
     <section class="two-sided" id="content">
-      Username: <%=user.username%>, Name: <%=user.name%>, Surname: <%=user.surname%>, CF: <%=user.cf%>
+      <center>    <h1>Hi, <%=user.username%></h1>
+      </center>
+      <article>
+        <h2>Welcome</h2>
+        <h3>Your data:</h3>
+
+        <h5>Username: <%=user.username%></h5>
+        <h5>Name: <%=user.name%></h5>
+        <h5>Mail: <%=user.mail%></h5>
+        <h5>Surname: <%=user.surname%></h5>
+        <h5>CF: <%=user.cf%></h5>
+      </article>
+      <aside>
+        <button onclick="alert('ci credevi?')">PRENOTA!!!</button>
+        <a href="/logout">Logout</a>
+      </aside>
     </section>
-  <aside>
-    <button onclick="alert('ci credevi?')">PRENOTA!!!</button>
-    <a href="/logout">Logout</a>
-  </aside>
   <%- include('../common/footer') %>
 
   </body>

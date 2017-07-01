@@ -47,9 +47,9 @@
                 <tbody>
                   <% var i; for(var i=0; i<7; i++) { if(timetables[i] != null) { %>
                   <tr>
-                    <td><%= timetables[i].day %></td>
-                    <td><%= timetables[i].opening_time %> - <%= timetables[i].closing_time %></td>
-                    <td><a href="/location/<%= timetables[i].location.id %>"><%= timetables[i].location.name %></a></td>
+                    <td data-title="Day"><%= timetables[i].day %></td>
+                    <td data-title="Time"><%= timetables[i].opening_time %> - <%= timetables[i].closing_time %></td>
+                    <td data-title="Location"><a href="/location/<%= timetables[i].location.id %>"><%= timetables[i].location.name %></a></td>
                   </tr>
                   <% } } %>
                 </tbody>

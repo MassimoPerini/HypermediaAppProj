@@ -8989,8 +8989,13 @@ center > h1 {
 }
 
 #contact-form {
-  max-width: 450px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 450px) {
+  #contact-form {
+    width: 450px;
+  }
 }
 
 form input[type='submit'] {
@@ -9011,11 +9016,57 @@ form input[type='submit']:active {
   background-color: #0073e1;
 }
 
+/*TABLE*/
+table {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  border: 1px solid transparent;
+  /* No more visible border */
+  height: 30px;
+  transition: all 0.3s;
+  /* Simple transition for hover effect */
+}
+
+th {
+  background: #DFDFDF;
+  /* Darken header a bit */
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td {
+  background: #F1F1F1;
+}
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+tr:nth-child(odd) td {
+  background: #FEFEFE;
+}
+
+tr td:hover {
+  background: #666;
+  color: #FFFFFF;
+}
+
+tr td:hover a {
+  color: #FFFFFF;
+}
+
 @media only screen and (max-width: 800px) {
   table, thead, tbody, th, td, tr {
     display: block;
   }
-  /* Hide table headers (but not display: none;, for accessibility) */
   thead tr {
     position: absolute;
     top: -9999px;
@@ -9034,9 +9085,7 @@ form input[type='submit']:active {
     text-align: left;
   }
   td:before {
-    /* Now like a table header */
     position: absolute;
-    /* Top/left values mimic padding */
     top: 6px;
     left: 6px;
     width: 45%;
@@ -9048,6 +9097,7 @@ form input[type='submit']:active {
   }
 }
 
+/*MAIN LAYOUT*/
 .two-sided > article {
   position: relative;
   float: left;
