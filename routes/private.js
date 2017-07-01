@@ -21,6 +21,15 @@ router.post('/login',
   })
 );
 
+
+router.post('/signup',
+    passport.authenticate('local-signup', {
+    successRedirect: '/private',
+    failureRedirect: '/login?error=true',
+    failureFlash : true
+}));
+
+
 router.get('/logout', function(req,res,next){
   req.logout();
   res.clearCookie('connect.sid');

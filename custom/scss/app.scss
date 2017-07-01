@@ -114,6 +114,15 @@ nav.main-navigation {
       }
     }
 
+    .dropdown{
+      >a{
+        @extend .dropdown-toggle;
+      }
+      >ul{
+        @extend .dropdown-menu;
+      }
+    }
+
     .main-landmarks {
       .landmarks-right {
         @extend .navbar-right;
@@ -221,7 +230,7 @@ center{
   .private-area-form {
 
     img{
-      width:$form-width - $login-form-margin;
+      width:($form-width - $login-form-margin) * 0.8;
       margin-bottom: $login-form-margin / 2;
       height: auto;
     }
