@@ -108,18 +108,30 @@ nav.main-navigation {
       display: inline-block;
       float: none;
       vertical-align: top;
-      > li {
-        > a {
-        }
+      li {
       }
     }
 
     .dropdown{
-      >a{
+      a{
         @extend .dropdown-toggle;
+        color: #FFFFFF;
+        &:hover{
+          color: $navbar-default-link-hover-color !important;
+        }
       }
+
       >ul{
         @extend .dropdown-menu;
+
+      }
+    }
+
+    @media (min-width: 979px) {
+      .dropdown:hover {
+        ul {
+          display: block;
+        }
       }
     }
 
