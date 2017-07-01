@@ -23,7 +23,7 @@
         <li<%if(page=='/contacts'){%> class="active"<%}%>><a href="/contacts">Contacts</a></li>
         <%if (user){%>
           <li class="dropdown <%if(page=='/private'){%> active <%}%> ">
-            <a data-toggle="dropdown" href="#">Hi, <%=user.username%>
+            <a data-toggle="dropdown" href="/private">Hi, <%=user.username%>
             <span class="caret"></span></a>
             <ul>
               <li><a href="/private">Private area</a></li>

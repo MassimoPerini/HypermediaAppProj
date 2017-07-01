@@ -3765,9 +3765,9 @@ fieldset[disabled] a.button {
 
 .btn-default:active, nav.navigation-content > .page:active, .btn-default.active, nav.navigation-content > .active.page,
 .open > .btn-default.dropdown-toggle,
-nav.navigation-content.open > .dropdown-toggle.page, nav.main-navigation .landmarks
-nav.dropdown.navigation-content.open > a.page, nav.main-navigation .landmarks
-.dropdown.open > a.btn-default {
+nav.navigation-content.open > .dropdown-toggle.page, nav.main-navigation .landmarks .dropdown
+nav.navigation-content.open > a.page, nav.main-navigation .landmarks .dropdown
+.open > a.btn-default {
   color: #333333;
   background-color: #cecdcd;
   border-color: #adadad;
@@ -3775,17 +3775,17 @@ nav.dropdown.navigation-content.open > a.page, nav.main-navigation .landmarks
 
 .btn-default:active:hover, nav.navigation-content > .page:active:hover, .btn-default:active:focus, nav.navigation-content > .page:active:focus, .btn-default:active.focus, nav.navigation-content > .page:active.focus, .btn-default.active:hover, nav.navigation-content > .active.page:hover, .btn-default.active:focus, nav.navigation-content > .active.page:focus, .btn-default.active.focus, nav.navigation-content > .active.focus.page,
 .open > .btn-default.dropdown-toggle:hover,
-nav.navigation-content.open > .dropdown-toggle.page:hover, nav.main-navigation .landmarks
-nav.dropdown.navigation-content.open > a.page:hover, nav.main-navigation .landmarks
-.dropdown.open > a.btn-default:hover,
+nav.navigation-content.open > .dropdown-toggle.page:hover, nav.main-navigation .landmarks .dropdown
+nav.navigation-content.open > a.page:hover, nav.main-navigation .landmarks .dropdown
+.open > a.btn-default:hover,
 .open > .btn-default.dropdown-toggle:focus,
-nav.navigation-content.open > .dropdown-toggle.page:focus, nav.main-navigation .landmarks
-nav.dropdown.navigation-content.open > a.page:focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-default:focus,
+nav.navigation-content.open > .dropdown-toggle.page:focus, nav.main-navigation .landmarks .dropdown
+nav.navigation-content.open > a.page:focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-default:focus,
 .open > .btn-default.dropdown-toggle.focus,
-nav.navigation-content.open > .dropdown-toggle.focus.page, nav.main-navigation .landmarks
-nav.dropdown.navigation-content.open > a.focus.page, nav.main-navigation .landmarks
-.dropdown.open > a.btn-default.focus {
+nav.navigation-content.open > .dropdown-toggle.focus.page, nav.main-navigation .landmarks .dropdown
+nav.navigation-content.open > a.focus.page, nav.main-navigation .landmarks .dropdown
+.open > a.btn-default.focus {
   color: #333333;
   background-color: #bcbcbc;
   border-color: #8c8c8c;
@@ -3793,9 +3793,9 @@ nav.dropdown.navigation-content.open > a.focus.page, nav.main-navigation .landma
 
 .btn-default:active, nav.navigation-content > .page:active, .btn-default.active, nav.navigation-content > .active.page,
 .open > .btn-default.dropdown-toggle,
-nav.navigation-content.open > .dropdown-toggle.page, nav.main-navigation .landmarks
-nav.dropdown.navigation-content.open > a.page, nav.main-navigation .landmarks
-.dropdown.open > a.btn-default {
+nav.navigation-content.open > .dropdown-toggle.page, nav.main-navigation .landmarks .dropdown
+nav.navigation-content.open > a.page, nav.main-navigation .landmarks .dropdown
+.open > a.btn-default {
   background-image: none;
 }
 
@@ -3834,9 +3834,9 @@ fieldset[disabled] nav.navigation-content > .focus.page {
 }
 
 .btn-primary:active, .button:active, .btn-primary.active, .active.button,
-.open > .btn-primary.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-primary, nav.main-navigation .landmarks
-.dropdown.open > a.button,
+.open > .btn-primary.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-primary, nav.main-navigation .landmarks .dropdown
+.open > a.button,
 .open > .dropdown-toggle.button {
   color: #fff;
   background-color: #0b3a64;
@@ -3844,17 +3844,17 @@ fieldset[disabled] nav.navigation-content > .focus.page {
 }
 
 .btn-primary:active:hover, .button:active:hover, .btn-primary:active:focus, .button:active:focus, .btn-primary:active.focus, .button:active.focus, .btn-primary.active:hover, .active.button:hover, .btn-primary.active:focus, .active.button:focus, .btn-primary.active.focus, .active.focus.button,
-.open > .btn-primary.dropdown-toggle:hover, nav.main-navigation .landmarks
-.dropdown.open > a.btn-primary:hover, nav.main-navigation .landmarks
-.dropdown.open > a.button:hover,
+.open > .btn-primary.dropdown-toggle:hover, nav.main-navigation .landmarks .dropdown
+.open > a.btn-primary:hover, nav.main-navigation .landmarks .dropdown
+.open > a.button:hover,
 .open > .dropdown-toggle.button:hover,
-.open > .btn-primary.dropdown-toggle:focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-primary:focus, nav.main-navigation .landmarks
-.dropdown.open > a.button:focus,
+.open > .btn-primary.dropdown-toggle:focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-primary:focus, nav.main-navigation .landmarks .dropdown
+.open > a.button:focus,
 .open > .dropdown-toggle.button:focus,
-.open > .btn-primary.dropdown-toggle.focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-primary.focus, nav.main-navigation .landmarks
-.dropdown.open > a.focus.button,
+.open > .btn-primary.dropdown-toggle.focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-primary.focus, nav.main-navigation .landmarks .dropdown
+.open > a.focus.button,
 .open > .dropdown-toggle.focus.button {
   color: #fff;
   background-color: #072844;
@@ -3862,9 +3862,9 @@ fieldset[disabled] nav.navigation-content > .focus.page {
 }
 
 .btn-primary:active, .button:active, .btn-primary.active, .active.button,
-.open > .btn-primary.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-primary, nav.main-navigation .landmarks
-.dropdown.open > a.button,
+.open > .btn-primary.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-primary, nav.main-navigation .landmarks .dropdown
+.open > a.button,
 .open > .dropdown-toggle.button {
   background-image: none;
 }
@@ -3904,28 +3904,28 @@ fieldset[disabled] .focus.button {
 }
 
 .btn-success:active, .btn-success.active,
-.open > .btn-success.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-success {
+.open > .btn-success.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-success {
   color: #fff;
   background-color: #358753;
   border-color: #2b6e44;
 }
 
 .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus,
-.open > .btn-success.dropdown-toggle:hover, nav.main-navigation .landmarks
-.dropdown.open > a.btn-success:hover,
-.open > .btn-success.dropdown-toggle:focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-success:focus,
-.open > .btn-success.dropdown-toggle.focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-success.focus {
+.open > .btn-success.dropdown-toggle:hover, nav.main-navigation .landmarks .dropdown
+.open > a.btn-success:hover,
+.open > .btn-success.dropdown-toggle:focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-success:focus,
+.open > .btn-success.dropdown-toggle.focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-success.focus {
   color: #fff;
   background-color: #2b6e44;
   border-color: #183e26;
 }
 
 .btn-success:active, .btn-success.active,
-.open > .btn-success.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-success {
+.open > .btn-success.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-success {
   background-image: none;
 }
 
@@ -3961,28 +3961,28 @@ fieldset[disabled] .btn-success.focus {
 }
 
 .btn-info:active, .btn-info.active,
-.open > .btn-info.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-info {
+.open > .btn-info.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-info {
   color: #fff;
   background-color: #31b0d5;
   border-color: #269abc;
 }
 
 .btn-info:active:hover, .btn-info:active:focus, .btn-info:active.focus, .btn-info.active:hover, .btn-info.active:focus, .btn-info.active.focus,
-.open > .btn-info.dropdown-toggle:hover, nav.main-navigation .landmarks
-.dropdown.open > a.btn-info:hover,
-.open > .btn-info.dropdown-toggle:focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-info:focus,
-.open > .btn-info.dropdown-toggle.focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-info.focus {
+.open > .btn-info.dropdown-toggle:hover, nav.main-navigation .landmarks .dropdown
+.open > a.btn-info:hover,
+.open > .btn-info.dropdown-toggle:focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-info:focus,
+.open > .btn-info.dropdown-toggle.focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-info.focus {
   color: #fff;
   background-color: #269abc;
   border-color: #1b6d85;
 }
 
 .btn-info:active, .btn-info.active,
-.open > .btn-info.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-info {
+.open > .btn-info.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-info {
   background-image: none;
 }
 
@@ -4018,28 +4018,28 @@ fieldset[disabled] .btn-info.focus {
 }
 
 .btn-warning:active, .btn-warning.active,
-.open > .btn-warning.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-warning {
+.open > .btn-warning.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-warning {
   color: #fff;
   background-color: #b67102;
   border-color: #935b01;
 }
 
 .btn-warning:active:hover, .btn-warning:active:focus, .btn-warning:active.focus, .btn-warning.active:hover, .btn-warning.active:focus, .btn-warning.active.focus,
-.open > .btn-warning.dropdown-toggle:hover, nav.main-navigation .landmarks
-.dropdown.open > a.btn-warning:hover,
-.open > .btn-warning.dropdown-toggle:focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-warning:focus,
-.open > .btn-warning.dropdown-toggle.focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-warning.focus {
+.open > .btn-warning.dropdown-toggle:hover, nav.main-navigation .landmarks .dropdown
+.open > a.btn-warning:hover,
+.open > .btn-warning.dropdown-toggle:focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-warning:focus,
+.open > .btn-warning.dropdown-toggle.focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-warning.focus {
   color: #fff;
   background-color: #935b01;
   border-color: #513201;
 }
 
 .btn-warning:active, .btn-warning.active,
-.open > .btn-warning.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-warning {
+.open > .btn-warning.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-warning {
   background-image: none;
 }
 
@@ -4075,28 +4075,28 @@ fieldset[disabled] .btn-warning.focus {
 }
 
 .btn-danger:active, .btn-danger.active,
-.open > .btn-danger.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-danger {
+.open > .btn-danger.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-danger {
   color: #fff;
   background-color: #d32a0e;
   border-color: #b1240c;
 }
 
 .btn-danger:active:hover, .btn-danger:active:focus, .btn-danger:active.focus, .btn-danger.active:hover, .btn-danger.active:focus, .btn-danger.active.focus,
-.open > .btn-danger.dropdown-toggle:hover, nav.main-navigation .landmarks
-.dropdown.open > a.btn-danger:hover,
-.open > .btn-danger.dropdown-toggle:focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-danger:focus,
-.open > .btn-danger.dropdown-toggle.focus, nav.main-navigation .landmarks
-.dropdown.open > a.btn-danger.focus {
+.open > .btn-danger.dropdown-toggle:hover, nav.main-navigation .landmarks .dropdown
+.open > a.btn-danger:hover,
+.open > .btn-danger.dropdown-toggle:focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-danger:focus,
+.open > .btn-danger.dropdown-toggle.focus, nav.main-navigation .landmarks .dropdown
+.open > a.btn-danger.focus {
   color: #fff;
   background-color: #b1240c;
   border-color: #731708;
 }
 
 .btn-danger:active, .btn-danger.active,
-.open > .btn-danger.dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.open > a.btn-danger {
+.open > .btn-danger.dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.open > a.btn-danger {
   background-image: none;
 }
 
@@ -4237,7 +4237,7 @@ tbody.collapse.in, nav.main-navigation tbody.in.landmarks {
   position: relative;
 }
 
-.dropdown-toggle:focus, nav.main-navigation .landmarks .dropdown > a:focus {
+.dropdown-toggle:focus, nav.main-navigation .landmarks .dropdown a:focus {
   outline: 0;
 }
 
@@ -4457,7 +4457,7 @@ nav.navigation-content.btn-group-vertical > .active.page,
   margin-left: 5px;
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a), nav.navigation-content > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a), nav.navigation-content > .page:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a), .btn-group > .button:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a), nav.navigation-content > .button:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a), nav.navigation-content > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a), nav.navigation-content > .page:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a), .btn-group > .button:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a), nav.navigation-content > .button:not(:first-child):not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a) {
   border-radius: 0;
 }
 
@@ -4465,14 +4465,14 @@ nav.navigation-content.btn-group-vertical > .active.page,
   margin-left: 0;
 }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a), nav.navigation-content > .btn:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a), nav.navigation-content > .page:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a), .btn-group > .button:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a), nav.navigation-content > .button:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a), nav.navigation-content > .btn:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a), nav.navigation-content > .page:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a), .btn-group > .button:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a), nav.navigation-content > .button:first-child:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 .btn-group > .btn:last-child:not(:first-child), nav.navigation-content > .btn:last-child:not(:first-child), nav.navigation-content > .page:last-child:not(:first-child), .btn-group > .button:last-child:not(:first-child), nav.navigation-content > .button:last-child:not(:first-child),
-.btn-group > .dropdown-toggle:not(:first-child), nav.navigation-content > .dropdown-toggle:not(:first-child), nav.main-navigation .landmarks
-.dropdown.btn-group > a:not(:first-child), nav.main-navigation .landmarks nav.dropdown.navigation-content > a:not(:first-child) {
+.btn-group > .dropdown-toggle:not(:first-child), nav.navigation-content > .dropdown-toggle:not(:first-child), nav.main-navigation .landmarks .dropdown
+.btn-group > a:not(:first-child), nav.main-navigation .landmarks .dropdown nav.navigation-content > a:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4487,9 +4487,9 @@ nav.navigation-content.btn-group-vertical > .active.page,
 
 .btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, nav.navigation-content > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > nav.navigation-content:first-child:not(:last-child) > .btn:last-child, nav.navigation-content > nav.navigation-content:first-child:not(:last-child) > .btn:last-child, .btn-group > nav.navigation-content:first-child:not(:last-child) > .page:last-child, nav.navigation-content > nav.navigation-content:first-child:not(:last-child) > .page:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .button:last-child, nav.navigation-content > .btn-group:first-child:not(:last-child) > .button:last-child, .btn-group > nav.navigation-content:first-child:not(:last-child) > .button:last-child, nav.navigation-content > nav.navigation-content:first-child:not(:last-child) > .button:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle, nav.navigation-content > .btn-group:first-child:not(:last-child) > .dropdown-toggle,
-.btn-group > nav.navigation-content:first-child:not(:last-child) > .dropdown-toggle, nav.navigation-content > nav.navigation-content:first-child:not(:last-child) > .dropdown-toggle, nav.main-navigation .landmarks
-.btn-group > .dropdown.btn-group:first-child:not(:last-child) > a, nav.main-navigation .landmarks nav.navigation-content > .dropdown.btn-group:first-child:not(:last-child) > a, nav.main-navigation .landmarks
-.btn-group > nav.dropdown.navigation-content:first-child:not(:last-child) > a, nav.main-navigation .landmarks nav.navigation-content > nav.dropdown.navigation-content:first-child:not(:last-child) > a {
+.btn-group > nav.navigation-content:first-child:not(:last-child) > .dropdown-toggle, nav.navigation-content > nav.navigation-content:first-child:not(:last-child) > .dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.btn-group > .btn-group:first-child:not(:last-child) > a, nav.main-navigation .landmarks .dropdown nav.navigation-content > .btn-group:first-child:not(:last-child) > a, nav.main-navigation .landmarks .dropdown
+.btn-group > nav.navigation-content:first-child:not(:last-child) > a, nav.main-navigation .landmarks .dropdown nav.navigation-content > nav.navigation-content:first-child:not(:last-child) > a {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4499,29 +4499,29 @@ nav.navigation-content.btn-group-vertical > .active.page,
   border-top-left-radius: 0;
 }
 
-.btn-group .dropdown-toggle:active, nav.navigation-content .dropdown-toggle:active, .btn-group nav.main-navigation .landmarks .dropdown > a:active, nav.main-navigation .landmarks .btn-group .dropdown > a:active, nav.navigation-content nav.main-navigation .landmarks .dropdown > a:active, nav.main-navigation .landmarks nav.navigation-content .dropdown > a:active,
+.btn-group .dropdown-toggle:active, nav.navigation-content .dropdown-toggle:active, .btn-group nav.main-navigation .landmarks .dropdown a:active, nav.main-navigation .landmarks .dropdown .btn-group a:active, nav.navigation-content nav.main-navigation .landmarks .dropdown a:active, nav.main-navigation .landmarks .dropdown nav.navigation-content a:active,
 .btn-group.open .dropdown-toggle, nav.open.navigation-content .dropdown-toggle,
-.btn-group.open nav.main-navigation .landmarks .dropdown > a, nav.main-navigation .landmarks
-.btn-group.open .dropdown > a, nav.open.navigation-content nav.main-navigation .landmarks .dropdown > a, nav.main-navigation .landmarks nav.open.navigation-content .dropdown > a {
+.btn-group.open nav.main-navigation .landmarks .dropdown a, nav.main-navigation .landmarks .dropdown
+.btn-group.open a, nav.open.navigation-content nav.main-navigation .landmarks .dropdown a, nav.main-navigation .landmarks .dropdown nav.open.navigation-content a {
   outline: 0;
 }
 
-.btn-group > .btn + .dropdown-toggle, nav.navigation-content > .btn + .dropdown-toggle, nav.navigation-content > .page + .dropdown-toggle, .btn-group > .button + .dropdown-toggle, nav.navigation-content > .button + .dropdown-toggle, nav.main-navigation .landmarks .dropdown.btn-group > .btn + a, nav.main-navigation .landmarks nav.dropdown.navigation-content > .btn + a, nav.main-navigation .landmarks nav.dropdown.navigation-content > .page + a, nav.main-navigation .landmarks .dropdown.btn-group > .button + a, nav.main-navigation .landmarks nav.dropdown.navigation-content > .button + a {
+.btn-group > .btn + .dropdown-toggle, nav.navigation-content > .btn + .dropdown-toggle, nav.navigation-content > .page + .dropdown-toggle, .btn-group > .button + .dropdown-toggle, nav.navigation-content > .button + .dropdown-toggle, nav.main-navigation .landmarks .dropdown .btn-group > .btn + a, nav.main-navigation .landmarks .dropdown nav.navigation-content > .btn + a, nav.main-navigation .landmarks .dropdown nav.navigation-content > .page + a, nav.main-navigation .landmarks .dropdown .btn-group > .button + a, nav.main-navigation .landmarks .dropdown nav.navigation-content > .button + a {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.btn-group > .btn-lg + .dropdown-toggle, nav.navigation-content > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, nav.btn-group-lg.navigation-content > .btn + .dropdown-toggle, nav.navigation-content.btn-group-lg > .page + .dropdown-toggle, .btn-group-lg.btn-group > .button + .dropdown-toggle, nav.btn-group-lg.navigation-content > .button + .dropdown-toggle, nav.main-navigation .landmarks .dropdown.btn-group > .btn-lg + a, nav.main-navigation .landmarks nav.dropdown.navigation-content > .btn-lg + a, nav.main-navigation .landmarks .dropdown.btn-group-lg.btn-group > .btn + a, nav.main-navigation .landmarks nav.dropdown.btn-group-lg.navigation-content > .btn + a, nav.main-navigation .landmarks nav.dropdown.navigation-content.btn-group-lg > .page + a, nav.main-navigation .landmarks .dropdown.btn-group-lg.btn-group > .button + a, nav.main-navigation .landmarks nav.dropdown.btn-group-lg.navigation-content > .button + a {
+.btn-group > .btn-lg + .dropdown-toggle, nav.navigation-content > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, nav.btn-group-lg.navigation-content > .btn + .dropdown-toggle, nav.navigation-content.btn-group-lg > .page + .dropdown-toggle, .btn-group-lg.btn-group > .button + .dropdown-toggle, nav.btn-group-lg.navigation-content > .button + .dropdown-toggle, nav.main-navigation .landmarks .dropdown .btn-group > .btn-lg + a, nav.main-navigation .landmarks .dropdown nav.navigation-content > .btn-lg + a, nav.main-navigation .landmarks .dropdown .btn-group-lg.btn-group > .btn + a, nav.main-navigation .landmarks .dropdown nav.btn-group-lg.navigation-content > .btn + a, nav.main-navigation .landmarks .dropdown nav.navigation-content.btn-group-lg > .page + a, nav.main-navigation .landmarks .dropdown .btn-group-lg.btn-group > .button + a, nav.main-navigation .landmarks .dropdown nav.btn-group-lg.navigation-content > .button + a {
   padding-left: 12px;
   padding-right: 12px;
 }
 
-.btn-group.open .dropdown-toggle, nav.open.navigation-content .dropdown-toggle, .btn-group.open nav.main-navigation .landmarks .dropdown > a, nav.main-navigation .landmarks .btn-group.open .dropdown > a, nav.open.navigation-content nav.main-navigation .landmarks .dropdown > a, nav.main-navigation .landmarks nav.open.navigation-content .dropdown > a {
+.btn-group.open .dropdown-toggle, nav.open.navigation-content .dropdown-toggle, .btn-group.open nav.main-navigation .landmarks .dropdown a, nav.main-navigation .landmarks .dropdown .btn-group.open a, nav.open.navigation-content nav.main-navigation .landmarks .dropdown a, nav.main-navigation .landmarks .dropdown nav.open.navigation-content a {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-.btn-group.open .dropdown-toggle.btn-link, nav.open.navigation-content .dropdown-toggle.btn-link, .btn-group.open nav.main-navigation .landmarks .dropdown > a.btn-link, nav.main-navigation .landmarks .btn-group.open .dropdown > a.btn-link, nav.open.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-link, nav.main-navigation .landmarks nav.open.navigation-content .dropdown > a.btn-link {
+.btn-group.open .dropdown-toggle.btn-link, nav.open.navigation-content .dropdown-toggle.btn-link, .btn-group.open nav.main-navigation .landmarks .dropdown a.btn-link, nav.main-navigation .landmarks .dropdown .btn-group.open a.btn-link, nav.open.navigation-content nav.main-navigation .landmarks .dropdown a.btn-link, nav.main-navigation .landmarks .dropdown nav.open.navigation-content a.btn-link {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -4611,9 +4611,9 @@ nav.navigation-content.btn-group-vertical > nav.navigation-content + .page,
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > nav.navigation-content:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > nav.navigation-content:first-child:not(:last-child) > .page:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .button:last-child, .btn-group-vertical > nav.navigation-content:first-child:not(:last-child) > .button:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle,
-.btn-group-vertical > nav.navigation-content:first-child:not(:last-child) > .dropdown-toggle, nav.main-navigation .landmarks
-.btn-group-vertical > .dropdown.btn-group:first-child:not(:last-child) > a, nav.main-navigation .landmarks
-.btn-group-vertical > nav.dropdown.navigation-content:first-child:not(:last-child) > a {
+.btn-group-vertical > nav.navigation-content:first-child:not(:last-child) > .dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > a, nav.main-navigation .landmarks .dropdown
+.btn-group-vertical > nav.navigation-content:first-child:not(:last-child) > a {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4763,11 +4763,11 @@ nav.navigation-content.input-group-btn:first-child > .page,
 .input-group-btn:first-child > nav.navigation-content > .page,
 .input-group-btn:first-child > .btn-group > .button,
 .input-group-btn:first-child > nav.navigation-content > .button,
-.input-group-btn:first-child > .dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.input-group-btn:first-child > a,
-.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a),
-nav.navigation-content.input-group-btn:last-child > .page:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a),
-.input-group-btn:last-child > .button:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown > a),
+.input-group-btn:first-child > .dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.input-group-btn:first-child > a,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a),
+nav.navigation-content.input-group-btn:last-child > .page:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a),
+.input-group-btn:last-child > .button:not(:last-child):not(.dropdown-toggle):not(nav.main-navigation .landmarks .dropdown a),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-btn:last-child > nav.navigation-content:not(:last-child) > .btn,
 .input-group-btn:last-child > nav.navigation-content:not(:last-child) > .page,
@@ -4791,8 +4791,8 @@ nav.navigation-content.input-group-btn:last-child > .page,
 .input-group-btn:last-child > nav.navigation-content > .page,
 .input-group-btn:last-child > .btn-group > .button,
 .input-group-btn:last-child > nav.navigation-content > .button,
-.input-group-btn:last-child > .dropdown-toggle, nav.main-navigation .landmarks
-.dropdown.input-group-btn:last-child > a,
+.input-group-btn:last-child > .dropdown-toggle, nav.main-navigation .landmarks .dropdown
+.input-group-btn:last-child > a,
 .input-group-btn:first-child > .btn:not(:first-child),
 nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 .input-group-btn:first-child > .button:not(:first-child),
@@ -6548,7 +6548,7 @@ button.list-group-item-danger.active:focus {
   border-top-left-radius: -1;
 }
 
-.panel-heading > .dropdown .dropdown-toggle, nav.main-navigation .landmarks .panel-heading > .dropdown > a {
+.panel-heading > .dropdown .dropdown-toggle, nav.main-navigation .landmarks .panel-heading > .dropdown a {
   color: inherit;
 }
 
@@ -8165,7 +8165,7 @@ button.close {
   padding: 4px 6px;
 }
 
-.btn-group .btn ~ .dropdown-toggle, nav.navigation-content .btn ~ .dropdown-toggle, .btn-group nav.navigation-content > .page ~ .dropdown-toggle, nav.navigation-content > .page ~ .dropdown-toggle, .btn-group .button ~ .dropdown-toggle, nav.navigation-content .button ~ .dropdown-toggle, .btn-group nav.main-navigation .landmarks .dropdown > .btn ~ a, nav.main-navigation .landmarks .btn-group .dropdown > .btn ~ a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .btn ~ a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .btn ~ a, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > .page ~ a, nav.main-navigation .landmarks nav.dropdown.navigation-content > .page ~ a, .btn-group nav.main-navigation .landmarks .dropdown > .button ~ a, nav.main-navigation .landmarks .btn-group .dropdown > .button ~ a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .button ~ a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .button ~ a {
+.btn-group .btn ~ .dropdown-toggle, nav.navigation-content .btn ~ .dropdown-toggle, .btn-group nav.navigation-content > .page ~ .dropdown-toggle, nav.navigation-content > .page ~ .dropdown-toggle, .btn-group .button ~ .dropdown-toggle, nav.navigation-content .button ~ .dropdown-toggle, .btn-group nav.main-navigation .landmarks .dropdown .btn ~ a, nav.main-navigation .landmarks .dropdown .btn-group .btn ~ a, nav.navigation-content nav.main-navigation .landmarks .dropdown .btn ~ a, nav.main-navigation .landmarks .dropdown nav.navigation-content .btn ~ a, nav.main-navigation .landmarks .dropdown .btn-group nav.navigation-content > .page ~ a, nav.main-navigation .landmarks .dropdown nav.navigation-content > .page ~ a, .btn-group nav.main-navigation .landmarks .dropdown .button ~ a, nav.main-navigation .landmarks .dropdown .btn-group .button ~ a, nav.navigation-content nav.main-navigation .landmarks .dropdown .button ~ a, nav.main-navigation .landmarks .dropdown nav.navigation-content .button ~ a {
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -8180,81 +8180,81 @@ button.close {
   margin-bottom: 0;
 }
 
-.btn-group .dropdown-toggle.btn-default ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-default ~ .dropdown-menu, .btn-group nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu, nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > a.page ~ .dropdown-menu, nav.main-navigation .landmarks nav.dropdown.navigation-content > a.page ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ .dropdown-menu, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-default ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ .dropdown-menu, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-default ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-default ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-default ~ ul, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul, nav.main-navigation .landmarks nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > a.page ~ ul, nav.main-navigation .landmarks nav.dropdown.navigation-content > a.page ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-default ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-default ~ ul {
+.btn-group .dropdown-toggle.btn-default ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-default ~ .dropdown-menu, .btn-group nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu, nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown .btn-group nav.navigation-content > a.page ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown nav.navigation-content > a.page ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown a.btn-default ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown .btn-group a.btn-default ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-default ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-default ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-default ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-default ~ ul, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul, nav.main-navigation .landmarks nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul, nav.main-navigation .landmarks .dropdown .btn-group nav.dropdown.navigation-content > a.page ~ ul, nav.main-navigation .landmarks .dropdown nav.dropdown.navigation-content > a.page ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-default ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-default ~ ul {
   background-color: #e7e7e7;
   border-color: #ccc;
 }
 
-.btn-group .dropdown-toggle.btn-default ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-default ~ .dropdown-menu > li > a, .btn-group nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu > li > a, nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > a.page ~ .dropdown-menu > li > a, nav.main-navigation .landmarks nav.dropdown.navigation-content > a.page ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-default ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ .dropdown-menu > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-default ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-default ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-default ~ ul > li > a, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul > li > a, nav.main-navigation .landmarks nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul > li > a, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > a.page ~ ul > li > a, nav.main-navigation .landmarks nav.dropdown.navigation-content > a.page ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-default ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-default ~ ul > li > a {
+.btn-group .dropdown-toggle.btn-default ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-default ~ .dropdown-menu > li > a, .btn-group nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu > li > a, nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown .btn-group nav.navigation-content > a.page ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content > a.page ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown a.btn-default ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown .btn-group a.btn-default ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-default ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-default ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-default ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-default ~ ul > li > a, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul > li > a, nav.main-navigation .landmarks nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul > li > a, nav.main-navigation .landmarks .dropdown .btn-group nav.dropdown.navigation-content > a.page ~ ul > li > a, nav.main-navigation .landmarks .dropdown nav.dropdown.navigation-content > a.page ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul > li > a, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-default ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-default ~ ul > li > a {
   color: #333333;
 }
 
-.btn-group .dropdown-toggle.btn-default ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-default ~ .dropdown-menu > li > a:hover, .btn-group nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu > li > a:hover, nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > a.page ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks nav.dropdown.navigation-content > a.page ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-default ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-default ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-default ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul > li > a:hover, nav.main-navigation .landmarks nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > a.page ~ ul > li > a:hover, nav.main-navigation .landmarks nav.dropdown.navigation-content > a.page ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-default ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-default ~ ul > li > a:hover {
+.btn-group .dropdown-toggle.btn-default ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-default ~ .dropdown-menu > li > a:hover, .btn-group nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu > li > a:hover, nav.navigation-content > .dropdown-toggle.page ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group nav.navigation-content > a.page ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content > a.page ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown a.btn-default ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group a.btn-default ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-default ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-default ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-default ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul > li > a:hover, nav.main-navigation .landmarks nav.dropdown.navigation-content > .dropdown-toggle.page ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group nav.dropdown.navigation-content > a.page ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown nav.dropdown.navigation-content > a.page ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-default ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-default ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-default ~ ul > li > a:hover {
   background-color: lightgray;
 }
 
-.btn-group .dropdown-toggle.btn-primary ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-primary ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ .dropdown-menu, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-primary ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ .dropdown-menu, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-primary ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ .dropdown-menu, nav.main-navigation .landmarks .btn-group .dropdown > a.button ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ .dropdown-menu, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.button ~ .dropdown-menu, .btn-group .dropdown-toggle.button ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.button ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-primary ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-primary ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-primary ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-primary ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > a.button ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.button ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.button ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.button ~ ul {
+.btn-group .dropdown-toggle.btn-primary ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-primary ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown a.btn-primary ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown .btn-group a.btn-primary ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-primary ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-primary ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown a.button ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown .btn-group a.button ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown a.button ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown nav.navigation-content a.button ~ .dropdown-menu, .btn-group .dropdown-toggle.button ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.button ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-primary ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-primary ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-primary ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-primary ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ ul, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.button ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ ul, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.button ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.button ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.button ~ ul {
   background-color: #105592;
   border-color: #0d487b;
 }
 
-.btn-group .dropdown-toggle.btn-primary ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-primary ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-primary ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ .dropdown-menu > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-primary ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.button ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ .dropdown-menu > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.button ~ .dropdown-menu > li > a, .btn-group .dropdown-toggle.button ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.button ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-primary ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-primary ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.button ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.button ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.button ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.button ~ ul > li > a {
+.btn-group .dropdown-toggle.btn-primary ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-primary ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown a.btn-primary ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown .btn-group a.btn-primary ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-primary ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-primary ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown a.button ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown .btn-group a.button ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown a.button ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content a.button ~ .dropdown-menu > li > a, .btn-group .dropdown-toggle.button ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.button ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul > li > a, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-primary ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-primary ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ ul > li > a, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.button ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ ul > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.button ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.button ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.button ~ ul > li > a {
   color: #fff;
 }
 
-.btn-group .dropdown-toggle.btn-primary ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-primary ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-primary ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-primary ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.button ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.button ~ .dropdown-menu > li > a:hover, .btn-group .dropdown-toggle.button ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.button ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-primary ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-primary ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.button ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.button ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.button ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.button ~ ul > li > a:hover {
+.btn-group .dropdown-toggle.btn-primary ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-primary ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown a.btn-primary ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group a.btn-primary ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-primary ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-primary ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown a.button ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group a.button ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown a.button ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content a.button ~ .dropdown-menu > li > a:hover, .btn-group .dropdown-toggle.button ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.button ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-primary ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-primary ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-primary ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-primary ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.button ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.button ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.button ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.button ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.button ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.button ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.button ~ ul > li > a:hover {
   background-color: #0c406d;
 }
 
-.btn-group .dropdown-toggle.btn-success ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-success ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ .dropdown-menu, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-success ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ .dropdown-menu, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-success ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-success ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-success ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-success ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-success ~ ul {
+.btn-group .dropdown-toggle.btn-success ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-success ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown a.btn-success ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown .btn-group a.btn-success ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-success ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-success ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-success ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-success ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-success ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-success ~ ul {
   background-color: #43ac6a;
   border-color: #3c9a5f;
 }
 
-.btn-group .dropdown-toggle.btn-success ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-success ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-success ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ .dropdown-menu > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-success ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-success ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-success ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-success ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-success ~ ul > li > a {
+.btn-group .dropdown-toggle.btn-success ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-success ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown a.btn-success ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown .btn-group a.btn-success ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-success ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-success ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-success ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-success ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul > li > a, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-success ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-success ~ ul > li > a {
   color: #fff;
 }
 
-.btn-group .dropdown-toggle.btn-success ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-success ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-success ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-success ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-success ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-success ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-success ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-success ~ ul > li > a:hover {
+.btn-group .dropdown-toggle.btn-success ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-success ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown a.btn-success ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group a.btn-success ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-success ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-success ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-success ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-success ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-success ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-success ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-success ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-success ~ ul > li > a:hover {
   background-color: #388f58;
 }
 
-.btn-group .dropdown-toggle.btn-info ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-info ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ .dropdown-menu, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-info ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ .dropdown-menu, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-info ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-info ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-info ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-info ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-info ~ ul {
+.btn-group .dropdown-toggle.btn-info ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-info ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown a.btn-info ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown .btn-group a.btn-info ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-info ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-info ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-info ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-info ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-info ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-info ~ ul {
   background-color: #5bc0de;
   border-color: #46b8da;
 }
 
-.btn-group .dropdown-toggle.btn-info ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-info ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-info ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ .dropdown-menu > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-info ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-info ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-info ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-info ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-info ~ ul > li > a {
+.btn-group .dropdown-toggle.btn-info ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-info ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown a.btn-info ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown .btn-group a.btn-info ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-info ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-info ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-info ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-info ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul > li > a, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-info ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-info ~ ul > li > a {
   color: #fff;
 }
 
-.btn-group .dropdown-toggle.btn-info ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-info ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-info ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-info ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-info ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-info ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-info ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-info ~ ul > li > a:hover {
+.btn-group .dropdown-toggle.btn-info ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-info ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown a.btn-info ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group a.btn-info ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-info ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-info ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-info ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-info ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-info ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-info ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-info ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-info ~ ul > li > a:hover {
   background-color: #39b3d7;
 }
 
-.btn-group .dropdown-toggle.btn-warning ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-warning ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ .dropdown-menu, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-warning ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ .dropdown-menu, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-warning ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-warning ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-warning ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-warning ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-warning ~ ul {
+.btn-group .dropdown-toggle.btn-warning ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-warning ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown a.btn-warning ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown .btn-group a.btn-warning ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-warning ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-warning ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-warning ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-warning ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-warning ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-warning ~ ul {
   background-color: #E99002;
   border-color: #d08002;
 }
 
-.btn-group .dropdown-toggle.btn-warning ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-warning ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-warning ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ .dropdown-menu > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-warning ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-warning ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-warning ~ ul > li > a {
+.btn-group .dropdown-toggle.btn-warning ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-warning ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown a.btn-warning ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown .btn-group a.btn-warning ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-warning ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-warning ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul > li > a, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-warning ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-warning ~ ul > li > a {
   color: #fff;
 }
 
-.btn-group .dropdown-toggle.btn-warning ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-warning ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-warning ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-warning ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-warning ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-warning ~ ul > li > a:hover {
+.btn-group .dropdown-toggle.btn-warning ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-warning ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown a.btn-warning ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group a.btn-warning ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-warning ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-warning ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-warning ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-warning ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-warning ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-warning ~ ul > li > a:hover {
   background-color: #c17702;
 }
 
-.btn-group .dropdown-toggle.btn-danger ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-danger ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ .dropdown-menu, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-danger ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ .dropdown-menu, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-danger ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-danger ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-danger ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-danger ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-danger ~ ul {
+.btn-group .dropdown-toggle.btn-danger ~ .dropdown-menu, nav.navigation-content .dropdown-toggle.btn-danger ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown a.btn-danger ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown .btn-group a.btn-danger ~ .dropdown-menu, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-danger ~ .dropdown-menu, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-danger ~ .dropdown-menu, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-danger ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-danger ~ ul, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-danger ~ ul, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-danger ~ ul {
   background-color: #F04124;
   border-color: #ea2f10;
 }
 
-.btn-group .dropdown-toggle.btn-danger ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-danger ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-danger ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ .dropdown-menu > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-danger ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-danger ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-danger ~ ul > li > a {
+.btn-group .dropdown-toggle.btn-danger ~ .dropdown-menu > li > a, nav.navigation-content .dropdown-toggle.btn-danger ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown a.btn-danger ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown .btn-group a.btn-danger ~ .dropdown-menu > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-danger ~ .dropdown-menu > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-danger ~ .dropdown-menu > li > a, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul > li > a, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-danger ~ ul > li > a, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul > li > a, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-danger ~ ul > li > a {
   color: #fff;
 }
 
-.btn-group .dropdown-toggle.btn-danger ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-danger ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-danger ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-danger ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > a.btn-danger ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > a.btn-danger ~ ul > li > a:hover {
+.btn-group .dropdown-toggle.btn-danger ~ .dropdown-menu > li > a:hover, nav.navigation-content .dropdown-toggle.btn-danger ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown a.btn-danger ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group a.btn-danger ~ .dropdown-menu > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown a.btn-danger ~ .dropdown-menu > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content a.btn-danger ~ .dropdown-menu > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a:hover, nav.main-navigation .landmarks .btn-group .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a:hover, nav.main-navigation .landmarks nav.navigation-content .dropdown > .dropdown-toggle.btn-danger ~ ul > li > a:hover, .btn-group nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown .btn-group .dropdown > a.btn-danger ~ ul > li > a:hover, nav.navigation-content nav.main-navigation .landmarks .dropdown > a.btn-danger ~ ul > li > a:hover, nav.main-navigation .landmarks .dropdown nav.navigation-content .dropdown > a.btn-danger ~ ul > li > a:hover {
   background-color: #dc2c0f;
 }
 
@@ -8714,13 +8714,12 @@ nav.main-navigation {
 }
 
 nav.main-navigation .brand {
-  padding: 0px;
+  padding: 10px 0% 10px 20px;
 }
 
 nav.main-navigation .brand > img {
   width: auto;
   height: 100%;
-  padding: 20%;
 }
 
 nav.main-navigation .landmarks {
@@ -8731,6 +8730,24 @@ nav.main-navigation .landmarks > ul {
   display: inline-block;
   float: none;
   vertical-align: top;
+}
+
+nav.main-navigation .landmarks .dropdown a {
+  color: #FFFFFF;
+}
+
+nav.main-navigation .landmarks .dropdown a:hover {
+  color: #7dbbf1 !important;
+}
+
+nav.main-navigation .landmarks .dropdown > ul {
+  box-shadow: none;
+}
+
+@media (min-width: 979px) {
+  nav.main-navigation .landmarks .dropdown:hover ul {
+    display: block;
+  }
 }
 
 /* ------------ COMPONENTS ------------- */
@@ -8980,22 +8997,9 @@ center > h1 {
 }
 
 .private-area-form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #105592;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
-}
-
-.private-area-form button:hover, .private-area-form button:active, .private-area-form button:focus {
-  background: #226b92;
 }
 
 .private-area-form p {
@@ -9014,9 +9018,22 @@ center > h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-form input:not([type='checkbox']) input [type='submit'] {
+form input[type='submit'] {
   background-color: #00A7E1;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
   color: #FFFFFF;
+  font-size: 14px;
+}
+
+form input[type='submit']:hover {
+  background-color: #0099e1;
+}
+
+form input[type='submit']:active {
+  background-color: #0073e1;
 }
 
 .two-sided > article {

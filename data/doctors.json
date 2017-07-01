@@ -27,7 +27,7 @@
     "surname" : "Einthoven",
     "position": "Cardiologist",
     "phone": "123456789",
-    "email": "@cpm.com",
+    "email": "einthoven@cpm.com",
     "description": "Dr. Willem Einthoven is a Dutch doctor and physiologist. He invented the first practical electrocardiogram (ECG or EKG) in 1903 and received the Nobel Prize in Medicine.",
     "icon": "/public/imgs/doctors/einthoven.jpg",
     "header": ""
@@ -151,6 +151,116 @@
     "email": "elli@cpm.com",
     "description": "Dr. Enrique Elli is our most valuable surgeon. He treats mostly Hernia, Esophageal cancer and Gastroparesis. He is one of the top researchers in Abdominal wall hernias procedures.",
     "icon": "/public/imgs/doctors/elli.jpg",
+    "header": ""
+  },
+  {
+    "id": 15,
+    "fullname": "Dr. Jonathan Fillmore",
+    "surname" : "Fillmore",
+    "position": "Dermatologist",
+    "phone": "123456789",
+    "email": "fillmore@cpm.com",
+    "description": "Dr. Jonathan Fillmore is one of our youngest but most active dermatologist, also performing difficult procedures as Craniofacial implantation and Dental implant surgery. He is specialized in treatment of Obstructive sleep apnea and TMJ disorders.",
+    "icon": "/public/imgs/doctors/fillmore.jpg",
+    "header": ""
+  },
+  {
+    "id": 16,
+    "fullname": "Dr. Kevin Arce",
+    "surname" : "Arce",
+    "position": "Dermatologist",
+    "phone": "123456789",
+    "email": "arce@cpm.com",
+    "description": "Dr. Kevin Arce is mostly focused on Maxillofacial reconstruction and Maxillofacial benign and malignant pathology. He is our specialist on Pediatric and Adolescent dermatology, performing Dental surgery and Reconstructive surgery.",
+    "icon": "/public/imgs/doctors/arce.jpg",
+    "header": ""
+  },
+  {
+    "id": 17,
+    "fullname": "Drs. Thelma G. Barnes",
+    "surname" : "Barnes",
+    "position": "Ophthalmologist",
+    "phone": "123456789",
+    "email": "barnes@cpm.com",
+    "description": "Drs. Thelma G. Barnes is our specialist in treating eye Glaucoma. But, she mostly performs our base eye care services, like glass and contact lenses fitting.",
+    "icon": "/public/imgs/doctors/barnes.jpg",
+    "header": ""
+  },
+  {
+    "id": 18,
+    "fullname": "Dr. Syril K. Dorairaj",
+    "surname" : "Dorairaj",
+    "position": "Ophthalmologist",
+    "phone": "123456789",
+    "email": "dorairaj@cpm.com",
+    "description": "Dr. Syril K. Dorairaj is our laser expert. He performs all the procedures releated to Cataract surgery and Laser eye surgery. He is specialized in the usage of cutting-edge procedures, like Femtosecond laser-assisted cataract surgery and Continuous monitoring of IOP.",
+    "icon": "/public/imgs/doctors/dorairaj.jpg",
+    "header": ""
+  },
+  {
+    "id": 19,
+    "fullname": "Dr. William L. Brown, Ph.D.",
+    "surname" : "Brown",
+    "position": "Ophthalmologist",
+    "phone": "123456789",
+    "email": "brown@cpm.com",
+    "description": "Dr. William Brown is on our top researchers, with a long career of publications. He is actively developing new procedures in eye care. Given his long experience, he is the responsible of the eye care area at our structure.",
+    "icon": "/public/imgs/doctors/brown.jpg",
+    "header": ""
+  },
+  {
+    "id": 20,
+    "fullname": "Dr. John J. Woog",
+    "surname" : "Woog",
+    "position": "Ophthalmologist",
+    "phone": "123456789",
+    "email": "woog@cpm.com",
+    "description": "Dr. John J. Woog is our specialist in Cornea diseases, known worldwide for the Graves disease. He currently performs Blepharoplasty and Tear duct probing.",
+    "icon": "/public/imgs/doctors/woog.jpg",
+    "header": ""
+  },
+  {
+    "id": 21,
+    "fullname": "Dr. F. Spencer Chivers",
+    "surname" : "Chivers",
+    "position": "Radiologist",
+    "phone": "123456789",
+    "email": "chivers@cpm.com",
+    "description": "Dr. F. Spencer Chivers is our sports guy: he mostly treat all sport related injuries and diagnose them. He currently performs CT scans and MRI, while also performing Sport specific rehabilitation.",
+    "icon": "/public/imgs/doctors/chivers.jpg",
+    "header": ""
+  },
+  {
+    "id": 22,
+    "fullname": "Dr. F. Kristopher W. Cummings",
+    "surname" : "Cummings",
+    "position": "Radiologist",
+    "phone": "123456789",
+    "email": "cummings@cpm.com",
+    "description": "Dr. Kristopher W. Cummings is specialized in cardio-related radiography, diagnosing heart diseases. He currently treats Cardiomyopathy and Pulmonary hypertension.",
+    "icon": "/public/imgs/doctors/cummings.jpg",
+    "header": ""
+  },
+  {
+    "id": 23,
+    "fullname": "Drs. Marina E. Giurescu",
+    "surname" : "Giurescu",
+    "position": "Radiologist",
+    "phone": "123456789",
+    "email": "giurescu@cpm.com",
+    "description": "Drs. Marina E. Giurescu is our expert in computed imaging procedures. She is responsible for the PET and MRI usages. She is actively researching procedures for Breast imaging.",
+    "icon": "/public/imgs/doctors/giurescu.jpg",
+    "header": ""
+  },
+  {
+    "id": 24,
+    "fullname": "Dr. Akira Kawashima, Ph.D.",
+    "surname" : "Kawashime",
+    "position": "Radiologist",
+    "phone": "123456789",
+    "email": "kawashima@cpm.com",
+    "description": "Dr. Akira Kawashima is one of our top researchers with long experience in Radiology. He is the responsible for the Radiology area at CPM. He is mainly interested in Genitourinary radiology.",
+    "icon": "/public/imgs/doctors/kawashima.jpg",
     "header": ""
   }
 ]
