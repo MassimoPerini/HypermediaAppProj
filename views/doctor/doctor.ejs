@@ -7,7 +7,7 @@
 
       <style>
         header{
-          background-image: url("/public/imgs/bg/doctor.jpg");
+          background-image: url("/public/imgs/bg/hallway.jpg");
         }
 
       </style>
@@ -16,24 +16,21 @@
         <%- include('../common/navbar', { page : '/doctors', user:user}) %>
 
       <header class="doctor">
-        <!-- immagine -->
-        <div>
-          <img src="<%=doctor.icon%>" height="300" width="190" alt="doctor-image" />
-        </div>
-        <div>
-          <h1><%=doctor.fullname%></h1>
-          <h3><%=doctor.position%></h3>
-          <h3><%=doctor.email%></h3>
-          <h3><%=doctor.phone%></h3>
+        <div class="profile">
+          <img src="<%=doctor.icon%>" alt="doctor-image"/>
         </div>
       </header>
 
-      <section class="two-sided" id="content">
+      <section class="two-sided doctor" id="content">
+        <center>
+          <h1><%=doctor.fullname%></h1>
+          <h4><%=doctor.position%></h4>
+        </center>
         <article>
           <!-- DOCTOR CURRICULUM -->
           <div>
-            <h2>About <%=doctor.fullname%></h2>
-              <p><%=doctor.description%></p>
+            <h2>About me</h2>
+            <p><%=doctor.description%></p>
           </div>
           <!-- DOCTOR TIMETABLE -->
           <div>
@@ -58,6 +55,12 @@
                 </tbody>
               </table>
             </p>
+          </div>
+          <!-- CONTACTS -->
+          <div>
+            <h2>Contacts</h2>
+              <p>Email: <%=doctor.email%></p>
+              <p>Phone: <a href="tell:<%=doctor.phone%>"><span class="glyphicon glyphicon-earphone"/><%=doctor.phone%></a></p>
           </div>
         </article>
 

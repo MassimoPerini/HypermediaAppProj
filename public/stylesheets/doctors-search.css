@@ -1447,7 +1447,7 @@ img {
   height: auto;
 }
 
-.img-circle {
+.img-circle, header.doctor > div.profile > img, header.two-sided.doctor > article.profile > img, header.two-sided.doctor > aside.profile > img, header.doctor > .profile.list > img, header.doctor > .profile.list-lg > img, header.doctor > .profile.list-md > img, header.doctor > .profile#doctors-list > img {
   border-radius: 50%;
 }
 
@@ -8662,46 +8662,18 @@ header > div > h1, header.two-sided > article > h1, header.two-sided > aside > h
   opacity: 0.85;
 }
 
-header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+header.doctor {
+  text-align: center;
 }
 
-@media (min-width: 992px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
-    float: left;
-    width: 50%;
-  }
+header.doctor > div.profile, header.two-sided.doctor > article.profile, header.two-sided.doctor > aside.profile, header.doctor > .profile.list, header.doctor > .profile.list-lg, header.doctor > .profile.list-md, header.doctor > .profile#doctors-list {
+  z-index: 10;
+  margin-top: 350px;
+  height: 250px;
 }
 
-@media (min-width: 768px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
-    float: left;
-    width: 100%;
-  }
-}
-
-@media (min-width: 1200px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
-    float: left;
-    width: 50%;
-  }
+header.doctor > div.profile > img, header.two-sided.doctor > article.profile > img, header.two-sided.doctor > aside.profile > img, header.doctor > .profile.list > img, header.doctor > .profile.list-lg > img, header.doctor > .profile.list-md > img, header.doctor > .profile#doctors-list > img {
+  height: 100%;
 }
 
 /* ------------ NAVBAR ------------- */

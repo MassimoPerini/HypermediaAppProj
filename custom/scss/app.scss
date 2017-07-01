@@ -58,11 +58,20 @@ header {
 }
 
 header.doctor{
-  >div{
-    @include make-md-column(6);
-    @include make-xs-column(12);
-    @include make-sm-column(12);
-    @include make-lg-column(6);
+
+  text-align: center;
+
+  >div.profile {
+
+    z-index: 10;
+
+    margin-top: 350px;
+    height: 250px;
+
+    >img{
+      @extend .img-circle;
+      height: 100%;
+    }
   }
 }
 
@@ -420,7 +429,6 @@ table{
   transition: all 0.5s ease 0s;
   //box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
   background-color: #FFFFFF;
-
 }
 
 
@@ -428,7 +436,6 @@ body.tight #content {
   transform: translateY(-60px) scale(0.9);
   cursor: pointer;
 }
-
 
 /* ------------ FOOTER ------------- */
 footer{
