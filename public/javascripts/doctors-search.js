@@ -20,16 +20,26 @@ function getFiltersFromSelectors() {
 }
 
 function initDoctors() {
-    window.currentPage = -1, window.doctors = [], $("#doctors-list").empty(), loadNextPage();
+    $("#doctors-list").empty(), window.currentPage = -1, window.doctors = {}, window.done = !1, 
+    loadNextPage();
 }
 
 function loadNextPage() {
-    window.currentPage != window.filters.page && -1 != window.currentPage || (window.filters.page = window.currentPage + 1, 
+    window.done || window.filters.page && window.currentPage != window.filters.page || (window.filters.page = window.currentPage + 1, 
     $.getJSON("api/doctor", window.filters, function(result) {
-        window.currentPage = window.filters.page, result.data.forEach(function(doctor) {
-            $("#doctors-list").append(doctorCard(doctor));
-        });
+        result.page == window.filters.page && (window.currentPage = window.filters.page, 
+        result.data.length <= 0 ? (window.done = !0, Object.keys(window.doctors).length <= 0 && $("#doctors-list").append(noDoctor())) : insertDoctors(result.data));
     }));
+}
+
+function insertDoctors(doctors) {
+    doctors.forEach(function(doctor) {
+        window.doctors[doctor.id] || (window.doctors[doctor.id] = doctor, $("#doctors-list").append(doctorCard(doctor)));
+    });
+}
+
+function noDoctor() {
+    return '<section class="no-result"><img src="/public/imgs/doctor.svg"><h2>No doctors found.</h2>';
 }
 
 function doctorCard(doctor) {

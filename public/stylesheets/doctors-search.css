@@ -9426,3 +9426,50 @@ section.navigation-child .button {
 #doctors-list {
   margin-top: 64px;
 }
+
+#doctors-list > section.no-result {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #doctors-list > section.no-result {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  #doctors-list > section.no-result {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #doctors-list > section.no-result {
+    float: left;
+    width: 100%;
+  }
+}
+
+#doctors-list > section.no-result > img {
+  width: 12%;
+}

@@ -63,7 +63,8 @@ router.get('/api/doctor', function(req, res, next){
     }).then(function(doctors){
       res.send({
         count: doctors.length,
-        data: doctors.slice(page * pagesize, (page+1) * pagesize)
+        data: doctors.slice(page * pagesize, (page+1) * pagesize),
+        page: page
       });
     }).catch(function(error){
       debug(error);
