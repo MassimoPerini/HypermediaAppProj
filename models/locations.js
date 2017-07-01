@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
     header: DataTypes.STRING,
     position: DataTypes.STRING,
     description: DataTypes.STRING,
-    htgt: DataTypes.STRING,
+    htgt: DataTypes.TEXT,
     gMaps: DataTypes.STRING(350),
     tell: DataTypes.STRING(15),
     email: DataTypes.STRING

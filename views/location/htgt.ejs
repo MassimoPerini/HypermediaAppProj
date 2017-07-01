@@ -22,22 +22,24 @@
 
         <!-- SHORT DESCRIPTION -->
         <div>
-          <h4><img src='/public/imgs/car.png' width="64px"> By car</h4>
-          <p>
-            <%=htgt.car%>
-          </p>
-          <h4><img src='/public/imgs/bus.png' width="64px"> By bus</h4>
-          <p>
-            <%=htgt.bus%>
-          </p>
-          <h4><img src='/public/imgs/tube.png' width="64px"> By tube</h4>
-          <p>
-            <%=htgt.tube%>
-          </p>
-          <h4><img src='/public/imgs/sub.png' width="64px"> By sub</h4>
-          <p>
-            Maybe you need to go deeper?
-          </p>
+          <h2>Transportations</h2>
+          <p>We chose our locations in order to be reached easily by every one.</p>
+          <% if(htgt.ways.length > 0) { %>
+          <p>You can reach <%= location.name %> in these ways:</p>
+          <% htgt.ways.forEach(function(way) { %>
+          <div>
+            <h4><img src='/public/imgs/<%= way.kind %>.png' width="32px">By <%= way.kind %></h4>
+            <p>
+              <%= way.info %>
+            </p>
+          </div>
+          <% })
+          } else { %>
+        <p>No available informations about directions for this location</p>    
+        <% } %>
+        <div>
+          <h2>Need more precise informations?</h2>
+          <p><a href="<%= htgt.gMapsDicrectionsURL %>" target="_blank">Check on Google Maps</a> or just <a href="/location/<%= location.id %>#contacts">contact us.</a></p>
         </div>
       </article>
 
@@ -51,8 +53,8 @@
           <article>
             <h1>How to get there</h1>
             <ul>
-                <li><p><b>Underground</b>. The nearest stop is Conciliazione (Line 1 - red). If you arrive in Milano Centrale Railway Station, take the underground line 2 (green) for Abbiategrasso, then change line at Cadorna FN M1 stop. Here you can travel with M1 (Bisceglie direction) up to Conciliazione</p></li>
-                <li><p><b>Bus</b>. Take the bus N. 91 to "Lotto (Fieramilanocity)" from P.za Luigi Di Savoia. Leave the bus at P.za Stuparich stop (around 30 minutes). Then, from Via Albani P.za Stuparich take the bus n.68 to "Via Bergognone" and leave the bus at the "Conciliazione M1" stop (around 15 minutes)</p></li>
+                <li><p><b>Underground</b>. </p></li>
+                <li><p><b>Bus</b>. </p></li>
                 <li><p><b>Train.</b> From Milano Centrale Railway Station go to Repubblica. Then, take the S13 suburban train to \"Bovisa\". At Milano Bovisa station (around 15 minutes) take the train R17 to Milano Nord Cadorna station (around 7 minutes). Once you'll be arrived in Milano Cadorna Station walk for 500 meters and you'll be arrived.</p></li>
             </ul>
           </article>
