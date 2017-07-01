@@ -14,28 +14,30 @@
 
     <header class="location">
     </header>
-    <center>
-      <h1><%= title %></h1>
-    </center>
-    <section class="two-sided" id="content">
-      <article>
-        <div>
-          <h2>Services</h2>
-          <% if(location.services.length <= 0) { %>
-          <p>There is no service in this <%= location.name %></p>
-          <% } else { %>
-          <ul>
-            <% location.services.forEach(service => { %>
-              <li><a href="/service/<%= service.id %>"><%= service.name %></a></li>
-            <% }); %>
-          </ul>
-          <% } %>
-        </div>
-      </article>
+    <div id="content">
+      <center>
+        <h1><%= title %></h1>
+      </center>
+      <section class="two-sided" id="content">
+        <article>
+          <div>
+            <h2>Services</h2>
+            <% if(location.services.length <= 0) { %>
+            <p>There is no service in this <%= location.name %></p>
+            <% } else { %>
+            <ul>
+              <% location.services.forEach(service => { %>
+                <li><a href="/service/<%= service.id %>"><%= service.name %></a></li>
+              <% }); %>
+            </ul>
+            <% } %>
+          </div>
+        </article>
 
-      <%- include('sidebar', { page : 'available-services'}) %>
+        <%- include('sidebar', { page : 'available-services'}) %>
 
-    </section>
+      </section>
+    </div>
     <%- include('../common/footer') %>
   </body>
 </html>

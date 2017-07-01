@@ -5,7 +5,7 @@
       <%- include('../common/imports') %>
     <style>
       header{
-        background-image: url("/public/imgs/locations/Aeroporto.jpg");
+        background-image: url("/public/imgs/bg/httg2.jpg");
       }
 
     </style>
@@ -14,10 +14,10 @@
     <%- include('../common/navbar', { page : '/location', user:user}) %>
     <header class="location">
     </header>
-    <center>
-      <h1>How to get to <%= location.name %></h1>
-    </center>
     <section class="two-sided" id="content">
+      <center>
+        <h1>How to get to <%= location.name %></h1>
+      </center>
       <article>
 
         <!-- SHORT DESCRIPTION -->

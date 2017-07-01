@@ -1447,7 +1447,7 @@ img {
   height: auto;
 }
 
-.img-circle {
+.img-circle, header.doctor > div.profile > img, header.two-sided.doctor > article.profile > img, header.two-sided.doctor > aside.profile > img, header.doctor > .profile.list > img, header.doctor > .profile.list-lg > img, header.doctor > .profile.list-md > img, header.doctor > .profile#doctors-list > img {
   border-radius: 50%;
 }
 
@@ -8662,46 +8662,18 @@ header > div > h1, header.two-sided > article > h1, header.two-sided > aside > h
   opacity: 0.85;
 }
 
-header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+header.doctor {
+  text-align: center;
 }
 
-@media (min-width: 992px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
-    float: left;
-    width: 50%;
-  }
+header.doctor > div.profile, header.two-sided.doctor > article.profile, header.two-sided.doctor > aside.profile, header.doctor > .profile.list, header.doctor > .profile.list-lg, header.doctor > .profile.list-md, header.doctor > .profile#doctors-list {
+  z-index: 10;
+  margin-top: 350px;
+  height: 250px;
 }
 
-@media (min-width: 768px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
-    float: left;
-    width: 100%;
-  }
-}
-
-@media (min-width: 1200px) {
-  header.doctor > div, header.two-sided.doctor > article, header.two-sided.doctor > aside, header.doctor > .list, header.doctor > .list-lg, header.doctor > .list-md, header.doctor > #doctors-list {
-    float: left;
-    width: 50%;
-  }
+header.doctor > div.profile > img, header.two-sided.doctor > article.profile > img, header.two-sided.doctor > aside.profile > img, header.doctor > .profile.list > img, header.doctor > .profile.list-lg > img, header.doctor > .profile.list-md > img, header.doctor > .profile#doctors-list > img {
+  height: 100%;
 }
 
 /* ------------ NAVBAR ------------- */
@@ -9014,8 +8986,13 @@ center > h1 {
 }
 
 #contact-form {
-  max-width: 450px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 450px) {
+  #contact-form {
+    width: 450px;
+  }
 }
 
 form input[type='submit'] {
@@ -9036,6 +9013,88 @@ form input[type='submit']:active {
   background-color: #0073e1;
 }
 
+/*TABLE*/
+table {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  border: 1px solid transparent;
+  /* No more visible border */
+  height: 30px;
+  transition: all 0.3s;
+  /* Simple transition for hover effect */
+}
+
+th {
+  background: #DFDFDF;
+  /* Darken header a bit */
+  font-weight: bold;
+  text-align: center;
+}
+
+td {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td {
+  background: #F1F1F1;
+}
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+tr:nth-child(odd) td {
+  background: #FEFEFE;
+}
+
+tr td:hover {
+  background: #666;
+  color: #FFFFFF;
+}
+
+tr td:hover a {
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 800px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50% !important;
+    white-space: normal;
+    text-align: left;
+  }
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+    content: attr(data-title);
+  }
+}
+
+/*MAIN LAYOUT*/
 .two-sided > article {
   position: relative;
   float: left;

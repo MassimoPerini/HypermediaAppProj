@@ -7,7 +7,7 @@
 
       <style>
         header{
-          background-image: url("/public/imgs/bg/doctor.jpg");
+          background-image: url("/public/imgs/bg/hallway.jpg");
         }
 
       </style>
@@ -16,24 +16,21 @@
         <%- include('../common/navbar', { page : '/doctors', user:user}) %>
 
       <header class="doctor">
-        <!-- immagine -->
-        <div>
-          <img src="<%=doctor.icon%>" height="300" width="190" alt="doctor-image" />
-        </div>
-        <div>
-          <h1><%=doctor.fullname%></h1>
-          <h3><%=doctor.position%></h3>
-          <h3><%=doctor.email%></h3>
-          <h3><%=doctor.phone%></h3>
+        <div class="profile">
+          <img src="<%=doctor.icon%>" alt="doctor-image"/>
         </div>
       </header>
 
-      <section class="two-sided" id="content">
+      <section class="two-sided doctor" id="content">
+        <center>
+          <h1><%=doctor.fullname%></h1>
+          <h4><%=doctor.position%></h4>
+        </center>
         <article>
           <!-- DOCTOR CURRICULUM -->
           <div>
-            <h2>About <%=doctor.fullname%></h2>
-              <p><%=doctor.description%></p>
+            <h2>About me</h2>
+            <p><%=doctor.description%></p>
           </div>
           <!-- DOCTOR TIMETABLE -->
           <div>
@@ -50,22 +47,28 @@
                 <tbody>
                   <% var i; for(var i=0; i<7; i++) { if(timetables[i] != null) { %>
                   <tr>
-                    <td><%= timetables[i].day %></td>
-                    <td><%= timetables[i].opening_time %> - <%= timetables[i].closing_time %></td>
-                    <td><a href="/location/<%= timetables[i].location.id %>"><%= timetables[i].location.name %></a></td>
+                    <td data-title="Day"><%= timetables[i].day %></td>
+                    <td data-title="Time"><%= timetables[i].opening_time %> - <%= timetables[i].closing_time %></td>
+                    <td data-title="Location"><a href="/location/<%= timetables[i].location.id %>"><%= timetables[i].location.name %></a></td>
                   </tr>
                   <% } } %>
                 </tbody>
               </table>
             </p>
           </div>
+          <!-- CONTACTS -->
+          <div>
+            <h2>Contacts</h2>
+              <p>Email: <%=doctor.email%></p>
+              <p>Phone: <a href="tell:<%=doctor.phone%>"><span class="glyphicon glyphicon-earphone"/><%=doctor.phone%></a></p>
+          </div>
         </article>
 
         <aside>
           <div class="card">
             <a href="/service/doctor/<%=doctor.id%>">
-              <div class="card_header" style="background-color:rgba(187, 120, 36, 0.1) ">
-                <center><img src="/public/imgs/service.svg" style="color:#BB7824" width="100%"></img></center>
+              <div class="card-header">
+                <center><img src="/public/imgs/service.svg" class="card-image"></img></center>
               </div>
               <div class="card-text">
                 <h5>Doctor's service</h5>
@@ -76,8 +79,8 @@
           <% if(doctor.area_responsible != null) { %>
           <div class="card">
             <a href="/area/<%= doctor.area_responsible.id %>">
-              <div class="card_header">
-                <center><img src="<%= doctor.area_responsible.icon %>"></img></center>
+              <div class="card-header">
+                <center><img src="<%= doctor.area_responsible.icon %>" class="card-image"></img></center>
               </div>
               <div class="card-text">
                 <h5>Responsible of <%= doctor.area_responsible.name %> Area</h5>
@@ -89,12 +92,10 @@
           <% if(doctor.service_responsible != null) { %>
           <div class="card">
             <a href="/service/<%= doctor.service_responsible.id %>">
-              <div class="card_header" style="background-color:rgba(187, 120, 36, 0.1) ">
-                <center><img src="/public/imgs/boh.png" style="color:#BB7824" width="100%"></img></center>
+              <div class="card-header">
+              <img class="card-image" src="/public/imgs/record.svg"/>
               </div>
-              <div class="card-text">
-                <h5>Responsible of <%= doctor.service_responsible.name %></h5>
-              </div>
+              <h5 class="card-text">Responsible of <%= doctor.service_responsible.name %></h5>
             </a>
           </div>
           <% } %>

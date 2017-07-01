@@ -6,7 +6,7 @@
 
   <style>
     header{
-      background-image: url("<%=area.header%>");
+      background-image: url('/public/imgs/bg/hallway2.jpg');
     }
 
   </style>
@@ -27,22 +27,20 @@
     <%- include('../common/navbar', { page : '/area', user:user}) %>
 
   <header>
-    <div>
-      <h1><%=area.name%></h1>
-    </div>
   </header>
 
   <section class="two-sided" id="content">
-    <article>
+    <center>
+      <h1><%=area.name%></h1>
+    </center>
 
+    <article>
       <div class="row">
         <div class="col-sm-2">
           <div class="card" id="responsible">
               <a href="">
-                  <div class="card-header">
-                  <img class="card-image" src="/public/imgs/doctor.svg"/>
-                  </div>
-                  <h5 class="card-text"></h5>
+                <img class="card-image" src="/public/imgs/doctor.svg"/>
+                <h5 class="card-text"></h5>
               </a>
           </div>
         </div>
@@ -71,22 +69,6 @@
                 <img class="card-image" src="/public/imgs/svgs/018-note.svg"/>
                 </div>
                 <h5 class="card-text">Questions? Contact the area</h5>
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <div class="card-header">
-                <img class="card-image" src=""/>
-                </div>
-                <h5 class="card-text">Che altro mettere?</h5>
-            </a>
-        </div>
-        <div class="card">
-            <a href="">
-                <div class="card-header">
-                <img class="card-image" src=""/>
-                </div>
-                <h5 class="card-text">Che altro mettere?</h5>
             </a>
         </div>
     </aside>
