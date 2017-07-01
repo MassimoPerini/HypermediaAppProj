@@ -3,60 +3,11 @@
   <head>
     <title><%= title %></title>
     <%- include('../common/imports') %>
-    <style>
-      header{
-        background-image: url("../public/imgs/bg/statistics.jpg");
-      }
-    </style>
-    <script src="/public/javascripts/Chart.js/Chart.min.js"></script>
   </head>
   <body>
     <%- include('../common/navbar', {page : '/who-we-are', user:user}) %>
-
-    <header>
-    </header>
-
-    <section class="two-sided" id="content">
-      <center>
-        <h1>Statistics</h1>
-      </center>
-      <article>
-        <div>
-          <h2>Some datas about us</h2>
-          <p>In order to offer the best service to our customers, our personal is composed by 30 physicians and 
-          scientists and 45 trainee and fellows. Our excellent health staff is composed by 57100 people so they 
-          will surely be able to satisfy every your desire.<br>So, in total around 118 people work in our clinics.<br>
-          Last year, 55000 people came to CPM Clinic for care, and we helped people for 88000 human ours.<br>
-          These are the datas for each area:</p>
-
-        </div>
-      </article>
-
-      <aside>
-        <div class="card">
-          <a href="/who-we-are/gallery">
-            <div class="card-header">
-              <center><img src="/public/imgs/gallery.svg"></img></center>
-            </div>
-            <div class="card-text">
-              <h5>Photo gallery</h5>
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="/who-we-are/statistics">
-            <div class="card-header">
-              <center><img src="/public/imgs/statistics.svg"></img></center>
-            </div>
-            <div class="card-text">
-              <h5>Statistics</h5>
-            </div>
-          </a>
-        </div>
-      </aside>
-
-    </section>
-    <%- include('../common/footer') %>
+    Qua ci vanno le stats<br>
+    <a href='/who-we-are'>Who we are</a><br>
+    <a href='/who-we-are/photogallery'>Photogallery</a><br>
   </body>
 </html>
