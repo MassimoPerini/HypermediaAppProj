@@ -22,9 +22,21 @@
             {
                 $('.private-area-form').prepend('<p style="color: #FF2C25">Error login</p>')
             }
-        });
 
 
+
+                $('#register, #login').click(function (e) {
+                    $('.register-form').animate({height: "toggle", opacity: "toggle"}, "slow");
+                    $('.login-form').animate({height: "toggle", opacity: "toggle"}, "slow");
+                });
+
+
+                $('#forget, #back').click(function (e) {
+                    $('.forget-form').animate({height: "toggle", opacity: "toggle"}, "slow");
+                    $('.login-form').animate({height: "toggle", opacity: "toggle"}, "slow");
+                });
+
+            });
 
     </script>
 
@@ -34,37 +46,37 @@
   <section>
     <div class="private-area-form">
       <a href="/" class="brand"><img src="/public/imgs/logo_fullsize.png"></a>
+
       <form class="register-form">
-        <input type="text" placeholder="name"/>
-        <input type="password" placeholder="password"/>
-        <input type="text" placeholder="email address"/>
-        <button>create</button>
+        <input type="text" placeholder="Username" name="username" required/>
+        <input type="password" placeholder="password" name="password" required/>
+        <input type="email" placeholder="email address" name="mail" required/>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Surname">
+        <input type="text" placeholder="C.F.">
+        <input type="submit" value="Register">
         <p class="message">Already registered? <a id="login" href="#">Sign In</a></p>
       </form>
+
       <form class="login-form" action="/login" method="post">
         <input type="text" placeholder="username" id="username" name="username"/>
         <input type="password" placeholder="password" id="password" name="password"/>
-        <button>login</button>
+        <input type="submit" value="Login">
         <p>Not registered? <a id="register" href="#">Create an account</a></p>
         <a href="#" id="forget">Forgot your password?</a>
       </form>
 
       <form class="forget-form" action="/login" method="post">
-       CIAO!
+        <input type="email" placeholder="e-mail" required>
+        <input type="submit" value="Recover">
+        <a href="#" id="back">Back</a>
       </form>
 
     </div>
   </section>
 
 
-  <script>
-      $('a').click(function(e){
-          var el = e.target.id;
-       //   el === "register" ?
-          $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-      });
 
-  </script>
 
   </body>
 </html>

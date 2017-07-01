@@ -12,11 +12,11 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
- 	  name: {type: DataTypes.STRING, nullable: false},
+ 	  name: {type: DataTypes.STRING, allowNull: false},
     description: DataTypes.TEXT,
     responsible: {
       type: DataTypes.INTEGER,
-        nullable: false,
+        allowNull: false,
       references: {
         model: 'doctors',
         key: 'id'
