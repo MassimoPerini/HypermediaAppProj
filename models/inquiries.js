@@ -12,13 +12,13 @@ module.exports = function(sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        name: {type: DataTypes.STRING, nullable: false},
-        surname: {type: DataTypes.STRING, nullable: false},
-        phone: {type: DataTypes.STRING, nullable: true},
-        mail: {type: DataTypes.STRING, nullable: false},
-        target: {type: DataTypes.STRING, nullable: false},
-        obj: {type: DataTypes.STRING, nullable: false},
-        message: {type: DataTypes.STRING, nullable: false}
+        name: {type: DataTypes.STRING, allowNull: false},
+        surname: {type: DataTypes.STRING, allowNull: false},
+        phone: {type: DataTypes.STRING, allowNull: true},
+        mail: {type: DataTypes.STRING, allowNull: false},
+        target: {type: DataTypes.STRING, allowNull: true},
+        obj: {type: DataTypes.STRING, allowNull: false},
+        message: {type: DataTypes.STRING, allowNull: false}
     },{
         timestamps: true,
         classMethods : {

@@ -15,11 +15,20 @@ router.get('/login', function(req, res, next){
 //app.use(function({})     passo username   req.user
 
 router.post('/login',
-  passport.authenticate('local', {
+  passport.authenticate('local-login', {
     successRedirect: '/private',
     failureRedirect: '/login?error=true'
   })
 );
+
+
+router.post('/signup',
+    passport.authenticate('local-signup', {
+    successRedirect: '/private',
+    failureRedirect: '/login?error=true',
+    failureFlash : true
+}));
+
 
 router.get('/logout', function(req,res,next){
   req.logout();

@@ -2,11 +2,11 @@
   {
     "id": 1,
     "name": "Cardiologic generic appointment",
-    "description": "A generic appointment with one of ours cardiologist. Choose this to have a diagnosis of a particular problem.",
+    "description": "A generic appointment with one of ours cardiologist. Choose this to have a diagnosis of an unknown problem.",
     "areaId": 1,
     "responsible" : 1,
     "locations" : [1],
-    "doctors" : [1,3,4]
+    "doctors" : [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
   },
   {
     "id": 2,
@@ -90,6 +90,70 @@
     "name": "Cornea & External Disease",
     "description": "The cornea is the transparent structure on the front of the eye through which we see. It is the tissue that is reshaped during laser vision correction. It begins the process of seeing by focusing onto the retina the light that it receives. There are five layers to the cornea, each with a distinct function: epithelium, Bowman’s membrane, stroma, Descemet’s membrane and endothelium.",
     "areaId": 3,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 12,
+    "name": "Gynecologic check-up",
+    "description": "A generic appointment with one of ours gynecologists. Choose this to have a diagnosis of an unknown problem.",
+    "areaId": 4,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 13,
+    "name": "General radiology (chest and skeletal)",
+    "description": "Common X-rays to diagnose broken bones.",
+    "areaId": 5,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 14,
+    "name": "Virtual colonoscopy",
+    "description": "Virtual colonoscopy is a minimally invasive exam to screen for cancer of the large intestine (colon). Virtual colonoscopy requires the same pre-test bowel preparation as colonoscopy. But virtual colonoscopy doesn’t require sedation or inserting a scope into the colon. During virtual colonoscopy, a CT scan produces hundreds of cross-sectional images of your abdominal organs. The images are combined and digitally manipulated to provide a detailed view of the inside of the colon and rectum.",
+    "areaId": 5,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 15,
+    "name": "Positron emission tomography (PET)",
+    "description": "Positron emission tomography (PET) is a nuclear medicine functional imaging technique that is used to observe metabolic processes in the body. The system detects pairs of gamma rays emitted indirectly by a positron-emitting radionuclide (tracer), which is introduced into the body on a biologically active molecule. Three-dimensional images of tracer concentration within the body are then constructed by computer analysis. In modern PET-CT scanners, three dimensional imaging is often accomplished with the aid of a CT X-ray scan performed on the patient during the same session, in the same machine.",
+    "areaId": 5,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 16,
+    "name": "Magnetic resonance imaging (MRI)",
+    "description": "Magnetic resonance imaging (MRI) is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body in both health and disease. MRI scanners use strong magnetic fields, radio waves, and field gradients to generate images of the organs in the body. MRI does not involve x-rays, which distinguishes it from computed tomography (CT or CAT). While the hazards of x-rays are now well-controlled in most medical contexts, MRI still may be seen as superior to CT in this regard.",
+    "areaId": 5,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 17,
+    "name": "CyberKnife",
+    "description": "The CyberKnife System is the first and only fully robotic radiation delivery system. It treats cancerous and non-cancerous tumors and other targets, precisely and accurately delivering radiation anywhere in the body.",
+    "areaId": 6,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 18,
+    "name": "Proton Beam Therapy Program",
+    "description": "Through its Proton Beam Therapy Program, CPM brings a new capability in radiotherapy to people who can benefit from highly targeted precision beam therapy. Intensity-modulated proton beam therapy with pencil beam scanning, the latest form of proton beam therapy, allows Mayo radiation oncologists to destroy cancer while sparing healthy tissue.",
+    "areaId": 6,
+    "responsible" : 1,
+    "locations" : [1,2]
+  },
+  {
+    "id": 19,
+    "name": "Generic surgery appointment",
+    "description": "We perform all the standard but also the cutting-edge procedures in surgery. Ask a specific doctor for further informations.",
+    "areaId": 7,
     "responsible" : 1,
     "locations" : [1,2]
   }

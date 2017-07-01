@@ -23,8 +23,4 @@ fs.readdirSync(__dirname)
   router.use(subrouter);
 });
 
-router.get('/me', function(req, res, next){
-  res.send(req.user);
-});
-
 module.exports = router;

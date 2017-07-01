@@ -34,8 +34,10 @@ passport.use('local-signup', new LocalStrategy({
   return models.users.create({
     username: username,
     password: password,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName
+      mail: req.body.mail,
+    name: req.body.name,
+    surname: req.body.surname,
+      cf: req.body.cf
   }).then(function(user){
     done(null, user);
   }).catch(function(error){

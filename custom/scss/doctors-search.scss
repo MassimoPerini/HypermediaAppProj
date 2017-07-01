@@ -1,0 +1,17 @@
+@import "app.scss";
+
+.selector {
+
+  @include make-xs-column(12);
+  @include make-sm-column(4);
+  @include make-md-column(4);
+  @include make-lg-column(4);
+
+}
+
+#doctors-list {
+  @extend .list-md;
+
+  margin-top: 64px;
+
+}

@@ -1447,7 +1447,7 @@ img {
   height: auto;
 }
 
-.img-circle {
+.img-circle, .home > article > section.contact > div.relax-image img, .home > article.one-sided > section.contact > section.relax-image img, .home > article.one-sided > section.contact > aside.relax-image img, .home > article.one-sided > section.contact > article.relax-image img, .home > article > section.two-sided.contact > article.relax-image img, .home > article > section.two-sided.contact > aside.relax-image img, .home > article > section.contact > .relax-image.list img, .home > article > section.contact > .relax-image.list-lg img, .home > article > section.contact > .relax-image.list-md img, .quote-container blockquote .avatar img, .home > article > section.quotes blockquote .avatar img {
   border-radius: 50%;
 }
 
@@ -1971,19 +1971,19 @@ pre code {
   }
 }
 
-.container-fluid, .one-sided, .two-sided, footer {
+.container-fluid, .one-sided, .two-sided, footer, .home > article > section {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.container-fluid:before, .one-sided:before, .two-sided:before, footer:before, .container-fluid:after, .one-sided:after, .two-sided:after, footer:after {
+.container-fluid:before, .one-sided:before, .two-sided:before, footer:before, .home > article > section:before, .container-fluid:after, .one-sided:after, .two-sided:after, footer:after, .home > article > section:after {
   content: " ";
   display: table;
 }
 
-.container-fluid:after, .one-sided:after, .two-sided:after, footer:after {
+.container-fluid:after, .one-sided:after, .two-sided:after, footer:after, .home > article > section:after {
   clear: both;
 }
 
@@ -5126,10 +5126,10 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 .container > .navbar-header, #contact-form > .navbar-header, nav.main-navigation .container > .header, nav.main-navigation #contact-form > .header,
 .container > .navbar-collapse, #contact-form > .navbar-collapse, nav.main-navigation
 .container > .landmarks, nav.main-navigation #contact-form > .landmarks,
-.container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
-.container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
-.container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
-.container-fluid > .landmarks, nav.main-navigation .one-sided > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
+.container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, .home > article > section > .navbar-header, nav.main-navigation
+.container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header, nav.main-navigation .home > article > section > .header,
+.container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, .home > article > section > .navbar-collapse, nav.main-navigation
+.container-fluid > .landmarks, nav.main-navigation .one-sided > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks, nav.main-navigation .home > article > section > .landmarks {
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -5138,10 +5138,10 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   .container > .navbar-header, #contact-form > .navbar-header, nav.main-navigation .container > .header, nav.main-navigation #contact-form > .header,
   .container > .navbar-collapse, #contact-form > .navbar-collapse, nav.main-navigation
   .container > .landmarks, nav.main-navigation #contact-form > .landmarks,
-  .container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
-  .container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
-  .container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
-  .container-fluid > .landmarks, nav.main-navigation .one-sided > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks {
+  .container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, .home > article > section > .navbar-header, nav.main-navigation
+  .container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header, nav.main-navigation .home > article > section > .header,
+  .container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, .home > article > section > .navbar-collapse, nav.main-navigation
+  .container-fluid > .landmarks, nav.main-navigation .one-sided > .landmarks, nav.main-navigation .two-sided > .landmarks, nav.main-navigation footer > .landmarks, nav.main-navigation .home > article > section > .landmarks {
     margin-right: 0;
     margin-left: 0;
   }
@@ -5205,7 +5205,8 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   .navbar > .container-fluid .navbar-brand, nav.main-navigation > .container-fluid .navbar-brand,
   .navbar > .one-sided .navbar-brand, nav.main-navigation > .one-sided .navbar-brand,
   .navbar > .two-sided .navbar-brand, nav.main-navigation > .two-sided .navbar-brand,
-  .navbar > footer .navbar-brand, nav.main-navigation > footer .navbar-brand,
+  .navbar > footer .navbar-brand, nav.main-navigation > footer .navbar-brand, .home >
+  article.navbar > section .navbar-brand,
   .navbar > .container-fluid nav.main-navigation .brand, nav.main-navigation
   .navbar > .container-fluid .brand, nav.main-navigation > .container-fluid .brand,
   .navbar > .one-sided nav.main-navigation .brand, nav.main-navigation
@@ -5213,7 +5214,9 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   .navbar > .two-sided nav.main-navigation .brand, nav.main-navigation
   .navbar > .two-sided .brand, nav.main-navigation > .two-sided .brand,
   .navbar > footer nav.main-navigation .brand, nav.main-navigation
-  .navbar > footer .brand, nav.main-navigation > footer .brand {
+  .navbar > footer .brand, nav.main-navigation > footer .brand, .home >
+  article.navbar > section nav.main-navigation .brand, nav.main-navigation .home >
+  article.navbar > section .brand {
     margin-left: -15px;
   }
 }
@@ -5989,7 +5992,7 @@ a.badge:hover, a.badge:focus {
 }
 
 .container .jumbotron, #contact-form .jumbotron,
-.container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron {
+.container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron, .home > article > section .jumbotron {
   border-radius: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -6005,7 +6008,7 @@ a.badge:hover, a.badge:focus {
     padding-bottom: 48px;
   }
   .container .jumbotron, #contact-form .jumbotron,
-  .container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron {
+  .container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron, .home > article > section .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -9364,3 +9367,338 @@ section.navigation-child .button {
 }
 
 /*end*/
+.home > article > section {
+  margin-top: 4%;
+  text-align: center;
+}
+
+.home > article > section.intro > center {
+  position: relative;
+  float: left;
+  width: 83.3333333333%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 8.3333333333%;
+}
+
+@media (min-width: 768px) {
+  .home > article > section.intro > center {
+    float: left;
+    width: 66.6666666667%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home > article > section.intro > center {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home > article > section.intro > center {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .home > article > section.intro > center {
+    margin-left: 16.6666666667%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home > article > section.intro > center {
+    margin-left: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home > article > section.intro > center {
+    margin-left: 25%;
+  }
+}
+
+.home > article > section.intro h1 {
+  font-weight: bold;
+}
+
+.home > article > section.quotes {
+  text-align: left;
+  background-color: #80A1C1;
+}
+
+.home > article > section.awards > article {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .home > article > section.awards > article {
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home > article > section.awards > article {
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home > article > section.awards > article {
+    float: left;
+    width: 25%;
+  }
+}
+
+.home > article > section.awards > article img {
+  width: 80%;
+}
+
+.home > article > section.awards > article p {
+  margin-top: 10%;
+}
+
+.home > article > section.contact {
+  background-color: #80A1C1;
+  color: #333;
+  padding-bottom: 6%;
+  padding-top: 6%;
+}
+
+.home > article > section.contact > div.relax-image, .home > article.one-sided > section.contact > section.relax-image, .home > article.one-sided > section.contact > aside.relax-image, .home > article.one-sided > section.contact > article.relax-image, .home > article > section.two-sided.contact > article.relax-image, .home > article > section.two-sided.contact > aside.relax-image, .home > article > section.contact > .relax-image.list, .home > article > section.contact > .relax-image.list-lg, .home > article > section.contact > .relax-image.list-md {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 25%;
+}
+
+.home > article > section.contact > div.relax-image img, .home > article.one-sided > section.contact > section.relax-image img, .home > article.one-sided > section.contact > aside.relax-image img, .home > article.one-sided > section.contact > article.relax-image img, .home > article > section.two-sided.contact > article.relax-image img, .home > article > section.two-sided.contact > aside.relax-image img, .home > article > section.contact > .relax-image.list img, .home > article > section.contact > .relax-image.list-lg img, .home > article > section.contact > .relax-image.list-md img {
+  width: 100%;
+}
+
+.home > article > section.contact > div.relax-text, .home > article.one-sided > section.contact > section.relax-text, .home > article.one-sided > section.contact > aside.relax-text, .home > article.one-sided > section.contact > article.relax-text, .home > article > section.two-sided.contact > article.relax-text, .home > article > section.two-sided.contact > aside.relax-text, .home > article > section.contact > .relax-text.list, .home > article > section.contact > .relax-text.list-lg, .home > article > section.contact > .relax-text.list-md {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.home > article > section.contact > div.relax-text h3, .home > article.one-sided > section.contact > section.relax-text h3, .home > article.one-sided > section.contact > aside.relax-text h3, .home > article.one-sided > section.contact > article.relax-text h3, .home > article > section.two-sided.contact > article.relax-text h3, .home > article > section.two-sided.contact > aside.relax-text h3, .home > article > section.contact > .relax-text.list h3, .home > article > section.contact > .relax-text.list-lg h3, .home > article > section.contact > .relax-text.list-md h3 {
+  margin-top: 10%;
+}
+
+.quote-container > article, .home > article > section.quotes > article {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .quote-container > article, .home > article > section.quotes > article {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .quote-container > article, .home > article > section.quotes > article {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-container > article, .home > article > section.quotes > article {
+    float: left;
+    width: 50%;
+  }
+}
+
+.quote-container h1, .home > article > section.quotes h1 {
+  color: #333;
+}
+
+.quote-container blockquote, .home > article > section.quotes blockquote {
+  margin-left: -15px;
+  margin-right: -15px;
+  border-left: none;
+  margin: 0;
+  margin-bottom: 10px;
+  content: "\f10d";
+  float: left;
+  margin-right: 10px;
+}
+
+.quote-container blockquote:before, .home > article > section.quotes blockquote:before, .quote-container blockquote:after, .home > article > section.quotes blockquote:after {
+  content: " ";
+  display: table;
+}
+
+.quote-container blockquote:after, .home > article > section.quotes blockquote:after {
+  clear: both;
+}
+
+.quote-container blockquote:before, .home > article > section.quotes blockquote:before, .quote-container blockquote:after, .home > article > section.quotes blockquote:after {
+  content: " ";
+  display: table;
+}
+
+.quote-container blockquote:after, .home > article > section.quotes blockquote:after {
+  clear: both;
+}
+
+.quote-container blockquote .avatar, .home > article > section.quotes blockquote .avatar {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .quote-container blockquote .avatar, .home > article > section.quotes blockquote .avatar {
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (min-width: 992px) {
+  .quote-container blockquote .avatar, .home > article > section.quotes blockquote .avatar {
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-container blockquote .avatar, .home > article > section.quotes blockquote .avatar {
+    float: left;
+    width: 25%;
+  }
+}
+
+.quote-container blockquote .avatar img, .home > article > section.quotes blockquote .avatar img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.quote-container blockquote .quote, .home > article > section.quotes blockquote .quote {
+  position: relative;
+  float: left;
+  width: 75%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .quote-container blockquote .quote, .home > article > section.quotes blockquote .quote {
+    float: left;
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  .quote-container blockquote .quote, .home > article > section.quotes blockquote .quote {
+    float: left;
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-container blockquote .quote, .home > article > section.quotes blockquote .quote {
+    float: left;
+    width: 75%;
+  }
+}
+
+.quote-container blockquote .quote small, .home > article > section.quotes blockquote .quote small {
+  color: #333;
+}
+
+.quote-container blockquote .quote p:before, .home > article > section.quotes blockquote .quote p:before {
+  content: "\f10d";
+  font-family: 'Fontawesome';
+  float: left;
+  margin-right: 10px;
+}

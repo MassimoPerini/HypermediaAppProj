@@ -6,14 +6,17 @@
 
   <style>
     header{
-      background-image: url("/public/imgs/bg/doctor.jpg");
+      background-image: url("/public/imgs/bg/doctor_phone.jpg");
+    }
+    #content{
+      padding-bottom: 100px;
     }
 
   </style>
 
   <script type="text/javascript">
 
-      $(function() {
+      $(document).ready(function (){
           $('form').submit(function(e) {
               $("#contact-form").empty().append("<div class='loading' style='transform:scale(0.31);'><div></div><div></div></div>");
               $.ajax({
@@ -38,7 +41,6 @@
 <%- include('common/navbar', { page : '/service', user:user}) %>
 
 <header>
-    <h1>Contact US</h1>
 </header>
 
   <section id="content" class="one-sided">
@@ -48,11 +50,11 @@
       <tbody>
         <tr>
           <th>Phone</th>
-          <td>1</td>
+          <td>3478395683</td>
         </tr>
         <tr>
           <th>Mail</th>
-          <td>Boh</td>
+          <td>info@cpm.com</td>
         </tr>
         <tr>
           <th>Address</th>
@@ -63,50 +65,53 @@
 
 
   <hr />
-  <section id="contact-form">
-    <form class="contact-form" >
-      <div>
-        <label for="name">Nome</label>
-        <input id="name" type="text" name="name" required placeholder="name">
-      </div>
-      <div>
-        <label for="surname">Cognome</label>
-        <input id="surname" type="text" name="surname" required placeholder="surname">
-      </div>
-      <div>
-        <label for="phone">Telefono</label>
-        <input id="phone" type="tel" name="phone" placeholder="phone" required>
-      </div>
-      <div>
-        <label for="mail">Mail</label>
-        <input id="mail" type="email" name="mail" placeholder="" required>
-      </div>
-      <div>
-        <label for="target">Area target</label>
-        <select id="target" name="target">
-          <%areas.forEach((area) => {%>
-          <option name="<%=area.name%>" value="<%=area.id%>"><%=area.name%></option>
-          <%})%>
-        </select>
-      </div>
-      <div>
-      <label for="obj">Oggetto</label>
-      <input id="obj" type="text" name="obj" required placeholder="name">
-      </div>
-      <div>
-        <label for="text">Testo</label>
-        <textarea id="message" name="message" placeholder="Write here..." required></textarea>
-      </div>
+  <section>
+      <div id="contact-form">
+      <h1>Contact Form</h1>
+      <form >
+        <div>
+          <label for="name">Nome</label>
+          <input id="name" type="text" name="name" required placeholder="name">
+        </div>
+        <div>
+          <label for="surname">Cognome</label>
+          <input id="surname" type="text" name="surname" required placeholder="surname">
+        </div>
+        <div>
+          <label for="phone">Telefono</label>
+          <input id="phone" type="tel" name="phone" placeholder="phone" required>
+        </div>
+        <div>
+          <label for="mail">Mail</label>
+          <input id="mail" type="email" name="mail" placeholder="e-mail" required>
+        </div>
+        <div>
+          <label for="target">Area target</label>
+          <select id="target" name="target">
+            <%areas.forEach((area) => {%>
+            <option name="<%=area.name%>" value="<%=area.id%>"><%=area.name%></option>
+            <%})%>
+          </select>
+        </div>
+        <div>
+        <label for="obj">Oggetto</label>
+        <input id="obj" type="text" name="obj" required placeholder="name">
+        </div>
+        <div>
+          <label for="text">Testo</label>
+          <textarea id="message" name="message" placeholder="Write here..." required></textarea>
+        </div>
 
-      <div class="checkbox">
-        <label>
-          <input id="agree" name="agree" type="checkbox">Check me out
-        </label>
-      </div>
-      <div>
-        <input type="submit" value="Submit">
-      </div>
-    </form>
+        <div class="checkbox">
+          <label>
+            <input id="agree" name="agree" type="checkbox">Check me out
+          </label>
+        </div>
+        <div>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
     </section>
   </section>
 

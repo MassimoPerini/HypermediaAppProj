@@ -6,7 +6,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="/">CPM clinic</a>
+    <!--  <a class="brand" href="/">CPM clinic</a> -->
+      <a href="/" class="brand"><img src="/public/imgs/logo_fullsize.png"></a>
     </div>
 
   <div class="landmarks" id="landmarks">
@@ -21,7 +22,15 @@
         <li<%if(page=='/faq'){%> class="active"<%}%>><a href="/faq">FAQ</a></li>
         <li<%if(page=='/contacts'){%> class="active"<%}%>><a href="/contacts">Contacts</a></li>
         <%if (user){%>
-          <li<%if(page=='/private'){%> class="active"<%}%>><a href="/private">Private area, <%=user.username%></a></li>
+          <li class="dropdown <%if(page=='/private'){%> active <%}%> ">
+            <a data-toggle="dropdown" href="#">Hi, <%=user.username%>
+            <span class="caret"></span></a>
+            <ul>
+              <li><a href="/private">Private area</a></li>
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </li>
+
         <%} else{%>
           <li><a href="/login">Login</a></li>
         <%}%>

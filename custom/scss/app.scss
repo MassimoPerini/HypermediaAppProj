@@ -10,6 +10,9 @@ $background-color: #FFFFFF;
 $color-bar: #8dbbf6;
 $aside-size: 2;
 $brand-selected: #226b92;
+$brand-left-margin: 15px;
+$form-width: 450px;
+$login-form-margin: 100px;
 
 @import "variables";
 @import "_bootstrap.scss";
@@ -86,11 +89,19 @@ nav.main-navigation {
 
   .brand {
     @extend .navbar-brand;
+    padding: 0px;
+
+    >img{
+      width: auto;
+      height: 100%;
+      padding: 20%;
+    }
+
   }
 
   .landmarks {
     @extend .collapse, .navbar-collapse;
-    text-align: center; /* Set this */
+    text-align: center;
 
     > ul {
       @extend .nav, .navbar-nav;
@@ -100,6 +111,15 @@ nav.main-navigation {
       > li {
         > a {
         }
+      }
+    }
+
+    .dropdown{
+      >a{
+        @extend .dropdown-toggle;
+      }
+      >ul{
+        @extend .dropdown-menu;
       }
     }
 
@@ -156,69 +176,11 @@ nav.main-navigation {
     font-size: 22pt;
 }
 
-.quote-container{
-
-  >article{
-    @include make-xs-column(12);
-    @include make-sm-column(12);
-    @include make-md-column(6);
-    @include make-lg-column(6);
-  }
-
-  h1{
-    //color: #efefef;
-    //color: black;
-    color: #333;
-  }
-
-  blockquote{
-
-    @include make-row;
-    @include clearfix;
-
-    border-left: none;
-    margin: 0;
-    margin-bottom: 10px;
-
-    content: "\f10d";
-    float: left;
-    margin-right: 10px;
-
-    .avatar{
-      @include make-xs-column(3);
-      @include make-sm-column(3);
-      @include make-md-column(3);
-      @include make-lg-column(3);
-      img{
-        @extend .img-circle;
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-      }
-    }
-
-    .quote{
-      @include make-xs-column(9);
-      @include make-sm-column(9);
-      @include make-md-column(9);
-      @include make-lg-column(9);
-
-      //color: #efefef;
-      color: #333;
-
-      small{
-        color: #333;
-        //color: #e0e0e0;
-      }
-
-      p:before{
-        content: "\f10d";
-        font-family: 'Fontawesome';
-        float: left;
-        margin-right: 10px;
-      }
-    }
-
+center{
+  text-align: center;
+  >h1{
+    margin: 0px;
+    padding: 16px;
   }
 }
 
@@ -260,13 +222,24 @@ nav.main-navigation {
   .register-form {
     display: none;
   }
+
+  .forget-form{
+    display: none;
+  }
 }
   .private-area-form {
+
+    img{
+      width:($form-width - $login-form-margin) * 0.8;
+      margin-bottom: $login-form-margin / 2;
+      height: auto;
+    }
+
     position: relative;
     z-index: 1;
     background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
+    max-width: $form-width;
+    margin: 0 auto $login-form-margin;
     padding: 45px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -311,9 +284,11 @@ nav.main-navigation {
   }
 
 
-.contact-form{
+#contact-form{
   @extend .container;
-  max-width: 500px;
+  max-width: $form-width;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 form{
@@ -323,7 +298,14 @@ form{
 
   input:not([type='checkbox']){
     @extend .form-control;
+
+    input [type='submit'] {
+      background-color: #00A7E1;
+      color: #FFFFFF;
+    }
+
   }
+
   textarea{
     @extend .form-control;
   }
@@ -333,81 +315,7 @@ table{
   @extend .table;
 }
 
-.home{
 
-  >article{
-
-    >section{
-      @extend .container-fluid;
-      margin-top: 4%;
-      text-align: center;
-    }
-
-    >section.intro{
-
-      >center{
-        @include make-xs-column(10);
-        @include make-sm-column(8);
-        @include make-md-column(6);
-        @include make-lg-column(6);
-        @include make-xs-column-offset(1);
-        @include make-sm-column-offset(2);
-        @include make-md-column-offset(3);
-        @include make-lg-column-offset(3);
-      }
-
-      h1{
-        font-weight: bold;
-      }
-    }
-
-    >section.quotes{
-      @extend .quote-container;
-      text-align: left;
-      background-color: #80A1C1;
-    }
-
-    >section.awards{
-
-      >article{
-        @include make-xs-column(6);
-        @include make-sm-column(3);
-        @include make-md-column(3);
-        @include make-lg-column(3);
-        img{
-          width: 80%;
-        }
-        p{
-          margin-top: 10%;
-        }
-      }
-    }
-
-    >section.contact{
-      background-color: #80A1C1;
-      color: #333;
-      padding-bottom: 6%;
-      padding-top: 6%;
-      >div.relax-image{
-        @include make-xs-column(3);
-        @include make-xs-column-offset(3);
-        img{
-          @extend .img-circle;
-          width: 100%;
-        }
-      }
-      >div.relax-text{
-        @include make-xs-column(3);
-
-        h3{
-          margin-top:10%;
-        }
-
-      }
-    }
-
-  }
-}
 
 // Two sided is used in 2-sided pages
 .two-sided{
@@ -461,19 +369,35 @@ table{
 // List Medium (Areas)
 .list-md{
   @extend .list;
-  >article{
-    @include make-xs-column(12);
-    @include make-sm-column(2);
+  > article{
+    @include make-xs-column(6);
+    @include make-sm-column(4);
     @include make-md-column(2);
     @include make-lg-column(2);
   }
+  @media (max-width: $screen-sm-min){
+    > article:nth-child(2n+1){
+      clear: left;
+    }
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-md-min){
+    > article:nth-child(3n+1){
+      clear: left;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    > article:nth-child(6n+1){
+      clear: left;
+    }
+  }
 }
+
 
 #content{
   min-height: 100vh;
   transform-origin: center bottom 0px;
   transition: all 0.5s ease 0s;
-  box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
+  //box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
   background-color: #FFFFFF;
 
 }
@@ -499,7 +423,7 @@ footer{
   max-width: 1440px;
   margin: 0px auto;
   min-height: 200px;
-  font-size: 2.125rem;
+  font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
   padding-top: 40px;
 

@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
- 	  name: {type: DataTypes.STRING, nullable: false},
+ 	  name: {type: DataTypes.STRING, allowNull: false},
     icon: DataTypes.STRING,
     header: DataTypes.STRING,
     position: DataTypes.STRING,

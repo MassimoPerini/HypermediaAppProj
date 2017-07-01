@@ -50,7 +50,9 @@ module.exports = function (grunt) {
                 files: {
                //     'css/app.css': 'scss/app.scss'
                		'public/stylesheets/app.css': 'custom/scss/app.scss',
-                  'public/stylesheets/carousel.css': 'custom/scss/carousel.scss'
+                  'public/stylesheets/carousel.css': 'custom/scss/carousel.scss',
+                  'public/stylesheets/home.css': 'custom/scss/home.scss',
+                  'public/stylesheets/doctors-search.css': 'custom/scss/doctors-search.scss'
                 }
             },
             debug: {
@@ -59,7 +61,9 @@ module.exports = function (grunt) {
                 },
                 files: {
                		'public/stylesheets/app.css': 'custom/scss/app.scss',
-                  'public/stylesheets/carousel.css': 'custom/scss/carousel.scss'
+                  'public/stylesheets/carousel.css': 'custom/scss/carousel.scss',
+                  'public/stylesheets/home.css': 'custom/scss/home.scss',
+                  'public/stylesheets/doctors-search.css': 'custom/scss/doctors-search.scss'
                 }
             }
         },
