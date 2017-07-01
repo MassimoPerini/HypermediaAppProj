@@ -10,6 +10,8 @@ var models = require('../models');
 
 var router = express.Router();
 
+
+
 router.post('/api/contact', function(req, res, next) {
     models.inquiries.create(
         {

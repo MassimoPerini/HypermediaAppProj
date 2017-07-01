@@ -39,7 +39,7 @@ function insertDoctors(doctors) {
 }
 
 function noDoctor() {
-    return '<section class="no-result"><img src="/public/imgs/doctor.svg"><h2>No doctors found.</h2>';
+    return '<section class="no-result"><img src="/public/imgs/doctor.svg"><h2>No doctors found.</h2></section>';
 }
 
 function doctorCard(doctor) {

@@ -1,6 +1,7 @@
 /**
- * Created by massimo on 29/06/17.
- */
+ MODEL: Inquiries
+ TABLE: Inquiries
+ **/
 var debug = require('debug')('model');
 
 

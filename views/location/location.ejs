@@ -34,26 +34,22 @@
           <iframe src="<%= location.gMaps %>" width="90%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <!-- TIMETABLE -->
-        <div>
           <h2>Timetable</h2>
-          <p>
-            <table class="table" style="font-size:9px">
-              <!-- FIXME responsivity, table oversize -->
+          <div>
+          <table>
+            <% rows = new Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday") %>
+
               <thead>
                 <tr>
-                  <th>Monday</th>
-                  <th>Tuesday</th>
-                  <th>Wednesday</th>
-                  <th>Thursday</th>
-                  <th>Friday</th>
-                  <th>Saturday</th>
-                  <th>Sunday</th>
+                  <%for (i=0;i<7;i++){%>
+                  <th><%=rows[i]%></th>
+                  <%}%>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <% var i; for(var i=0; i<7; i++) { %>
-                    <td> <%= (timetables[i] == null ? "closed" : (timetables[i].opening_time + " - " + timetables[i].closing_time)) %></td>
+                    <td data-title="<%=rows[i]%>"> <%= (timetables[i] == null ? "closed" : (timetables[i].opening_time + " - " + timetables[i].closing_time)) %></td>
                   <% } %>
                 </tr>
               </tbody>
