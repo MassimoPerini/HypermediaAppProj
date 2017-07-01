@@ -9,7 +9,7 @@ router.get('/who-we-are', function(req, res, next){
 });
 
 router.get('/who-we-are/statistics', function(req, res, next){
-  res.render('who-we-are/statistics', {user:req.user});
+  res.render('who-we-are/statistics', {title: 'Statistics', user:req.user});
 });
 
 module.exports = router;
