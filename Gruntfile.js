@@ -25,6 +25,12 @@ module.exports = function (grunt) {
                         src: ['**/*.min.js'],
                         dest: 'public/javascripts/footer-reveal/'
                     },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/chart.js/dist/',
+                        src: ['*.min.js'],
+                        dest: 'public/javascripts/chart.js/'
+                    },
                     // Fonts.
                     {
                         expand: true,

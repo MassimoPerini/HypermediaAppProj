@@ -3,11 +3,155 @@
   <head>
     <title><%= title %></title>
     <%- include('../common/imports') %>
+    <style>
+      header{
+        background-image: url("../public/imgs/bg/statistics.jpg");
+      }
+    </style>
+    <script src="/public/javascripts/Chart.js/Chart.min.js"></script>
   </head>
   <body>
     <%- include('../common/navbar', {page : '/who-we-are', user:user}) %>
-    Qua ci vanno le stats<br>
-    <a href='/who-we-are'>Who we are</a><br>
-    <a href='/who-we-are/photogallery'>Photogallery</a><br>
+
+    <header>
+    </header>
+
+    <section class="two-sided" id="content">
+      <center>
+        <h1>Statistics</h1>
+      </center>
+      <article>
+        <div>
+          <h2>Number of people</h2>
+          <p>In order to offer the best service to our customers, our personal is composed by 30 physicians and 
+          scientists and 45 trainee and fellows. Our excellent health staff is composed by 57100 people so they 
+          will surely be able to satisfy every your desire.<br>So, in total around 118 people work in our clinics.<br>
+          Last year, 55000 people came to CPM Clinic for care, and we helped people for 88000 human ours.<br>
+          These are the datas for each area:</p>
+          <div class="chart-container" style="position: relative; height:60vh; width:80vw">
+          <canvas id="areasChart"></canvas>
+          </div>
+          <script>
+            window.chartColors = {
+              red: 'rgb(255, 99, 132)',
+              orange: 'rgb(255, 159, 64)',
+              yellow: 'rgb(255, 205, 86)',
+              green: 'rgb(75, 192, 192)',
+              blue: 'rgb(54, 162, 235)',
+              purple: 'rgb(153, 102, 255)',
+              grey: 'rgb(201, 203, 207)'
+            };
+            var ctx = $('#areasChart');
+            var areasChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: ["Cardiology", "Dermatology", "Eye care", "Gynecology", "Radiology", "Radiotherapy", "Surgery"],
+                  datasets: [{
+                      label: 'via Mascheroni',
+                      data: [3122, 2051, 4523, 11000, 16700, 9000, 10870],
+                      stack: 'Stack0',
+                      backgroundColor: window.chartColors.red
+                  }, {
+                      label: 'via Saronno',
+                      data: [9654, 4503, 5799, 0, 0, 3007, 0],
+                      stack: 'Stack0',
+                      backgroundColor: window.chartColors.blue
+                  }, {
+                      label: 'via Taormina',
+                      data: [101, 6439, 0, 11578, 0, 0, 251],
+                      stack: 'Stack0',
+                      backgroundColor: window.chartColors.green
+                  }]
+              },
+              options: {
+                  scales: {
+                      yAxes: [{
+                          ticks: {
+                              beginAtZero:true
+                          }
+                      }]
+                  },
+                  maintainAspectRatio:false,
+                  responsive: true,
+                  title: {
+                    display: true,
+                    text: "People helped in our locations in 2016"
+                  },
+              }
+            });
+          </script>
+        </div>
+        <div>
+          <h2>Financial informations</h2>
+          <p>From year 2015, we increased our 2016 total revenue of +58%. Here our incomings, thanks for contributions and donations:</p>
+          <div class="chart-container" style="position: relative; height:60vh; width:60vw">
+            <canvas id="moneyChart"></canvas>
+          </div>
+          <script>
+            var money = $('#moneyChart');
+            var moneyChart = new Chart(money, {
+              type: 'pie',
+              data: {
+                datasets: [{
+                  data: [10.4, 7.6, 2.8, 1.6],
+                  backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                  ],
+                  label: '2016 Incomings [Milions of €]'
+                }, {
+                  data: [7.6, 3.2, 1.2, 1.6],
+                  backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                  ],
+                  label: '2015 Incomings [Milions of €]'
+                }],
+                labels: ['From our activity', 'Contributions from benefactors', 'Money from prizes', 'Government loans'],
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: "2016 (Outer) / 2015 (Inner) Incomings compared"
+                  },
+              }
+            });
+          </script>
+        </div>
+
+      </article>
+
+      <aside>
+        <div class="card">
+          <a href="/who-we-are/gallery">
+            <div class="card-header">
+              <center><img src="/public/imgs/gallery.svg"></img></center>
+            </div>
+            <div class="card-text">
+              <h5>Photo gallery</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="/who-we-are/statistics">
+            <div class="card-header">
+              <center><img src="/public/imgs/statistics.svg"></img></center>
+            </div>
+            <div class="card-text">
+              <h5>Statistics</h5>
+            </div>
+          </a>
+        </div>
+      </aside>
+
+    </section>
+    <%- include('../common/footer') %>
   </body>
 </html>
