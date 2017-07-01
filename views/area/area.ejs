@@ -15,11 +15,10 @@
       $.ajax({
         dataType: 'json',
         url: '/api/doctor/<%= area.responsible %>',
-        success: function(result) {
-          $('#responsible a').attr('href', '/doctor/'+result['id']);
-          $('#responsible a img').attr('src', result['icon']);
-          $('#responsible a h5').html('Responsible: ' + result['fullname']);
-        } 
+      }).done(function(result) {
+        $('#responsible a').attr('href', '/doctor/'+result['id']);
+        $('#responsible a img').attr('src', result['icon']);
+        $('#responsible a h5').html('Responsible: ' + result['fullname']);
       });
     });
   </script>

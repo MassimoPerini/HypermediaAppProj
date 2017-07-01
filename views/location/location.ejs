@@ -21,53 +21,54 @@
       <section class="two-sided">
         <article>
 
-          <!-- SHORT DESCRIPTION -->
-          <div>
-            <h2>Description</h2>
-            <p>
-              <%= location.description %>
-            </p>
-          </div>
-          <!-- MAP POSITION -->
-          <div>
-            <h2>Position</h2>
-            <iframe src="<%= location.gMaps %>" width="90%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-          <!-- TIMETABLE -->
-          <div>
-            <h2>Timetable</h2>
-            <p>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
-                    <th>Sunday</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <% var i; for(var i=0; i<7; i++) { %>
-                      <td> <%= (timetables[i] == null ? "closed" : (timetables[i].opening_time + " - " + timetables[i].closing_time)) %></td>
-                    <% } %>
-                  </tr>
-                </tbody>
-              </table>
-            </p>
-          </div>
-          <!-- CONTACTS -->
-          <div>
-            <h2>Contacts</h2>
-            <ul>
-              <li><%= location.tell %></li>
-              <li><a href="mailto:<%= location.email %>"><%= location.email %></a></li>
-            </ul>
-          </div>
-        </article>
+<<<<<<< HEAD
+        <!-- SHORT DESCRIPTION -->
+        <div>
+          <h2>Description</h2>
+          <p>
+            <%= location.description %>
+          </p>
+        </div>
+        <!-- MAP POSITION -->
+        <div>
+          <h2>Position</h2>
+          <iframe src="<%= location.gMaps %>" width="90%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <!-- TIMETABLE -->
+        <div>
+          <h2>Timetable</h2>
+          <p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <% var i; for(var i=0; i<7; i++) { %>
+                    <td> <%= (timetables[i] == null ? "closed" : (timetables[i].opening_time + " - " + timetables[i].closing_time)) %></td>
+                  <% } %>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+        </div>
+        <!-- CONTACTS -->
+        <div>
+          <h2>Contacts</h2>
+          <ul>
+            <li><a href="tell:<%= location.tell %>"><%= location.tell %></a></li>
+            <li><a href="mailto:<%= location.email %>"><%= location.email %></a></li>
+          </ul>
+        </div>
+      </article>
 
         <%- include('sidebar', { page : 'location'}) %>
 
