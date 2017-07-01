@@ -89,12 +89,18 @@ nav.main-navigation {
 
   .brand {
     @extend .navbar-brand;
-    padding: 0px;
+  //  vertical-align: middle;
+  //  line-height: 80px;
+  //  margin-left: 20px;
+    padding: 10px 0% 10px 20px;
+ //   margin: -20px 0px 0px 0px;
 
     >img{
       width: auto;
       height: 100%;
-      padding: 20%;
+   //   margin-left: 10px;
+   //   margin-left: 20%
+      //  padding: 20%;
     }
 
   }
@@ -102,6 +108,8 @@ nav.main-navigation {
   .landmarks {
     @extend .collapse, .navbar-collapse;
     text-align: center;
+  //  max-height: none;
+  //  overflow-y: visible !important;
 
     > ul {
       @extend .nav, .navbar-nav;
@@ -123,6 +131,7 @@ nav.main-navigation {
 
       >ul{
         @extend .dropdown-menu;
+        box-shadow: none;
 
       }
     }
@@ -268,21 +277,9 @@ center{
       font-size: 14px;
     }
     button {
-      font-family: "Roboto", sans-serif;
-      text-transform: uppercase;
-      outline: 0;
-      background: $brand-primary;
-      width: 100%;
-      border: 0;
-      padding: 15px;
-      color: #FFFFFF;
-      font-size: 14px;
       -webkit-transition: all 0.3 ease;
       transition: all 0.3 ease;
       cursor: pointer;
-    }
-    button:hover, button:active, button:focus {
-      background: $brand-selected;
     }
     p {
       margin: 15px 0 0;
@@ -308,15 +305,27 @@ form{
       @extend .form-group;
   }
 
+  input[type='submit'] {
+    background-color: #00A7E1;
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    &:hover{
+      background-color: #0099e1;
+    }
+    &:active{
+      background-color: #0073e1;
+    }
+  }
+
+
   input:not([type='checkbox']){
     @extend .form-control;
-
-    input [type='submit'] {
-      background-color: #00A7E1;
-      color: #FFFFFF;
-    }
-
   }
+
 
   textarea{
     @extend .form-control;

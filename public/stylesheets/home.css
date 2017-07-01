@@ -8717,13 +8717,12 @@ nav.main-navigation {
 }
 
 nav.main-navigation .brand {
-  padding: 0px;
+  padding: 10px 0% 10px 20px;
 }
 
 nav.main-navigation .brand > img {
   width: auto;
   height: 100%;
-  padding: 20%;
 }
 
 nav.main-navigation .landmarks {
@@ -8742,6 +8741,10 @@ nav.main-navigation .landmarks .dropdown a {
 
 nav.main-navigation .landmarks .dropdown a:hover {
   color: #7dbbf1 !important;
+}
+
+nav.main-navigation .landmarks .dropdown > ul {
+  box-shadow: none;
 }
 
 @media (min-width: 979px) {
@@ -8997,22 +9000,9 @@ center > h1 {
 }
 
 .private-area-form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #105592;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #FFFFFF;
-  font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
-}
-
-.private-area-form button:hover, .private-area-form button:active, .private-area-form button:focus {
-  background: #226b92;
 }
 
 .private-area-form p {
@@ -9031,9 +9021,22 @@ center > h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-form input:not([type='checkbox']) input [type='submit'] {
+form input[type='submit'] {
   background-color: #00A7E1;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
   color: #FFFFFF;
+  font-size: 14px;
+}
+
+form input[type='submit']:hover {
+  background-color: #0099e1;
+}
+
+form input[type='submit']:active {
+  background-color: #0073e1;
 }
 
 .two-sided > article {
