@@ -55,6 +55,24 @@ header {
       opacity: 0.85;
     }
   }
+
+  img{
+    display: table-cell;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  @media (min-width: 800px) {
+    img {
+      width: 70%;
+    }
+  }
+
 }
 
 header.doctor{
@@ -71,6 +89,10 @@ header.doctor{
     >img{
       @extend .img-circle;
       height: 100%;
+      /*FIX*/
+      position: relative;
+      width: auto;
+      display: inline-block;
     }
   }
 }

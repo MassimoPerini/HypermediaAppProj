@@ -24,8 +24,9 @@ router.post('/api/contact', function(req, res, next) {
             message: req.body.message
         }
     ).then(function () {
-        return res.status(200).json({message: "user created"});
+        return res.status(200).json({message: "Thank you!"});
     }).catch(function (err) {
+        console.log(err.message);
         return res.status(400).json({ message: "error" });
     })
 });
