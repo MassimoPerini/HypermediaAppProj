@@ -44,12 +44,12 @@ router.get('/api/doctor', function(req, res, next){
       include:[{
         model: models.services,
         where: serviceQuery,
-        /*attributes: [],
+        attributes: [],
         include: [{
           model: models.areas,
           where: areaQuery,
           attributes: []
-        }]*/
+        }]
       },{
         model: models.doctors_timetables,
         attributes: [],
