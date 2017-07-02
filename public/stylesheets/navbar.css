@@ -9414,6 +9414,14 @@ section.navigation-child .button {
   font-size: 16px;
 }
 
+.blurred {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
 /*end*/
 /* ------------ NAVBAR ------------- */
 nav.main-navigation {
