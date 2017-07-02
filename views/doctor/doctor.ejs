@@ -66,12 +66,12 @@
 
         <aside>
           <div class="card">
-            <a href="/service/doctor/<%=doctor.id%>">
+            <a href="/service/<%= doctor.doctors_services[0].id %>">
               <div class="card-header">
                 <center><img src="/public/imgs/service.svg" class="card-image"></img></center>
               </div>
               <div class="card-text">
-                <h5>Doctor's service</h5>
+                <h5>Doctor's service: <%= doctor.doctors_services[0].name %></h5>
               </div>
             </a>
           </div>
