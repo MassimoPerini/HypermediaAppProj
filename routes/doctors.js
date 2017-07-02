@@ -41,7 +41,6 @@ router.get('/doctor/:id', function(req, res, next){
           attributes: ['id', 'name', 'icon']
         }, {
           model: models.services,
-          as: 'doctors_services',
           attributes: ['id', 'name']
         }]
     }).then(function(doctor){
