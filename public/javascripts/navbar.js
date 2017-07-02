@@ -27,7 +27,9 @@ $(document).ready(function($) {
         $("html, body").animate({
             scrollTop: $("#content").outerHeight() - $(window).height()
         }, 500);
-    }), updateNavbar();
+    }), updateNavbar(), $("#sidebar-bg").click(function(e) {
+        toggleNav();
+    });
 }), $(window).on("resize", function() {
     updateNavbar();
 });

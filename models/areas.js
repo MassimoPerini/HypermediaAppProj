@@ -24,7 +24,7 @@ var debug = require('debug')('model');
 
 module.exports = function(sequelize, DataTypes) {
 
-  var areas = sequelize.define("areas", {
+  var Areas = sequelize.define("areas", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -45,8 +45,14 @@ module.exports = function(sequelize, DataTypes) {
   },{
   	timestamps: true,
     classMethods : {
+
+      associate: function(models){
+        Areas.hasMany(models.services);
+        Areas.belongsToMany(models.locations, {through: 'locations_areas'});
+      }
+
     }
   });
 
-  return areas;
+  return Areas;
 };

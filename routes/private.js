@@ -8,11 +8,8 @@ var router = express.Router();
 var passport = require('../config/auth.js');
 
 router.get('/login', function(req, res, next){
-    res.render('private-area/login', { title: 'Login'});
-  res.send("errore login");
+  res.render('private-area/login', { title: 'Login'});
 });
-
-//app.use(function({})     passo username   req.user
 
 router.post('/login',
   passport.authenticate('local-login', {
@@ -21,14 +18,12 @@ router.post('/login',
   })
 );
 
-
 router.post('/signup',
     passport.authenticate('local-signup', {
     successRedirect: '/private',
     failureRedirect: '/login?error=true',
     failureFlash : true
 }));
-
 
 router.get('/logout', function(req,res,next){
   req.logout();
@@ -41,10 +36,24 @@ router.get('/logout', function(req,res,next){
 router.get('/private', function(req, res, next){
     if (!req.user){
         res.redirect('/login');
-    }
-    else {
+    }else {
         res.render('private-area/private-home', {title: 'Private area', user: req.user});
     }
+});
+
+router.get('/reservation', function(req, res, next){
+    if (!req.user){
+        res.redirect('/login');
+    }else {
+        models.services.findAll({})
+        .then(function(services){
+            res.render('private-area/booking', { title: 'Booking', services: services, user:req.user});
+        });
+    }
+});
+
+router.get('/password-reset', function(req, res, next){
+  res.render('private-area/reset', {title: 'Password reset', user:req.user, token: req.query.token});
 });
 
 module.exports = router;
