@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+
+    <%- include('../common/imports') %>
+
+  <style>
+    header{
+      background-image: url('/public/imgs/bg/private.jpg');
+    }
+  </style>
+
+  <script type="text/javascript">
+
+    function loadNewLocations(serviceId) {
+          $.getJSON("/service/"+serviceId+"/location", function(result){
+              console.log(result);
+              var append = "";
+              $.each(result.data, function (i, item) {
+                  append+='<option value: '+item.id+'>'+item.name+'</option>';
+              });
+              $("#location").empty().append(append).prop( "disabled", false );
+          });
+    }
+
+
+    $(document).ready(function (){
+        $('#service').change(function () {
+            $( this ).val() === "-1" ? $("#location").empty().append("<option>Choose a service</option>").prop( "disabled", true ) : loadNewLocations($( this ).val())
+          }).change();
+
+        $('form').submit(function(e) {
+            if ($('#service').val() === "-1")
+            {
+                alert("Non mi freghi così");
+                e.preventDefault();
+                return;
+            }
+
+            $("#content").empty().append("<div class='loading' style='transform:scale(0.31);'><div></div><div></div></div>");
+            $.ajax({
+                type: "POST",
+                url: "/api/reservation",
+                data: $(this).serialize(),
+                success: function(data)
+                {
+                    $("#content").empty();
+                    alert("Well done!");
+                  //  $("#contact-form").empty().append(data.message);
+                }
+            });
+            e.preventDefault();
+        });
+
+      });
+  </script>
+
+</head>
+<body>
+<%- include('../common/navbar', { page : '/private', user:user}) %>
+<header>
+</header>
+<section class="two-sided" id="content">
+  <center>
+    <h1>Prenota la tua stupida visita</h1>
+  </center>
+  <article>
+
+    <form>
+      <div>
+        <label for="date">Date: </label>
+        <input type="date" id="date" name="date" placeholder="Date" required>
+      </div>
+      <div>
+        <label for="hour">Hour:</label>
+        <select id="hour" name="hour">
+          <option value="early_morning">Early Morning</option>
+          <option value="late_morning">Late Morning</option>
+          <option value="lunch">Lunch</option>
+          <option value="early_afternoon">Early Afternoon</option>
+          <option value="late_afternoon">Late Afternoon</option>
+        </select>
+      </div>
+      <div>
+        <label for="service">Service</label>
+        <select id="service" name="service" required>
+          <option value="-1">Choose a service</option>
+            <%services.forEach((service) => {%>
+              <option value="<%=service.id%>"><%=service.name%></option>
+            <%})%>
+        </select>
+      </div>
+      <div>
+        <label>Location</label>
+        <select id="location" name="location" disabled required>
+          <option>Choose a service before</option>
+        </select>
+      </div>
+      <input type="submit">
+
+    </form>
+
+  </article>
+  <aside>
+  </aside>
+</section>
+<%- include('../common/footer') %>
+
+</body>
+</html>

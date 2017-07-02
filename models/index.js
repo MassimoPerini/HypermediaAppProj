@@ -60,6 +60,19 @@ db.doctors_timetables.belongsTo(db.locations, { foreignKey : 'working_location_i
 db.locations.belongsToMany(db.services, {through: 'locations_services'});
 db.services.belongsToMany(db.locations, {through: 'locations_services'});
 
+
+
+/*BOOKINGS*/
+
+/*
+db.bookings.belongsTo(db.users, {foreignKey: 'username', targetKey: 'username'});
+db.bookings.belongsTo(db.services, {foreignKey: 'service', targetKey: 'id'});
+db.bookings.belongsTo(db.locations, {foreignKey: 'location', targetKey: 'id'});
+
+db.users.hasMany(db.bookings, {foreignKey: 'countryCode', sourceKey: 'isoCode'});
+*/
+
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

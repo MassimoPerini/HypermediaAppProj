@@ -47,4 +47,18 @@ router.get('/private', function(req, res, next){
     }
 });
 
+router.get('/reservation', function(req, res, next){
+    if (!req.user){
+        res.redirect('/login');
+    }
+    else {
+        models.services.findAll({})
+            .then(function(services){
+                res.render('private-area/booking', { title: 'Booking', services: services, user:req.user});
+            });
+    }
+});
+
+
+
 module.exports = router;

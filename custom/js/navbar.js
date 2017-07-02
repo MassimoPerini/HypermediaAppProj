@@ -13,6 +13,10 @@ $(document).ready(function($) {
     });
     /* SIDEBAR NAV */
     updateNavbar();
+
+    $('#sidebar-bg').click(function(e) {
+        toggleNav();
+    });
 });
 
 $(window).on("resize", function () {
