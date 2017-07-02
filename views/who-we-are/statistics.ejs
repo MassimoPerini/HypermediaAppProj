@@ -7,6 +7,14 @@
       header{
         background-image: url("../public/imgs/bg/statistics.jpg");
       }
+
+      .chart-container {
+        position: relative;
+        height:60vh;
+        width:60vw;
+        margin-top: 20px;
+        margin-bottom:40px;
+      }
     </style>
     <script src="/public/javascripts/Chart.js/Chart.min.js"></script>
   </head>
@@ -28,7 +36,7 @@
           will surely be able to satisfy every your desire.<br>So, in total around 118 people work in our clinics.<br>
           Last year, 55000 people came to CPM Clinic for care, and we helped people for 88000 human ours.<br>
           These are the datas for each area:</p>
-          <div class="chart-container" style="position: relative; height:60vh; width:80vw">
+          <div class="chart-container" style="width:80vw">
           <canvas id="areasChart"></canvas>
           </div>
           <script>
@@ -84,7 +92,7 @@
         <div>
           <h2>Financial informations</h2>
           <p>From year 2015, we increased our 2016 total revenue of +58%. Here our incomings, thanks for contributions and donations:</p>
-          <div class="chart-container" style="position: relative; height:60vh; width:60vw">
+          <div class="chart-container">
             <canvas id="moneyChart"></canvas>
           </div>
           <script>
