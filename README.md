@@ -10,15 +10,15 @@ This is the Hypermedia Application Project 2017 website repository.
 To clarify how the project was implemented, here we add some guidelines for readers:
 
 ### GRUNT + SASS:
-All our stylesheets are compiled and minified from SASS files through GRUNT. In this way, the minification is automatic. This works also for JS scripts. All the un-compiled sources are in the ‘/custom’ directory, while all the compiled ones are in ‘/public’ (css + js).
+All our stylesheets are compiled and minified from SASS files through GRUNT. In this way, the minification is automatic. This works also for JS scripts. All the un-compiled sources are in the */custom* directory, while all the compiled ones are in */public* (css + js).
 
 ### EJS:
 We did not use any vanilla HTML file, while we used EJS templating instead. This allowed us to reduce the usage of AJAX calls on client side (that we still used in some cases, see below). This is an advantage because the client renders the page with the data directly. We used this in “static” pages, such as the single doctor/service/area page.
 Also, this allowed us to re-use components (e.g. navbar with logged user or the footer).
-All the EJS templates are contained in the ‘/views’ directory.
+All the EJS templates are contained in the */views* directory.
 
 ### APIS DOCS:
-Documentation of the APIs is written using Swagger and is available @ ‘/docs/api’. This was done making comments with block tags as in JavaDoc
+Documentation of the APIs is written using Swagger and is available @ */docs/api*. This was done making comments with block tags as in JavaDoc
 
 ### AJAX:
 We used AJAX for the “All doctors” list, because we intended to implement pagination for that list. Instead of “simple” pagination, we implemented an infinite scroll.
@@ -51,8 +51,10 @@ We also implemented a basic login-signup and private area functionality. This wa
 [PassportJS website](http://passportjs.org)
 
 If you want to try the login phase, we created a user for you:
-usr: demo@example.com
-pwd: hypermedia
+
+>usr: demo@example.com
+
+>pwd: hypermedia
 
 ### RESERVATION:
 The reservation form does only insert a request for an appointment in the DB, without making the user choose the exact time. This is because we supposed that the reservation system is implemented in another system, separated from our website (and probably already in use). We suppose that there is someone of the staff that reads the requests from the DB and fix appointments for user. Users are later notified of the reservation.
