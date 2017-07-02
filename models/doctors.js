@@ -1,7 +1,31 @@
 /**
-    MODEL : Doctors
-    TABLE: Doctors
-**/
+ * @swagger
+ * definitions:
+ *    Doctor:
+ *      type: "object"
+ *      required:
+ *        - id
+ *        - fullname
+ *      properties:
+ *        id:
+ *          type: "integer"
+ *        fullname:
+ *          type: "string"
+ *        surname:
+ *          type: "string"
+ *        icon:
+ *          type: 'string'
+ *          description: "path of the doctor's picture"
+ *        position:
+ *          type: 'string'
+ *          description: "covered in the hospital"
+ *        phone:
+ *          type: 'string'
+ *        email:
+ *          type: 'string'
+ *        description:
+ *          type: 'string'
+ */
 var debug = require('debug')('model');
 
 module.exports = function(sequelize, DataTypes) {

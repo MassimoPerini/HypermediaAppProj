@@ -1,7 +1,25 @@
 /**
-    MODEL : Areas
-    TABLE: Areas
-**/
+ * @swagger
+ * definitions:
+ *   Area:
+ *     type: "object"
+ *     description: "Describes a single area"
+ *     required:
+ *       - id
+ *       - name
+ *       - responsible
+ *     properties:
+ *       id:
+ *         type: "integer"
+ *       name:
+ *         type: "string"
+ *       icon:
+ *         type: "string"
+ *         description: "Path of the area icon image"
+ *       responsible:
+ *         type: "integer"
+ *         description: "The id of the doctor responsible for this area"
+ */
 var debug = require('debug')('model');
 
 module.exports = function(sequelize, DataTypes) {

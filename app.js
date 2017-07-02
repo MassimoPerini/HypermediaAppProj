@@ -61,7 +61,7 @@ var swaggerSpec = swaggerJSDoc({
     host: 'https://polimi-hyp-2017-team-10543744.herokuapp.com',
     basePath: '/api/'
   },
-  apis: ['./routes/*.js']
+  apis: ['./routes/*.js', './models/*.js']
 });
 
 /* Routers */

@@ -1,7 +1,24 @@
 /**
-    MODEL : Services
-    TABLE: Services
-**/
+ * @swagger
+ * definitions:
+ *   Service:
+ *     type: "object"
+ *     required:
+ *       - id
+ *       - name
+ *       - responsible
+ *     properties:
+ *       id:
+ *         type: "integer"
+ *       name:
+ *         type: "string"
+ *       description:
+ *         type: "string"
+ *       responsible:
+ *         type: "integer"
+ *         description: "The doctor's id responsible of this service"
+ */
+
 var debug = require('debug')('model');
 
 module.exports = function(sequelize, DataTypes) {

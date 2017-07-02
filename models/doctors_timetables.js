@@ -1,7 +1,32 @@
 /**
-    MODEL: Doctors_timetables
-    TABLE: Doctors_timetables
-**/
+ * @swagger
+ * definitions:
+ *   Doctor_timetable:
+ *     description: "It represents where a doctor can be found on a certain day, location and time."
+ *     type: "object"
+ *     required:
+ *       - doctor_id
+ *       - day
+ *     properties:
+ *       doctor_id:
+ *         type: "integer"
+ *       day:
+ *         type: "string"
+ *         enum:
+ *           - Monday
+ *           - Tuesday
+ *           - Wednesday
+ *           - Thursday
+ *           - Friday
+ *           - Saturday
+ *           - Sunday
+ *       working_location_id:
+ *         type: "integer"
+ *       opening_time:
+ *         type: "string"
+ *       closing_time:
+ *         type: "string"
+ */
 
 var debug = require('debug')('model');
 

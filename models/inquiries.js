@@ -1,7 +1,36 @@
 /**
- MODEL: Inquiries
- TABLE: Inquiries
- **/
+ * @swagger
+ * definitions:
+ *   Inquiry:
+ *     type: "object"
+ *     description: "?"
+ *     required:
+ *       - id
+ *       - name
+ *       - surname
+ *       - phone
+ *       - mail
+ *       - target
+ *       - obj
+ *       - message
+ *     properties:
+ *       id:
+ *         type: "integer"
+ *       name:
+ *         type: "string"
+ *       surname:
+ *         type: "string"
+ *       phone:
+ *         type: "string"
+ *       mail:
+ *         type: "string"
+ *       target:
+ *         type: "string"
+ *       obj:
+ *         type: "string"
+ *       message:
+ *         type: "string"
+ */
 var debug = require('debug')('model');
 
 

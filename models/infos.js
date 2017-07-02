@@ -1,7 +1,24 @@
 /**
-    MODEL : Infos
-    TABLE: Infos
-**/
+ * @swagger
+ * definitions:
+ *   Info:
+ *     type: "object"
+ *     description: "?"
+ *     required:
+ *       - id
+ *     properties:
+ *       id:
+ *         type: "integer"
+ *       title:
+ *         type: "string"
+ *       text:
+ *         type: "string"
+ *       icon:
+ *         type: "string"
+ *       header:
+ *         type: "string"
+ */
+
 var debug = require('debug')('model');
 
 module.exports = function(sequelize, DataTypes) {
