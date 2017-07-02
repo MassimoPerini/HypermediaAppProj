@@ -36,14 +36,14 @@ Object.keys(db).forEach(function(modelName) {
 /* ASSOCIATIONS SETUP */
 // Service belongs to an area
 db.services.belongsTo(db.areas);
-db.areas.hasMany(db.services);
+//db.areas.hasMany(db.services);
 // Area responsible
 db.doctors.hasOne(db.areas, {foreignKey: 'responsible', as: 'area_responsible'});
 // Service responsible
 db.doctors.hasOne(db.services, {foreignKey: 'responsible', as: 'service_responsible'});
 // Location - Areas
 db.locations.belongsToMany(db.areas, {through: 'locations_areas'});
-db.areas.belongsToMany(db.locations, {through: 'locations_areas'});
+//db.areas.belongsToMany(db.locations, {through: 'locations_areas'});
 // Locations - Services
 db.locations.belongsToMany(db.services, { through: 'locations_services'});
 db.services.belongsToMany(db.locations, { through: 'locations_services'});
@@ -59,19 +59,6 @@ db.doctors_timetables.belongsTo(db.locations, { foreignKey : 'working_location_i
 // Location-Services
 db.locations.belongsToMany(db.services, {through: 'locations_services'});
 db.services.belongsToMany(db.locations, {through: 'locations_services'});
-
-
-
-/*BOOKINGS*/
-
-/*
-db.bookings.belongsTo(db.users, {foreignKey: 'username', targetKey: 'username'});
-db.bookings.belongsTo(db.services, {foreignKey: 'service', targetKey: 'id'});
-db.bookings.belongsTo(db.locations, {foreignKey: 'location', targetKey: 'id'});
-
-db.users.hasMany(db.bookings, {foreignKey: 'countryCode', sourceKey: 'isoCode'});
-*/
-
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

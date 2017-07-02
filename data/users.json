@@ -8,5 +8,10 @@
     "username" : "demo@example.com",
     "password" : "hypermedia",
     "mail" : "hypermedia@polimi.it"
+  },
+  {
+    "username" : "nicomon24",
+    "password" : "nicomon",
+    "mail" : "nico.montali24@gmail.com"
   }
 ]

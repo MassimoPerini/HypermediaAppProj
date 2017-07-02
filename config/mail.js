@@ -37,7 +37,7 @@ module.exports = {
         from: from, // sender address
         to: sendTo, // list of receivers
         subject: subject, // Subject line
-        text: body // plain text body
+        html: body // plain text body
     };
     // Send the defined email
     transporter.sendMail(mailOptions, (error, info) => {

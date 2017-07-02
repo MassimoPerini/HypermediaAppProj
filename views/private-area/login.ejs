@@ -11,31 +11,14 @@
         background: linear-gradient(to top, #185a9d, #43cea2) no-repeat center center fixed;
       }
 
+      #errors{
+        color: red;
+        padding: 16px;
+        font-size: 1.2em;
+      }
+
     </style>
-
-    <script type="text/javascript">
-
-        $(document).ready(function (){
-
-            params = new URLSearchParams(window.location.search);
-            if (params.get("error"))
-            {
-                $('.private-area-form').prepend('<p style="color: #FF2C25">Error login</p>')
-            }
-
-            $('#register, #login').click(function (e) {
-                    $('.register-form').animate({height: "toggle", opacity: "toggle"}, "slow");
-                    $('.login-form').animate({height: "toggle", opacity: "toggle"}, "slow");
-            });
-
-
-            $('#forget, #back').click(function (e) {
-                $('.forget-form').animate({height: "toggle", opacity: "toggle"}, "slow");
-                $('.login-form').animate({height: "toggle", opacity: "toggle"}, "slow");
-            });
-        });
-
-    </script>
+    <script src='/public/javascripts/login.js'></script>
 
   </head>
   <body>
@@ -43,6 +26,8 @@
   <section>
     <div class="private-area-form">
       <a href="/"><img src="/public/imgs/logo_fullsize.png"></a>
+
+      <div id='errors'></div>
 
       <form class="register-form" action="/signup" method="post">
         <input type="text" placeholder="Username" name="username" required/>
@@ -63,17 +48,14 @@
         <a href="#" id="forget">Forgot your password?</a>
       </form>
 
-      <form class="forget-form" action="/login" method="post">
-        <input type="email" placeholder="e-mail" required>
+      <form class="forget-form">
+        <input type="email" placeholder="e-mail" required id='forget-email'>
         <input type="submit" value="Recover">
         <a href="#" id="back">Back</a>
       </form>
 
     </div>
   </section>
-
-
-
 
   </body>
 </html>

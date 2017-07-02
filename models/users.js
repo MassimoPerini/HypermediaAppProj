@@ -17,10 +17,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
         allowNull: false
     },
-      mail: {
-          type: DataTypes.STRING,
-          allowNull: false
-      },
+    mail: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
  	  name: DataTypes.STRING,
     surname: DataTypes.STRING,
     cf: DataTypes.STRING
@@ -31,6 +31,11 @@ module.exports = function(sequelize, DataTypes) {
     hooks: {
 
       beforeCreate: function(instance, options){
+        //Hash password with SHA1 before inserting
+        instance.password = sha1(instance.password);
+      },
+
+      beforeUpdate: function(instance, options){
         //Hash password with SHA1 before inserting
         instance.password = sha1(instance.password);
       }

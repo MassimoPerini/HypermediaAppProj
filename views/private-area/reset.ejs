@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+      <%- include('../common/imports') %>
+
+    <style>
+      body {
+        background: #43cea2; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #185a9d, #43cea2) no-repeat center center fixed;
+        background: linear-gradient(to top, #185a9d, #43cea2) no-repeat center center fixed;
+      }
+
+      #errors{
+        color: red;
+        padding: 16px;
+        font-size: 1.2em;
+      }
+
+    </style>
+    <script src='/public/javascripts/recover.js'></script>
+
+  </head>
+  <body>
+    <script>
+      var token = "<%= token %>";
+    </script>
+  <section>
+    <div class="private-area-form">
+      <a href="/"><img src="/public/imgs/logo_fullsize.png"></a>
+
+      <div id='errors'></div>
+
+      <form class="recover-form">
+        <input type="password" placeholder="New password" required id='recover-password'>
+        <input type="submit" value="Set new password">
+      </form>
+
+    </div>
+  </section>
+
+  </body>
+</html>
