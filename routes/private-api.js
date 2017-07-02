@@ -23,7 +23,7 @@ router.get('/service/:id/location', function(req, res, next){
 });
 
 
-router.get('/api/reservation', function(req, res, next){
+router.post('/api/reservation', function(req, res, next){
     models.bookings.create(
         {
             username: req.user.username,
