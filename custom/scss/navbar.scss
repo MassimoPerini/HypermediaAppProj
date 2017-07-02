@@ -1,0 +1,89 @@
+@import "app.scss";
+
+/* ------------ NAVBAR ------------- */
+nav.navigation-content{
+  @extend .btn-group;
+  >.page{
+    @extend .btn, .btn-default;
+  }
+}
+
+//Navbar
+nav.main-navigation {
+  @extend .navbar, .navbar-default, .navbar-fixed-top;
+  background-color: $navbar-default-bg;
+  opacity: 0.85;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  min-height: $navbar-height;
+
+  .header {
+    @extend .navbar-header;
+  }
+
+  .brand {
+    @extend .navbar-brand;
+    //vertical-align: middle;
+    //line-height: 80px;
+    //margin-left: 20px;
+    padding: 10px 0% 10px 20px;
+    //margin: -20px 0px 0px 0px;
+
+    >img{
+      width: auto;
+      height: 100%;
+      //margin-left: 10px;
+      //margin-left: 20%
+      //padding: 20%;
+    }
+
+  }
+
+  .landmarks {
+    @extend .collapse, .navbar-collapse;
+    text-align: center;
+    //max-height: none;
+    //overflow-y: visible !important;
+
+    > ul {
+      @extend .nav, .navbar-nav;
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      li {
+      }
+    }
+
+    .dropdown{
+      a{
+        @extend .dropdown-toggle;
+        color: #FFFFFF;
+        &:hover{
+          color: $navbar-default-link-hover-color !important;
+        }
+      }
+
+      >ul{
+        @extend .dropdown-menu;
+        box-shadow: none;
+
+      }
+    }
+
+    @media (min-width: 979px) {
+      .dropdown:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+
+    .main-landmarks {
+      .landmarks-right {
+        @extend .navbar-right;
+      }
+    }
+  }
+}
+
+/* ------- SIDEBAR -------- */

@@ -58,6 +58,7 @@ module.exports = function (grunt) {
                		'public/stylesheets/app.css': 'custom/scss/app.scss',
                   'public/stylesheets/carousel.css': 'custom/scss/carousel.scss',
                   'public/stylesheets/home.css': 'custom/scss/home.scss',
+                  'public/stylesheets/navbar.css': 'custom/scss/navbar.scss',
                   'public/stylesheets/doctors-search.css': 'custom/scss/doctors-search.scss'
                 }
             },
@@ -69,6 +70,7 @@ module.exports = function (grunt) {
                		'public/stylesheets/app.css': 'custom/scss/app.scss',
                   'public/stylesheets/carousel.css': 'custom/scss/carousel.scss',
                   'public/stylesheets/home.css': 'custom/scss/home.scss',
+                  'public/stylesheets/navbar.css': 'custom/scss/navbar.scss',
                   'public/stylesheets/doctors-search.css': 'custom/scss/doctors-search.scss'
                 }
             }
