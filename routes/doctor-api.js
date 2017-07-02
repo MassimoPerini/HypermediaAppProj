@@ -33,23 +33,23 @@ router.get('/api/doctor', function(req, res, next){
     var service = req.query["service"];
     var area = req.query["area"];
     var location = req.query["location"];
-    var serviceQuery = (service) ? {id : service} : {};
+    var serviceQuery = (service) ? {id : service} : null;
     var locationQuery = (location) ? {id : location} : {};
     var areaQuery = (area) ? {id: area} : {};
     // Get all doctors, apply pagination after
     // FIXME: sequelize has a broken findAndCountAll that is faster than manual pagination,
     // but is bugged.
+    debug(serviceQuery);
     models.doctors.findAll({
       include:[{
         model: models.services,
-        as: 'doctors_services',
         where: serviceQuery,
-        attributes: [],
+        /*attributes: [],
         include: [{
           model: models.areas,
           where: areaQuery,
           attributes: []
-        }]
+        }]*/
       },{
         model: models.doctors_timetables,
         attributes: [],
@@ -98,6 +98,9 @@ router.get('/api/doctor/:id', function(req, res, next){
     },{
       model: models.services,
       as: 'service_responsible',
+      attributes: ['id', 'name']
+    },{
+      model: models.services,
       attributes: ['id', 'name']
     },{
       model: models.areas,

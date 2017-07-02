@@ -48,8 +48,8 @@ db.areas.belongsToMany(db.locations, {through: 'locations_areas'});
 db.locations.belongsToMany(db.services, { through: 'locations_services'});
 db.services.belongsToMany(db.locations, { through: 'locations_services'});
 // Services - Doctors
-db.doctors.belongsToMany(db.services, { through: 'doctors_services', as: 'doctors_services'});
-db.services.belongsToMany(db.doctors, { through: 'doctors_services', as: 'doctors_services'});
+db.doctors.belongsTo(db.services, {constraints: false});
+db.services.hasMany(db.doctors, {constraints: false});
 // Doctors - Doctors timetables
 db.doctors.hasMany(db.doctors_timetables, { foreignKey : 'doctor_id'});
 // Locations - Locations timetables
