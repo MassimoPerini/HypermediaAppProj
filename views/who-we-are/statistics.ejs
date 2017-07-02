@@ -5,7 +5,7 @@
     <%- include('../common/imports') %>
     <style>
       header{
-        background-image: url("../public/imgs/bg/statistics.jpg");
+        background-image: url("../public/imgs/bg/stats.jpg");
       }
     </style>
     <script src="/public/javascripts/Chart.js/Chart.min.js"></script>
@@ -23,8 +23,8 @@
       <article>
         <div>
           <h2>Number of people</h2>
-          <p>In order to offer the best service to our customers, our personal is composed by 30 physicians and 
-          scientists and 45 trainee and fellows. Our excellent health staff is composed by 57100 people so they 
+          <p>In order to offer the best service to our customers, our personal is composed by 30 physicians and
+          scientists and 45 trainee and fellows. Our excellent health staff is composed by 57100 people so they
           will surely be able to satisfy every your desire.<br>So, in total around 118 people work in our clinics.<br>
           Last year, 55000 people came to CPM Clinic for care, and we helped people for 88000 human ours.<br>
           These are the datas for each area:</p>
@@ -84,7 +84,7 @@
         <div>
           <h2>Financial informations</h2>
           <p>From year 2015, we increased our 2016 total revenue of +58%. Here our incomings, thanks for contributions and donations:</p>
-          <div class="chart-container" style="position: relative; height:60vh; width:60vw">
+          <div class="chart-container" style="position: relative; height:60vh; width:60vw; margin-bottom:64px;">
             <canvas id="moneyChart"></canvas>
           </div>
           <script>
@@ -128,6 +128,18 @@
       </article>
 
       <aside>
+
+        <div class="card">
+          <a href="/who-we-are">
+            <div class="card-header">
+              <center><img src="/public/imgs/location.svg"></img></center>
+            </div>
+            <div class="card-text">
+              <h5>Back to Who we are</h5>
+            </div>
+          </a>
+        </div>
+
         <div class="card">
           <a href="/who-we-are/gallery">
             <div class="card-header">
@@ -139,16 +151,6 @@
           </a>
         </div>
 
-        <div class="card">
-          <a href="/who-we-are/statistics">
-            <div class="card-header">
-              <center><img src="/public/imgs/statistics.svg"></img></center>
-            </div>
-            <div class="card-text">
-              <h5>Statistics</h5>
-            </div>
-          </a>
-        </div>
       </aside>
 
     </section>

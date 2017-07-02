@@ -9,14 +9,10 @@ var models = require('../models');
 var router = express.Router();
 
 router.get('/contacts', function(req, res, next){
-
     models.areas.findAll({})
         .then(function(areas){
-            res.render('contact', { title: 'Contatti', areas: areas, user:req.user});
+            res.render('contact', { title: 'Contacts', areas: areas, user:req.user});
         });
-
-       //     res.render('contact', { title: 'Contatti'});
 });
-
 
 module.exports = router;

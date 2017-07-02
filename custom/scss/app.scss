@@ -58,7 +58,7 @@ header {
 
   img{
     display: table-cell;
-    width: 100%;
+    width: 80%;
     position: absolute;
     bottom: 0;
     left:0;
@@ -67,9 +67,9 @@ header {
     margin-right:auto;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: $screen-md-min) {
     img {
-      width: 70%;
+      width: 50%;
     }
   }
 

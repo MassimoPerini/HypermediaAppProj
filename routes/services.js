@@ -52,14 +52,7 @@ router.get('/service/:id/operating-doctors', function(req, res, next){
 });
 
 router.get('/service/:id/instrumentations', function(req, res, next) {
-    models.services.findOne({
-        where : { id : req.params.id}
-    }).then(function(service){
-        res.render('service/instrumentations', { title: 'Instrumentation of ' + service.name, service: service, user:req.user});
-    }).catch(function(error) {
-        debug(error);
-        next(error);
-    });
+    res.render('blank', {title: 'WIP page', user:req.user});
 });
 
 module.exports = router;

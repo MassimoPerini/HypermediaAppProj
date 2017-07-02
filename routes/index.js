@@ -23,4 +23,12 @@ fs.readdirSync(__dirname)
   router.use(subrouter);
 });
 
+/* --- WIP Pages --- */
+// These are pages that are browseable (in the navbar or with link) but are yet to be implemented
+// Given that they were not required, we did not implement these due to the time factor and
+router.get(['/infos', '/news', '/faq'], function(req, res, next){
+  res.render('blank', {title: 'Gallery', user:req.user});
+});
+
+
 module.exports = router;

@@ -13,28 +13,7 @@
     }
 
   </style>
-
-  <script type="text/javascript">
-
-      $(document).ready(function (){
-          $('form').submit(function(e) {
-              $("#contact-form").empty().append("<div class='loading' style='transform:scale(0.31);'><div></div><div></div></div>");
-              $.ajax({
-                  type: "POST",
-                  url: "/api/contact",
-                  data: $(this).serialize(),
-                  success: function(data)
-                  {
-                      $("#contact-form").empty().append(data.message);
-                  }
-              });
-              e.preventDefault();
-          });
-      });
-
-
-  </script>
-
+  <script src="/public/javascripts/contacts.js"></script>
 
 </head>
 <body>
@@ -88,6 +67,7 @@
         <div>
           <label for="target">Area target</label>
           <select id="target" name="target">
+            <option name="generic">Generic</option>
             <%areas.forEach((area) => {%>
             <option name="<%=area.name%>" value="<%=area.id%>"><%=area.name%></option>
             <%})%>
