@@ -8480,6 +8480,23 @@ header > div > h1, header.two-sided > article > h1, header.two-sided > aside > h
   opacity: 0.85;
 }
 
+header img {
+  display: table-cell;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 800px) {
+  header img {
+    width: 70%;
+  }
+}
+
 header.doctor {
   text-align: center;
 }
@@ -8492,6 +8509,10 @@ header.doctor > div.profile, header.two-sided.doctor > article.profile, header.t
 
 header.doctor > div.profile > img, header.two-sided.doctor > article.profile > img, header.two-sided.doctor > aside.profile > img, header.doctor > .profile.list > img, header.doctor > .profile.list-lg > img, header.doctor > .profile.list-md > img {
   height: 100%;
+  /*FIX*/
+  position: relative;
+  width: auto;
+  display: inline-block;
 }
 
 /* ------------ COMPONENTS ------------- */
