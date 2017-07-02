@@ -22,6 +22,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "footer-reveal": "*",
-    "chart.js": "^2.6.0"
+    "chart.js": "^2.6.0",
+    "Modernizr": "https://modernizr.com/download/?-inputtypes-setclasses.zip"
   }
 }

@@ -39,6 +39,19 @@ module.exports = function (grunt) {
                         cwd: 'bower_components/',
                         src: ['bootstrap-sass/assets/fonts/**'],
                         dest: 'public/fonts/bootstrap/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/Modernizr/',
+                        src: ['**/*.js'],
+                        dest: 'public/javascripts/Modernizr/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/pickadate/lib/compressed',
+                        filter: 'isFile',
+                        src: ['**/*.js'],
+                        dest: 'public/javascripts/pickadate/'
                     }
                 ]
             },
@@ -59,7 +72,9 @@ module.exports = function (grunt) {
                   'public/stylesheets/carousel.css': 'custom/scss/carousel.scss',
                   'public/stylesheets/home.css': 'custom/scss/home.scss',
                   'public/stylesheets/navbar.css': 'custom/scss/navbar.scss',
-                  'public/stylesheets/doctors-search.css': 'custom/scss/doctors-search.scss'
+                  'public/stylesheets/doctors-search.css': 'custom/scss/doctors-search.scss',
+                  'public/stylesheets/pickadate/default.css' : 'bower_components/pickadate/lib/themes/default.css',
+                  'public/stylesheets/pickadate/default.date.css' :'bower_components/pickadate/lib/themes/default.date.css'
                 }
             },
             debug: {
@@ -71,10 +86,13 @@ module.exports = function (grunt) {
                   'public/stylesheets/carousel.css': 'custom/scss/carousel.scss',
                   'public/stylesheets/home.css': 'custom/scss/home.scss',
                   'public/stylesheets/navbar.css': 'custom/scss/navbar.scss',
-                  'public/stylesheets/doctors-search.css': 'custom/scss/doctors-search.scss'
+                  'public/stylesheets/doctors-search.css': 'custom/scss/doctors-search.scss',
+                  'public/stylesheets/pickadate/default.css' : 'bower_components/pickadate/lib/themes/default.css',
+                  'public/stylesheets/pickadate/default.date.css' :'bower_components/pickadate/lib/themes/default.date.css'
                 }
             }
         },
+        
 
         uglify: {
     		debug: {
@@ -142,7 +160,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
-	  grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks("grunt-modernizr");
+	grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jsdoc');
     // Establish tasks we can run from the terminal.
     // grunt.registerTask('build', ['sass', 'copy']);

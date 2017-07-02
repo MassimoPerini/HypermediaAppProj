@@ -11,6 +11,11 @@
     }
   </style>
 
+  <link rel="stylesheet" href="/public/stylesheets/pickadate/default.css" />
+  <link rel="stylesheet" href="/public/stylesheets/pickadate/default.date.css"/>
+  <script type="text/javascript" src="/public/javascripts/pickadate/picker.js"></script>
+  <script type="text/javascript" src="/public/javascripts/pickadate/picker.date.js"></script>
+
   <script type="text/javascript">
 
     function loadNewLocations(serviceId) {
@@ -26,8 +31,19 @@
 
 
     $(document).ready(function (){
+        var now = new Date();
+        var minDate = now.toISOString().substring(0,10);
+        $('#date').prop('min', minDate);
 
         var defaultPage = $("#booking-form").children();
+
+
+        // If they do not have HTML5 date then provide a datepicker using javascript
+        if (!Modernizr.inputtypes.date) {
+            $( "input[type=date]" ).pickadate({
+                min: now
+            });
+       }
 
         $('body').on('click','#reserve-again', function() {
             $("#booking-form").empty().append(defaultPage);
@@ -77,7 +93,8 @@
     <form>
       <div>
         <label for="date">Date: </label>
-        <input type="date" id="date" name="date" placeholder="Date" required>
+
+        <input type="date" id="date" name="date" placeholder="Date" min="2014-05-11" required>
       </div>
       <div>
         <label for="hour">Hour:</label>
