@@ -70,7 +70,9 @@
                 data: $(this).serialize(),
                 success: function(data)
                 {
-                    $('#booking-form').empty().append("<a href='/private'>Go back</a><button id='reserve-again'>Do it again</button>");
+                    $('#booking-form').empty().append(
+                        "<div id='reserve-again' class='card'><div class='card-header'><center><img src='/public/imgs/do-again.svg' alt='again'></center></div><div class='card-text'><h5>Do again</h5></div></div>"
+                    );
                 }
             });
             e.preventDefault();
@@ -88,8 +90,7 @@
   <center>
     <h1>Prenota la tua stupida visita</h1>
   </center>
-  <article id="booking-form">
-
+  <article id="booking-form" class="only-form">
     <form>
       <div>
         <label for="date">Date: </label>
@@ -121,12 +122,26 @@
           <option>Choose a service before</option>
         </select>
       </div>
-      <input type="submit">
-
+      <div>
+        <input type="submit">
+      </div>
     </form>
-
   </article>
   <aside>
+
+    <div class="card">
+      <a href="/private">
+        <div class="card-header">
+          <center>
+            <img src="/public/imgs/location.svg" alt="back">
+          </center>
+        </div>
+        <div class="card-text">
+          <h5>Back to Personal Page</h5>
+        </div>
+      </a>
+    </div>
+
   </aside>
 </section>
 <%- include('../common/footer') %>

@@ -30,8 +30,30 @@
         <h5>CF: <%=user.cf%></h5>
       </article>
       <aside>
-        <button onclick="alert('ci credevi?')">PRENOTA!!!</button>
-        <a href="/logout">Logout</a>
+        <div class="card">
+          <a href="/reservation">
+            <div class="card-header">
+              <center>
+                <img src="/public/imgs/reserve.svg" alt="Reserve visit">
+              </center>
+            </div>
+            <div class="card-text">
+              <h5>Reserve your visit</h5>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="/logout">
+            <div class="card-header">
+              <center>
+                <img src="/public/imgs/logout.svg" alt="Logout">
+              </center>
+            </div>
+            <div class="card-text">
+              <h5>Logout</h5>
+            </div>
+          </a>
+        </div>
       </aside>
     </section>
   <%- include('../common/footer') %>

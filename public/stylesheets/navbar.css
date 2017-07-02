@@ -1937,36 +1937,36 @@ pre code {
   overflow-y: scroll;
 }
 
-.container, #contact-form {
+.container, .only-form {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.container:before, #contact-form:before, .container:after, #contact-form:after {
+.container:before, .only-form:before, .container:after, .only-form:after {
   content: " ";
   display: table;
 }
 
-.container:after, #contact-form:after {
+.container:after, .only-form:after {
   clear: both;
 }
 
 @media (min-width: 768px) {
-  .container, #contact-form {
+  .container, .only-form {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  .container, #contact-form {
+  .container, .only-form {
     width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container, #contact-form {
+  .container, .only-form {
     width: 1170px;
   }
 }
@@ -5123,9 +5123,9 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
   }
 }
 
-.container > .navbar-header, #contact-form > .navbar-header, nav.main-navigation .container > .header, nav.main-navigation #contact-form > .header,
-.container > .navbar-collapse, #contact-form > .navbar-collapse, nav.main-navigation
-.container > .landmarks, nav.main-navigation #contact-form > .landmarks,
+.container > .navbar-header, .only-form > .navbar-header, nav.main-navigation .container > .header, nav.main-navigation .only-form > .header,
+.container > .navbar-collapse, .only-form > .navbar-collapse, nav.main-navigation
+.container > .landmarks, nav.main-navigation .only-form > .landmarks,
 .container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
 .container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
 .container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
@@ -5135,9 +5135,9 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 }
 
 @media (min-width: 992px) {
-  .container > .navbar-header, #contact-form > .navbar-header, nav.main-navigation .container > .header, nav.main-navigation #contact-form > .header,
-  .container > .navbar-collapse, #contact-form > .navbar-collapse, nav.main-navigation
-  .container > .landmarks, nav.main-navigation #contact-form > .landmarks,
+  .container > .navbar-header, .only-form > .navbar-header, nav.main-navigation .container > .header, nav.main-navigation .only-form > .header,
+  .container > .navbar-collapse, .only-form > .navbar-collapse, nav.main-navigation
+  .container > .landmarks, nav.main-navigation .only-form > .landmarks,
   .container-fluid > .navbar-header, .one-sided > .navbar-header, .two-sided > .navbar-header, footer > .navbar-header, nav.main-navigation
   .container-fluid > .header, nav.main-navigation .one-sided > .header, nav.main-navigation .two-sided > .header, nav.main-navigation footer > .header,
   .container-fluid > .navbar-collapse, .one-sided > .navbar-collapse, .two-sided > .navbar-collapse, footer > .navbar-collapse, nav.main-navigation
@@ -5201,7 +5201,7 @@ nav.navigation-content.input-group-btn:first-child > .page:not(:first-child),
 }
 
 @media (min-width: 992px) {
-  .navbar > .container .navbar-brand, nav.main-navigation > .container .navbar-brand, .navbar > #contact-form .navbar-brand, nav.main-navigation > #contact-form .navbar-brand, .navbar > .container nav.main-navigation .brand, nav.main-navigation .navbar > .container .brand, nav.main-navigation > .container .brand, .navbar > #contact-form nav.main-navigation .brand, nav.main-navigation .navbar > #contact-form .brand, nav.main-navigation > #contact-form .brand,
+  .navbar > .container .navbar-brand, nav.main-navigation > .container .navbar-brand, .navbar > .only-form .navbar-brand, nav.main-navigation > .only-form .navbar-brand, .navbar > .container nav.main-navigation .brand, nav.main-navigation .navbar > .container .brand, nav.main-navigation > .container .brand, .navbar > .only-form nav.main-navigation .brand, nav.main-navigation .navbar > .only-form .brand, nav.main-navigation > .only-form .brand,
   .navbar > .container-fluid .navbar-brand, nav.main-navigation > .container-fluid .navbar-brand,
   .navbar > .one-sided .navbar-brand, nav.main-navigation > .one-sided .navbar-brand,
   .navbar > .two-sided .navbar-brand, nav.main-navigation > .two-sided .navbar-brand,
@@ -5988,14 +5988,14 @@ a.badge:hover, a.badge:focus {
   border-top-color: #e1e0e0;
 }
 
-.container .jumbotron, #contact-form .jumbotron,
+.container .jumbotron, .only-form .jumbotron,
 .container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron {
   border-radius: 0;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.jumbotron .container, .jumbotron #contact-form {
+.jumbotron .container, .jumbotron .only-form {
   max-width: 100%;
 }
 
@@ -6004,7 +6004,7 @@ a.badge:hover, a.badge:focus {
     padding-top: 48px;
     padding-bottom: 48px;
   }
-  .container .jumbotron, #contact-form .jumbotron,
+  .container .jumbotron, .only-form .jumbotron,
   .container-fluid .jumbotron, .one-sided .jumbotron, .two-sided .jumbotron, footer .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
@@ -8960,12 +8960,12 @@ center > h1 {
   text-decoration: none;
 }
 
-#contact-form {
+.only-form {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media (min-width: 450px) {
-  #contact-form {
+  .only-form {
     width: 450px;
   }
 }
