@@ -8664,7 +8664,7 @@ header > div > h1, header.two-sided > article > h1, header.two-sided > aside > h
 
 header img {
   display: table-cell;
-  width: 100%;
+  width: 80%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -8673,9 +8673,9 @@ header img {
   margin-right: auto;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 992px) {
   header img {
-    width: 70%;
+    width: 50%;
   }
 }
 

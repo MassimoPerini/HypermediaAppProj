@@ -56,8 +56,10 @@
       padding-bottom: 6%;
       padding-top: 6%;
       >div.relax-image{
-        @include make-xs-column(3);
-        @include make-xs-column-offset(3);
+        @include make-xs-column(6);
+        @include make-sm-column(3);
+        @include make-sm-column-offset(3);
+
         img{
           @extend .img-circle;
           width: 100%;
@@ -104,7 +106,7 @@
     margin-right: 10px;
 
     .avatar{
-      @include make-xs-column(3);
+      @include make-xs-column(4);
       @include make-sm-column(3);
       @include make-md-column(3);
       @include make-lg-column(3);
@@ -117,7 +119,7 @@
     }
 
     .quote{
-      @include make-xs-column(9);
+      @include make-xs-column(8);
       @include make-sm-column(9);
       @include make-md-column(9);
       @include make-lg-column(9);

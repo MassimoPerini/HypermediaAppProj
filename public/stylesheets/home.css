@@ -8483,7 +8483,7 @@ header > div > h1, header.two-sided > article > h1, header.two-sided > aside > h
 
 header img {
   display: table-cell;
-  width: 100%;
+  width: 80%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -8492,9 +8492,9 @@ header img {
   margin-right: auto;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 992px) {
   header img {
-    width: 70%;
+    width: 50%;
   }
 }
 
@@ -9377,11 +9377,27 @@ section.navigation-child .button {
 .home > article > section.contact > div.relax-image, .home > article.one-sided > section.contact > section.relax-image, .home > article.one-sided > section.contact > aside.relax-image, .home > article.one-sided > section.contact > article.relax-image, .home > article > section.two-sided.contact > article.relax-image, .home > article > section.two-sided.contact > aside.relax-image, .home > article > section.contact > .relax-image.list, .home > article > section.contact > .relax-image.list-lg, .home > article > section.contact > .relax-image.list-md {
   position: relative;
   float: left;
-  width: 25%;
+  width: 50%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 25%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .home > article > section.contact > div.relax-image, .home > article.one-sided > section.contact > section.relax-image, .home > article.one-sided > section.contact > aside.relax-image, .home > article.one-sided > section.contact > article.relax-image, .home > article > section.two-sided.contact > article.relax-image, .home > article > section.two-sided.contact > aside.relax-image, .home > article > section.contact > .relax-image.list, .home > article > section.contact > .relax-image.list-lg, .home > article > section.contact > .relax-image.list-md {
+    float: left;
+    width: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .home > article > section.contact > div.relax-image, .home > article.one-sided > section.contact > section.relax-image, .home > article.one-sided > section.contact > aside.relax-image, .home > article.one-sided > section.contact > article.relax-image, .home > article > section.two-sided.contact > article.relax-image, .home > article > section.two-sided.contact > aside.relax-image, .home > article > section.contact > .relax-image.list, .home > article > section.contact > .relax-image.list-lg, .home > article > section.contact > .relax-image.list-md {
+    margin-left: 25%;
+  }
 }
 
 .home > article > section.contact > div.relax-image img, .home > article.one-sided > section.contact > section.relax-image img, .home > article.one-sided > section.contact > aside.relax-image img, .home > article.one-sided > section.contact > article.relax-image img, .home > article > section.two-sided.contact > article.relax-image img, .home > article > section.two-sided.contact > aside.relax-image img, .home > article > section.contact > .relax-image.list img, .home > article > section.contact > .relax-image.list-lg img, .home > article > section.contact > .relax-image.list-md img {
@@ -9479,7 +9495,7 @@ section.navigation-child .button {
 .quote-container blockquote .avatar, .home > article > section.quotes blockquote .avatar {
   position: relative;
   float: left;
-  width: 25%;
+  width: 33.3333333333%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -9527,7 +9543,7 @@ section.navigation-child .button {
 .quote-container blockquote .quote, .home > article > section.quotes blockquote .quote {
   position: relative;
   float: left;
-  width: 75%;
+  width: 66.6666666667%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;

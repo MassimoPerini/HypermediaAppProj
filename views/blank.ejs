@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Blank</title>
+  <title>WIP page</title>
   <%- include('common/imports') %>
   </head>
   <body>
-    <%- include('common/navbar', { page : '/doctor', user:user}) %>
-    <center>
-      <h2> This page is still under development </h2>
-    </center>
-
+    <%- include('common/navbar', { page : '/', user:user}) %>
+    <div id='content' class="container-fluid" style="text-align:center;">
+      <h1> This page is still under development </h1>
+      <p> This was not a strictly requested page, so it is not implemented right now. </p>
+      <a href="javascript:history.back()"><p>Go Back</p></a>
+    </div>
     <%- include('common/footer') %>
   </body>
 </html>
