@@ -1,7 +1,30 @@
 /**
-    MODEL : Locations_timetables
-    TABLE: Locations_timetables
-**/
+ * @swagger
+ * definitions:
+ *   Location_timetable:
+ *     description: "It represents the time schedule of locations with respect to days, closing and opening time."
+ *     type: "object"
+ *     required:
+ *       - location_id
+ *       - day
+ *     properties:
+ *       location_id:
+ *         type: "integer"
+ *       day:
+ *         type: "string"
+ *         enum:
+ *           - Monday
+ *           - Tuesday
+ *           - Wednesday
+ *           - Thursday
+ *           - Friday
+ *           - Saturday
+ *           - Sunday
+ *       opening_time:
+ *         type: "string"
+ *       closing_time:
+ *         type: "string"
+ */
 
 var debug = require('debug')('model');
 

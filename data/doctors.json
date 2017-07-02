@@ -262,5 +262,16 @@
     "description": "Dr. Akira Kawashima is one of our top researchers with long experience in Radiology. He is the responsible for the Radiology area at CPM. He is mainly interested in Genitourinary radiology.",
     "icon": "/public/imgs/doctors/kawashima.jpg",
     "header": ""
+  },
+  {
+    "id": 25,
+    "fullname": "Dr. Eric Foreman",
+    "surname": "Foreman",
+    "position": "Neurologist",
+    "phone": "3312200220",
+    "email": "foreman@cpm.com",
+    "description": "A neurologist, Foreman is member of specialists at Princeton-Plainsboro Teaching Hospital's Diagnostic Medicine Department. Foreman attended Columbia University as an undergraduate before matriculating at the Johns Hopkins School of Medicine. He had a 4.0 GPA through medical school.",
+    "icon": "/public/imgs/doctors/foreman.jpg",
+    "header": ""
   }
 ]

@@ -1,7 +1,28 @@
 /**
-    MODEL : Users
-    TABLE: Users
-**/
+ * @swagger
+ * definitions:
+ *   User:
+ *     type: "object"
+ *     description: "User account for private section"
+ *     required:
+ *       - username
+ *       - password
+ *       - mail
+ *     properties:
+ *       username:
+ *         type: "string"
+ *       password:
+ *         type: "string"
+ *       mail:
+ *         type: "string"
+ *       name:
+ *         type: "string"
+ *       surname:
+ *         type: "string"
+ *       cf:
+ *         type: "string"
+ */
+
 var debug = require('debug')('model');
 
 var sha1 = require('sha1');
