@@ -41,8 +41,7 @@ router.get('/service/:id/operating-doctors', function(req, res, next){
       model : models.areas,
       attributes : ['name', 'icon']
     }, {
-        model : models.doctors,
-        as: 'doctors_services'
+        model : models.doctors
     }]
   }).then(function(service) {
     res.render('service/operating-doctors', { title: 'Doctors operating in ' + service.name, service: service, user:req.user});

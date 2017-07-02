@@ -53,7 +53,7 @@ async function loadData(){
   for (var service of services){
     if (service.doctors){
       var _service = await models.services.findById(service.id);
-      await _service.setDoctors_services(service.doctors);
+      await _service.setDoctors(service.doctors);
     }
   }
   // End function
