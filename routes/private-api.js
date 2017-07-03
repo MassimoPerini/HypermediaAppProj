@@ -20,7 +20,7 @@ const PWD_RESET_EXPIRATION_TIME = 15 * 60;
  *     tags:
  *       - Password
  *     summary: Reset user password
- *     description: Appends a password reset token to the user, to make possible to change the password. Of course this operation can be applied only on registered users. 
+ *     description: Appends a password reset token to the user, to make possible to change the password. Of course this operation can be applied only on registered users.
  *     parameters:
  *       - name: email
  *         in: body
@@ -114,6 +114,40 @@ router.post('/api/password/set', function(req, res, next){
     debug(error);
     next(error);
   });
+});
+
+router.get('/service/:id/location', function(req, res, next){
+    models.locations.findAll({
+        include:[{
+            model: models.services,
+            where: {id: req.params.id},
+            attributes: []
+        }]
+    }).then(function(locations){
+        res.send({
+            data: locations
+        });
+    }).catch(function(error){
+        debug(error);
+        next(error);
+    });
+});
+
+router.post('/api/reservation', function(req, res, next){
+    models.bookings.create(
+        {
+            username: req.user.username,
+            day: req.body.date,
+            time_slot: req.body.hour,
+            service: req.body.service,
+            location: req.body.location,
+        }
+    ).then(function () {
+        return res.status(200).json({message: "Thank you!"});
+    }).catch(function (err) {
+        debug(err);
+        return res.status(400).json({ message: "error" });
+    })
 });
 
 module.exports = router;

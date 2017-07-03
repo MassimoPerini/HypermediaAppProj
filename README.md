@@ -38,7 +38,7 @@ This scripts loads all the JSONs files in the data directory. We implemented thi
 ### SEQUELIZE:
 To access (and manage) the DB we used the Sequelize library:
 
-> “Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.”
+> Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
 
 [SequelizeJS website](http://docs.sequelizejs.com)
 
