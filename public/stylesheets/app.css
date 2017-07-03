@@ -9240,4 +9240,8 @@ section.navigation-child .button {
   filter: blur(3px);
 }
 
+.picker__holder {
+  overflow-y: hidden;
+}
+
 /*end*/

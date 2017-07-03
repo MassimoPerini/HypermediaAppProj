@@ -3,6 +3,10 @@
 <head>
   <title><%= title %></title>
 
+  <link rel="stylesheet" href="/public/stylesheets/pickadate/default.css" />
+  <link rel="stylesheet" href="/public/stylesheets/pickadate/default.date.css"/>
+  <!-- app.css contiene il fix per il footer-->
+
     <%- include('../common/imports') %>
 
   <style>
@@ -11,8 +15,7 @@
     }
   </style>
 
-  <link rel="stylesheet" href="/public/stylesheets/pickadate/default.css" />
-  <link rel="stylesheet" href="/public/stylesheets/pickadate/default.date.css"/>
+
   <script type="text/javascript" src="/public/javascripts/pickadate/picker.js"></script>
   <script type="text/javascript" src="/public/javascripts/pickadate/picker.date.js"></script>
 
@@ -58,7 +61,7 @@
     //    $('form').submit(function(e) {
             if ($('#service').val() === "-1")
             {
-                alert("Non mi freghi così");
+                alert("Input not valid");
                 e.preventDefault();
                 return;
             }
@@ -71,7 +74,7 @@
                 success: function(data)
                 {
                     $('#booking-form').empty().append(
-                        "<div id='reserve-again' class='card'><div class='card-header'><center><img src='/public/imgs/do-again.svg' alt='again'></center></div><div class='card-text'><h5>Do again</h5></div></div>"
+                        "<div class='row'><div class='col-sm-2'><div id='reserve-again' class='card'><div class='card-header'><center><img src='/public/imgs/do-again.svg' alt='again'></center></div><div class='card-text'><h5>Do again</h5></div></div></div></div>"
                     );
                 }
             });
