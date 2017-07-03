@@ -117,7 +117,7 @@ router.post('/api/password/set', function(req, res, next){
 });
 
 /** @swagger
- * /service/:id/location:
+ * /api/service/:id/location:
  *   get:
  *     tags:
  *       - Service
@@ -136,7 +136,7 @@ router.post('/api/password/set', function(req, res, next){
  *         type: integer
  *         minimum: 1
  */
-router.get('/service/:id/location', function(req, res, next){
+router.get('/api/service/:id/location', function(req, res, next){
     models.locations.findAll({
         include:[{
             model: models.services,

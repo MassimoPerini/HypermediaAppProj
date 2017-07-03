@@ -1,5 +1,5 @@
 function loadNewLocations(serviceId) {
-    $.getJSON("/service/"+serviceId+"/location", function(result){
+    $.getJSON("/api/service/"+serviceId+"/location", function(result){
         console.log(result);
         var append = "";
         $.each(result.data, function (i, item) {
