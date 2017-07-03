@@ -47,6 +47,7 @@
  *         type: "string"
  *       email:
  *         type: "string"
+ *         format: 'email'
  */    
 
 var debug = require('debug')('model');

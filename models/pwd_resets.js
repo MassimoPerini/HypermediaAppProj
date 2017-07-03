@@ -1,7 +1,19 @@
 /**
- MODEL: pwd_resets
- TABLE: pwd_resets
- **/
+ * @swagger
+ * definitions:
+ *   Pwd_reset:
+ *     description: Object definition that enables users to change password for their accounts.
+ *     type: object
+ *     required:
+ *       - id
+ *       - token
+ *     properties:
+ *       id:
+ *         type: integer
+ *       token:
+ *         type: string
+ */
+
 var debug = require('debug')('model');
 var crypto = require('crypto');
 

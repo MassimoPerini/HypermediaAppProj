@@ -24,6 +24,7 @@
  *         type: "string"
  *       mail:
  *         type: "string"
+ *         format: 'email'
  *       target:
  *         type: "string"
  *       obj:

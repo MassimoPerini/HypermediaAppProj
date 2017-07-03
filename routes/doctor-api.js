@@ -14,14 +14,50 @@ const DEFAULT_PAGE_SIZE = 12;
  * @swagger
  * /doctor:
  *   get:
+ *     summary: Gets all doctors
  *     tags:
  *       - Doctor
- *     description: Returns all doctors
+ *     description: Returns all doctors, with the possibility to filter them by service, by area and by location. Further is also possible the retrieve a certain page of doctors using the paging parameters.
  *     produces:
  *       - application/json
+ *     parameters:
+ *       - name: page
+ *         in: query
+ *         description: "[Pagin parameter] The index of the page requested."
+ *         type: integer
+ *         minimum: 0
+ *         required: false
+ *       - name: pagesize
+ *         in: query
+ *         description: "[Paging parameter] The number of doctor per page."
+ *         type: integer
+ *         minimum: 0
+ *         required: false
+ *       - name: service
+ *         in: query
+ *         description: "[Filter parameter] The id of the service to get all the doctors that operate in that service."
+ *         type: integer
+ *         minimum: 1
+ *         required: false
+ *       - name: area
+ *         in: query
+ *         description: "[Filter parameter] The id of the area to get all the doctors working in."
+ *         type: integer
+ *         minimum: 1
+ *         required: false
+ *       - name: location
+ *         in: query
+ *         description: "[Filter parameter] The id of the location to get all the doctors working in."
+ *         type: integer
+ *         minimum: 1
+ *         required: false
  *     responses:
  *       200:
- *         description: An array of doctors
+ *         description: "Succesful operation: all the doctors satisfying the parameters."
+ *         schema:
+ *           type: array
+ *           items:
+ *             $ref: '#/definitions/Doctor'   
  */
 router.get('/api/doctor', function(req, res, next){
     // Paging parameters
@@ -74,16 +110,26 @@ router.get('/api/doctor', function(req, res, next){
 
 /**
  * @swagger
- * /doctors/:id:
+ * /doctors/{id}:
  *   get:
+ *     summary: Get a doctorr
  *     tags:
  *       - Doctor
- *     description: Returns a single doctor by id
+ *     description: Returns a single doctor by id.
  *     produces:
  *       - application/json
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         description: The id of the doctor to search.
+ *         type: integer
+ *         required: true
+ *         minimum: 1
  *     responses:
  *       200:
  *         description: The specified doctor
+ *         schema:
+ *           $ref: '#/definitions/Doctor'
  */
 router.get('/api/doctor/:id', function(req, res, next){
   models.doctors.findOne({

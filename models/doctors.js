@@ -23,6 +23,7 @@
  *          type: 'string'
  *        email:
  *          type: 'string'
+ *          format: 'email'
  *        description:
  *          type: 'string'
  */

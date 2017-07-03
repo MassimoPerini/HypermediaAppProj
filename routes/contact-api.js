@@ -1,17 +1,46 @@
 /**
  * Created by massimo on 29/06/17.
  */
-/**
 
- **/
 var debug = require('debug')('api');
 var express = require('express');
 var models = require('../models');
 
 var router = express.Router();
 
-
-
+/**
+ * @swagger
+ * /contact:
+ *   post:
+ *     tags:
+ *       - Contact
+ *     summary: Create an inquiry
+ *     description: used to send a message to the clinic.
+ *     produces:
+ *      - application/json
+ *     parameters:
+ *       - in: body
+ *         name: message
+ *         description: the message inquiry to create
+ *         required: true
+ *         schema:
+ *           $ref: '#/definitions/Inquiry'
+ *     responses:
+ *       200:
+ *         description: Succesful operation.
+ *         examples:
+ *           application/json:
+ *             message: Thank you!
+ *         schema:
+ *           $ref: '#/responses/GenericMessage'
+ *       400:
+ *         description: Error case.
+ *         schema:
+ *           $ref: '#/responses/GenericMessage'
+ *         examples:
+ *           application/json:
+ *             message: error
+ */  
 router.post('/api/contact', function(req, res, next) {
     models.inquiries.create(
         {
@@ -30,5 +59,17 @@ router.post('/api/contact', function(req, res, next) {
         return res.status(400).json({ message: "error" });
     })
 });
+
+/**
+ * @swagger
+ * responses:
+ *   GenericMessage:
+ *     description: Generic default answer message
+ *     required:
+ *       - message
+ *     properties:
+ *       message:
+ *         type: string
+ */
 
 module.exports = router;

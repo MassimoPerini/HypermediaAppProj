@@ -13,6 +13,29 @@ var router = express.Router();
 // Set expiration time to 15 minutes
 const PWD_RESET_EXPIRATION_TIME = 15 * 60;
 
+/**
+ * @swagger
+ * /password/reset:
+ *   post:
+ *     tags:
+ *       - Password
+ *     summary: Reset user password
+ *     description: Appends a password reset token to the user, to make possible to change the password. Of course this operation can be applied only on registered users. 
+ *     parameters:
+ *       - name: email
+ *         in: body
+ *         schema:
+ *           type: string
+ *           format: email
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Succesful operation
+ *         schema:
+ *           type: string
+ *         example:
+ *           "Sent email"
+ */
 router.post('/api/password/reset', function(req, res, next){
   models.users.findOne({
     where: {
@@ -38,6 +61,36 @@ router.post('/api/password/reset', function(req, res, next){
   });
 });
 
+/**
+ * @swagger
+ * /password/set:
+ *   post:
+ *     tags:
+ *       - Password
+ *     description: Sets a new password for a certain user that already has a token to authorize the operation. Of course only registered users can do this, since they received to token by email.
+ *     summary: Set user password
+ *     parameters:
+ *       - name: token
+ *         in: body
+ *         schema:
+ *           allOf:
+ *             - $ref: '#/definitions/Pwd_reset'
+ *             - properties:
+ *                 userUsername:
+ *                   type: string
+ *                   description: The username that needs to change the password
+ *         description: The pwd_object containing the token previously requested.
+ *         required: true
+ *       - name: password
+ *         schema:
+ *           type: string
+ *           format: password
+ *         required: true
+ *         in: body
+ *     responses:
+ *       200:
+ *         description: Succesful operation
+ */
 router.post('/api/password/set', function(req, res, next){
   models.pwd_resets.findOne({
     where: {

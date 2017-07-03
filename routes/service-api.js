@@ -14,12 +14,24 @@ var router = express.Router();
  *   get:
  *     tags:
  *       - Service
- *     description: Returns all services
+ *     summary: Gets all the services
+ *     description: Returns all services in the clinic
  *     produces:
  *       - application/json
  *     responses:
  *       200:
  *         description: An array of services
+ *         schema:
+ *           type: array
+ *           items:
+ *             allOf:
+ *               - $ref: '#/definitions/Service'
+ *               - properties:
+ *                   areadId:
+ *                     type: integer
+ *                     description: the id of the area whose the service is part of.
+ *                   area:                  
+ *                     $ref: '#/definitions/Area'
  */
 router.get('/api/service', function(req, res, next){
   models.services.findAll({
@@ -34,16 +46,26 @@ router.get('/api/service', function(req, res, next){
 
 /**
  * @swagger
- * /service/:id:
+ * /service/{id}:
  *   get:
  *     tags:
  *       - Service
+ *     summary: Find a service
  *     description: Returns a single service by id
  *     produces:
  *       - application/json
  *     responses:
  *       200:
  *         description: The specified service
+ *         schema:
+ *           $ref: '#/definitions/Service'
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         type: integer
+ *         minimum: 1
+ *         description: the id of the service to retrivie.
  */
 router.get('/api/service/:id', function(req, res, next){
   models.services.findOne({
@@ -55,17 +77,5 @@ router.get('/api/service/:id', function(req, res, next){
     next(error);
   });
 });
-
-router.post('/api/service', function(req, res, next){
-  models.services.create(req.body,{
-    include: [models.doctors]
-  }).then(function(service){
-    res.send(service);
-  }).catch(function(error){
-    debug(error);
-    next(error);
-  });
-});
-
 
 module.exports = router;

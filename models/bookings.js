@@ -1,12 +1,44 @@
 /**
  * Created by massimo on 02/07/17.
  */
-/**
- MODEL: Inquiries
- TABLE: Inquiries
- **/
-var debug = require('debug')('model');
 
+/**
+ * @swagger
+ * definitions:
+ *   Booking:
+ *     type: object
+ *     required:
+ *       - id
+ *       - username
+ *       - day
+ *       - time_slot
+ *       - service
+ *       - location
+ *     properties:
+ *       id:
+ *         type: integer
+ *       username:
+ *         type: string
+ *       day:
+ *         type: string
+ *         format: date
+ *       time_slot:
+ *         type: string
+ *         enum:
+ *           - early_morning
+ *           - late_morning
+ *           - lunch
+ *           - early_afternoon
+ *           - late_afternoon
+ *       service:
+ *         type: integer
+ *         description: the id of the service booked
+ *       location:
+ *         type: integer
+ *         description: the id of the location in which there is the service booked.
+ */
+
+var debug = require('debug')('model');
 
 module.exports = function(sequelize, DataTypes) {
 

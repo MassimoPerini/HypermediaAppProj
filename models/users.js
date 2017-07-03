@@ -13,8 +13,10 @@
  *         type: "string"
  *       password:
  *         type: "string"
+ *         format: "password"
  *       mail:
  *         type: "string"
+ *         format: 'email'
  *       name:
  *         type: "string"
  *       surname:

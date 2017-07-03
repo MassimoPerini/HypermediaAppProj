@@ -12,6 +12,7 @@ var router = express.Router();
  * @swagger
  * /location:
  *   get:
+ *     summary: Gets all the locations.
  *     tags:
  *       - Location
  *     description: Returns all locations
@@ -19,7 +20,11 @@ var router = express.Router();
  *       - application/json
  *     responses:
  *       200:
- *         description: An array of locations
+ *         description: All the locations in the clinic
+ *         schema:
+ *           type: array
+ *           items:
+ *             $ref: '#/definitions/Location'
  */
 router.get('/api/location', function(req, res, next) {
     models.locations.findAll({})
@@ -33,16 +38,26 @@ router.get('/api/location', function(req, res, next) {
 
 /**
  * @swagger
- * /locations/:id:
+ * /location/{id}:
  *   get:
  *     tags:
  *       - Location
- *     description: Returns a single location by id
+ *     summary: Find a location
+ *     description: Returns a single location by id.
  *     produces:
  *       - application/json
  *     responses:
  *       200:
  *         description: The specified location
+ *         schema:
+ *           $ref: '#/definitions/Location'
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         type: integer
+ *         minimum: 1
+ *         description: the id of the location to get.
  */
 router.get('/api/location/:id', function(req, res, next) {
     models.locations.findOne({
