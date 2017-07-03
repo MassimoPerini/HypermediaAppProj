@@ -17,7 +17,7 @@ $(document).ready(function (){
             data: $(this).serialize(),
             success: function(data)
             {
-                $("#contact-form").empty().append(data.message);
+                $("#contact-form").empty().append('<h3 style="text-align: center;">'+data.message+'</h3>');
             }
         });
         e.preventDefault();
