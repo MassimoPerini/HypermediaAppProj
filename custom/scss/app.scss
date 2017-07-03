@@ -103,12 +103,13 @@ header.doctor{
   box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.15);
   transition: 0.3s;
   border-radius: 4px;
-  background: #fff;
+  background-color: #fff;
   >a{
     width: 100%;
     height: 100%;
     display: block;
     border:0;
+    margin: 0;
     text-decoration: none;
     color: #525c65;
     transition: color 0.3s ease;
@@ -117,10 +118,12 @@ header.doctor{
     box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.2);
   }
   .card-header{
+    margin: 0;
     padding: 20px;
     background-color:rgba(16, 85, 146, 0.65);
   }
   .card-text{
+    padding: 8px;
     text-align: center;
     color: black;
   }
