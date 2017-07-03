@@ -48,7 +48,7 @@
  *       email:
  *         type: "string"
  *         format: 'email'
- */    
+ */
 
 var debug = require('debug')('model');
 
@@ -61,7 +61,6 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true
     },
  	  name: {type: DataTypes.STRING, allowNull: false},
-    icon: DataTypes.STRING,
     header: DataTypes.STRING,
     position: DataTypes.STRING,
     description: DataTypes.STRING,

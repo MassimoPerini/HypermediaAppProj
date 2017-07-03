@@ -40,7 +40,6 @@ module.exports = function(sequelize, DataTypes) {
  	  fullname: {type: DataTypes.STRING, allowNull: false},
     surname: DataTypes.STRING,
     icon: DataTypes.STRING,
-    header: DataTypes.STRING,
     position: DataTypes.STRING,
     phone: DataTypes.STRING,
     email: DataTypes.STRING,

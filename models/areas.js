@@ -32,7 +32,6 @@ module.exports = function(sequelize, DataTypes) {
     },
  	  name: {type: DataTypes.STRING, allowNull: false},
     icon: DataTypes.STRING,
-    header: DataTypes.STRING,
     description: DataTypes.TEXT,
     responsible: {
       type: DataTypes.INTEGER,
@@ -44,14 +43,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   },{
   	timestamps: true,
-    classMethods : {
-
-      associate: function(models){
-        Areas.hasMany(models.services);
-        Areas.belongsToMany(models.locations, {through: 'locations_areas'});
-      }
-
-    }
+    classMethods : {}
   });
 
   return Areas;

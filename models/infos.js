@@ -15,8 +15,6 @@
  *         type: "string"
  *       icon:
  *         type: "string"
- *       header:
- *         type: "string"
  */
 
 var debug = require('debug')('model');
@@ -32,7 +30,6 @@ module.exports = function(sequelize, DataTypes) {
     title: DataTypes.STRING,
  	  text: DataTypes.STRING,
     icon: DataTypes.STRING,
-    header: DataTypes.STRING
   },{
   	timestamps: true,
     classMethods : {

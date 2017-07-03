@@ -1,6 +1,6 @@
 {
-  "name": "website",
-  "version": "0.0.0",
+  "name": "CPM-clinic-website",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "DEBUG=app,model,api node app.js",

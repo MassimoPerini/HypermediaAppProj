@@ -11,9 +11,9 @@ var router = express.Router();
 
 router.get('/service', function(req, res, next){
     models.services.findAll({})
-        .then(function(services){
-            res.render('service/services', { title: 'Services', services: services, user:req.user});
-        });
+    .then(function(services){
+        res.render('service/services', { title: 'Services', services: services, user:req.user});
+    });
 });
 
 router.get('/service/:id', function(req, res, next){
@@ -41,7 +41,7 @@ router.get('/service/:id/operating-doctors', function(req, res, next){
       model : models.areas,
       attributes : ['name', 'icon']
     }, {
-        model : models.doctors
+      model : models.doctors
     }]
   }).then(function(service) {
     res.render('service/operating-doctors', { title: 'Doctors operating in ' + service.name, service: service, user:req.user});

@@ -2,7 +2,6 @@
     {
         "id": 1,
         "name": "Via Mascheroni 2",
-        "icon": "",
         "header": "/public/imgs/locations/mascheroni.jpg",
         "position": "Via Mascheroni 2, Milan (Italy)",
         "description": "Our biggest building is located in Via Lorenzo Mascheroni, 2 Milan (Italy). Here you will find the majority of the services we offer.",
@@ -14,7 +13,6 @@
     {
         "id": 2,
         "name": "Via Saronno 5",
-        "icon": "",
         "header": "/public/imgs/locations/saronno.jpg",
         "position": "Via Saronno 5, Milan (Italy)",
         "description": "Our newest building is located in Via Saronno, 5 Milan (Italy). Here you will find the most requested services.",
@@ -26,7 +24,6 @@
     {
         "id": 3,
         "name": "Via Taormina 2",
-        "icon": "",
         "header": "/public/imgs/locations/taormina.jpg",
         "position": "Via Taormina 2, Milan (Italy)",
         "description": "This locations is the home of all our experimental treatments, as well as our specialized analysis laboratory.",

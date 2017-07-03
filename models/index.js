@@ -27,23 +27,24 @@ fs
     db[model.name] = model;
   });
 
-Object.keys(db).forEach(function(modelName) {
+// Disabled since associations are done all here to have a broad view
+/*Object.keys(db).forEach(function(modelName) {
   if ("associate" in db[modelName]) {
     db[modelName].associate(db);
   }
-});
+});*/
 
 /* ASSOCIATIONS SETUP */
 // Service belongs to an area
 db.services.belongsTo(db.areas);
-//db.areas.hasMany(db.services);
+db.areas.hasMany(db.services);
 // Area responsible
 db.doctors.hasOne(db.areas, {foreignKey: 'responsible', as: 'area_responsible'});
 // Service responsible
 db.doctors.hasOne(db.services, {foreignKey: 'responsible', as: 'service_responsible'});
 // Location - Areas
 db.locations.belongsToMany(db.areas, {through: 'locations_areas'});
-//db.areas.belongsToMany(db.locations, {through: 'locations_areas'});
+db.areas.belongsToMany(db.locations, {through: 'locations_areas'});
 // Locations - Services
 db.locations.belongsToMany(db.services, { through: 'locations_services'});
 db.services.belongsToMany(db.locations, { through: 'locations_services'});

@@ -59,7 +59,7 @@ module.exports = function(sequelize, DataTypes) {
       },
 
       beforeUpdate: function(instance, options){
-        //Hash password with SHA1 before inserting
+        //Hash password with SHA1 before updating
         instance.password = sha1(instance.password);
       }
 

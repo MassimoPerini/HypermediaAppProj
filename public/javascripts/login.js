@@ -24,7 +24,7 @@ $(document).ready(function() {
                 email: $("#forget-email").val()
             },
             success: function(data) {
-                $(".forget-form").empty().append(data.message);
+                window.location.replace("/login");
             },
             error: function(error) {
                 $("#errors").text("Error recovering password");

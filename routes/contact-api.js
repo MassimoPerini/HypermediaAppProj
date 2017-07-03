@@ -40,24 +40,22 @@ var router = express.Router();
  *         examples:
  *           application/json:
  *             message: error
- */  
+ */
 router.post('/api/contact', function(req, res, next) {
-    models.inquiries.create(
-        {
-            name: req.body.name,
-            surname: req.body.surname,
-            phone: req.body.phone,
-            mail: req.body.mail,
-            target: req.body.target,
-            obj: req.body.object,
-            message: req.body.message
-        }
-    ).then(function () {
+    models.inquiries.create({
+        name: req.body.name,
+        surname: req.body.surname,
+        phone: req.body.phone,
+        mail: req.body.mail,
+        target: req.body.target,
+        obj: req.body.object,
+        message: req.body.message
+    }).then(function () {
         return res.status(200).json({message: "Thank you!"});
     }).catch(function (err) {
-        console.log(err.message);
+        debug(err);
         return res.status(400).json({ message: "error" });
-    })
+    });
 });
 
 /**
