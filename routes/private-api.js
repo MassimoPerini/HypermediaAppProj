@@ -116,6 +116,26 @@ router.post('/api/password/set', function(req, res, next){
   });
 });
 
+/** @swagger
+ * /service/:id/location:
+ *   get:
+ *     tags:
+ *       - Service
+ *     summary: Find Locations
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: A list of locations
+ *         schema:
+ *           $ref: '#/definitions/Location'
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         type: integer
+ *         minimum: 1
+ */
 router.get('/service/:id/location', function(req, res, next){
     models.locations.findAll({
         include:[{
@@ -133,6 +153,37 @@ router.get('/service/:id/location', function(req, res, next){
     });
 });
 
+/**
+ * @swagger
+ * /reservation:
+ *   post:
+ *     tags:
+ *       - Booking
+ *     description: Only logged users can access to this api.
+ *     summary: Book a reservation
+ *     parameters:
+ *       - name: booking
+ *         in: body
+ *         schema:
+ *           $ref: '#/definitions/Pwd_reset'
+ *         description: The request object.
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: Succesful operation.
+ *         examples:
+ *           application/json:
+ *             message: Thank you!
+ *         schema:
+ *           $ref: '#/responses/GenericMessage'
+ *       400:
+ *         description: Error case.
+ *         schema:
+ *           $ref: '#/responses/GenericMessage'
+ *         examples:
+ *           application/json:
+ *             message: error
+ */
 router.post('/api/reservation', function(req, res, next){
     models.bookings.create(
         {
