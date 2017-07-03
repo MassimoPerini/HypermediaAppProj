@@ -18,6 +18,8 @@
 
   <script type="text/javascript" src="/public/javascripts/pickadate/picker.js"></script>
   <script type="text/javascript" src="/public/javascripts/pickadate/picker.date.js"></script>
+  <script type="text/javascript" src="/public/javascripts/pickadate/legacy.js"></script>
+
 
   <script type="text/javascript">
 
@@ -44,7 +46,8 @@
         // If they do not have HTML5 date then provide a datepicker using javascript
         if (!Modernizr.inputtypes.date) {
             $( "input[type=date]" ).pickadate({
-                min: now
+                min: now,
+                container: 'body'
             });
        }
 
@@ -131,7 +134,7 @@
     </form>
   </article>
   <aside>
-
+    <div>
     <div class="card">
       <a href="/private">
         <div class="card-header">
@@ -144,7 +147,7 @@
         </div>
       </a>
     </div>
-
+    </div>
   </aside>
 </section>
 <%- include('../common/footer') %>
