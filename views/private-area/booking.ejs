@@ -40,7 +40,7 @@
         var minDate = now.toISOString().substring(0,10);
         $('#date').prop('min', minDate);
 
-        var defaultPage = $("#booking-form").children();
+    //    var defaultPage = $("#booking-form").children();
 
 
         // If they do not have HTML5 date then provide a datepicker using javascript
@@ -51,17 +51,17 @@
             });
        }
 
-        $('body').on('click','#reserve-again', function() {
+    /*    $('body').on('click','#reserve-again', function() {
             $("#booking-form").empty().append(defaultPage);
-        });
+        });*/
 
         $('#service').change(function () {
             $( this ).val() === "-1" ? $("#location").empty().append("<option>Choose a service</option>").prop( "disabled", true ) : loadNewLocations($( this ).val())
           }).change();
 
 
-        $('body').on('submit','form', function() {
-    //    $('form').submit(function(e) {
+    //    $('body').on('submit','form', function() {
+        $('form').submit(function(e) {
             if ($('#service').val() === "-1")
             {
                 alert("Input not valid");
@@ -77,7 +77,7 @@
                 success: function(data)
                 {
                     $('#booking-form').empty().append(
-                        "<div class='row'><div class='col-sm-2'><div id='reserve-again' class='card'><div class='card-header'><center><img src='/public/imgs/do-again.svg' alt='again'></center></div><div class='card-text'><h5>Do again</h5></div></div></div></div>"
+                        "<p>Well done!</p>"
                     );
                 }
             });
@@ -94,7 +94,8 @@
 </header>
 <section class="two-sided" id="content">
   <center>
-    <h1>Reserve your medical examination</h1>
+    <h1>Reserve your medical examination
+    </h1>
   </center>
   <article id="booking-form" class="only-form">
     <form>
